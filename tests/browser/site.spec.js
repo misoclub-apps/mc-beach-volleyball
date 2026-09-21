@@ -33,7 +33,7 @@ test("選手検索 → 予定 → 大会 → 選手の往復", async ({ page }) 
     .click();
   await expect(page.locator(".team")).not.toHaveCount(0);
   await expect(
-    page.getByRole("heading", { name: "公式資料", exact: true }),
+    page.getByRole("heading", { name: "大会資料", exact: true }),
   ).toBeVisible();
   await page.locator(".team a").filter({ hasText: "酒井春海" }).first().click();
   await expect(page.locator("h1")).toContainText("酒井");
@@ -88,7 +88,8 @@ test("スマホでも次回大会カードと公式プロフィール画像を�
   const largePhoto = page.locator(".profile-heading .player-photo.large");
   await expect(largePhoto.locator("[data-profile-photo]")).toBeVisible();
   const photoBox = await largePhoto.boundingBox();
-  expect(photoBox.width).toBe(photoBox.height);
+  expect(photoBox.height).toBeGreaterThan(photoBox.width);
+  expect(photoBox.height / photoBox.width).toBeCloseTo(1.5, 1);
 });
 
 test("通信失敗の回復案内", async ({ page }) => {
@@ -139,11 +140,22 @@ test("過去大会は期間で絞り込めて結果とペアを辿れる", async
   await page.goto("/#events");
   await page.getByLabel("表示期間").selectOption("past");
   await expect(page.locator(".event-row")).toHaveCount(6);
+  await expect(page.locator(".event-row .badge.result")).toHaveCount(6);
   await page.getByLabel("大会名・会場").fill("立川");
   await page.locator(".event-row").click();
   await expect(
-    page.getByRole("heading", { name: "大会結果・ペア" }),
+    page.getByRole("heading", { name: "試合結果", exact: true }),
   ).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: "最終順位・ペア" }),
+  ).toBeVisible();
+  const resultPanel = page.locator(".event-results");
+  await expect(resultPanel).toContainText("女子 優勝");
+  await expect(resultPanel).toContainText("辻村りこ");
+  await expect(resultPanel).toContainText("西堀健実");
+  await expect(
+    resultPanel.getByRole("link", { name: /女子結果 6月26日/ }),
+  ).toHaveAttribute("href", /tachikawa_result_women0626\.pdf$/);
   await expect(
     page.getByText("男子の最終順位表は確認できていません。", { exact: false }),
   ).toBeVisible();
