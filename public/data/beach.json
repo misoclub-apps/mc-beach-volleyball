@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-21T17:44:15+00:00",
-  "checkedAt": "2026-09-21T17:42:58+00:00",
+  "generatedAt": "2026-09-21T18:02:25+00:00",
+  "checkedAt": "2026-09-21T18:02:07+00:00",
   "asOf": "2026-09-22",
   "year": 2026,
   "coverage": {
@@ -62,7 +62,7 @@
     "pagesDiscovered": 113,
     "pagesChecked": 113,
     "pdfsChecked": 10,
-    "reviewCount": 1,
+    "reviewCount": 0,
     "offline": true,
     "skippedCount": 99
   },
@@ -2143,7 +2143,7 @@
       ],
       "roman": "Mayu Kikuchi",
       "profileUrl": "https://www.jbv.jp/players/woman/kikuchi.html",
-      "imageUrl": "https://www.jbv.jp/players/img/woman/kikuchi_w.jpg"
+      "imageUrl": "https://www.jbv.jp/players/img/woman/pic/kikuchi.jpg"
     },
     {
       "id": "p-426647a04c610e",
@@ -6984,11 +6984,5 @@
       "checkedAt": "2026-09-21T17:38:52+00:00"
     }
   ],
-  "issues": [
-    {
-      "eventId": null,
-      "url": "https://www.jbv.jp/players/woman/kikuchi.html",
-      "kind": "profile-image"
-    }
-  ]
+  "issues": []
 }
