@@ -79,9 +79,10 @@ test("スマホでも次回大会カードと公式プロフィール画像を�
     0,
   );
   await page.locator(".player-link").click();
-  await expect(
-    page.locator(".profile-heading [data-profile-photo]"),
-  ).toBeVisible();
+  const largePhoto = page.locator(".profile-heading .player-photo.large");
+  await expect(largePhoto.locator("[data-profile-photo]")).toBeVisible();
+  const photoBox = await largePhoto.boundingBox();
+  expect(photoBox.width).toBe(photoBox.height);
 });
 
 test("通信失敗の回復案内", async ({ page }) => {

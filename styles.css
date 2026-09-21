@@ -393,7 +393,7 @@ legend {
 .player-photo {
   border: 1px solid var(--color-rule);
   width: 48px;
-  aspect-ratio: 1;
+  height: 48px;
   display: grid;
   place-items: center;
   border-radius: var(--radius-sm);
@@ -416,7 +416,9 @@ legend {
   position: relative;
 }
 .player-photo.large {
-  width: clamp(88px, 12vw, 120px);
+  --photo-size: clamp(88px, 12vw, 120px);
+  width: var(--photo-size);
+  height: var(--photo-size);
   border-radius: 50%;
   font-size: 2rem;
   flex: 0 0 auto;
