@@ -1,0 +1,3665 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-21T16:46:14+00:00",
+  "asOf": "2026-09-22",
+  "year": 2026,
+  "coverage": {
+    "source": "日本ビーチバレーボール連盟（JBV）・日本バレーボール協会（JVA）",
+    "description": "JBVの年間予定・ニュース・公認大会から、取得時点で開催前または開催中の大会を収録。JVA国内予定も確認。公開された参加名簿を選手に紐付けています。未発表の出場予定は含みません。",
+    "domains": [
+      "www.jbv.jp",
+      "www.jva.or.jp"
+    ],
+    "reviewedSources": [
+      {
+        "url": "https://www.jva.or.jp/beach_domestic/2026/",
+        "title": "2026年国内大会スケジュール | 公益財団法人日本バレーボール協会",
+        "checkedAt": "2026-09-21T16:46:12+00:00"
+      },
+      {
+        "url": "https://www.jva.or.jp/beach_domestic/2026/other-events/kawasakicup/",
+        "title": "川崎市長杯 JVA第18回ビーチバレーボール大会 | 公益財団法人日本バレーボール協会",
+        "checkedAt": "2026-09-21T16:46:13+00:00"
+      },
+      {
+        "url": "https://www.jva.or.jp/beach_domestic/2026/other-events/kawasakicup/?entry=schedule_results",
+        "title": "川崎市長杯 JVA第18回ビーチバレーボール大会 | 公益財団法人日本バレーボール協会",
+        "checkedAt": "2026-09-21T16:46:14+00:00"
+      }
+    ],
+    "pagesDiscovered": 113,
+    "pagesChecked": 113,
+    "pdfsChecked": 4,
+    "reviewCount": 0,
+    "offline": false,
+    "skippedCount": 99
+  },
+  "players": [
+    {
+      "id": "p-33be9913501c00",
+      "name": "Bogle Ashley",
+      "gender": "women",
+      "aliases": [
+        "Bogle Ashley"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-de825d238f0a84",
+      "name": "Martin Kaufer",
+      "gender": "men",
+      "aliases": [
+        "Martin Kaufer",
+        "Kaufer Martin"
+      ],
+      "roman": "Martin Kaufer",
+      "profileUrl": "https://www.jbv.jp/players/man/kaufer.html"
+    },
+    {
+      "id": "p-d9ee789da27f2b",
+      "name": "Tay Jerome",
+      "gender": "men",
+      "aliases": [
+        "Tay Jerome"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-9fe27d6b40c23e",
+      "name": "オト パウリネ恵美里",
+      "gender": "women",
+      "aliases": [
+        "オト パウリネ恵美里"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-0932b58def2823",
+      "name": "マルキ ナシム",
+      "gender": "men",
+      "aliases": [
+        "マルキ ナシム"
+      ],
+      "roman": "Nassim Malki",
+      "profileUrl": "https://www.jbv.jp/players/man/malki.html"
+    },
+    {
+      "id": "p-aadd725216de9b",
+      "name": "上本 奈菜子",
+      "gender": "women",
+      "aliases": [
+        "上本 奈菜子"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-b0ec356fd21201",
+      "name": "中原 賢治",
+      "gender": "men",
+      "aliases": [
+        "中原 賢治"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-0012effe0e4f80",
+      "name": "中川知香",
+      "gender": "women",
+      "aliases": [
+        "中川知香",
+        "中川 知香"
+      ],
+      "roman": "Chika Nakagawa",
+      "profileUrl": "https://www.jbv.jp/players/woman/nakagawa.html"
+    },
+    {
+      "id": "p-297b17500e7c10",
+      "name": "中村 勇太",
+      "gender": "men",
+      "aliases": [
+        "中村 勇太"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-c1f1a72ab2aa28",
+      "name": "丸山紗季",
+      "gender": "women",
+      "aliases": [
+        "丸山紗季"
+      ],
+      "roman": "Saki Maruyama",
+      "profileUrl": "https://www.jbv.jp/players/woman/maruyama.html"
+    },
+    {
+      "id": "p-c15fae4e6e68a2",
+      "name": "久須 健太",
+      "gender": "men",
+      "aliases": [
+        "久須 健太"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-86214dcb5e9107",
+      "name": "井上 夏緒里",
+      "gender": "women",
+      "aliases": [
+        "井上 夏緒里"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-83717440788185",
+      "name": "井上 航",
+      "gender": "men",
+      "aliases": [
+        "井上 航"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-df48743bbeeb58",
+      "name": "今井駿世",
+      "gender": "men",
+      "aliases": [
+        "今井駿世",
+        "今井 駿世"
+      ],
+      "roman": "Hayase Imai",
+      "profileUrl": "https://www.jbv.jp/players/man/imai-h.html"
+    },
+    {
+      "id": "p-0ae5bd566aae50",
+      "name": "伊藤 瀬菜",
+      "gender": "women",
+      "aliases": [
+        "伊藤 瀬菜"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-238cbfb56b8682",
+      "name": "伊藤 碧紀",
+      "gender": "women",
+      "aliases": [
+        "伊藤 碧紀"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-285d531c0b6a5c",
+      "name": "伊藤 美玲",
+      "gender": "women",
+      "aliases": [
+        "伊藤 美玲"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-f0f0a4a7f277b6",
+      "name": "伊藤桜",
+      "gender": "women",
+      "aliases": [
+        "伊藤桜"
+      ],
+      "roman": "Sakura Ito",
+      "profileUrl": "https://www.jbv.jp/players/woman/ito.html"
+    },
+    {
+      "id": "p-c3ff1ffcd612ed",
+      "name": "伊藤遼河",
+      "gender": "men",
+      "aliases": [
+        "伊藤遼河",
+        "伊藤 遼河"
+      ],
+      "roman": "Ryoga Ito",
+      "profileUrl": "https://www.jbv.jp/players/man/ito.html"
+    },
+    {
+      "id": "p-56198d51067c42",
+      "name": "佐々木 唯",
+      "gender": "women",
+      "aliases": [
+        "佐々木 唯"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-08d066486c8a89",
+      "name": "佐々木 梨花",
+      "gender": "women",
+      "aliases": [
+        "佐々木 梨花"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-e660d211b4496a",
+      "name": "佐藤 史之",
+      "gender": "men",
+      "aliases": [
+        "佐藤 史之"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-39277685de5f32",
+      "name": "佐藤 恵",
+      "gender": "women",
+      "aliases": [
+        "佐藤 恵"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-0e83a86fb129d8",
+      "name": "佐藤 賢聖",
+      "gender": "men",
+      "aliases": [
+        "佐藤 賢聖"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-d751e2f59f7802",
+      "name": "佐藤亮太",
+      "gender": "men",
+      "aliases": [
+        "佐藤亮太",
+        "佐藤 亮太"
+      ],
+      "roman": "Ryota Sato",
+      "profileUrl": "https://www.jbv.jp/players/man/sato-r.html"
+    },
+    {
+      "id": "p-5135874a2d62df",
+      "name": "倉坂正人",
+      "gender": "men",
+      "aliases": [
+        "倉坂正人"
+      ],
+      "roman": "Masato Kurasaka",
+      "profileUrl": "https://www.jbv.jp/players/man/kurasaka.html"
+    },
+    {
+      "id": "p-4c177784a4432b",
+      "name": "内田 颯人",
+      "gender": "men",
+      "aliases": [
+        "内田 颯人"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-4fdd823d2d66f2",
+      "name": "前澤 花麗",
+      "gender": "women",
+      "aliases": [
+        "前澤 花麗"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-d80bb44af433de",
+      "name": "加藤 優奈",
+      "gender": "women",
+      "aliases": [
+        "加藤 優奈"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-59dc53e20f904b",
+      "name": "加藤 沙菜",
+      "gender": "women",
+      "aliases": [
+        "加藤 沙菜"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-267993eb67bba7",
+      "name": "加賀 蓮",
+      "gender": "men",
+      "aliases": [
+        "加賀 蓮"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-e5643b6bbdc6e7",
+      "name": "北野 優心",
+      "gender": "women",
+      "aliases": [
+        "北野 優心"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-5aa84c84841109",
+      "name": "吉原 和香奈",
+      "gender": "women",
+      "aliases": [
+        "吉原 和香奈"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-6b636528915ff5",
+      "name": "吉岡 可奈",
+      "gender": "women",
+      "aliases": [
+        "吉岡 可奈"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-2be15d0607014e",
+      "name": "吉本 蓮",
+      "gender": "women",
+      "aliases": [
+        "吉本 蓮"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-8eca3e9f7ac86f",
+      "name": "唐澤 真唯",
+      "gender": "women",
+      "aliases": [
+        "唐澤 真唯"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-27146d1100b160",
+      "name": "土田 優直",
+      "gender": "women",
+      "aliases": [
+        "土田 優直"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-54316126a8a75f",
+      "name": "坂東 巧望",
+      "gender": "men",
+      "aliases": [
+        "坂東 巧望"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-d4619d6a8aaba4",
+      "name": "坊野 明里",
+      "gender": "women",
+      "aliases": [
+        "坊野 明里"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-f2fa0338d31d37",
+      "name": "坪内紫苑",
+      "gender": "women",
+      "aliases": [
+        "坪内紫苑",
+        "坪内 紫苑"
+      ],
+      "roman": "Shion Tsubouchi",
+      "profileUrl": "https://www.jbv.jp/players/woman/tsubouchi.html"
+    },
+    {
+      "id": "p-ea4e0c0ccba243",
+      "name": "大久保 美咲",
+      "gender": "women",
+      "aliases": [
+        "大久保 美咲"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-058c4ec3f3802d",
+      "name": "大場 藍海",
+      "gender": "women",
+      "aliases": [
+        "大場 藍海"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-ebb98e5e06a98e",
+      "name": "大平 陽貴",
+      "gender": "men",
+      "aliases": [
+        "大平 陽貴"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-fd735e30d00fe5",
+      "name": "奥野 由",
+      "gender": "women",
+      "aliases": [
+        "奥野 由"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-b880af03c17a8d",
+      "name": "宇都木乃愛",
+      "gender": "women",
+      "aliases": [
+        "宇都木乃愛",
+        "宇都木 乃愛"
+      ],
+      "roman": "Noa Utsugi",
+      "profileUrl": "https://www.jbv.jp/players/woman/utsugi.html"
+    },
+    {
+      "id": "p-bacb4c47486198",
+      "name": "安達龍一",
+      "gender": "men",
+      "aliases": [
+        "安達龍一",
+        "安達 龍一"
+      ],
+      "roman": "Ryuichi Adachi",
+      "profileUrl": "https://www.jbv.jp/players/man/adachi.html"
+    },
+    {
+      "id": "p-ec090c58210ae5",
+      "name": "宮田 航輔",
+      "gender": "men",
+      "aliases": [
+        "宮田 航輔"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-3c0f1899831ea6",
+      "name": "富田昂馬",
+      "gender": "men",
+      "aliases": [
+        "富田昂馬",
+        "富田 昂馬"
+      ],
+      "roman": "Koma Tomita",
+      "profileUrl": "https://www.jbv.jp/players/man/tomita.html"
+    },
+    {
+      "id": "p-9c5a1283daa8e0",
+      "name": "小島 利治",
+      "gender": "men",
+      "aliases": [
+        "小島 利治"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-df285780bb6402",
+      "name": "小島 旭陽",
+      "gender": "men",
+      "aliases": [
+        "小島 旭陽"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-5a683b5d033eb9",
+      "name": "小林 唯華",
+      "gender": "women",
+      "aliases": [
+        "小林 唯華"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-e74385bc91847b",
+      "name": "小林 多希理",
+      "gender": "women",
+      "aliases": [
+        "小林 多希理"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-5e6f0b334b4679",
+      "name": "小林 大峻",
+      "gender": "men",
+      "aliases": [
+        "小林 大峻"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-be282ee5369769",
+      "name": "小野寺 将克",
+      "gender": "men",
+      "aliases": [
+        "小野寺 将克"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-e68522b1b2ae3d",
+      "name": "小野寺 智子",
+      "gender": "women",
+      "aliases": [
+        "小野寺 智子"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-a2ae033a2c458d",
+      "name": "小野寺 暉",
+      "gender": "men",
+      "aliases": [
+        "小野寺 暉"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-744fba13784877",
+      "name": "山口 和也",
+      "gender": "men",
+      "aliases": [
+        "山口 和也"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-b08c41e1130378",
+      "name": "山口 心菜",
+      "gender": "women",
+      "aliases": [
+        "山口 心菜"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-ff8635c304e6d1",
+      "name": "山口 桂奈",
+      "gender": "women",
+      "aliases": [
+        "山口 桂奈"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-70758c41dbd816",
+      "name": "山田 紗也香",
+      "gender": "women",
+      "aliases": [
+        "山田 紗也香"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-b5a1767dae9173",
+      "name": "山田 陽平",
+      "gender": "men",
+      "aliases": [
+        "山田 陽平"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-0e522b0dbb975e",
+      "name": "岡村 真衣",
+      "gender": "women",
+      "aliases": [
+        "岡村 真衣"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-89fb663c39dd55",
+      "name": "岡田典代",
+      "gender": "women",
+      "aliases": [
+        "岡田典代",
+        "岡田 典代"
+      ],
+      "roman": "Norika Okada",
+      "profileUrl": "https://www.jbv.jp/players/woman/okada.html"
+    },
+    {
+      "id": "p-50dc877a7cec02",
+      "name": "岩立 岳",
+      "gender": "men",
+      "aliases": [
+        "岩立 岳"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-bf1e65e017c8a6",
+      "name": "岸野雄次朗",
+      "gender": "men",
+      "aliases": [
+        "岸野雄次朗"
+      ],
+      "roman": "Yujiro Kishino",
+      "profileUrl": "https://www.jbv.jp/players/man/kishino.html"
+    },
+    {
+      "id": "p-d97b7ff6733d31",
+      "name": "嶋田 雄介",
+      "gender": "men",
+      "aliases": [
+        "嶋田 雄介"
+      ],
+      "roman": "Yusuke Shimada",
+      "profileUrl": "https://www.jbv.jp/players/man/shimada-y.html"
+    },
+    {
+      "id": "p-58367f076d2631",
+      "name": "市川 凛",
+      "gender": "women",
+      "aliases": [
+        "市川 凛"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-820ff7f07b47df",
+      "name": "市川 柊",
+      "gender": "men",
+      "aliases": [
+        "市川 柊"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-c50aa57b4324af",
+      "name": "平井 学",
+      "gender": "men",
+      "aliases": [
+        "平井 学"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-7534d7c24cd95d",
+      "name": "平元 大喜",
+      "gender": "men",
+      "aliases": [
+        "平元 大喜"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-6cc776b47b5e95",
+      "name": "我妻 陸",
+      "gender": "men",
+      "aliases": [
+        "我妻 陸"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-572a620cb0139b",
+      "name": "戸叶 こなね",
+      "gender": "women",
+      "aliases": [
+        "戸叶 こなね"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-7c039b7bda13a8",
+      "name": "戸田 拓也",
+      "gender": "men",
+      "aliases": [
+        "戸田 拓也"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-92fcf437958e50",
+      "name": "戸田 由里香",
+      "gender": "women",
+      "aliases": [
+        "戸田 由里香"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-89b5d37cd11b8c",
+      "name": "有住 玲央",
+      "gender": "men",
+      "aliases": [
+        "有住 玲央"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-f54e398fdef88c",
+      "name": "本村嘉菜",
+      "gender": "women",
+      "aliases": [
+        "本村嘉菜",
+        "本村 嘉菜"
+      ],
+      "roman": "Kana Motomura",
+      "profileUrl": "https://www.jbv.jp/players/woman/motomura.html"
+    },
+    {
+      "id": "p-e1aa5fe79cfa78",
+      "name": "本村成優",
+      "gender": "women",
+      "aliases": [
+        "本村成優",
+        "本村 成優"
+      ],
+      "roman": "Nayu Motomura",
+      "profileUrl": "https://www.jbv.jp/players/woman/motomura-n.html"
+    },
+    {
+      "id": "p-27fcc16cbd21d9",
+      "name": "本田 安依梨",
+      "gender": "women",
+      "aliases": [
+        "本田 安依梨"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-2ad8777261c796",
+      "name": "村上礼華",
+      "gender": "women",
+      "aliases": [
+        "村上礼華",
+        "村上 礼華"
+      ],
+      "roman": "Reika Murakami",
+      "profileUrl": "https://www.jbv.jp/players/woman/murakami-r.html"
+    },
+    {
+      "id": "p-c03b165b51346a",
+      "name": "松下道一",
+      "gender": "men",
+      "aliases": [
+        "松下道一",
+        "松下 道一"
+      ],
+      "roman": "Toi Matsushita",
+      "profileUrl": "https://www.jbv.jp/players/man/matsushita.html"
+    },
+    {
+      "id": "p-94664df6f011f8",
+      "name": "松井晴皆",
+      "gender": "men",
+      "aliases": [
+        "松井晴皆",
+        "松井 晴皆"
+      ],
+      "roman": "Harutomo Matsui",
+      "profileUrl": "https://www.jbv.jp/players/man/matsui.html"
+    },
+    {
+      "id": "p-5aa33f86f91d65",
+      "name": "松坂 颯斗",
+      "gender": "men",
+      "aliases": [
+        "松坂 颯斗"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-f8ec9f01f73a50",
+      "name": "松岡 弦",
+      "gender": "men",
+      "aliases": [
+        "松岡 弦"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-24d02039890a15",
+      "name": "松崎 伊吹",
+      "gender": "women",
+      "aliases": [
+        "松崎 伊吹"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-907be3ffc8f0ce",
+      "name": "松本恋",
+      "gender": "women",
+      "aliases": [
+        "松本恋"
+      ],
+      "roman": "Matsumoto Ren",
+      "profileUrl": "https://www.jbv.jp/players/woman/matsumoto-r.html"
+    },
+    {
+      "id": "p-4615251b352481",
+      "name": "松本穏",
+      "gender": "women",
+      "aliases": [
+        "松本穏"
+      ],
+      "roman": "Matsumoto Non",
+      "profileUrl": "https://www.jbv.jp/players/woman/matsumoto.html"
+    },
+    {
+      "id": "p-209ae8d6247cf3",
+      "name": "柴麻美",
+      "gender": "women",
+      "aliases": [
+        "柴麻美"
+      ],
+      "roman": "Asami Shiba",
+      "profileUrl": "https://www.jbv.jp/players/woman/shiba.html"
+    },
+    {
+      "id": "p-9201eba2042d0d",
+      "name": "梅野 涼",
+      "gender": "men",
+      "aliases": [
+        "梅野 涼"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-915d9bd3be71d4",
+      "name": "森愛唯",
+      "gender": "women",
+      "aliases": [
+        "森愛唯",
+        "森 愛唯"
+      ],
+      "roman": "Mei Mori",
+      "profileUrl": "https://www.jbv.jp/players/woman/mori.html"
+    },
+    {
+      "id": "p-10902c73bf77fb",
+      "name": "横山 龍二",
+      "gender": "men",
+      "aliases": [
+        "横山 龍二"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-ea597e582f838e",
+      "name": "樫原美陽",
+      "gender": "women",
+      "aliases": [
+        "樫原美陽"
+      ],
+      "roman": "Miharu Kashihara",
+      "profileUrl": "https://www.jbv.jp/players/woman/kashihara.html"
+    },
+    {
+      "id": "p-643a643a7a36bd",
+      "name": "櫻井 いづみ",
+      "gender": "women",
+      "aliases": [
+        "櫻井 いづみ"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-7133c92bb8a56b",
+      "name": "水上 和葉",
+      "gender": "women",
+      "aliases": [
+        "水上 和葉"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-b9c92aacfb3510",
+      "name": "水島 健",
+      "gender": "men",
+      "aliases": [
+        "水島 健"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-2bc3a9cc952c04",
+      "name": "水町泰杜",
+      "gender": "men",
+      "aliases": [
+        "水町泰杜"
+      ],
+      "roman": "Taito Mizumachi",
+      "profileUrl": "https://www.jbv.jp/players/man/mizumachi.html"
+    },
+    {
+      "id": "p-c482f56f258175",
+      "name": "永井 雄太",
+      "gender": "men",
+      "aliases": [
+        "永井 雄太"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-1ef00814faedb6",
+      "name": "江原あかり",
+      "gender": "women",
+      "aliases": [
+        "江原あかり",
+        "江原 あかり"
+      ],
+      "roman": "Akari Ebara",
+      "profileUrl": "https://www.jbv.jp/players/woman/ebara.html"
+    },
+    {
+      "id": "p-fd1eaa3d5d7a19",
+      "name": "池田隼平",
+      "gender": "men",
+      "aliases": [
+        "池田隼平"
+      ],
+      "roman": "Junpei Ikeda",
+      "profileUrl": "https://www.jbv.jp/players/man/ikeda.html"
+    },
+    {
+      "id": "p-bcf55897f68a02",
+      "name": "沢目繭",
+      "gender": "women",
+      "aliases": [
+        "沢目繭"
+      ],
+      "roman": "Mayu Sawame",
+      "profileUrl": "https://www.jbv.jp/players/woman/sawame.html"
+    },
+    {
+      "id": "p-80b22dcc07c24e",
+      "name": "波紫伊那蔵",
+      "gender": "men",
+      "aliases": [
+        "波紫伊那蔵",
+        "波紫 伊那蔵"
+      ],
+      "roman": "Inazo Hashi",
+      "profileUrl": "https://www.jbv.jp/players/man/hashi.html"
+    },
+    {
+      "id": "p-e7d443af2e0fb1",
+      "name": "浦田 景子",
+      "gender": "women",
+      "aliases": [
+        "浦田 景子"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-5b5c22b0fbab93",
+      "name": "清和 真奈美",
+      "gender": "women",
+      "aliases": [
+        "清和 真奈美"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-bdab3e1443988a",
+      "name": "清水 啓輔",
+      "gender": "men",
+      "aliases": [
+        "清水 啓輔"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-bb3eda817c7adc",
+      "name": "渡辺周馬",
+      "gender": "men",
+      "aliases": [
+        "渡辺周馬"
+      ],
+      "roman": "Shuma Watanabe",
+      "profileUrl": "https://www.jbv.jp/players/man/watanabe-s.html"
+    },
+    {
+      "id": "p-42ca88b3a7d1a9",
+      "name": "渡邊 愛菜",
+      "gender": "women",
+      "aliases": [
+        "渡邊 愛菜"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-8ce24651c6a54c",
+      "name": "渡邊 玲央",
+      "gender": "men",
+      "aliases": [
+        "渡邊 玲央"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-90c73910db8908",
+      "name": "湯田 笑夢",
+      "gender": "women",
+      "aliases": [
+        "湯田 笑夢"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-e2f0ff5692e9bc",
+      "name": "溝江明香",
+      "gender": "women",
+      "aliases": [
+        "溝江明香",
+        "溝江 明香"
+      ],
+      "roman": "Sayaka Mizoe",
+      "profileUrl": "https://www.jbv.jp/players/woman/mizoe.html"
+    },
+    {
+      "id": "p-39e29bb5b30187",
+      "name": "溝端拓真",
+      "gender": "men",
+      "aliases": [
+        "溝端拓真",
+        "溝端 拓真"
+      ],
+      "roman": "Takuma Mizobata",
+      "profileUrl": "https://www.jbv.jp/players/man/mizobata.html"
+    },
+    {
+      "id": "p-f3309d4a4eb5eb",
+      "name": "瀧 凪咲",
+      "gender": "women",
+      "aliases": [
+        "瀧 凪咲"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-63bd5537dddddc",
+      "name": "瀧澤 結羽",
+      "gender": "women",
+      "aliases": [
+        "瀧澤 結羽"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-16216d397111da",
+      "name": "瀬井 達也",
+      "gender": "men",
+      "aliases": [
+        "瀬井 達也"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-e70290ca03d006",
+      "name": "熊谷 勇人",
+      "gender": "men",
+      "aliases": [
+        "熊谷 勇人"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-ec3d66bf61a909",
+      "name": "片桐 菜摘",
+      "gender": "women",
+      "aliases": [
+        "片桐 菜摘"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-9c40824722c700",
+      "name": "牧 悠菜",
+      "gender": "women",
+      "aliases": [
+        "牧 悠菜"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-ef8586266060ae",
+      "name": "畑 恵",
+      "gender": "women",
+      "aliases": [
+        "畑 恵"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-ad8b7f4e835959",
+      "name": "畑辺 千代",
+      "gender": "women",
+      "aliases": [
+        "畑辺 千代"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-5a194d18749c9e",
+      "name": "白幡亜美",
+      "gender": "women",
+      "aliases": [
+        "白幡亜美",
+        "白幡 亜美"
+      ],
+      "roman": "Ami Shirahata",
+      "profileUrl": "https://www.jbv.jp/players/woman/shirahata.html"
+    },
+    {
+      "id": "p-976ed7cc7e5365",
+      "name": "真田 知紗都",
+      "gender": "women",
+      "aliases": [
+        "真田 知紗都"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-04203906673033",
+      "name": "石井美樹",
+      "gender": "women",
+      "aliases": [
+        "石井美樹"
+      ],
+      "roman": "Miki Ishi",
+      "profileUrl": "https://www.jbv.jp/players/woman/ishii.html"
+    },
+    {
+      "id": "p-2ffd40abb352b1",
+      "name": "石原泉",
+      "gender": "women",
+      "aliases": [
+        "石原泉"
+      ],
+      "roman": "Izumi Ishihara",
+      "profileUrl": "https://www.jbv.jp/players/woman/ishihara.html"
+    },
+    {
+      "id": "p-229aea0a5e245b",
+      "name": "石島雄介",
+      "gender": "men",
+      "aliases": [
+        "石島雄介"
+      ],
+      "roman": "Yusuke Ishijima",
+      "profileUrl": "https://www.jbv.jp/players/man/ishijima.html"
+    },
+    {
+      "id": "p-f9c13549ef3d9a",
+      "name": "石川 綾菜",
+      "gender": "women",
+      "aliases": [
+        "石川 綾菜"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-98638614563dfb",
+      "name": "石川瀬那",
+      "gender": "men",
+      "aliases": [
+        "石川瀬那"
+      ],
+      "roman": "Sena Ishikawa",
+      "profileUrl": "https://www.jbv.jp/players/man/ishikawa.html"
+    },
+    {
+      "id": "p-f14c67cc3f1f06",
+      "name": "福嶋晃介",
+      "gender": "men",
+      "aliases": [
+        "福嶋晃介",
+        "福嶋 晃介"
+      ],
+      "roman": "Kosuke Fukushima",
+      "profileUrl": "https://www.jbv.jp/players/man/fukushima.html"
+    },
+    {
+      "id": "p-cbfb49e65b03e7",
+      "name": "福田 鈴菜",
+      "gender": "women",
+      "aliases": [
+        "福田 鈴菜"
+      ],
+      "roman": "Suzuna Fukuda",
+      "profileUrl": "https://www.jbv.jp/players/woman/fukuda-s.html"
+    },
+    {
+      "id": "p-195bc3b45e3e72",
+      "name": "秋重若菜",
+      "gender": "women",
+      "aliases": [
+        "秋重若菜",
+        "秋重 若菜"
+      ],
+      "roman": "Wakana Akishige",
+      "profileUrl": "https://www.jbv.jp/players/woman/akishige.html"
+    },
+    {
+      "id": "p-c4f072e092a2f2",
+      "name": "稲垣 喜一",
+      "gender": "men",
+      "aliases": [
+        "稲垣 喜一"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-b8edb88a18e274",
+      "name": "稲葉 朔弥",
+      "gender": "men",
+      "aliases": [
+        "稲葉 朔弥"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-28b7b74a5eb99c",
+      "name": "稲葉 湧晴",
+      "gender": "men",
+      "aliases": [
+        "稲葉 湧晴"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-6940ec375c06e8",
+      "name": "立谷純太郎",
+      "gender": "men",
+      "aliases": [
+        "立谷純太郎"
+      ],
+      "roman": "Juntaro Tachiya",
+      "profileUrl": "https://www.jbv.jp/players/man/tachiya.html"
+    },
+    {
+      "id": "p-4f7f70f882c0d8",
+      "name": "竹井 ひかり",
+      "gender": "women",
+      "aliases": [
+        "竹井 ひかり"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-536d8879278f47",
+      "name": "竹内 快斗",
+      "gender": "men",
+      "aliases": [
+        "竹内 快斗"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-5bcfe1e82824db",
+      "name": "笹渡美海",
+      "gender": "women",
+      "aliases": [
+        "笹渡美海",
+        "笹渡 美海"
+      ],
+      "roman": "Miu Sasawatari",
+      "profileUrl": "https://www.jbv.jp/players/woman/sasawatari.html"
+    },
+    {
+      "id": "p-e527a1b6fbbfca",
+      "name": "細田 伸太郎",
+      "gender": "men",
+      "aliases": [
+        "細田 伸太郎"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-9aa915b22f538d",
+      "name": "紺野 実由紀",
+      "gender": "women",
+      "aliases": [
+        "紺野 実由紀"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-5bfc10c148b633",
+      "name": "美保幸輝",
+      "gender": "men",
+      "aliases": [
+        "美保幸輝",
+        "美保 幸輝"
+      ],
+      "roman": "Koki Miho",
+      "profileUrl": "https://www.jbv.jp/players/man/miho.html"
+    },
+    {
+      "id": "p-1e50fca86d32a7",
+      "name": "若原 正享",
+      "gender": "men",
+      "aliases": [
+        "若原 正享"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-30f54d52b7eceb",
+      "name": "荘司 陽香梨",
+      "gender": "women",
+      "aliases": [
+        "荘司 陽香梨"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-3a1909b6c0933b",
+      "name": "菅原 和子",
+      "gender": "women",
+      "aliases": [
+        "菅原 和子"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-63c0eb523e1429",
+      "name": "菊地真結",
+      "gender": "women",
+      "aliases": [
+        "菊地真結",
+        "菊地 真結"
+      ],
+      "roman": "Mayu Kikuchi",
+      "profileUrl": "https://www.jbv.jp/players/woman/kikuchi.html"
+    },
+    {
+      "id": "p-426647a04c610e",
+      "name": "薮見真歩",
+      "gender": "women",
+      "aliases": [
+        "薮見真歩",
+        "藪見 真歩",
+        "薮見 真歩"
+      ],
+      "roman": "Maho Yabumi",
+      "profileUrl": "https://www.jbv.jp/players/woman/yabumi.html"
+    },
+    {
+      "id": "p-da681bc9d67166",
+      "name": "藤井桜子",
+      "gender": "women",
+      "aliases": [
+        "藤井桜子"
+      ],
+      "roman": "Sakurako Fujii",
+      "profileUrl": "https://www.jbv.jp/players/woman/fujii-s.html"
+    },
+    {
+      "id": "p-fae05b76f162ee",
+      "name": "衣笠乃愛",
+      "gender": "women",
+      "aliases": [
+        "衣笠乃愛",
+        "衣笠 乃愛"
+      ],
+      "roman": "Noa Kinugasa",
+      "profileUrl": "https://www.jbv.jp/players/woman/kinugasa.html"
+    },
+    {
+      "id": "p-0a1903073eb965",
+      "name": "西堀健実",
+      "gender": "women",
+      "aliases": [
+        "西堀健実"
+      ],
+      "roman": "Takemi Nishibori",
+      "profileUrl": "https://www.jbv.jp/players/woman/nishibori.html"
+    },
+    {
+      "id": "p-abe30bf088268c",
+      "name": "西村 晃一",
+      "gender": "men",
+      "aliases": [
+        "西村 晃一"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-c338f3ce672cf8",
+      "name": "西村勇斗",
+      "gender": "men",
+      "aliases": [
+        "西村勇斗"
+      ],
+      "roman": "Hayato Nishimura",
+      "profileUrl": "https://www.jbv.jp/players/man/nishimura-h.html"
+    },
+    {
+      "id": "p-e900bac72b258e",
+      "name": "詫間悠",
+      "gender": "men",
+      "aliases": [
+        "詫間悠",
+        "詫間 悠"
+      ],
+      "roman": "Yu Takuma",
+      "profileUrl": "https://www.jbv.jp/players/man/takuma.html"
+    },
+    {
+      "id": "p-bd3287e1362a54",
+      "name": "谷島 花虹",
+      "gender": "women",
+      "aliases": [
+        "谷島 花虹"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-87a1970d90fd02",
+      "name": "谷島 陽菜",
+      "gender": "women",
+      "aliases": [
+        "谷島 陽菜"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-90c520e7170021",
+      "name": "辻 琉斗",
+      "gender": "men",
+      "aliases": [
+        "辻 琉斗"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-ba6e259b045dc4",
+      "name": "辻村りこ",
+      "gender": "women",
+      "aliases": [
+        "辻村りこ",
+        "辻村 りこ"
+      ],
+      "roman": "Riko Tsujimura",
+      "profileUrl": "https://www.jbv.jp/players/woman/tsujimura.html"
+    },
+    {
+      "id": "p-7b33eeb4c59158",
+      "name": "進藤 涼",
+      "gender": "men",
+      "aliases": [
+        "進藤 涼"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-f9df949f999cf1",
+      "name": "道下 颯陽",
+      "gender": "men",
+      "aliases": [
+        "道下 颯陽"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-a9d89e9a2fdf49",
+      "name": "遠藤 美波",
+      "gender": "women",
+      "aliases": [
+        "遠藤 美波"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-bd2ce333aca5e6",
+      "name": "酒井春海",
+      "gender": "women",
+      "aliases": [
+        "酒井春海",
+        "酒井 春海"
+      ],
+      "roman": "Harumi Sakai",
+      "profileUrl": "https://www.jbv.jp/players/woman/sakai.html"
+    },
+    {
+      "id": "p-acc0e64aee804f",
+      "name": "野口 夕陽",
+      "gender": "women",
+      "aliases": [
+        "野口 夕陽"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-0b891d351fb2cd",
+      "name": "長谷川徳海",
+      "gender": "men",
+      "aliases": [
+        "長谷川徳海"
+      ],
+      "roman": "Yoshiumi Hasegawa",
+      "profileUrl": "https://www.jbv.jp/players/man/hasegawa.html"
+    },
+    {
+      "id": "p-f05a40f62f1f8a",
+      "name": "関口 希望",
+      "gender": "women",
+      "aliases": [
+        "関口 希望"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-4becb601919188",
+      "name": "関寛之",
+      "gender": "men",
+      "aliases": [
+        "関寛之",
+        "関 寛之"
+      ],
+      "roman": "Hiroyuki Seki",
+      "profileUrl": "https://www.jbv.jp/players/man/seki.html"
+    },
+    {
+      "id": "p-4ae6df1a16048e",
+      "name": "須藤 羽海",
+      "gender": "women",
+      "aliases": [
+        "須藤 羽海"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-5b3b7296c53464",
+      "name": "高内 雄心",
+      "gender": "men",
+      "aliases": [
+        "高内 雄心",
+        "髙内 雄心"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-193c3e6bcc660d",
+      "name": "高士 恵人",
+      "gender": "men",
+      "aliases": [
+        "高士 恵人"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-456af9f5b9effd",
+      "name": "高宮 エヴァン",
+      "gender": "men",
+      "aliases": [
+        "高宮 エヴァン"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-bb255ad1ef4d73",
+      "name": "高崎 裕麻",
+      "gender": "men",
+      "aliases": [
+        "高崎 裕麻",
+        "髙崎 裕麻"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-aae242c346d332",
+      "name": "高橋 大地",
+      "gender": "men",
+      "aliases": [
+        "高橋 大地",
+        "髙橋 大地"
+      ],
+      "roman": "Daichi Takahashi",
+      "profileUrl": "https://www.jbv.jp/players/man/takahashi-d.html"
+    },
+    {
+      "id": "p-07757767a97420",
+      "name": "高野 愛菜",
+      "gender": "women",
+      "aliases": [
+        "高野 愛菜"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-1552ee38d688ac",
+      "name": "髙橋巧",
+      "gender": "men",
+      "aliases": [
+        "髙橋巧"
+      ],
+      "roman": "Takumi Takahashi",
+      "profileUrl": "https://www.jbv.jp/players/man/takahashi.html"
+    },
+    {
+      "id": "p-0f1d7e27067be6",
+      "name": "黒川寛輝ディラン",
+      "gender": "men",
+      "aliases": [
+        "黒川寛輝ディラン"
+      ],
+      "roman": "Hiroki Dylan Kurokawa",
+      "profileUrl": "https://www.jbv.jp/players/man/kurokawa-h.html"
+    },
+    {
+      "id": "p-7ce605fcf52b8d",
+      "name": "黒川魁",
+      "gender": "men",
+      "aliases": [
+        "黒川魁",
+        "黒川 魁"
+      ],
+      "roman": "Kai Kurokawa",
+      "profileUrl": "https://www.jbv.jp/players/man/kurokawa.html"
+    }
+  ],
+  "events": [
+    {
+      "id": "e-30e644ef01a566",
+      "name": "第9・10回H・B・V・C（Hiroshima Beach Volleyball Club）CUP in ベイサイドビーチ坂",
+      "officialTitle": "第9・10回H・B・V・C（Hiroshima Beach Volleyball Club）CUP in ベイサイドビーチ坂＜9/22・9/23＞",
+      "category": "公認大会",
+      "startDate": "2026-09-22",
+      "endDate": "2026-09-23",
+      "dateLabel": "第9回：2026年9月22日(火祝) / 第10回：2026年9月23日(水祝)",
+      "venue": "広島県安芸群坂町「ベイサイドビーチ坂」",
+      "cancelled": false,
+      "sourceUrl": "https://www.jbv.jp/schedule/entry-2499.html",
+      "documents": [
+        {
+          "url": "https://www.jbv.jp/schedule/2025/9_10_HiroshimaBeachVolleyballcup_20260922_23.pdf",
+          "label": "大会概要",
+          "kind": "schedule",
+          "gender": null
+        }
+      ],
+      "entries": [],
+      "entryStatus": "unpublished",
+      "checkedAt": "2026-09-21T16:44:25+00:00"
+    },
+    {
+      "id": "e-88cb918f9f721a",
+      "name": "相馬市長杯サテライト相馬大会",
+      "officialTitle": "【BVT2】相馬市長杯サテライト相馬大会シーディング・対戦表・マッチスケシュール・連絡事項",
+      "category": "BVT2",
+      "startDate": "2026-09-26",
+      "endDate": "2026-09-27",
+      "dateLabel": "2026年9月26日(土)～27日(日)試合開始9:30",
+      "venue": "福島県相馬市・尾浜ビーチバレーボール場",
+      "cancelled": false,
+      "sourceUrl": "https://www.jbv.jp/news/entry-2493.html",
+      "documents": [
+        {
+          "url": "https://www.jbv.jp/news/2025/2026bvt2_soma_playerinfo_20260921.pdf",
+          "label": "選手への連絡事項[9/20掲載]",
+          "kind": "info",
+          "gender": null
+        },
+        {
+          "url": "https://www.jbv.jp/news/2025/BVT2_soma_muchschedule_20260920.pdf",
+          "label": "男女マッチスケシュール[9/20掲載]",
+          "kind": "schedule",
+          "gender": null
+        },
+        {
+          "url": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf",
+          "label": "男子シーディング・対戦表[9/20掲載]",
+          "kind": "seed",
+          "gender": "men",
+          "parsed": true
+        },
+        {
+          "url": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf",
+          "label": "女子シーディング・対戦表[9/20掲載]",
+          "kind": "seed",
+          "gender": "women",
+          "parsed": true
+        },
+        {
+          "url": "https://www.jbv.jp/news/2025/BVT2_soma_entrylist_men_20260911.pdf",
+          "label": "男子参加チーム[9/11掲載]",
+          "kind": "entry",
+          "gender": "men"
+        },
+        {
+          "url": "https://www.jbv.jp/news/2025/BVT2_soma_entrylist_women_20260911.pdf",
+          "label": "女子参加チーム[9/11掲載]",
+          "kind": "entry",
+          "gender": "women"
+        }
+      ],
+      "entries": [
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 1,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-bacb4c47486198",
+            "p-df48743bbeeb58"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 2,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-4becb601919188",
+            "p-b5a1767dae9173"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 3,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-0932b58def2823",
+            "p-bb255ad1ef4d73"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 4,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-e900bac72b258e",
+            "p-7b33eeb4c59158"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 5,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-c03b165b51346a",
+            "p-de825d238f0a84"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 6,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-3c0f1899831ea6",
+            "p-5bfc10c148b633"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 7,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-f14c67cc3f1f06",
+            "p-abe30bf088268c"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 8,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-aae242c346d332",
+            "p-5e6f0b334b4679"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 9,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-456af9f5b9effd",
+            "p-c3ff1ffcd612ed"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 10,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-b9c92aacfb3510",
+            "p-d751e2f59f7802"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 11,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-94664df6f011f8",
+            "p-9201eba2042d0d"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 12,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-5b3b7296c53464",
+            "p-90c520e7170021"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 13,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-39e29bb5b30187",
+            "p-7c039b7bda13a8"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 14,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-e660d211b4496a",
+            "p-80b22dcc07c24e"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 15,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-c50aa57b4324af",
+            "p-a2ae033a2c458d"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 16,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-536d8879278f47",
+            "p-6cc776b47b5e95"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 17,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-c4f072e092a2f2",
+            "p-c15fae4e6e68a2"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 18,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-54316126a8a75f",
+            "p-744fba13784877"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 19,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-89b5d37cd11b8c",
+            "p-7534d7c24cd95d"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 20,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-297b17500e7c10",
+            "p-d9ee789da27f2b"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 21,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-28b7b74a5eb99c",
+            "p-ebb98e5e06a98e"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 22,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-5aa33f86f91d65",
+            "p-267993eb67bba7"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 23,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-10902c73bf77fb",
+            "p-8ce24651c6a54c"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 24,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-0e83a86fb129d8",
+            "p-50dc877a7cec02"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "reserve",
+          "number": 25,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-820ff7f07b47df",
+            "p-e527a1b6fbbfca"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "reserve",
+          "number": 26,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-193c3e6bcc660d",
+            "p-ec090c58210ae5"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "reserve",
+          "number": 27,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-be282ee5369769",
+            "p-e70290ca03d006"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "reserve",
+          "number": 28,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "playerIds": [
+            "p-1e50fca86d32a7",
+            "p-16216d397111da"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 1,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-e2f0ff5692e9bc",
+            "p-2ad8777261c796"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 2,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-5bcfe1e82824db",
+            "p-b880af03c17a8d"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 3,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-9fe27d6b40c23e",
+            "p-63c0eb523e1429"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 4,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-0012effe0e4f80",
+            "p-24d02039890a15"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 5,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-bd3287e1362a54",
+            "p-f2fa0338d31d37"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 6,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-5a194d18749c9e",
+            "p-0e522b0dbb975e"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 7,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-fae05b76f162ee",
+            "p-058c4ec3f3802d"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 8,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-bd2ce333aca5e6",
+            "p-6b636528915ff5"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 9,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-f9c13549ef3d9a",
+            "p-e1aa5fe79cfa78"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 10,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-7133c92bb8a56b",
+            "p-426647a04c610e"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 11,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-195bc3b45e3e72",
+            "p-2be15d0607014e"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 12,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-9c40824722c700",
+            "p-915d9bd3be71d4"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 13,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-56198d51067c42",
+            "p-cbfb49e65b03e7"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 14,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-fd735e30d00fe5",
+            "p-70758c41dbd816"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 15,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-63bd5537dddddc",
+            "p-b08c41e1130378"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 16,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-1ef00814faedb6",
+            "p-d4619d6a8aaba4"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 17,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-07757767a97420",
+            "p-f3309d4a4eb5eb"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 18,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-59dc53e20f904b",
+            "p-ea4e0c0ccba243"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 19,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-ba6e259b045dc4",
+            "p-92fcf437958e50"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 20,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-27fcc16cbd21d9",
+            "p-e74385bc91847b"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 21,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-238cbfb56b8682",
+            "p-ec3d66bf61a909"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 22,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-ef8586266060ae",
+            "p-643a643a7a36bd"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 23,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-27146d1100b160",
+            "p-acc0e64aee804f"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 24,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-90c73910db8908",
+            "p-3a1909b6c0933b"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "reserve",
+          "number": 25,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-5a683b5d033eb9",
+            "p-30f54d52b7eceb"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "reserve",
+          "number": 26,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-58367f076d2631",
+            "p-e5643b6bbdc6e7"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "reserve",
+          "number": 27,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-e68522b1b2ae3d",
+            "p-39277685de5f32"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "reserve",
+          "number": 28,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-285d531c0b6a5c",
+            "p-a9d89e9a2fdf49"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "reserve",
+          "number": 29,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-d80bb44af433de",
+            "p-5b5c22b0fbab93"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "reserve",
+          "number": 30,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-08d066486c8a89",
+            "p-42ca88b3a7d1a9"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "reserve",
+          "number": 31,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-4f7f70f882c0d8",
+            "p-33be9913501c00"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "reserve",
+          "number": 32,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-4ae6df1a16048e",
+            "p-5aa84c84841109"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "reserve",
+          "number": 33,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "playerIds": [
+            "p-9aa915b22f538d",
+            "p-0ae5bd566aae50"
+          ]
+        }
+      ],
+      "entryStatus": "published",
+      "checkedAt": "2026-09-21T16:43:54+00:00"
+    },
+    {
+      "id": "e-9603da85e96465",
+      "name": "第5・6回 B-SPORT EHIMEビーチバレーボール大会2026",
+      "officialTitle": "第5・6回 B-SPORT EHIMEビーチバレーボール大会2026＜9/26・9/27＞",
+      "category": "公認大会",
+      "startDate": "2026-09-26",
+      "endDate": "2026-09-27",
+      "dateLabel": "第5回：2026年9月26日(土) / 第6回：2026年9月27日(日)",
+      "venue": "愛媛県伊予市・五色浜海浜公園",
+      "cancelled": false,
+      "sourceUrl": "https://www.jbv.jp/schedule/entry-2502.html",
+      "documents": [
+        {
+          "url": "https://www.jbv.jp/schedule/2025/5th_B-SP_20260926.pdf",
+          "label": "第5回大会概要",
+          "kind": "schedule",
+          "gender": null
+        },
+        {
+          "url": "https://www.jbv.jp/schedule/2025/6th_B-SP_20260927.pdf",
+          "label": "第6回大会概要",
+          "kind": "schedule",
+          "gender": null
+        }
+      ],
+      "entries": [],
+      "entryStatus": "unpublished",
+      "checkedAt": "2026-09-21T16:44:23+00:00"
+    },
+    {
+      "id": "e-51803488845004",
+      "name": "第5回IWASEHAMA CUP",
+      "officialTitle": "第5回IWASEHAMA CUP＜9/27＞",
+      "category": "公認大会",
+      "startDate": "2026-09-27",
+      "endDate": "2026-09-27",
+      "dateLabel": "2026年9月27日(日)",
+      "venue": "富山県富⼭市岩瀬天神町・岩瀬浜海⽔浴場内特設コート",
+      "cancelled": false,
+      "sourceUrl": "https://www.jbv.jp/schedule/entry-2489.html",
+      "documents": [
+        {
+          "url": "https://www.jbv.jp/schedule/2025/IWASEHAMACUP_20260927.pdf",
+          "label": "大会概要",
+          "kind": "schedule",
+          "gender": null
+        }
+      ],
+      "entries": [],
+      "entryStatus": "unpublished",
+      "checkedAt": "2026-09-21T16:44:30+00:00"
+    },
+    {
+      "id": "e-e309b63890b129",
+      "name": "サテライト高萩大会",
+      "officialTitle": "【BVT2】サテライト高萩大会参加チーム",
+      "category": "BVT2",
+      "startDate": "2026-10-03",
+      "endDate": "2026-10-04",
+      "dateLabel": "2026年10月3日(土)～4日(日)試合開始9:30",
+      "venue": "茨城県高萩市・高戸（前浜海岸）特設コート",
+      "cancelled": false,
+      "sourceUrl": "https://www.jbv.jp/news/entry-2494.html",
+      "documents": [
+        {
+          "url": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf",
+          "label": "男子参加チーム[9/21掲載]",
+          "kind": "entry",
+          "gender": "men",
+          "parsed": true
+        },
+        {
+          "url": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf",
+          "label": "女子参加チーム[9/21掲載]",
+          "kind": "entry",
+          "gender": "women",
+          "parsed": true
+        }
+      ],
+      "entries": [
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 1,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-4becb601919188",
+            "p-80b22dcc07c24e"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 2,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-bb255ad1ef4d73",
+            "p-bacb4c47486198"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 3,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-e900bac72b258e",
+            "p-90c520e7170021"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 4,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-7ce605fcf52b8d",
+            "p-5bfc10c148b633"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 5,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-0932b58def2823",
+            "p-456af9f5b9effd"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 6,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-c3ff1ffcd612ed",
+            "p-83717440788185"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 7,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-3c0f1899831ea6",
+            "p-267993eb67bba7"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 8,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-aae242c346d332",
+            "p-5e6f0b334b4679"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 9,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-de825d238f0a84",
+            "p-8ce24651c6a54c"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 10,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-b9c92aacfb3510",
+            "p-d751e2f59f7802"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 11,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-94664df6f011f8",
+            "p-9201eba2042d0d"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 12,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-39e29bb5b30187",
+            "p-7c039b7bda13a8"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 13,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-c482f56f258175",
+            "p-bdab3e1443988a"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 14,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-c50aa57b4324af",
+            "p-a2ae033a2c458d"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 15,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-c03b165b51346a",
+            "p-f8ec9f01f73a50"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 16,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-536d8879278f47",
+            "p-6cc776b47b5e95"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 17,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-5b3b7296c53464",
+            "p-5aa33f86f91d65"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 18,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-c4f072e092a2f2",
+            "p-c15fae4e6e68a2"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 19,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-e527a1b6fbbfca",
+            "p-d97b7ff6733d31"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 20,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-df285780bb6402",
+            "p-e660d211b4496a"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 21,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-f9df949f999cf1",
+            "p-4c177784a4432b"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 22,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-89b5d37cd11b8c",
+            "p-7534d7c24cd95d"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 23,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-b0ec356fd21201",
+            "p-9c5a1283daa8e0"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 24,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-297b17500e7c10",
+            "p-d9ee789da27f2b"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "reserve",
+          "number": 25,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-0e83a86fb129d8",
+            "p-b8edb88a18e274"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "reserve",
+          "number": 26,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-28b7b74a5eb99c",
+            "p-ebb98e5e06a98e"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "reserve",
+          "number": 27,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-193c3e6bcc660d",
+            "p-ec090c58210ae5"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "reserve",
+          "number": 28,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-1e50fca86d32a7",
+            "p-16216d397111da"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "reserve",
+          "number": 29,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "playerIds": [
+            "p-be282ee5369769",
+            "p-e70290ca03d006"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 1,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-9fe27d6b40c23e",
+            "p-63c0eb523e1429"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 2,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-f05a40f62f1f8a",
+            "p-f2fa0338d31d37"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 3,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-b880af03c17a8d",
+            "p-e74385bc91847b"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 4,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-0012effe0e4f80",
+            "p-7133c92bb8a56b"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 5,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-bd2ce333aca5e6",
+            "p-6b636528915ff5"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 6,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-fae05b76f162ee",
+            "p-058c4ec3f3802d"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 7,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-5a194d18749c9e",
+            "p-0e522b0dbb975e"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 8,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-24d02039890a15",
+            "p-915d9bd3be71d4"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 9,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-f9c13549ef3d9a",
+            "p-426647a04c610e"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 10,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-89fb663c39dd55",
+            "p-f54e398fdef88c"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 11,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-195bc3b45e3e72",
+            "p-2be15d0607014e"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 12,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-fd735e30d00fe5",
+            "p-70758c41dbd816"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 13,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-ba6e259b045dc4",
+            "p-bd3287e1362a54"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 14,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-d80bb44af433de",
+            "p-e1aa5fe79cfa78"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 15,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-1ef00814faedb6",
+            "p-d4619d6a8aaba4"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 16,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-e7d443af2e0fb1",
+            "p-976ed7cc7e5365"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 17,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-56198d51067c42",
+            "p-5bcfe1e82824db"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 18,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-ad8b7f4e835959",
+            "p-92fcf437958e50"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 19,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-acc0e64aee804f",
+            "p-63bd5537dddddc"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 20,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-ff8635c304e6d1",
+            "p-58367f076d2631"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 21,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-238cbfb56b8682",
+            "p-ec3d66bf61a909"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 22,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-87a1970d90fd02",
+            "p-4fdd823d2d66f2"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 23,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-3a1909b6c0933b",
+            "p-86214dcb5e9107"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 24,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-27146d1100b160",
+            "p-9c40824722c700"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "reserve",
+          "number": 25,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-f3309d4a4eb5eb",
+            "p-e5643b6bbdc6e7"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "reserve",
+          "number": 26,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-5a683b5d033eb9",
+            "p-30f54d52b7eceb"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "reserve",
+          "number": 27,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-90c73910db8908",
+            "p-572a620cb0139b"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "reserve",
+          "number": 28,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-8eca3e9f7ac86f",
+            "p-aadd725216de9b"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "reserve",
+          "number": 29,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=2",
+          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "playerIds": [
+            "p-4f7f70f882c0d8",
+            "p-33be9913501c00"
+          ]
+        }
+      ],
+      "entryStatus": "published",
+      "checkedAt": "2026-09-21T16:43:50+00:00"
+    },
+    {
+      "id": "e-f0a9aa585c411e",
+      "name": "第48回LooseCupオープン",
+      "officialTitle": "第48回LooseCupオープン＜10/3＞",
+      "category": "公認大会",
+      "startDate": "2026-10-03",
+      "endDate": "2026-10-03",
+      "dateLabel": "2026年10月3日(土)",
+      "venue": "滋賀県野洲市・ビワコマイアミランド内特設コート",
+      "cancelled": false,
+      "sourceUrl": "https://www.jbv.jp/schedule/entry-2500.html",
+      "documents": [
+        {
+          "url": "https://www.jbv.jp/schedule/2025/48thLooseCup_20260802.pdf",
+          "label": "大会概要",
+          "kind": "schedule",
+          "gender": null
+        }
+      ],
+      "entries": [],
+      "entryStatus": "unpublished",
+      "checkedAt": "2026-09-21T16:44:24+00:00"
+    },
+    {
+      "id": "e-78fe0e5d21158e",
+      "name": "2026年度YBVF series5 フジキハウス VELUNAカップ公認ビーチバレーボール大会",
+      "officialTitle": "2026年度YBVF series5 フジキハウス VELUNAカップ公認ビーチバレーボール大会＜10/4＞",
+      "category": "公認大会",
+      "startDate": "2026-10-04",
+      "endDate": "2026-10-04",
+      "dateLabel": "2026年10月4日(日)",
+      "venue": "横浜海の公園常設ビーチバレーコート",
+      "cancelled": false,
+      "sourceUrl": "https://www.jbv.jp/schedule/entry-2505.html",
+      "documents": [
+        {
+          "url": "https://www.jbv.jp/schedule/2025/2026ybvf_series5open_20261004.pdf",
+          "label": "大会概要",
+          "kind": "schedule",
+          "gender": null
+        }
+      ],
+      "entries": [],
+      "entryStatus": "unpublished",
+      "checkedAt": "2026-09-21T16:44:22+00:00"
+    },
+    {
+      "id": "e-fc27375016a447",
+      "name": "サテライト岐阜大会",
+      "officialTitle": "【BVT2】サテライト岐阜大会エントリー終了",
+      "category": "BVT2",
+      "startDate": "2026-10-10",
+      "endDate": "2026-10-11",
+      "dateLabel": "2026年10月10日(土)～11日(日)試合開始9:30",
+      "venue": "岐阜県海津市・長良川サービスセンターサンドコート",
+      "cancelled": false,
+      "sourceUrl": "https://www.jbv.jp/news/entry-2495.html",
+      "documents": [],
+      "entries": [],
+      "entryStatus": "unpublished",
+      "checkedAt": "2026-09-21T16:44:00+00:00"
+    },
+    {
+      "id": "e-53c5283be4ca9d",
+      "name": "川崎市長杯 JVA第18回ビーチバレーボール大会",
+      "officialTitle": "【JBVs】川崎市長杯 JVA第18回ビーチバレーボール大会エントリー終了",
+      "category": "JBVs",
+      "startDate": "2026-10-10",
+      "endDate": "2026-10-11",
+      "dateLabel": "2026年10月10日(土)～11日(日)",
+      "venue": "神奈川県川崎市・川崎マリエンビーチバレーコート",
+      "cancelled": false,
+      "sourceUrl": "https://www.jbv.jp/news/entry-2496.html",
+      "documents": [
+        {
+          "url": "https://www.jbv.jp/news/2025/kawasakicup_VenueLayout.pdf",
+          "label": "会場案内図はコチラ",
+          "kind": "info",
+          "gender": null
+        }
+      ],
+      "entries": [],
+      "entryStatus": "unpublished",
+      "checkedAt": "2026-09-21T16:43:59+00:00"
+    },
+    {
+      "id": "e-5fda22427c09b3",
+      "name": "第10回 PVB JAPAN CUP ビーチバレーボール大会 in ももち浜",
+      "officialTitle": "第10回 PVB JAPAN CUP ビーチバレーボール大会 in ももち浜＜10/10＞",
+      "category": "公認大会",
+      "startDate": "2026-10-10",
+      "endDate": "2026-10-10",
+      "dateLabel": "2026年10月10日(土)",
+      "venue": "福岡県福岡市・シーサイドももち海浜公園",
+      "cancelled": false,
+      "sourceUrl": "https://www.jbv.jp/schedule/entry-2504.html",
+      "documents": [
+        {
+          "url": "https://www.jbv.jp/schedule/2025/10th_PVBJAPANCUP_20261010.pdf",
+          "label": "大会概要",
+          "kind": "schedule",
+          "gender": null
+        }
+      ],
+      "entries": [],
+      "entryStatus": "unpublished",
+      "checkedAt": "2026-09-21T16:44:21+00:00"
+    },
+    {
+      "id": "e-9340b3fb62036c",
+      "name": "第1回しらこばとPROTOSTARS CUP",
+      "officialTitle": "第1回しらこばとPROTOSTARS CUP＜10/10＞",
+      "category": "公認大会",
+      "startDate": "2026-10-10",
+      "endDate": "2026-10-10",
+      "dateLabel": "2026年10月10日(土)",
+      "venue": "埼玉県越谷市・しらこばと水上公園ホワイトビーチ",
+      "cancelled": false,
+      "sourceUrl": "https://www.jbv.jp/schedule/entry-2508.html",
+      "documents": [
+        {
+          "url": "https://www.jbv.jp/schedule/2025/1st_shirakobato_PROTOSTARSCUP_20261010.pdf",
+          "label": "大会概要",
+          "kind": "schedule",
+          "gender": null
+        },
+        {
+          "url": "https://www.jbv.jp/schedule/2025/1st_shirakobato_PROTOSTARSCUP_info.pdf",
+          "label": "事務連絡・会場案内",
+          "kind": "schedule",
+          "gender": null
+        }
+      ],
+      "entries": [],
+      "entryStatus": "unpublished",
+      "checkedAt": "2026-09-21T16:44:18+00:00"
+    },
+    {
+      "id": "e-e6a9ae6c66475f",
+      "name": "U20北信越・小浜大会",
+      "officialTitle": "【BVT3】U20北信越・小浜大会エントリー受付中",
+      "category": "BVT3",
+      "startDate": "2026-10-11",
+      "endDate": "2026-10-12",
+      "dateLabel": "2大会開催（1日のみの参加可） / 【1日目】2026年10月11日(日) / 【2日目】2026年10月12日(月・祝)",
+      "venue": "若狭鯉川シーサイドパーク（福井県小浜市鯉川29-3）",
+      "cancelled": false,
+      "sourceUrl": "https://www.jbv.jp/news/entry-2506.html",
+      "documents": [],
+      "entries": [],
+      "entryStatus": "unpublished",
+      "checkedAt": "2026-09-21T16:43:58+00:00"
+    },
+    {
+      "id": "e-3ad9cf2751e5b6",
+      "name": "第3・4回 SGBV公認大会",
+      "officialTitle": "第3・4回 SGBV公認大会＜10/11・10/12＞",
+      "category": "公認大会",
+      "startDate": "2026-10-11",
+      "endDate": "2026-10-12",
+      "dateLabel": "第3回・2026年10月11日(日) / 第4回・2026年10月12日(月祝)",
+      "venue": "佐賀県唐津市東城内・西の浜",
+      "cancelled": false,
+      "sourceUrl": "https://www.jbv.jp/schedule/entry-2503.html",
+      "documents": [
+        {
+          "url": "https://www.jbv.jp/schedule/2025/3rd_4th_SGBVopen_2026101112.pdf",
+          "label": "大会概要",
+          "kind": "schedule",
+          "gender": null
+        }
+      ],
+      "entries": [],
+      "entryStatus": "unpublished",
+      "checkedAt": "2026-09-21T16:44:19+00:00"
+    },
+    {
+      "id": "e-e07dafb0666493",
+      "name": "関東ブロック U20",
+      "officialTitle": "関東ブロック U20",
+      "category": "BVT3",
+      "startDate": "2026-10-11",
+      "endDate": "2026-10-11",
+      "dateLabel": "10/11(日) ※中止[7/28更新]",
+      "venue": "埼玉県越谷市・しらこばと水上公園",
+      "cancelled": true,
+      "sourceUrl": "https://www.jbv.jp/convention/index.html",
+      "documents": [],
+      "entries": [],
+      "entryStatus": "unpublished",
+      "checkedAt": "2026-09-21T16:43:47+00:00"
+    },
+    {
+      "id": "e-1f9eaaaeaee1c1",
+      "name": "東海ブロック U20",
+      "officialTitle": "東海ブロック U20",
+      "category": "BVT3",
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-18",
+      "dateLabel": "10/17(土)・10/18(日)",
+      "venue": "愛知県知多市・新舞子ブルーサンビーチ",
+      "cancelled": false,
+      "sourceUrl": "https://www.jbv.jp/convention/index.html",
+      "documents": [],
+      "entries": [],
+      "entryStatus": "unpublished",
+      "checkedAt": "2026-09-21T16:43:47+00:00"
+    },
+    {
+      "id": "e-ff3211f8d3051c",
+      "name": "BEACHVOLLEY ALL KOBE OPEN チャレンジャー大会",
+      "officialTitle": "BEACHVOLLEY ALL KOBE OPEN チャレンジャー大会＜10/31・11/1＞",
+      "category": "公認大会",
+      "startDate": "2026-10-31",
+      "endDate": "2026-11-01",
+      "dateLabel": "第1回・2026年10月31日(土) / 第2回・2026年11月1日(日)",
+      "venue": "兵庫県神戸市・須磨海岸特設ビーチバレーコート",
+      "cancelled": false,
+      "sourceUrl": "https://www.jbv.jp/schedule/entry-2509.html",
+      "documents": [
+        {
+          "url": "https://www.jbv.jp/schedule/2025/BEACHVOLLEYALLKOBE_OPEN_20261031_1101_2.pdf",
+          "label": "大会概要",
+          "kind": "schedule",
+          "gender": null
+        }
+      ],
+      "entries": [],
+      "entryStatus": "unpublished",
+      "checkedAt": "2026-09-21T16:44:17+00:00"
+    },
+    {
+      "id": "e-e5f84b7cb54c3d",
+      "name": "川崎大会第5戦",
+      "officialTitle": "川崎大会第5戦",
+      "category": "JBVc",
+      "startDate": "2026-11-01",
+      "endDate": "2026-11-01",
+      "dateLabel": "11/1(日)予定",
+      "venue": "神奈川県川崎市・川崎マリエン",
+      "cancelled": false,
+      "sourceUrl": "https://www.jbv.jp/convention/index.html",
+      "documents": [],
+      "entries": [],
+      "entryStatus": "unpublished",
+      "checkedAt": "2026-09-21T16:43:47+00:00"
+    },
+    {
+      "id": "e-333f422c85b282",
+      "name": "チャンピオンシップ川崎大会 U20",
+      "officialTitle": "チャンピオンシップ川崎大会 U20",
+      "category": "BVT3",
+      "startDate": "2026-11-21",
+      "endDate": "2026-11-22",
+      "dateLabel": "11/21(土)・11/22(日)",
+      "venue": "神奈川県川崎市・川崎マリエン",
+      "cancelled": false,
+      "sourceUrl": "https://www.jbv.jp/convention/index.html",
+      "documents": [],
+      "entries": [],
+      "entryStatus": "unpublished",
+      "checkedAt": "2026-09-21T16:43:47+00:00"
+    },
+    {
+      "id": "e-c985a8ceac82e2",
+      "name": "第7回ジャパンマスターズ・ヴィンテージビーチバレーボール大会",
+      "officialTitle": "第7回ジャパンマスターズ・ヴィンテージビーチバレーボール大会",
+      "category": "JBVs",
+      "startDate": "2026-11-28",
+      "endDate": "2026-11-29",
+      "dateLabel": "11/28(土)・11/29(日)",
+      "venue": "神奈川県平塚市・ひらつかビーチパーク",
+      "cancelled": false,
+      "sourceUrl": "https://www.jbv.jp/convention/index.html",
+      "documents": [],
+      "entries": [],
+      "entryStatus": "unpublished",
+      "checkedAt": "2026-09-21T16:43:47+00:00"
+    },
+    {
+      "id": "e-9d8b57a38810b6",
+      "name": "川崎大会第6戦",
+      "officialTitle": "川崎大会第6戦",
+      "category": "JBVc",
+      "startDate": "2026-12-26",
+      "endDate": "2026-12-26",
+      "dateLabel": "12/26(土) ※12/7(月)受付開始",
+      "venue": "神奈川県川崎市・川崎マリエン",
+      "cancelled": false,
+      "sourceUrl": "https://www.jbv.jp/convention/index.html",
+      "documents": [],
+      "entries": [],
+      "entryStatus": "unpublished",
+      "checkedAt": "2026-09-21T16:43:47+00:00"
+    }
+  ],
+  "issues": []
+}
