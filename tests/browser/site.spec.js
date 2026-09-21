@@ -17,7 +17,17 @@ test("選手検索 → 予定 → 大会 → 選手の往復", async ({ page }) 
   await expect(page.locator(".player-row")).toHaveCount(1);
   await page.locator(".player-link").click();
   await expect(page.locator("h1")).toContainText("関");
-  await expect(page.locator(".appearance")).toHaveCount(2);
+  await expect(
+    page.locator(".appearance").filter({ hasText: "開催予定" }),
+  ).toHaveCount(2);
+  await expect(page.locator(".past-results .appearance")).toHaveCount(5);
+  const hiratsuka = page
+    .locator(".past-results .appearance")
+    .filter({ hasText: "平塚" });
+  await expect(hiratsuka.locator(".badge.result")).toHaveText("9位");
+  await expect(
+    hiratsuka.getByRole("link", { name: "公式の結果 PDF" }),
+  ).toHaveAttribute("href", /#page=5$/);
   await page
     .getByRole("link", { name: "相馬市長杯サテライト相馬大会", exact: true })
     .click();
@@ -65,7 +75,12 @@ test("通信失敗の回復案内", async ({ page }) => {
 });
 
 test("アクセシビリティの重大な違反がない", async ({ page }) => {
-  for (const hash of ["players", "events", "about"]) {
+  for (const hash of [
+    "players",
+    "events",
+    "about",
+    "player/p-bd2ce333aca5e6",
+  ]) {
     await page.goto("/#" + hash);
     await expect(page.locator("h1")).toBeVisible();
     const results = await new AxeBuilder({ page })
@@ -78,7 +93,12 @@ test("アクセシビリティの重大な違反がない", async ({ page }) => 
 for (const width of [320, 375, 414, 768, 1440])
   test(`幅${width}pxで横にはみ出さない`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 });
-    for (const hash of ["players", "events", "about"]) {
+    for (const hash of [
+      "players",
+      "events",
+      "about",
+      "player/p-bd2ce333aca5e6",
+    ]) {
       await page.goto("/#" + hash);
       await expect(page.locator("h1")).toBeVisible();
       expect(
@@ -88,3 +108,18 @@ for (const width of [320, 375, 414, 768, 1440])
       ).toBe(true);
     }
   });
+
+test("過去大会は期間で絞り込めて結果とペアを辿れる", async ({ page }) => {
+  await page.goto("/#events");
+  await page.getByLabel("表示期間").selectOption("past");
+  await expect(page.locator(".event-row")).toHaveCount(6);
+  await page.getByLabel("大会名・会場").fill("立川");
+  await page.locator(".event-row").click();
+  await expect(
+    page.getByRole("heading", { name: "大会結果・ペア" }),
+  ).toBeVisible();
+  await expect(
+    page.getByText("男子の最終順位表は確認できていません。", { exact: false }),
+  ).toBeVisible();
+  await expect(page.locator(".team .badge.result").first()).toHaveText("1位");
+});

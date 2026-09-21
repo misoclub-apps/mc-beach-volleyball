@@ -40,5 +40,66 @@
       "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/alanya-2/",
       "url": "https://www.jva.or.jp/beach_international/2026/bpt2026/alanya-2/"
     }
-  ]
+  ],
+  "history": {
+    "indexUrl": "https://www.jva.or.jp/beach_domestic/2026/",
+    "events": [
+      {
+        "url": "https://www.jva.or.jp/beach_domestic/2026/japan-beach-volleyball-tour-bvt1/nagoya/",
+        "genders": [
+          "men",
+          "women"
+        ],
+        "coverage": "男女の公式最終順位表に掲載されたペアを収録。"
+      },
+      {
+        "url": "https://www.jva.or.jp/beach_domestic/2026/japan-beach-volleyball-tour-bvt1/osaka/",
+        "genders": [
+          "men",
+          "women"
+        ],
+        "coverage": "男女の公式最終順位表に掲載されたペアを収録。",
+        "corrections": {
+          "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf": {
+            "6:伊藤 桜": {
+              "expected": "",
+              "label": "3位",
+              "reason": "6ページの結合された3位セルをPDF画像で確認。抽出時だけ空欄になる。"
+            }
+          }
+        }
+      },
+      {
+        "url": "https://www.jva.or.jp/beach_domestic/2026/japan-beach-volleyball-tour-bvt1/miyakonojo/",
+        "genders": [
+          "men",
+          "women"
+        ],
+        "coverage": "男女の公式最終順位表に掲載されたペアを収録。"
+      },
+      {
+        "url": "https://www.jva.or.jp/beach_domestic/2026/japan-beach-volleyball-tour-bvt1/tachikawatachihi/",
+        "genders": [
+          "women"
+        ],
+        "coverage": "女子の公式最終順位を収録。男子の最終順位表は確認できていません。"
+      },
+      {
+        "url": "https://www.jva.or.jp/beach_domestic/2026/japan-beach-volleyball-tour-bvt1/yokohama/",
+        "genders": [
+          "men",
+          "women"
+        ],
+        "coverage": "男女の公式最終順位表に掲載されたペアを収録。"
+      },
+      {
+        "url": "https://www.jva.or.jp/beach_domestic/2026/japan-beach-volleyball-tour-bvt1/hiratsuka/",
+        "genders": [
+          "men",
+          "women"
+        ],
+        "coverage": "男女の公式最終順位表に掲載されたペアを収録。"
+      }
+    ]
+  }
 }

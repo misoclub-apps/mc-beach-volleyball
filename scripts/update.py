@@ -15,6 +15,7 @@ from urllib.robotparser import RobotFileParser
 
 import requests
 
+from scripts.history import collect_history
 from scripts.parsers import normalize, parse_article, parse_profiles, parse_roster, parse_calendar, parse_jva_calendar, parse_jva_teams, safe_url, soup_body, stable_id
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -173,8 +174,10 @@ def validate(dataset):
                 if pid not in players or pid in members:
                     raise ValueError(f'名簿の重複または不明な選手: {e["id"]} / {pid}')
                 members.add(pid)
-            if entry['status'] not in ('entered', 'reserve', 'withdrawn'):
+            if entry['status'] not in ('entered', 'reserve', 'withdrawn', 'completed'):
                 raise ValueError('不明な参加状態')
+            if entry['status'] == 'completed' and (not isinstance(entry.get('rank'), int) or entry['rank'] < 1 or not entry.get('resultLabel')):
+                raise ValueError('最終順位が不正です')
             if not entry.get('sourceUrl'):
                 raise ValueError('出典のない参加情報')
 
@@ -289,10 +292,15 @@ def run(args):
             event['documents'].append({'url': source['url'], 'label': '日本の出場メンバー（JVA）', 'kind': 'entry', 'gender': None})
         except Exception as error:
             issues.append({'url': source['url'], 'kind': 'external', 'message': str(error)})
+    history, history_pdfs = collect_history(fetcher, config, as_of)
+    events.extend(history)
+    pdf_count += history_pdfs
+    if pdf_count > config['maxPdfs']:
+        raise ValueError('結果PDFを含む取得上限超過')
     players = compile_players(events, profiles, overrides.get('aliases', {}))
     dataset = {'schemaVersion': 1, 'generatedAt': now(), 'checkedAt': max(r['checkedAt'] for r in fetcher.records.values()), 'asOf': as_of, 'year': config['year'],
                'coverage': {'source': 'JBV・JVA・各大会主催者',
-                            'description': 'JBVの年間予定・ニュース・公認大会とJVA国際大会予定から、取得時点で開催前または開催中の大会を収録。主催者サイトも確認し、大会別に公開された参加名簿を選手に紐付けています。未発表の出場予定は含みません。',
+                            'description': 'JBVの年間予定・ニュース・公認大会とJVA国際大会予定から、取得時点で開催前または開催中の大会を収録。主催者サイトも確認し、大会別に公開された参加名簿を選手に紐付けています。未発表の出場予定は含みません。過去の結果は2026年BVT1の6大会を対象に、公式最終順位表から収録（立川立飛は女子のみ）。全大会・全試合を網羅するものではありません。',
                             'domains': sorted({urlparse(u).hostname for u in fetcher.records}),
                             'reviewedSources': [{'url': r['url'], 'title': r['title'], 'checkedAt': r['checkedAt']} for r in external_review],
                             'pagesDiscovered': len(candidates), 'pagesChecked': min(len(candidates), limit),

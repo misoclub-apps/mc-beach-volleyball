@@ -77,11 +77,18 @@ test("外部ソースにHTMLやjavascript URLがあっても実行しない", ()
     "&lt;img onerror=&quot;x&quot;&gt;",
   );
 });
-test("出典・選手参照・日程が整合し、終了済み大会が含まれない", () => {
+test("出典・選手参照・日程・過去の最終順位が整合する", () => {
   const ids = new Set(data.players.map((p) => p.id));
   for (const e of data.events) {
     assert.ok(e.startDate && e.endDate >= e.startDate);
-    assert.ok(e.endDate >= data.asOf);
+    if (e.endDate < data.asOf) {
+      assert.ok(
+        e.entries.every(
+          (entry) =>
+            entry.status === "completed" && entry.rank > 0 && entry.resultLabel,
+        ),
+      );
+    }
     assert.match(e.sourceUrl, /^https:\/\//);
     const seen = new Set();
     for (const entry of e.entries) {

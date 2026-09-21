@@ -40,8 +40,8 @@ const range = (event) =>
     ? date(event.startDate) +
       (event.endDate !== event.startDate ? ` — ${date(event.endDate)}` : "")
     : "日程確認中";
-const badge = (entry) =>
-  `<span class="badge ${entry.status === "entered" ? "" : "sand"}">${h({ entered: "出場予定", reserve: "補欠", withdrawn: "欠場" }[entry.status] || "確認中")}</span>`;
+const badge = (entry, event) =>
+  `<span class="badge ${entry.status === "completed" ? "result" : entry.status === "entered" ? "" : "sand"}">${h(entry.status === "completed" ? entry.resultLabel : { entered: event && !isUpcoming(event) ? "名簿掲載" : "出場予定", reserve: "補欠", withdrawn: "欠場" }[entry.status] || "確認中")}</span>`;
 const favorite = (p) =>
   `<button class="favorite ${saved.includes(p.id) ? "is-saved" : ""}" data-save="${p.id}" aria-pressed="${saved.includes(p.id)}" aria-label="${h(p.name)}をお気に入り${saved.includes(p.id) ? "から削除" : "に追加"}">${saved.includes(p.id) ? "★" : "☆"}</button>`;
 const empty = (
@@ -132,7 +132,7 @@ function appearanceCard({ event, entry }, playerId) {
   const partner = data.players.find(
     (p) => p.id === entry.playerIds.find((id) => id !== playerId),
   );
-  return `<article class="appearance"><div class="date-block"><span>${event.startDate?.slice(0, 4) || "日程"}</span><strong>${range(event)}</strong><span>${event.cancelled ? "開催中止" : isUpcoming(event) ? "開催予定" : "終了"}</span></div><div class="appearance-body"><div class="badge-line"><span class="small-label">${h(event.category)}</span>${badge(entry)}</div><h3><a href="#event/${event.id}">${h(event.name)}</a></h3><p>${h(event.venue || "会場は公式情報をご確認ください")}</p><p class="partner">ペア <a href="#player/${partner.id}">${h(partner.name)} ↗</a></p><div class="source-links">${external(event.sourceUrl, "公式の大会情報")}${external(entry.sourceUrl, /\.pdf(?:#|\?|$)/i.test(entry.sourceUrl) ? "掲載名簿 PDF" : "公式の出場メンバー")}</div></div></article>`;
+  return `<article class="appearance"><div class="date-block"><span>${event.startDate?.slice(0, 4) || "日程"}</span><strong>${range(event)}</strong><span>${event.cancelled ? "開催中止" : isUpcoming(event) ? "開催予定" : "終了"}</span></div><div class="appearance-body"><div class="badge-line"><span class="small-label">${h(event.category)}</span>${badge(entry, event)}</div><h3><a href="#event/${event.id}">${h(event.name)}</a></h3><p>${h(event.venue || "会場は公式情報をご確認ください")}</p><p class="partner">ペア <a href="#player/${partner.id}">${h(partner.name)} ↗</a></p><div class="source-links">${external(event.sourceUrl, "公式の大会情報")}${external(entry.sourceUrl, entry.status === "completed" ? "公式の結果 PDF" : /\.pdf(?:#|\?|$)/i.test(entry.sourceUrl) ? "掲載名簿 PDF" : "公式の出場メンバー")}</div></div></article>`;
 }
 
 function playerPage(id) {
@@ -140,9 +140,14 @@ function playerPage(id) {
   if (!p) return notFound();
   const all = appearances(data, id);
   const plans = all.filter((a) => isUpcoming(a.event));
-  const ended = all.filter((a) => !isUpcoming(a.event));
-  document.title = `${p.name}の出場予定 | BEACH NOTE`;
-  main.innerHTML = `<a class="back-link" href="#players">← 選手一覧へ</a><section class="profile-heading"><div><p class="eyebrow">${genderName(p.gender)} / PLAYER NOTE</p><h1>${h(p.name)}</h1><p class="roman">${h(p.roman)}</p></div><div class="profile-actions">${favorite(p)}${p.profileUrl ? external(p.profileUrl, "公式プロフィール") : ""}</div></section><div class="profile-layout"><section><div class="section-heading"><h2>これからの出場予定</h2><span>${plans.length} 大会</span></div>${plans.length ? plans.map((a) => appearanceCard(a, id)).join("") : empty("公開された出場予定はありません", '<p>名簿公開前の大会や未収録の大会に出場する場合もあります。</p><a class="button" href="#events">大会カレンダーへ</a>')}${ended.length ? `<details class="past"><summary>取得済みの終了・中止大会（${ended.length}件）</summary>${ended.map((a) => appearanceCard(a, id)).join("")}</details>` : ""}</section><aside class="note-panel"><p class="eyebrow">ABOUT THIS NOTE</p><h2>公式発表を、<br>そのまま手がかりに。</h2><p>掲載名簿に名前のある大会をまとめています。出場変更や当日の予定は公式情報でご確認ください。</p><p>補欠は「出場予定」と分けて表示しています。</p><p class="small-label">最終取得<br>${stamp(data.checkedAt || data.generatedAt)}</p></aside></div>`;
+  const results = all
+    .filter((a) => a.entry.status === "completed")
+    .sort((a, b) => b.event.endDate.localeCompare(a.event.endDate));
+  const ended = all.filter(
+    (a) => !isUpcoming(a.event) && a.entry.status !== "completed",
+  );
+  document.title = `${p.name}の出場予定・大会結果 | BEACH NOTE`;
+  main.innerHTML = `<a class="back-link" href="#players">← 選手一覧へ</a><section class="profile-heading"><div><p class="eyebrow">${genderName(p.gender)} / PLAYER NOTE</p><h1>${h(p.name)}</h1><p class="roman">${h(p.roman)}</p></div><div class="profile-actions">${favorite(p)}${p.profileUrl ? external(p.profileUrl, "公式プロフィール") : ""}</div></section><div class="profile-layout"><section><div class="section-heading"><h2>これからの出場予定</h2><span>${plans.length} 大会</span></div>${plans.length ? plans.map((a) => appearanceCard(a, id)).join("") : empty("公開された出場予定はありません", '<p>名簿公開前の大会や未収録の大会に出場する場合もあります。</p><a class="button" href="#events">大会カレンダーへ</a>')}<section class="past-results" aria-labelledby="past-results-heading"><div class="section-heading"><h2 id="past-results-heading">過去の大会結果</h2><span>${results.length} 大会</span></div><p class="history-note">2026年BVT1の6大会を収録（立川立飛は女子のみ）。公式の最終順位と当時のペアを掲載しています。記録がない大会も、欠場を意味するものではありません。</p>${results.length ? results.map((a) => appearanceCard(a, id)).join("") : empty("収録済みの結果はありません", "<p>今後、確認できた公式結果を追加していきます。</p>")}</section>${ended.length ? `<details class="past"><summary>取得済みの終了・中止大会（${ended.length}件）</summary>${ended.map((a) => appearanceCard(a, id)).join("")}</details>` : ""}</section><aside class="note-panel"><p class="eyebrow">ABOUT THIS NOTE</p><h2>公式発表を、<br>そのまま手がかりに。</h2><p>掲載名簿に名前のある大会をまとめています。出場変更や当日の予定は公式情報でご確認ください。</p><p>補欠は「出場予定」と分けて表示しています。</p><p class="small-label">最終取得<br>${stamp(data.checkedAt || data.generatedAt)}</p></aside></div>`;
 }
 
 function eventsPage() {
@@ -156,7 +161,7 @@ function eventsPage() {
     )
     .join(
       "",
-    )}</select></label><label>表示期間<select id="event-period"><option value="upcoming" ${eventFilters.period === "upcoming" ? "selected" : ""}>これからの大会</option><option value="all" ${eventFilters.period === "all" ? "selected" : ""}>取得済みのすべて</option></select></label></div><div id="events-list"></div>`;
+    )}</select></label><label>表示期間<select id="event-period"><option value="upcoming" ${eventFilters.period === "upcoming" ? "selected" : ""}>これからの大会</option><option value="past" ${eventFilters.period === "past" ? "selected" : ""}>終了した大会</option><option value="all" ${eventFilters.period === "all" ? "selected" : ""}>取得済みのすべて</option></select></label></div><div id="events-list"></div>`;
   for (const [id, field] of [
     ["event-search", "query"],
     ["event-category", "category"],
@@ -200,14 +205,14 @@ function eventPage(id) {
     e.entryStatus === "review"
       ? "参加名簿の一部は確認中です。掲載のない選手については公式資料をご覧ください。"
       : "取得時点で出場選手の発表を確認できていません。公式ページで最新情報をご確認ください。";
-  main.innerHTML = `<a class="back-link" href="#events">← 大会カレンダーへ</a><section class="event-heading"><p class="eyebrow">${h(e.category)} / TOURNAMENT NOTE</p><h1>${h(e.name)}</h1><div class="event-meta"><strong>${range(e)}</strong><p>${h(e.venue)}</p>${e.cancelled ? '<span class="badge sand">開催中止</span>' : ""}</div>${external(e.sourceUrl, "公式の大会情報を見る", "button primary")}</section><div class="profile-layout"><section><div class="section-heading"><h2>出場選手・ペア</h2><span>${e.entries.length} ペア</span></div>${e.entryStatus === "review" || !e.entries.length ? `<p class="notice">${status}</p>` : ""}${[
+  main.innerHTML = `<a class="back-link" href="#events">← 大会カレンダーへ</a><section class="event-heading"><p class="eyebrow">${h(e.category)} / TOURNAMENT NOTE</p><h1>${h(e.name)}</h1><div class="event-meta"><strong>${range(e)}</strong><p>${h(e.venue)}</p>${e.cancelled ? '<span class="badge sand">開催中止</span>' : ""}</div>${external(e.sourceUrl, "公式の大会情報を見る", "button primary")}</section><div class="profile-layout"><section><div class="section-heading"><h2>${e.entries.some((entry) => entry.status === "completed") ? "大会結果・ペア" : "出場選手・ペア"}</h2><span>${e.entries.length} ペア</span></div>${e.resultCoverage ? `<p class="notice">${h(e.resultCoverage)}</p>` : ""}${e.entryStatus === "review" || !e.entries.length ? `<p class="notice">${status}</p>` : ""}${[
     "men",
     "women",
   ]
     .map((gender) => {
       const entries = e.entries.filter((x) => x.gender === gender);
       return entries.length
-        ? `<h3 class="gender-heading">${genderName(gender)} <span>${entries.length} ペア</span></h3><div class="teams">${entries.map((entry) => `<div class="team"><div>${entry.playerIds.map((id) => `<a href="#player/${id}">${h(data.players.find((p) => p.id === id).name)}</a>`).join('<span class="pair-divider"> / </span>')}</div>${badge(entry)}${external(entry.sourceUrl, "名簿")}</div>`).join("")}</div>`
+        ? `<h3 class="gender-heading">${genderName(gender)} <span>${entries.length} ペア</span></h3><div class="teams">${entries.map((entry) => `<div class="team"><div>${entry.playerIds.map((id) => `<a href="#player/${id}">${h(data.players.find((p) => p.id === id).name)}</a>`).join('<span class="pair-divider"> / </span>')}</div>${badge(entry, e)}${external(entry.sourceUrl, entry.status === "completed" ? "結果 PDF" : "名簿")}</div>`).join("")}</div>`
         : "";
     })
     .join(
@@ -216,7 +221,7 @@ function eventPage(id) {
 }
 
 function aboutPage() {
-  main.innerHTML = `<article class="about"><p class="eyebrow">ABOUT BEACH NOTE</p><h1>探す時間を、<br>応援する時間に。</h1><p class="lead">ビーチバレーの選手が、いつ、どの大会に出るのか。公式に公開された情報を、選手から辿れるようにまとめた非公式の観戦ガイドです。</p><h2>掲載している情報</h2><p>${h(data.coverage.description)}</p><dl class="coverage"><div><dt>基準日</dt><dd>${h(data.asOf || todayJst())}</dd></div><div><dt>最終取得</dt><dd>${stamp(data.checkedAt || data.generatedAt)}</dd></div><div><dt>収録内容</dt><dd>${data.players.length} 選手 / ${data.events.length} 大会</dd></div><div><dt>確認した資料</dt><dd>${data.coverage.pagesChecked} 記事 / ${data.coverage.pdfsChecked} 名簿PDF</dd></div></dl><h2>予定が見つからないとき</h2><p>名簿が未発表の大会、掲載形式の確認が必要な資料は、選手の予定に反映されていない場合があります。「予定なし」は欠場を意味しません。補欠は区別して掲載し、勝ち上がりや出場を予測することはありません。</p><h2>情報の更新について</h2><p>公式情報を確認した時点の内容を掲載しています。リアルタイム更新ではありません。各大会・名簿へのリンクから、最新の変更をご確認ください。過去の大会結果は今回の収録対象外です。</p><h2>参照元</h2><div class="source-links">${external("https://www.jbv.jp/", "日本ビーチバレーボール連盟（JBV）")}${external("https://www.jva.or.jp/beach_domestic/2026/", "日本バレーボール協会（JVA）")}</div><h2>お気に入りについて</h2><p>お気に入りはお使いのブラウザ内に保存します。アカウント登録は不要です。別の端末との同期はありません。</p><p class="notice">当サイトはJBV・JVAによる公式サイトではありません。選手の写真や公式記事の全文は転載せず、出典へのリンクを掲載しています。</p></article>`;
+  main.innerHTML = `<article class="about"><p class="eyebrow">ABOUT BEACH NOTE</p><h1>探す時間を、<br>応援する時間に。</h1><p class="lead">ビーチバレーの選手が、いつ、どの大会に出るのか。公式に公開された情報を、選手から辿れるようにまとめた非公式の観戦ガイドです。</p><h2>掲載している情報</h2><p>${h(data.coverage.description)}</p><dl class="coverage"><div><dt>基準日</dt><dd>${h(data.asOf || todayJst())}</dd></div><div><dt>最終取得</dt><dd>${stamp(data.checkedAt || data.generatedAt)}</dd></div><div><dt>収録内容</dt><dd>${data.players.length} 選手 / ${data.events.length} 大会</dd></div><div><dt>確認した資料</dt><dd>${data.coverage.pagesChecked} 記事 / ${data.coverage.pdfsChecked} PDF</dd></div></dl><h2>予定が見つからないとき</h2><p>名簿が未発表の大会、掲載形式の確認が必要な資料は、選手の予定に反映されていない場合があります。「予定なし」は欠場を意味しません。補欠は区別して掲載し、勝ち上がりや出場を予測することはありません。</p><h2>情報の更新について</h2><p>公式情報を確認した時点の内容を掲載しています。リアルタイム更新ではありません。各大会・名簿へのリンクから、最新の変更をご確認ください。過去の大会結果は2026年BVT1の6大会（立川立飛は女子のみ）から収録しています。公式に明記された最終順位だけを掲載し、予選順位や対戦表から順位を推測しません。</p><h2>参照元</h2><div class="source-links">${external("https://www.jbv.jp/", "日本ビーチバレーボール連盟（JBV）")}${external("https://www.jva.or.jp/beach_domestic/2026/", "日本バレーボール協会（JVA）")}</div><h2>お気に入りについて</h2><p>お気に入りはお使いのブラウザ内に保存します。アカウント登録は不要です。別の端末との同期はありません。</p><p class="notice">当サイトはJBV・JVAによる公式サイトではありません。選手の写真や公式記事の全文は転載せず、出典へのリンクを掲載しています。</p></article>`;
 }
 
 function notFound() {

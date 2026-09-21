@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-21T17:00:32+00:00",
-  "checkedAt": "2026-09-21T16:56:30+00:00",
+  "generatedAt": "2026-09-21T17:12:03+00:00",
+  "checkedAt": "2026-09-21T17:10:23+00:00",
   "asOf": "2026-09-22",
   "year": 2026,
   "coverage": {
     "source": "JBV・JVA・各大会主催者",
-    "description": "JBVの年間予定・ニュース・公認大会とJVA国際大会予定から、取得時点で開催前または開催中の大会を収録。主催者サイトも確認し、大会別に公開された参加名簿を選手に紐付けています。未発表の出場予定は含みません。",
+    "description": "JBVの年間予定・ニュース・公認大会とJVA国際大会予定から、取得時点で開催前または開催中の大会を収録。主催者サイトも確認し、大会別に公開された参加名簿を選手に紐付けています。未発表の出場予定は含みません。過去の結果は2026年BVT1の6大会を対象に、公式最終順位表から収録（立川立飛は女子のみ）。全大会・全試合を網羅するものではありません。",
     "domains": [
       "www.jbv.jp",
       "www.jva.or.jp",
@@ -16,7 +16,7 @@
       {
         "url": "https://www.jva.or.jp/beach_domestic/2026/",
         "title": "2026年国内大会スケジュール | 公益財団法人日本バレーボール協会",
-        "checkedAt": "2026-09-21T16:51:57+00:00"
+        "checkedAt": "2026-09-21T17:09:51+00:00"
       },
       {
         "url": "https://www.jva.or.jp/beach_domestic/2026/other-events/kawasakicup/",
@@ -61,18 +61,58 @@
     ],
     "pagesDiscovered": 113,
     "pagesChecked": 113,
-    "pdfsChecked": 4,
+    "pdfsChecked": 10,
     "reviewCount": 0,
     "offline": true,
     "skippedCount": 99
   },
   "players": [
     {
+      "id": "p-6449eebf186d83",
+      "name": "Agnieszka Adamek",
+      "gender": "women",
+      "aliases": [
+        "Agnieszka Adamek"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-3678d75443f2b9",
+      "name": "Aleksandra Gromadowska",
+      "gender": "women",
+      "aliases": [
+        "Aleksandra Gromadowska"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-b96a51d44a8238",
+      "name": "Ben O'Dea",
+      "gender": "men",
+      "aliases": [
+        "Ben O'Dea"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
       "id": "p-33be9913501c00",
       "name": "Bogle Ashley",
       "gender": "women",
       "aliases": [
         "Bogle Ashley"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-808e362fe51856",
+      "name": "James Sadlier",
+      "gender": "men",
+      "aliases": [
+        "James Sadlier"
       ],
       "roman": "",
       "profileUrl": null
@@ -89,11 +129,42 @@
       "profileUrl": "https://www.jbv.jp/players/man/kaufer.html"
     },
     {
+      "id": "p-c683795e56376b",
+      "name": "Olivia MacDonald",
+      "gender": "women",
+      "aliases": [
+        "Olivia MacDonald",
+        "Olivia Macdonald"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-5cfe8c228fc4de",
+      "name": "Sam O'Dea",
+      "gender": "men",
+      "aliases": [
+        "Sam O'Dea"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
       "id": "p-d9ee789da27f2b",
       "name": "Tay Jerome",
       "gender": "men",
       "aliases": [
         "Tay Jerome"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-49822e7bfec750",
+      "name": "Thomas Hartles",
+      "gender": "men",
+      "aliases": [
+        "Thomas Hartles"
       ],
       "roman": "",
       "profileUrl": null
@@ -120,11 +191,41 @@
       "profileUrl": "https://www.jbv.jp/players/man/malki.html"
     },
     {
+      "id": "p-f63352a2165e15",
+      "name": "三木 庸子",
+      "gender": "women",
+      "aliases": [
+        "三木 庸子"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-ab0d8a733cfa18",
+      "name": "三留 汐利",
+      "gender": "women",
+      "aliases": [
+        "三留 汐利"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
       "id": "p-aadd725216de9b",
       "name": "上本 奈菜子",
       "gender": "women",
       "aliases": [
         "上本 奈菜子"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-741f25b4958b21",
+      "name": "上田 翔貴",
+      "gender": "men",
+      "aliases": [
+        "上田 翔貴"
       ],
       "roman": "",
       "profileUrl": null
@@ -156,6 +257,16 @@
       "gender": "men",
       "aliases": [
         "中村 勇太"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-ed18c0632dd006",
+      "name": "中野 康羽",
+      "gender": "women",
+      "aliases": [
+        "中野 康羽"
       ],
       "roman": "",
       "profileUrl": null
@@ -201,6 +312,26 @@
       "profileUrl": null
     },
     {
+      "id": "p-1e382f46160ccd",
+      "name": "井城 青空",
+      "gender": "women",
+      "aliases": [
+        "井城 青空"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-fb025ab8253517",
+      "name": "今井 勇太",
+      "gender": "men",
+      "aliases": [
+        "今井 勇太"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
       "id": "p-df48743bbeeb58",
       "name": "今井駿世",
       "gender": "men",
@@ -210,6 +341,26 @@
       ],
       "roman": "Hayase Imai",
       "profileUrl": "https://www.jbv.jp/players/man/imai-h.html"
+    },
+    {
+      "id": "p-cc1da19f7ad73e",
+      "name": "今村 貴彦",
+      "gender": "men",
+      "aliases": [
+        "今村 貴彦"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-2ba2990913c01b",
+      "name": "伊吹 政人",
+      "gender": "men",
+      "aliases": [
+        "伊吹 政人"
+      ],
+      "roman": "",
+      "profileUrl": null
     },
     {
       "id": "p-0ae5bd566aae50",
@@ -246,7 +397,8 @@
       "name": "伊藤桜",
       "gender": "women",
       "aliases": [
-        "伊藤桜"
+        "伊藤桜",
+        "伊藤 桜"
       ],
       "roman": "Sakura Ito",
       "profileUrl": "https://www.jbv.jp/players/woman/ito.html"
@@ -278,6 +430,16 @@
       "gender": "women",
       "aliases": [
         "佐々木 梨花"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-b06941d3301571",
+      "name": "佐々木 達郎",
+      "gender": "men",
+      "aliases": [
+        "佐々木 達郎"
       ],
       "roman": "",
       "profileUrl": null
@@ -334,6 +496,16 @@
       "profileUrl": "https://www.jbv.jp/players/man/kurasaka.html"
     },
     {
+      "id": "p-70990a41c8979d",
+      "name": "光広 のぞみ",
+      "gender": "women",
+      "aliases": [
+        "光広 のぞみ"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
       "id": "p-4c177784a4432b",
       "name": "内田 颯人",
       "gender": "men",
@@ -384,11 +556,41 @@
       "profileUrl": null
     },
     {
+      "id": "p-00656b2567f575",
+      "name": "勝岡 将斗",
+      "gender": "men",
+      "aliases": [
+        "勝岡 将斗"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-8324feeb43092a",
+      "name": "北川 美桜",
+      "gender": "women",
+      "aliases": [
+        "北川 美桜"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
       "id": "p-e5643b6bbdc6e7",
       "name": "北野 優心",
       "gender": "women",
       "aliases": [
         "北野 優心"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-82b3e90aa9e413",
+      "name": "古田 史郎",
+      "gender": "men",
+      "aliases": [
+        "古田 史郎"
       ],
       "roman": "",
       "profileUrl": null
@@ -424,11 +626,31 @@
       "profileUrl": null
     },
     {
+      "id": "p-c55c5f5d9da684",
+      "name": "和田 栞菜",
+      "gender": "women",
+      "aliases": [
+        "和田 栞菜"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
       "id": "p-8eca3e9f7ac86f",
       "name": "唐澤 真唯",
       "gender": "women",
       "aliases": [
         "唐澤 真唯"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-041b1d35905b0a",
+      "name": "園田 柊弥",
+      "gender": "men",
+      "aliases": [
+        "園田 柊弥"
       ],
       "roman": "",
       "profileUrl": null
@@ -473,6 +695,16 @@
       ],
       "roman": "Shion Tsubouchi",
       "profileUrl": "https://www.jbv.jp/players/woman/tsubouchi.html"
+    },
+    {
+      "id": "p-5baf896e001d95",
+      "name": "堤 亜里菜",
+      "gender": "women",
+      "aliases": [
+        "堤 亜里菜"
+      ],
+      "roman": "",
+      "profileUrl": null
     },
     {
       "id": "p-ea4e0c0ccba243",
@@ -558,6 +790,16 @@
       "profileUrl": "https://www.jbv.jp/players/man/tomita.html"
     },
     {
+      "id": "p-3bb61700c98638",
+      "name": "小山 明",
+      "gender": "women",
+      "aliases": [
+        "小山 明"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
       "id": "p-9c5a1283daa8e0",
       "name": "小島 利治",
       "gender": "men",
@@ -633,6 +875,26 @@
       "gender": "men",
       "aliases": [
         "小野寺 暉"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-298788de6e124b",
+      "name": "尾﨑 こころ",
+      "gender": "women",
+      "aliases": [
+        "尾﨑 こころ"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-2ff849e6331484",
+      "name": "山内 志織",
+      "gender": "women",
+      "aliases": [
+        "山内 志織"
       ],
       "roman": "",
       "profileUrl": null
@@ -739,6 +1001,16 @@
       "profileUrl": "https://www.jbv.jp/players/man/shimada-y.html"
     },
     {
+      "id": "p-f502528688e23e",
+      "name": "川岸 夕紗",
+      "gender": "women",
+      "aliases": [
+        "川岸 夕紗"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
       "id": "p-58367f076d2631",
       "name": "市川 凛",
       "gender": "women",
@@ -774,6 +1046,26 @@
       "gender": "men",
       "aliases": [
         "平元 大喜"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-58ff48742e80ed",
+      "name": "平田 悠真",
+      "gender": "men",
+      "aliases": [
+        "平田 悠真"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-601f1b41287ffb",
+      "name": "後藤 圭将",
+      "gender": "men",
+      "aliases": [
+        "後藤 圭将"
       ],
       "roman": "",
       "profileUrl": null
@@ -918,7 +1210,8 @@
       "name": "松崎 伊吹",
       "gender": "women",
       "aliases": [
-        "松崎 伊吹"
+        "松崎 伊吹",
+        "松﨑 伊吹"
       ],
       "roman": "",
       "profileUrl": null
@@ -928,7 +1221,8 @@
       "name": "松本恋",
       "gender": "women",
       "aliases": [
-        "松本恋"
+        "松本恋",
+        "松本 恋"
       ],
       "roman": "Matsumoto Ren",
       "profileUrl": "https://www.jbv.jp/players/woman/matsumoto-r.html"
@@ -938,20 +1232,52 @@
       "name": "松本穏",
       "gender": "women",
       "aliases": [
-        "松本穏"
+        "松本穏",
+        "松本 穏"
       ],
       "roman": "Matsumoto Non",
       "profileUrl": "https://www.jbv.jp/players/woman/matsumoto.html"
+    },
+    {
+      "id": "p-9e9090bc8c310e",
+      "name": "柏木 陸歩",
+      "gender": "men",
+      "aliases": [
+        "柏木 陸歩"
+      ],
+      "roman": "",
+      "profileUrl": null
     },
     {
       "id": "p-209ae8d6247cf3",
       "name": "柴麻美",
       "gender": "women",
       "aliases": [
-        "柴麻美"
+        "柴麻美",
+        "柴 麻美"
       ],
       "roman": "Asami Shiba",
       "profileUrl": "https://www.jbv.jp/players/woman/shiba.html"
+    },
+    {
+      "id": "p-826fc64ae30e9d",
+      "name": "桂川 こなつ",
+      "gender": "women",
+      "aliases": [
+        "桂川 こなつ"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-ecdcaf7edffce0",
+      "name": "梅木 瞳",
+      "gender": "women",
+      "aliases": [
+        "梅木 瞳"
+      ],
+      "roman": "",
+      "profileUrl": null
     },
     {
       "id": "p-9201eba2042d0d",
@@ -959,6 +1285,16 @@
       "gender": "men",
       "aliases": [
         "梅野 涼"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-6fe734688b833f",
+      "name": "森川 仁湖",
+      "gender": "women",
+      "aliases": [
+        "森川 仁湖"
       ],
       "roman": "",
       "profileUrl": null
@@ -989,7 +1325,8 @@
       "name": "樫原美陽",
       "gender": "women",
       "aliases": [
-        "樫原美陽"
+        "樫原美陽",
+        "樫原 美陽"
       ],
       "roman": "Miharu Kashihara",
       "profileUrl": "https://www.jbv.jp/players/woman/kashihara.html"
@@ -1029,10 +1366,21 @@
       "name": "水町泰杜",
       "gender": "men",
       "aliases": [
-        "水町泰杜"
+        "水町泰杜",
+        "水町 泰杜"
       ],
       "roman": "Taito Mizumachi",
       "profileUrl": "https://www.jbv.jp/players/man/mizumachi.html"
+    },
+    {
+      "id": "p-049303b18ccfd2",
+      "name": "永井 いづみ",
+      "gender": "women",
+      "aliases": [
+        "永井 いづみ"
+      ],
+      "roman": "",
+      "profileUrl": null
     },
     {
       "id": "p-c482f56f258175",
@@ -1056,11 +1404,22 @@
       "profileUrl": "https://www.jbv.jp/players/woman/ebara.html"
     },
     {
+      "id": "p-52e39cfcfa00c0",
+      "name": "池田 大心",
+      "gender": "men",
+      "aliases": [
+        "池田 大心"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
       "id": "p-fd1eaa3d5d7a19",
       "name": "池田隼平",
       "gender": "men",
       "aliases": [
-        "池田隼平"
+        "池田隼平",
+        "池田 隼平"
       ],
       "roman": "Junpei Ikeda",
       "profileUrl": "https://www.jbv.jp/players/man/ikeda.html"
@@ -1070,7 +1429,8 @@
       "name": "沢目繭",
       "gender": "women",
       "aliases": [
-        "沢目繭"
+        "沢目繭",
+        "沢目 繭"
       ],
       "roman": "Mayu Sawame",
       "profileUrl": "https://www.jbv.jp/players/woman/sawame.html"
@@ -1085,6 +1445,26 @@
       ],
       "roman": "Inazo Hashi",
       "profileUrl": "https://www.jbv.jp/players/man/hashi.html"
+    },
+    {
+      "id": "p-2ab78245ad3254",
+      "name": "浅野 美波",
+      "gender": "women",
+      "aliases": [
+        "浅野 美波"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-92f03fd3246f44",
+      "name": "浜田 翔太",
+      "gender": "men",
+      "aliases": [
+        "浜田 翔太"
+      ],
+      "roman": "",
+      "profileUrl": null
     },
     {
       "id": "p-e7d443af2e0fb1",
@@ -1121,7 +1501,8 @@
       "name": "渡辺周馬",
       "gender": "men",
       "aliases": [
-        "渡辺周馬"
+        "渡辺周馬",
+        "渡辺 周馬"
       ],
       "roman": "Shuma Watanabe",
       "profileUrl": "https://www.jbv.jp/players/man/watanabe-s.html"
@@ -1177,6 +1558,26 @@
       ],
       "roman": "Takuma Mizobata",
       "profileUrl": "https://www.jbv.jp/players/man/mizobata.html"
+    },
+    {
+      "id": "p-9166933202a318",
+      "name": "澁谷 真央",
+      "gender": "women",
+      "aliases": [
+        "澁谷 真央"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-9af0e6159064c8",
+      "name": "濵口 蒼太",
+      "gender": "men",
+      "aliases": [
+        "濵口 蒼太"
+      ],
+      "roman": "",
+      "profileUrl": null
     },
     {
       "id": "p-f3309d4a4eb5eb",
@@ -1239,6 +1640,16 @@
       "profileUrl": null
     },
     {
+      "id": "p-e2a3d208cd3596",
+      "name": "田崎 颯太",
+      "gender": "men",
+      "aliases": [
+        "田崎 颯太"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
       "id": "p-ef8586266060ae",
       "name": "畑 恵",
       "gender": "women",
@@ -1270,6 +1681,16 @@
       "profileUrl": "https://www.jbv.jp/players/woman/shirahata.html"
     },
     {
+      "id": "p-8efa2516d6b612",
+      "name": "目黒 安希",
+      "gender": "women",
+      "aliases": [
+        "目黒 安希"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
       "id": "p-976ed7cc7e5365",
       "name": "真田 知紗都",
       "gender": "women",
@@ -1284,7 +1705,8 @@
       "name": "石井美樹",
       "gender": "women",
       "aliases": [
-        "石井美樹"
+        "石井美樹",
+        "石井 美樹"
       ],
       "roman": "Miki Ishi",
       "profileUrl": "https://www.jbv.jp/players/woman/ishii.html"
@@ -1294,7 +1716,8 @@
       "name": "石原泉",
       "gender": "women",
       "aliases": [
-        "石原泉"
+        "石原泉",
+        "石原 泉"
       ],
       "roman": "Izumi Ishihara",
       "profileUrl": "https://www.jbv.jp/players/woman/ishihara.html"
@@ -1304,7 +1727,8 @@
       "name": "石島雄介",
       "gender": "men",
       "aliases": [
-        "石島雄介"
+        "石島雄介",
+        "石島 雄介"
       ],
       "roman": "Yusuke Ishijima",
       "profileUrl": "https://www.jbv.jp/players/man/ishijima.html"
@@ -1324,7 +1748,8 @@
       "name": "石川瀬那",
       "gender": "men",
       "aliases": [
-        "石川瀬那"
+        "石川瀬那",
+        "石川 瀬那"
       ],
       "roman": "Sena Ishikawa",
       "profileUrl": "https://www.jbv.jp/players/man/ishikawa.html"
@@ -1392,11 +1817,22 @@
       "profileUrl": null
     },
     {
+      "id": "p-a61ea77abc7c27",
+      "name": "立石 大和",
+      "gender": "men",
+      "aliases": [
+        "立石 大和"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
       "id": "p-6940ec375c06e8",
       "name": "立谷純太郎",
       "gender": "men",
       "aliases": [
-        "立谷純太郎"
+        "立谷純太郎",
+        "立谷 純太郎"
       ],
       "roman": "Juntaro Tachiya",
       "profileUrl": "https://www.jbv.jp/players/man/tachiya.html"
@@ -1417,6 +1853,16 @@
       "gender": "men",
       "aliases": [
         "竹内 快斗"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-cb1acec983fd60",
+      "name": "笠井 季璃",
+      "gender": "women",
+      "aliases": [
+        "笠井 季璃"
       ],
       "roman": "",
       "profileUrl": null
@@ -1474,6 +1920,16 @@
       "profileUrl": null
     },
     {
+      "id": "p-35d598de3fa1ce",
+      "name": "荒田 蓮珠",
+      "gender": "women",
+      "aliases": [
+        "荒田 蓮珠"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
       "id": "p-30f54d52b7eceb",
       "name": "荘司 陽香梨",
       "gender": "women",
@@ -1521,10 +1977,21 @@
       "name": "藤井桜子",
       "gender": "women",
       "aliases": [
-        "藤井桜子"
+        "藤井桜子",
+        "藤井 桜子"
       ],
       "roman": "Sakurako Fujii",
       "profileUrl": "https://www.jbv.jp/players/woman/fujii-s.html"
+    },
+    {
+      "id": "p-6b056cab733348",
+      "name": "藤田 丈太郎",
+      "gender": "men",
+      "aliases": [
+        "藤田 丈太郎"
+      ],
+      "roman": "",
+      "profileUrl": null
     },
     {
       "id": "p-fae05b76f162ee",
@@ -1542,7 +2009,8 @@
       "name": "西堀健実",
       "gender": "women",
       "aliases": [
-        "西堀健実"
+        "西堀健実",
+        "西堀 健実"
       ],
       "roman": "Takemi Nishibori",
       "profileUrl": "https://www.jbv.jp/players/woman/nishibori.html"
@@ -1562,7 +2030,8 @@
       "name": "西村勇斗",
       "gender": "men",
       "aliases": [
-        "西村勇斗"
+        "西村勇斗",
+        "西村 勇斗"
       ],
       "roman": "Hayato Nishimura",
       "profileUrl": "https://www.jbv.jp/players/man/nishimura-h.html"
@@ -1594,6 +2063,16 @@
       "gender": "women",
       "aliases": [
         "谷島 陽菜"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-51c855bf09a751",
+      "name": "辰巳 遼",
+      "gender": "men",
+      "aliases": [
+        "辰巳 遼"
       ],
       "roman": "",
       "profileUrl": null
@@ -1655,7 +2134,8 @@
       "gender": "women",
       "aliases": [
         "酒井春海",
-        "酒井 春海"
+        "酒井 春海",
+        "酒井 春海"
       ],
       "roman": "Harumi Sakai",
       "profileUrl": "https://www.jbv.jp/players/woman/sakai.html"
@@ -1671,11 +2151,43 @@
       "profileUrl": null
     },
     {
+      "id": "p-be7c43eff160d6",
+      "name": "金田 洋世",
+      "gender": "women",
+      "aliases": [
+        "金田 洋世"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-a52680d59e32d0",
+      "name": "鎌田 咲希",
+      "gender": "women",
+      "aliases": [
+        "鎌田 咲希"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
+      "id": "p-03abf2f4821d7d",
+      "name": "鏡 瀬里奈",
+      "gender": "women",
+      "aliases": [
+        "鏡 瀬里奈"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
       "id": "p-0b891d351fb2cd",
       "name": "長谷川徳海",
       "gender": "men",
       "aliases": [
-        "長谷川徳海"
+        "長谷川徳海",
+        "長谷川 徳海",
+        "⾧谷川 徳海"
       ],
       "roman": "Yoshiumi Hasegawa",
       "profileUrl": "https://www.jbv.jp/players/man/hasegawa.html"
@@ -1765,6 +2277,16 @@
       "profileUrl": "https://www.jbv.jp/players/man/takahashi-d.html"
     },
     {
+      "id": "p-161d9c9bcde639",
+      "name": "高江 証詞",
+      "gender": "men",
+      "aliases": [
+        "高江 証詞"
+      ],
+      "roman": "",
+      "profileUrl": null
+    },
+    {
       "id": "p-07757767a97420",
       "name": "高野 愛菜",
       "gender": "women",
@@ -1779,17 +2301,29 @@
       "name": "髙橋巧",
       "gender": "men",
       "aliases": [
-        "髙橋巧"
+        "髙橋巧",
+        "髙橋 巧"
       ],
       "roman": "Takumi Takahashi",
       "profileUrl": "https://www.jbv.jp/players/man/takahashi.html"
+    },
+    {
+      "id": "p-d172410688fa9d",
+      "name": "髙相 みな実",
+      "gender": "women",
+      "aliases": [
+        "髙相 みな実"
+      ],
+      "roman": "",
+      "profileUrl": null
     },
     {
       "id": "p-0f1d7e27067be6",
       "name": "黒川寛輝ディラン",
       "gender": "men",
       "aliases": [
-        "黒川寛輝ディラン"
+        "黒川寛輝ディラン",
+        "黒川 寛輝ディラン"
       ],
       "roman": "Hiroki Dylan Kurokawa",
       "profileUrl": "https://www.jbv.jp/players/man/kurokawa-h.html"
@@ -1810,13 +2344,2347 @@
       "name": "黒澤孝太",
       "gender": "men",
       "aliases": [
-        "黒澤孝太"
+        "黒澤孝太",
+        "黒澤 孝太"
       ],
       "roman": "",
       "profileUrl": null
     }
   ],
   "events": [
+    {
+      "id": "e-c5540cfcfdf18a",
+      "name": "第1戦 名古屋大会 第20回アジア競技大会（2026/愛知・名古屋）日本代表選手選考会",
+      "officialTitle": "第1戦 名古屋大会 第20回アジア競技大会（2026/愛知・名古屋）日本代表選手選考会",
+      "category": "BVT1",
+      "startDate": "2026-05-30",
+      "endDate": "2026-05-31",
+      "dateLabel": "5/30,31",
+      "venue": "愛知県名古屋市 予選　5/23,24（愛知県碧南市）",
+      "cancelled": false,
+      "sourceUrl": "https://www.jva.or.jp/beach_domestic/2026/japan-beach-volleyball-tour-bvt1/nagoya/",
+      "scheduleSourceUrl": "https://www.jva.or.jp/beach_domestic/2026/",
+      "documents": [
+        {
+          "url": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf",
+          "label": "男女最終結果一覧　5月31日",
+          "kind": "result",
+          "gender": null,
+          "parsed": true
+        }
+      ],
+      "entries": [
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 1,
+          "resultLabel": "優勝",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-2bc3a9cc952c04",
+            "p-f68c79e674a200"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 2,
+          "resultLabel": "準優勝",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-229aea0a5e245b",
+            "p-6940ec375c06e8"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 3,
+          "resultLabel": "3位",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-1552ee38d688ac",
+            "p-fd1eaa3d5d7a19"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 3,
+          "resultLabel": "3位",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-4becb601919188",
+            "p-6b056cab733348"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-bdab3e1443988a",
+            "p-00656b2567f575"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-f14c67cc3f1f06",
+            "p-741f25b4958b21"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-c3ff1ffcd612ed",
+            "p-98638614563dfb"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-82b3e90aa9e413",
+            "p-51c855bf09a751"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-7ce605fcf52b8d",
+            "p-bacb4c47486198"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-94664df6f011f8",
+            "p-9201eba2042d0d"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-df48743bbeeb58",
+            "p-b5a1767dae9173"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-bb3eda817c7adc",
+            "p-cc1da19f7ad73e"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-0932b58def2823",
+            "p-e900bac72b258e"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-5bfc10c148b633",
+            "p-aae242c346d332"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-3c0f1899831ea6",
+            "p-d751e2f59f7802"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-0f1d7e27067be6",
+            "p-0b891d351fb2cd"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-7b33eeb4c59158",
+            "p-bb255ad1ef4d73"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-c338f3ce672cf8",
+            "p-b06941d3301571"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-536d8879278f47",
+            "p-6cc776b47b5e95"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-2ba2990913c01b",
+            "p-90c520e7170021"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-601f1b41287ffb",
+            "p-fb025ab8253517"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-9c5a1283daa8e0",
+            "p-0e83a86fb129d8"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-9af0e6159064c8",
+            "p-39e29bb5b30187"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-92f03fd3246f44",
+            "p-7c039b7bda13a8"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-161d9c9bcde639",
+            "p-52e39cfcfa00c0"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-80b22dcc07c24e",
+            "p-c03b165b51346a"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-e2a3d208cd3596",
+            "p-a2ae033a2c458d"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-8ce24651c6a54c",
+            "p-c50aa57b4324af"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 1,
+          "resultLabel": "優勝",
+          "page": 9,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-f0f0a4a7f277b6",
+            "p-bcf55897f68a02"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 2,
+          "resultLabel": "準優勝",
+          "page": 9,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-907be3ffc8f0ce",
+            "p-4615251b352481"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 3,
+          "resultLabel": "3位",
+          "page": 9,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-209ae8d6247cf3",
+            "p-2ad8777261c796"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 3,
+          "resultLabel": "3位",
+          "page": 9,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-04203906673033",
+            "p-63c0eb523e1429"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 9,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-5a194d18749c9e",
+            "p-cbfb49e65b03e7"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 9,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-ba6e259b045dc4",
+            "p-0a1903073eb965"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 9,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-0012effe0e4f80",
+            "p-195bc3b45e3e72"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 9,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-fae05b76f162ee",
+            "p-2ffd40abb352b1"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 9,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-7133c92bb8a56b",
+            "p-5bcfe1e82824db"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 9,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-1ef00814faedb6",
+            "p-03abf2f4821d7d"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 9,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-be7c43eff160d6",
+            "p-ea597e582f838e"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 9,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-70758c41dbd816",
+            "p-915d9bd3be71d4"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 9,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-e2f0ff5692e9bc",
+            "p-b880af03c17a8d"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 9,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-f54e398fdef88c",
+            "p-e1aa5fe79cfa78"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 9,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-da681bc9d67166",
+            "p-426647a04c610e"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 9,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-bd2ce333aca5e6",
+            "p-f2fa0338d31d37"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 10,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=10",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-f63352a2165e15",
+            "p-89fb663c39dd55"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 10,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=10",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-0e522b0dbb975e",
+            "p-f9c13549ef3d9a"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 10,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=10",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-63bd5537dddddc",
+            "p-e74385bc91847b"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 10,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=10",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-9fe27d6b40c23e",
+            "p-bd3287e1362a54"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 10,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=10",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-ec3d66bf61a909",
+            "p-643a643a7a36bd"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 10,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=10",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-3a1909b6c0933b",
+            "p-ecdcaf7edffce0"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 10,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=10",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-9166933202a318",
+            "p-826fc64ae30e9d"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 10,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=10",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-e5643b6bbdc6e7",
+            "p-90c73910db8908"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 10,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=10",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-285d531c0b6a5c",
+            "p-a9d89e9a2fdf49"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 10,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=10",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-8eca3e9f7ac86f",
+            "p-35d598de3fa1ce"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 10,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=10",
+          "checkedAt": "2026-09-21T17:10:11+00:00",
+          "playerIds": [
+            "p-9c40824722c700",
+            "p-27fcc16cbd21d9"
+          ]
+        }
+      ],
+      "entryStatus": "published",
+      "resultCoverage": "男女の公式最終順位表に掲載されたペアを収録。",
+      "checkedAt": "2026-09-21T17:10:10+00:00"
+    },
+    {
+      "id": "e-6b44e5ee71049b",
+      "name": "第2戦 グランドスラム グランフロント大阪大会",
+      "officialTitle": "第2戦 グランドスラム グランフロント大阪大会",
+      "category": "BVT1",
+      "startDate": "2026-06-06",
+      "endDate": "2026-06-07",
+      "dateLabel": "6/6,7",
+      "venue": "大阪府大阪市 予選　5/9,10（神奈川県横浜市）",
+      "cancelled": false,
+      "sourceUrl": "https://www.jva.or.jp/beach_domestic/2026/japan-beach-volleyball-tour-bvt1/osaka/",
+      "scheduleSourceUrl": "https://www.jva.or.jp/beach_domestic/2026/",
+      "documents": [
+        {
+          "url": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf",
+          "label": "男女最終結果一覧　6月7日",
+          "kind": "result",
+          "gender": null,
+          "parsed": true
+        }
+      ],
+      "entries": [
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 1,
+          "resultLabel": "優勝",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:13+00:00",
+          "playerIds": [
+            "p-2bc3a9cc952c04",
+            "p-f68c79e674a200"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 2,
+          "resultLabel": "準優勝",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:13+00:00",
+          "playerIds": [
+            "p-229aea0a5e245b",
+            "p-6940ec375c06e8"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 3,
+          "resultLabel": "3位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:13+00:00",
+          "playerIds": [
+            "p-bdab3e1443988a",
+            "p-00656b2567f575"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 3,
+          "resultLabel": "3位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:13+00:00",
+          "playerIds": [
+            "p-0f1d7e27067be6",
+            "p-0b891d351fb2cd"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:13+00:00",
+          "playerIds": [
+            "p-f14c67cc3f1f06",
+            "p-4becb601919188"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:13+00:00",
+          "playerIds": [
+            "p-82b3e90aa9e413",
+            "p-51c855bf09a751"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:13+00:00",
+          "playerIds": [
+            "p-de825d238f0a84",
+            "p-741f25b4958b21"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:13+00:00",
+          "playerIds": [
+            "p-3c0f1899831ea6",
+            "p-d751e2f59f7802"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 1,
+          "resultLabel": "優勝",
+          "page": 6,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=6",
+          "checkedAt": "2026-09-21T17:10:13+00:00",
+          "playerIds": [
+            "p-04203906673033",
+            "p-63c0eb523e1429"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 2,
+          "resultLabel": "準優勝",
+          "page": 6,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=6",
+          "checkedAt": "2026-09-21T17:10:13+00:00",
+          "playerIds": [
+            "p-0012effe0e4f80",
+            "p-195bc3b45e3e72"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 3,
+          "resultLabel": "3位",
+          "page": 6,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=6",
+          "checkedAt": "2026-09-21T17:10:13+00:00",
+          "playerIds": [
+            "p-f0f0a4a7f277b6",
+            "p-bcf55897f68a02"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 3,
+          "resultLabel": "3位",
+          "page": 6,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=6",
+          "checkedAt": "2026-09-21T17:10:13+00:00",
+          "playerIds": [
+            "p-e2f0ff5692e9bc",
+            "p-b880af03c17a8d"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 6,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=6",
+          "checkedAt": "2026-09-21T17:10:13+00:00",
+          "playerIds": [
+            "p-70758c41dbd816",
+            "p-915d9bd3be71d4"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 6,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=6",
+          "checkedAt": "2026-09-21T17:10:13+00:00",
+          "playerIds": [
+            "p-5a194d18749c9e",
+            "p-cbfb49e65b03e7"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 6,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=6",
+          "checkedAt": "2026-09-21T17:10:13+00:00",
+          "playerIds": [
+            "p-bd2ce333aca5e6",
+            "p-f2fa0338d31d37"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 6,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=6",
+          "checkedAt": "2026-09-21T17:10:13+00:00",
+          "playerIds": [
+            "p-fae05b76f162ee",
+            "p-2ffd40abb352b1"
+          ]
+        }
+      ],
+      "entryStatus": "published",
+      "resultCoverage": "男女の公式最終順位表に掲載されたペアを収録。",
+      "checkedAt": "2026-09-21T17:10:13+00:00"
+    },
+    {
+      "id": "e-cdb20239a1f5dd",
+      "name": "第3戦 都城大会 第27回ビーチバレー霧島酒造オープン",
+      "officialTitle": "第3戦 都城大会 第27回ビーチバレー霧島酒造オープン",
+      "category": "BVT1",
+      "startDate": "2026-06-12",
+      "endDate": "2026-06-14",
+      "dateLabel": "6/12-14",
+      "venue": "宮崎県都城市",
+      "cancelled": false,
+      "sourceUrl": "https://www.jva.or.jp/beach_domestic/2026/japan-beach-volleyball-tour-bvt1/miyakonojo/",
+      "scheduleSourceUrl": "https://www.jva.or.jp/beach_domestic/2026/",
+      "documents": [
+        {
+          "url": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf",
+          "label": "男女最終結果一覧　6月14日",
+          "kind": "result",
+          "gender": null,
+          "parsed": true
+        }
+      ],
+      "entries": [
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 1,
+          "resultLabel": "優勝",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:16+00:00",
+          "playerIds": [
+            "p-0932b58def2823",
+            "p-e900bac72b258e"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 2,
+          "resultLabel": "準優勝",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:16+00:00",
+          "playerIds": [
+            "p-de825d238f0a84",
+            "p-741f25b4958b21"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 3,
+          "resultLabel": "3位",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:16+00:00",
+          "playerIds": [
+            "p-229aea0a5e245b",
+            "p-6940ec375c06e8"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 3,
+          "resultLabel": "3位",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:16+00:00",
+          "playerIds": [
+            "p-b96a51d44a8238",
+            "p-808e362fe51856"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:16+00:00",
+          "playerIds": [
+            "p-0f1d7e27067be6",
+            "p-0b891d351fb2cd"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:16+00:00",
+          "playerIds": [
+            "p-7ce605fcf52b8d",
+            "p-bacb4c47486198"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:16+00:00",
+          "playerIds": [
+            "p-f14c67cc3f1f06",
+            "p-4becb601919188"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:16+00:00",
+          "playerIds": [
+            "p-5bfc10c148b633",
+            "p-aae242c346d332"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:16+00:00",
+          "playerIds": [
+            "p-f68c79e674a200",
+            "p-9e9090bc8c310e"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:16+00:00",
+          "playerIds": [
+            "p-3c0f1899831ea6",
+            "p-d751e2f59f7802"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:16+00:00",
+          "playerIds": [
+            "p-c3ff1ffcd612ed",
+            "p-98638614563dfb"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 4,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=4",
+          "checkedAt": "2026-09-21T17:10:16+00:00",
+          "playerIds": [
+            "p-39e29bb5b30187",
+            "p-c338f3ce672cf8"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 1,
+          "resultLabel": "優勝",
+          "page": 8,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=8",
+          "checkedAt": "2026-09-21T17:10:16+00:00",
+          "playerIds": [
+            "p-209ae8d6247cf3",
+            "p-2ad8777261c796"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 2,
+          "resultLabel": "準優勝",
+          "page": 8,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=8",
+          "checkedAt": "2026-09-21T17:10:16+00:00",
+          "playerIds": [
+            "p-907be3ffc8f0ce",
+            "p-4615251b352481"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 3,
+          "resultLabel": "3位",
+          "page": 8,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=8",
+          "checkedAt": "2026-09-21T17:10:16+00:00",
+          "playerIds": [
+            "p-63c0eb523e1429",
+            "p-915d9bd3be71d4"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 3,
+          "resultLabel": "3位",
+          "page": 8,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=8",
+          "checkedAt": "2026-09-21T17:10:16+00:00",
+          "playerIds": [
+            "p-ea597e582f838e",
+            "p-bcf55897f68a02"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 8,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=8",
+          "checkedAt": "2026-09-21T17:10:16+00:00",
+          "playerIds": [
+            "p-0012effe0e4f80",
+            "p-195bc3b45e3e72"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 8,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=8",
+          "checkedAt": "2026-09-21T17:10:16+00:00",
+          "playerIds": [
+            "p-5a194d18749c9e",
+            "p-cbfb49e65b03e7"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 8,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=8",
+          "checkedAt": "2026-09-21T17:10:16+00:00",
+          "playerIds": [
+            "p-e2f0ff5692e9bc",
+            "p-b880af03c17a8d"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 8,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=8",
+          "checkedAt": "2026-09-21T17:10:16+00:00",
+          "playerIds": [
+            "p-ba6e259b045dc4",
+            "p-0a1903073eb965"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 8,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=8",
+          "checkedAt": "2026-09-21T17:10:16+00:00",
+          "playerIds": [
+            "p-bd2ce333aca5e6",
+            "p-f2fa0338d31d37"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 8,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=8",
+          "checkedAt": "2026-09-21T17:10:16+00:00",
+          "playerIds": [
+            "p-3678d75443f2b9",
+            "p-6449eebf186d83"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 8,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=8",
+          "checkedAt": "2026-09-21T17:10:16+00:00",
+          "playerIds": [
+            "p-f54e398fdef88c",
+            "p-e1aa5fe79cfa78"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 8,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=8",
+          "checkedAt": "2026-09-21T17:10:16+00:00",
+          "playerIds": [
+            "p-da681bc9d67166",
+            "p-426647a04c610e"
+          ]
+        }
+      ],
+      "entryStatus": "published",
+      "resultCoverage": "男女の公式最終順位表に掲載されたペアを収録。",
+      "checkedAt": "2026-09-21T17:10:15+00:00"
+    },
+    {
+      "id": "e-f2f77c1b726504",
+      "name": "第4戦 立川立飛大会 Crown of the beach",
+      "officialTitle": "第4戦 立川立飛大会 Crown of the beach",
+      "category": "BVT1",
+      "startDate": "2026-06-26",
+      "endDate": "2026-06-27",
+      "dateLabel": "6/26,27",
+      "venue": "東京都立川市",
+      "cancelled": false,
+      "sourceUrl": "https://www.jva.or.jp/beach_domestic/2026/japan-beach-volleyball-tour-bvt1/tachikawatachihi/",
+      "scheduleSourceUrl": "https://www.jva.or.jp/beach_domestic/2026/",
+      "documents": [
+        {
+          "url": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf",
+          "label": "女子結果　6月26日",
+          "kind": "result",
+          "gender": null,
+          "parsed": true
+        }
+      ],
+      "entries": [
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 1,
+          "resultLabel": "1位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:18+00:00",
+          "playerIds": [
+            "p-ba6e259b045dc4",
+            "p-0a1903073eb965"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 2,
+          "resultLabel": "2位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:18+00:00",
+          "playerIds": [
+            "p-2ab78245ad3254",
+            "p-92fcf437958e50"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 3,
+          "resultLabel": "3位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:18+00:00",
+          "playerIds": [
+            "p-c683795e56376b",
+            "p-da681bc9d67166"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 4,
+          "resultLabel": "4位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:18+00:00",
+          "playerIds": [
+            "p-ab0d8a733cfa18",
+            "p-cb1acec983fd60"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:18+00:00",
+          "playerIds": [
+            "p-0012effe0e4f80",
+            "p-63c0eb523e1429"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 6,
+          "resultLabel": "6位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:18+00:00",
+          "playerIds": [
+            "p-238cbfb56b8682",
+            "p-ec3d66bf61a909"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 6,
+          "resultLabel": "6位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:18+00:00",
+          "playerIds": [
+            "p-a52680d59e32d0",
+            "p-8efa2516d6b612"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 6,
+          "resultLabel": "6位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:18+00:00",
+          "playerIds": [
+            "p-24d02039890a15",
+            "p-b08c41e1130378"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 6,
+          "resultLabel": "6位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:18+00:00",
+          "playerIds": [
+            "p-ad8b7f4e835959",
+            "p-bcf55897f68a02"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 10,
+          "resultLabel": "10位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:18+00:00",
+          "playerIds": [
+            "p-d172410688fa9d",
+            "p-ed18c0632dd006"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 10,
+          "resultLabel": "10位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:18+00:00",
+          "playerIds": [
+            "p-298788de6e124b",
+            "p-70990a41c8979d"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 10,
+          "resultLabel": "10位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:18+00:00",
+          "playerIds": [
+            "p-285d531c0b6a5c",
+            "p-a9d89e9a2fdf49"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 13,
+          "resultLabel": "13位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:18+00:00",
+          "playerIds": [
+            "p-f502528688e23e",
+            "p-c55c5f5d9da684"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 13,
+          "resultLabel": "13位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:18+00:00",
+          "playerIds": [
+            "p-5baf896e001d95",
+            "p-049303b18ccfd2"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 13,
+          "resultLabel": "13位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:18+00:00",
+          "playerIds": [
+            "p-3bb61700c98638",
+            "p-1e382f46160ccd"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 13,
+          "resultLabel": "13位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:18+00:00",
+          "playerIds": [
+            "p-8324feeb43092a",
+            "p-2ff849e6331484"
+          ]
+        }
+      ],
+      "entryStatus": "published",
+      "resultCoverage": "女子の公式最終順位を収録。男子の最終順位表は確認できていません。",
+      "checkedAt": "2026-09-21T17:10:17+00:00"
+    },
+    {
+      "id": "e-429d5355473912",
+      "name": "第5戦 グランドスラム 横浜赤レンガ倉庫大会",
+      "officialTitle": "第5戦 グランドスラム 横浜赤レンガ倉庫大会",
+      "category": "BVT1",
+      "startDate": "2026-07-11",
+      "endDate": "2026-07-12",
+      "dateLabel": "7/11,12",
+      "venue": "神奈川県横浜市 予選　7/9（同会場）",
+      "cancelled": false,
+      "sourceUrl": "https://www.jva.or.jp/beach_domestic/2026/japan-beach-volleyball-tour-bvt1/yokohama/",
+      "scheduleSourceUrl": "https://www.jva.or.jp/beach_domestic/2026/",
+      "documents": [
+        {
+          "url": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf",
+          "label": "男女最終結果一覧　7月12日",
+          "kind": "result",
+          "gender": null,
+          "parsed": true
+        }
+      ],
+      "entries": [
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 1,
+          "resultLabel": "優勝",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:21+00:00",
+          "playerIds": [
+            "p-2bc3a9cc952c04",
+            "p-f68c79e674a200"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 2,
+          "resultLabel": "準優勝",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:21+00:00",
+          "playerIds": [
+            "p-229aea0a5e245b",
+            "p-6940ec375c06e8"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 3,
+          "resultLabel": "3位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:21+00:00",
+          "playerIds": [
+            "p-0932b58def2823",
+            "p-e900bac72b258e"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 3,
+          "resultLabel": "3位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:21+00:00",
+          "playerIds": [
+            "p-b96a51d44a8238",
+            "p-5cfe8c228fc4de"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:21+00:00",
+          "playerIds": [
+            "p-de825d238f0a84",
+            "p-741f25b4958b21"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:21+00:00",
+          "playerIds": [
+            "p-0f1d7e27067be6",
+            "p-0b891d351fb2cd"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:21+00:00",
+          "playerIds": [
+            "p-bb3eda817c7adc",
+            "p-49822e7bfec750"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:21+00:00",
+          "playerIds": [
+            "p-1552ee38d688ac",
+            "p-fd1eaa3d5d7a19"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:21+00:00",
+          "playerIds": [
+            "p-82b3e90aa9e413",
+            "p-51c855bf09a751"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:21+00:00",
+          "playerIds": [
+            "p-7ce605fcf52b8d",
+            "p-bacb4c47486198"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:21+00:00",
+          "playerIds": [
+            "p-f14c67cc3f1f06",
+            "p-00656b2567f575"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 3,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=3",
+          "checkedAt": "2026-09-21T17:10:21+00:00",
+          "playerIds": [
+            "p-4becb601919188",
+            "p-98638614563dfb"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 1,
+          "resultLabel": "優勝",
+          "page": 6,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=6",
+          "checkedAt": "2026-09-21T17:10:21+00:00",
+          "playerIds": [
+            "p-209ae8d6247cf3",
+            "p-2ad8777261c796"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 2,
+          "resultLabel": "準優勝",
+          "page": 6,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=6",
+          "checkedAt": "2026-09-21T17:10:21+00:00",
+          "playerIds": [
+            "p-f0f0a4a7f277b6",
+            "p-04203906673033"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 3,
+          "resultLabel": "3位",
+          "page": 6,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=6",
+          "checkedAt": "2026-09-21T17:10:21+00:00",
+          "playerIds": [
+            "p-907be3ffc8f0ce",
+            "p-4615251b352481"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 3,
+          "resultLabel": "3位",
+          "page": 6,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=6",
+          "checkedAt": "2026-09-21T17:10:21+00:00",
+          "playerIds": [
+            "p-bcf55897f68a02",
+            "p-63c0eb523e1429"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 6,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=6",
+          "checkedAt": "2026-09-21T17:10:21+00:00",
+          "playerIds": [
+            "p-0012effe0e4f80",
+            "p-195bc3b45e3e72"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 6,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=6",
+          "checkedAt": "2026-09-21T17:10:21+00:00",
+          "playerIds": [
+            "p-e2f0ff5692e9bc",
+            "p-b880af03c17a8d"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 6,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=6",
+          "checkedAt": "2026-09-21T17:10:21+00:00",
+          "playerIds": [
+            "p-5a194d18749c9e",
+            "p-cbfb49e65b03e7"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 6,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=6",
+          "checkedAt": "2026-09-21T17:10:21+00:00",
+          "playerIds": [
+            "p-fae05b76f162ee",
+            "p-2ffd40abb352b1"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 6,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=6",
+          "checkedAt": "2026-09-21T17:10:21+00:00",
+          "playerIds": [
+            "p-ad8b7f4e835959",
+            "p-5bcfe1e82824db"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 6,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=6",
+          "checkedAt": "2026-09-21T17:10:21+00:00",
+          "playerIds": [
+            "p-ea597e582f838e",
+            "p-426647a04c610e"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 6,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=6",
+          "checkedAt": "2026-09-21T17:10:21+00:00",
+          "playerIds": [
+            "p-bd2ce333aca5e6",
+            "p-f2fa0338d31d37"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 6,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=6",
+          "checkedAt": "2026-09-21T17:10:21+00:00",
+          "playerIds": [
+            "p-f54e398fdef88c",
+            "p-e1aa5fe79cfa78"
+          ]
+        }
+      ],
+      "entryStatus": "published",
+      "resultCoverage": "男女の公式最終順位表に掲載されたペアを収録。",
+      "checkedAt": "2026-09-21T17:10:20+00:00"
+    },
+    {
+      "id": "e-499f3d02bcf0dc",
+      "name": "第6戦 平塚大会 荒井商事杯",
+      "officialTitle": "第6戦 平塚大会 荒井商事杯",
+      "category": "BVT1",
+      "startDate": "2026-09-11",
+      "endDate": "2026-09-13",
+      "dateLabel": "9/11-13",
+      "venue": "神奈川県平塚市 予選　9/10（同会場）",
+      "cancelled": false,
+      "sourceUrl": "https://www.jva.or.jp/beach_domestic/2026/japan-beach-volleyball-tour-bvt1/hiratsuka/",
+      "scheduleSourceUrl": "https://www.jva.or.jp/beach_domestic/2026/",
+      "documents": [
+        {
+          "url": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf",
+          "label": "大会最終日結果　9月13日",
+          "kind": "result",
+          "gender": null,
+          "parsed": true
+        }
+      ],
+      "entries": [
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 1,
+          "resultLabel": "優勝",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-7ce605fcf52b8d",
+            "p-bacb4c47486198"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 2,
+          "resultLabel": "準優勝",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-1552ee38d688ac",
+            "p-fd1eaa3d5d7a19"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 3,
+          "resultLabel": "3位",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-229aea0a5e245b",
+            "p-6940ec375c06e8"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 3,
+          "resultLabel": "3位",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-f14c67cc3f1f06",
+            "p-00656b2567f575"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-0932b58def2823",
+            "p-e900bac72b258e"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-de825d238f0a84",
+            "p-98638614563dfb"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-0f1d7e27067be6",
+            "p-0b891d351fb2cd"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-041b1d35905b0a",
+            "p-a61ea77abc7c27"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-58ff48742e80ed",
+            "p-9e9090bc8c310e"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-bb3eda817c7adc",
+            "p-bdab3e1443988a"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-4becb601919188",
+            "p-6b056cab733348"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-aae242c346d332",
+            "p-90c520e7170021"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 13,
+          "resultLabel": "13位",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-3c0f1899831ea6",
+            "p-d751e2f59f7802"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 13,
+          "resultLabel": "13位",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-c3ff1ffcd612ed",
+            "p-39e29bb5b30187"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 13,
+          "resultLabel": "13位",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-c338f3ce672cf8",
+            "p-d97b7ff6733d31"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 13,
+          "resultLabel": "13位",
+          "page": 5,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-94664df6f011f8",
+            "p-df48743bbeeb58"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 1,
+          "resultLabel": "優勝",
+          "page": 10,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-209ae8d6247cf3",
+            "p-2ad8777261c796"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 2,
+          "resultLabel": "準優勝",
+          "page": 10,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-907be3ffc8f0ce",
+            "p-4615251b352481"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 3,
+          "resultLabel": "3位",
+          "page": 10,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-04203906673033",
+            "p-0a1903073eb965"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 3,
+          "resultLabel": "3位",
+          "page": 10,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-5a194d18749c9e",
+            "p-cbfb49e65b03e7"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 10,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-ea597e582f838e",
+            "p-2ffd40abb352b1"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 10,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-195bc3b45e3e72",
+            "p-6fe734688b833f"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 10,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-ba6e259b045dc4",
+            "p-63c0eb523e1429"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 10,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-da681bc9d67166",
+            "p-c683795e56376b"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 10,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-bd2ce333aca5e6",
+            "p-5bcfe1e82824db"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 10,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-fae05b76f162ee",
+            "p-915d9bd3be71d4"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 10,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-24d02039890a15",
+            "p-b08c41e1130378"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 10,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-0012effe0e4f80",
+            "p-f2fa0338d31d37"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 13,
+          "resultLabel": "13位",
+          "page": 10,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-f54e398fdef88c",
+            "p-e1aa5fe79cfa78"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 13,
+          "resultLabel": "13位",
+          "page": 10,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-e2f0ff5692e9bc",
+            "p-b880af03c17a8d"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 13,
+          "resultLabel": "13位",
+          "page": 10,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-9fe27d6b40c23e",
+            "p-426647a04c610e"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "completed",
+          "rank": 13,
+          "resultLabel": "13位",
+          "page": 10,
+          "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
+          "checkedAt": "2026-09-21T17:10:23+00:00",
+          "playerIds": [
+            "p-f05a40f62f1f8a",
+            "p-70758c41dbd816"
+          ]
+        }
+      ],
+      "entryStatus": "published",
+      "resultCoverage": "男女の公式最終順位表に掲載されたペアを収録。",
+      "checkedAt": "2026-09-21T17:10:22+00:00"
+    },
     {
       "id": "e-8e604b2a75657e",
       "name": "第20回アジア競技大会（2026/愛知・名古屋）",

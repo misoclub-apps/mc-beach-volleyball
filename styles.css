@@ -1108,3 +1108,17 @@ legend {
     margin-bottom: 12px;
   }
 }
+
+.past-results {
+  margin-top: 3rem;
+}
+.history-note {
+  color: var(--color-muted);
+  line-height: 1.8;
+  margin: 0 0 1.5rem;
+}
+.badge.result {
+  background: #e5eee9;
+  color: #264f41;
+  font-weight: 700;
+}
