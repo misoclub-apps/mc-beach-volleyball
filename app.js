@@ -63,7 +63,7 @@ function home() {
     data.events.find((e) => isUpcoming(e) && e.entries.length) ||
     data.events.find((e) => isUpcoming(e));
   main.innerHTML = `<section class="intro"><div><p class="eyebrow">BEACH VOLLEYBALL / ${data.year}</p><h1>気になる選手の、<br>次のコートへ。</h1><p class="intro-copy">選手から、出場大会と日程をひと目で。<br>公式サイトに散らばる情報を、このノートに。</p></div>${next ? `<a class="next-event" href="#event/${next.id}"><span class="eyebrow">NEXT ON THE SAND</span><span class="next-date">${range(next)}</span><strong>${h(next.name)}</strong><span class="next-place">${h(next.venue)}</span><span class="next-link">大会を見る <span>↗</span></span></a>` : ""}</section>${freshness()}
-    <section class="directory" aria-labelledby="directory-title"><aside class="filters"><p class="eyebrow">PLAYER INDEX</p><h2 id="directory-title">選手を探す</h2><p>名前・ローマ字で検索できます。</p><label class="search-label" for="player-search">選手名</label><div class="search-box"><span aria-hidden="true">⌕</span><input id="player-search" type="search" placeholder="例：酒井 春海" value="${h(filters.query)}" autocomplete="off"></div><fieldset><legend>カテゴリー</legend><div class="segments">${[
+    <section class="directory" aria-labelledby="directory-title"><aside class="filters"><p class="eyebrow">PLAYER INDEX</p><h2 id="directory-title">選手を探す</h2><p>名前・ローマ字で検索できます。</p><label class="search-label" for="player-search">選手名</label><div class="search-box"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m15.5 15.5 5 5"></path></svg><input id="player-search" type="search" placeholder="例：酒井 春海" value="${h(filters.query)}" autocomplete="off"></div><fieldset><legend>カテゴリー</legend><div class="segments">${[
       ["", "すべて"],
       ["men", "男子"],
       ["women", "女子"],

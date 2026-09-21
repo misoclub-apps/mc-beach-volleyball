@@ -16,7 +16,7 @@ from urllib.robotparser import RobotFileParser
 import requests
 
 from scripts.history import collect_history
-from scripts.parsers import normalize, parse_article, parse_profiles, parse_roster, parse_calendar, parse_jva_calendar, parse_jva_teams, safe_url, soup_body, stable_id
+from scripts.parsers import normalize, parse_article, parse_profile_image, parse_profiles, parse_roster, parse_calendar, parse_jva_calendar, parse_jva_teams, safe_url, soup_body, stable_id
 
 ROOT = Path(__file__).resolve().parents[1]
 UA = 'BeachNote/1.0 (+https://github.com/misoclub-apps/mc-beach-volleyball; local periodic index)'
@@ -43,6 +43,11 @@ class Fetcher:
         self.session.headers['Accept-Encoding'] = 'gzip, deflate'
         self.allowed_hosts = set(allowed_hosts or ['www.jbv.jp', 'jbv.jp'])
         self.records, self.robots, self.warnings = {}, {}, []
+
+    def cached(self, url):
+        key = hashlib.sha256(url.encode()).hexdigest()
+        path = self.cache / key
+        return path.read_bytes() if path.exists() else None
 
     def get(self, url, robots=False):
         parts = urlparse(url)
@@ -129,6 +134,24 @@ def discover(fetcher, config, issues):
                     pages[link] = a.get_text(' ', strip=True)
         except Exception as error:
             issues.append({'url': url, 'kind': 'discovery', 'message': str(error)})
+    for index, profile in enumerate(profiles, 1):
+        print(f'[profile {index}/{len(profiles)}] {profile["name"]}', flush=True)
+        try:
+            portrait = parse_profile_image(fetcher.get(profile['profileUrl']), profile['profileUrl'], profile['name'])
+            if portrait:
+                profile['imageUrl'] = portrait
+            else:
+                issues.append({'url': profile['profileUrl'], 'kind': 'profile-image',
+                               'message': '個別プロフィールの本人画像を確認できないため一覧画像を使用'})
+        except Exception as error:
+            cached = fetcher.cached(profile['profileUrl'])
+            portrait = parse_profile_image(cached, profile['profileUrl'], profile['name']) if cached else None
+            if portrait:
+                profile['imageUrl'] = portrait
+                issues.append({'url': profile['profileUrl'], 'kind': 'profile-image',
+                               'message': f'個別ページの再取得失敗。保存済みページの画像を維持: {error}'})
+            else:
+                issues.append({'url': profile['profileUrl'], 'kind': 'profile-image', 'message': str(error)})
     for url in config.get('extraPages', []):
         pages[url] = '追加対象'
     return pages, profiles, calendar

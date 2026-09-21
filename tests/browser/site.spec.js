@@ -71,6 +71,12 @@ test("スマホでも次回大会カードと公式プロフィール画像を�
   await page.setViewportSize({ width: 375, height: 900 });
   await page.goto("/");
   await expect(page.locator(".next-event")).toBeVisible();
+  const searchCenters = await page.locator(".search-box").evaluate((box) => {
+    const input = box.querySelector("input").getBoundingClientRect();
+    const icon = box.querySelector("svg").getBoundingClientRect();
+    return [input.top + input.height / 2, icon.top + icon.height / 2];
+  });
+  expect(Math.abs(searchCenters[0] - searchCenters[1])).toBeLessThan(1);
   await page.getByLabel("選手名", { exact: true }).fill("酒井春海");
   const photo = page.locator(".player-row [data-profile-photo]");
   await expect(photo).toBeVisible();

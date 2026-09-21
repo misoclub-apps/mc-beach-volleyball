@@ -1,7 +1,7 @@
 import io
 import unittest
 from unittest.mock import patch, MagicMock
-from scripts.parsers import dates_from_label, parse_article, parse_calendar, parse_profiles, parse_roster, parse_jva_calendar, parse_jva_teams, normalize
+from scripts.parsers import dates_from_label, parse_article, parse_calendar, parse_profile_image, parse_profiles, parse_roster, parse_jva_calendar, parse_jva_teams, normalize
 from scripts.update import compile_players, validate
 
 
@@ -12,6 +12,13 @@ class ParsersTest(unittest.TestCase):
         profile = parse_profiles(html, 'https://www.jbv.jp/players/index.html')[0]
         self.assertEqual(profile['imageUrl'], 'https://www.jbv.jp/players/img/woman/sakai_w.jpg')
         self.assertEqual(profile['profileUrl'], 'https://www.jbv.jp/players/woman/sakai.html')
+
+    def test_individual_profile_photo_replaces_directory_thumbnail(self):
+        html = '''<div id="contents_Right"><img src="../../cmn/logo.jpg" alt="JBV">
+        <img src="../img/woman/pic/sakai.jpg" alt="酒井春海"></div>'''
+        image = parse_profile_image(html, 'https://www.jbv.jp/players/woman/sakai.html', '酒井 春海')
+        self.assertEqual(image, 'https://www.jbv.jp/players/img/woman/pic/sakai.jpg')
+        self.assertIsNone(parse_profile_image(html, 'https://www.jbv.jp/players/woman/sakai.html', '別の選手'))
 
     def test_date_ranges(self):
         for text, start, end in [

@@ -74,6 +74,16 @@ def parse_profiles(html, url):
     return result
 
 
+def parse_profile_image(html, url, name):
+    """Return the portrait shown on the player's individual JBV profile."""
+    _, body = soup_body(html)
+    expected = normalize(name)
+    for image in body.select('img[src]'):
+        if normalize(image.get('alt', '')) == expected:
+            return safe_url(url, image['src'])
+    return None
+
+
 def parse_article(html, url, year):
     _, body = soup_body(html)
     heading = body.find('h2')
