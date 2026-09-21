@@ -15,7 +15,7 @@ from urllib.robotparser import RobotFileParser
 
 import requests
 
-from scripts.parsers import normalize, parse_article, parse_profiles, parse_roster, parse_calendar, safe_url, soup_body, stable_id
+from scripts.parsers import normalize, parse_article, parse_profiles, parse_roster, parse_calendar, parse_jva_calendar, parse_jva_teams, safe_url, soup_body, stable_id
 
 ROOT = Path(__file__).resolve().parents[1]
 UA = 'BeachNote/1.0 (+https://github.com/misoclub-apps/mc-beach-volleyball; local periodic index)'
@@ -120,6 +120,8 @@ def discover(fetcher, config, issues):
                 profiles += parse_profiles(html, url)
             if '/convention/' in url or '/convention-jva/' in url:
                 calendar += parse_calendar(html, url, config['year'])
+            if '/beach_international/' in url:
+                calendar += parse_jva_calendar(html, url, config['year'])
             for a in soup.select('a[href]'):
                 link = safe_url(url, a['href'])
                 if link and re.match(r'https://www\.jbv\.jp/(news|schedule)/entry-\d+\.html$', link):
@@ -256,7 +258,8 @@ def run(args):
             a, b = normalize(event['name']), normalize(other['name'])
             return other['startDate'] == event['startDate'] and (a in b or b in a or ('小浜' in other['name'] and '北信越' in event['name']))
         if not any(same_event(e) for e in events):
-            event['checkedAt'] = fetcher.records[event['sourceUrl']]['checkedAt']
+            event['checkedAt'] = fetcher.records[event.get('scheduleSourceUrl', event['sourceUrl'])]['checkedAt']
+            event.update(overrides.get('events', {}).get(event['id'], {}))
             events.append(event)
     external_review = []
     for url in config.get('reviewPages', []):
@@ -270,10 +273,26 @@ def run(args):
         except Exception as error:
             issues.append({'url': url, 'kind': 'external', 'message': str(error)})
     write_json(ROOT / 'reports/external-review.json', external_review)
+    for source in config.get('htmlRosters', []):
+        event = next((e for e in events if e['sourceUrl'] == source['eventUrl']), None)
+        if event is None:
+            continue
+        try:
+            teams, problems = parse_jva_teams(fetcher.get(source['url']), profiles)
+            for problem in problems:
+                issues.append({'url': source['url'], 'eventId': event['id'], 'kind': 'roster', 'message': problem})
+            for team in teams:
+                team['sourceUrl'] = source['url']
+                team['checkedAt'] = fetcher.records[source['url']]['checkedAt']
+            event['entries'] = teams
+            event['entryStatus'] = 'review' if problems else 'published' if teams else 'unpublished'
+            event['documents'].append({'url': source['url'], 'label': '日本の出場メンバー（JVA）', 'kind': 'entry', 'gender': None})
+        except Exception as error:
+            issues.append({'url': source['url'], 'kind': 'external', 'message': str(error)})
     players = compile_players(events, profiles, overrides.get('aliases', {}))
-    dataset = {'schemaVersion': 1, 'generatedAt': now(), 'asOf': as_of, 'year': config['year'],
-               'coverage': {'source': '日本ビーチバレーボール連盟（JBV）・日本バレーボール協会（JVA）',
-                            'description': 'JBVの年間予定・ニュース・公認大会から、取得時点で開催前または開催中の大会を収録。JVA国内予定も確認。公開された参加名簿を選手に紐付けています。未発表の出場予定は含みません。',
+    dataset = {'schemaVersion': 1, 'generatedAt': now(), 'checkedAt': max(r['checkedAt'] for r in fetcher.records.values()), 'asOf': as_of, 'year': config['year'],
+               'coverage': {'source': 'JBV・JVA・各大会主催者',
+                            'description': 'JBVの年間予定・ニュース・公認大会とJVA国際大会予定から、取得時点で開催前または開催中の大会を収録。主催者サイトも確認し、大会別に公開された参加名簿を選手に紐付けています。未発表の出場予定は含みません。',
                             'domains': sorted({urlparse(u).hostname for u in fetcher.records}),
                             'reviewedSources': [{'url': r['url'], 'title': r['title'], 'checkedAt': r['checkedAt']} for r in external_review],
                             'pagesDiscovered': len(candidates), 'pagesChecked': min(len(candidates), limit),
@@ -287,7 +306,7 @@ def run(args):
     write_json(ROOT / 'reports/update.json', {'at': now(), 'issues': issues, 'skipped': skipped,
                                              'warnings': fetcher.warnings, 'sources': fetcher.records})
     # Hard fetch/discovery failures must not erase the last good snapshot.
-    failures = [i for i in issues if i['kind'] in ('fetch', 'discovery', 'article', 'limit')]
+    failures = [i for i in issues if i['kind'] in ('fetch', 'discovery', 'article', 'limit', 'external', 'date')]
     if failures:
         raise ValueError(f'{len(failures)}件の取得エラー。reports/update.json を確認してください。公開データは変更しません。')
     output = ROOT / 'public/data/beach.json'
@@ -297,6 +316,11 @@ def run(args):
         new_events = {e['id'] for e in events}
         write_json(ROOT / 'reports/changes.json', {'added': sorted(new_events-old_events), 'removed': sorted(old_events-new_events),
                                                   'playersBefore': len(old['players']), 'playersAfter': len(players)})
+        unexpectedly_missing = [e['id'] for e in old['events'] if e['id'] not in new_events
+                                and (e['endDate'] or '9999') >= as_of
+                                and e['id'] not in overrides.get('removedEvents', {})]
+        if unexpectedly_missing:
+            raise ValueError('未開催大会が消えています。掲載変更を確認し、必要なら overrides.removedEvents に理由を記録してください: ' + ', '.join(unexpectedly_missing))
     write_json(output, dataset)
     print(f'\n完了: {len(players)}選手 / {len(events)}大会 / {sum(len(e["entries"]) for e in events)}ペア / 要確認{len(issues)}件')
     for warning in fetcher.warnings:

@@ -1,7 +1,7 @@
 import io
 import unittest
 from unittest.mock import patch, MagicMock
-from scripts.parsers import dates_from_label, parse_article, parse_calendar, parse_roster, normalize
+from scripts.parsers import dates_from_label, parse_article, parse_calendar, parse_roster, parse_jva_calendar, parse_jva_teams, normalize
 from scripts.update import compile_players, validate
 
 
@@ -56,6 +56,22 @@ class ParsersTest(unittest.TestCase):
         players = compile_players(events, [], {'Kaufer Martin': 'Martin Kaufer'})
         self.assertEqual(len(players), 2)
         self.assertEqual(events[0]['entries'][0]['playerIds'], events[1]['entries'][0]['playerIds'])
+
+    def test_jva_uses_explicit_pair_sections(self):
+        html = '''<main><section class="m-playerList"><div class="m-playerList-contents-article-data-name">選手 一</div><div class="m-playerList-contents-article-data-name">選手 二</div></section></main>'''
+        profiles = [{'name': '選手一', 'gender': 'women'}, {'name': '選手二', 'gender': 'women'}]
+        teams, issues = parse_jva_teams(html, profiles)
+        self.assertFalse(issues)
+        self.assertEqual(teams[0]['names'], ['選手 一', '選手 二'])
+        self.assertEqual(teams[0]['gender'], 'women')
+        html = html.replace('</section>', '<div class="m-playerList-contents-article-data-name">選手 三</div></section>')
+        self.assertFalse(parse_jva_teams(html, profiles)[0])
+
+    def test_jva_date_and_source(self):
+        html = '''<main><dl class="is-beach_international"><dt>9/20-10/3</dt><dd class="schedule-contents-dl-title"><a href="event/">国際大会</a></dd><dd class="schedule-contents-dl-place">愛知</dd></dl></main>'''
+        event = parse_jva_calendar(html, 'https://www.jva.or.jp/beach_international/2026/', 2026)[0]
+        self.assertEqual(event['endDate'], '2026-10-03')
+        self.assertEqual(event['sourceUrl'], 'https://www.jva.or.jp/beach_international/2026/event/')
 
 
 if __name__ == '__main__': unittest.main()

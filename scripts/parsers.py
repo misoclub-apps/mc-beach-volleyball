@@ -170,6 +170,51 @@ def parse_calendar(html, url, year):
     return events
 
 
+def parse_jva_calendar(html, url, year):
+    _, body = soup_body(html)
+    events = []
+    for dl in body.select('dl.is-beach_international'):
+        dt, title = dl.find('dt'), dl.select_one('.schedule-contents-dl-title')
+        if dt is None or title is None:
+            continue
+        label = dt.get_text(' ', strip=True)
+        start, end = dates_from_label(label, year)
+        if not start:
+            continue
+        a = title.find('a')
+        name = title.get_text(' ', strip=True)
+        source = safe_url(url, a['href']) if a else url
+        venue = dl.select_one('.schedule-contents-dl-place')
+        events.append({'id': stable_id('e-', source if a else source+'|'+name+'|'+start),
+                       'name': name, 'officialTitle': name, 'category': '国際大会',
+                       'startDate': start, 'endDate': end, 'dateLabel': label,
+                       'venue': venue.get_text(' ', strip=True) if venue else '',
+                       'cancelled': '中止' in name, 'sourceUrl': source, 'scheduleSourceUrl': url,
+                       'documents': [], 'entries': [], 'entryStatus': 'unpublished'})
+    return events
+
+
+def parse_jva_teams(html, profiles):
+    """JVA groups each actual pair in a separate m-playerList section.
+
+    Never pair arbitrary adjacent names or use the overall national-team list
+    as evidence of entry. Sex is resolved against already verified profiles.
+    """
+    _, body = soup_body(html)
+    genders = {normalize(p['name']): p['gender'] for p in profiles}
+    teams, problems = [], []
+    for section in body.select('section.m-playerList'):
+        names = [n.get_text(' ', strip=True) for n in section.select('.m-playerList-contents-article-data-name')]
+        if not names:
+            continue
+        group_genders = {genders[normalize(n)] for n in names if normalize(n) in genders}
+        if len(names) != 2 or len(group_genders) != 1:
+            problems.append('JVAのペア区分・男女区分を確認してください: ' + ' / '.join(names))
+            continue
+        teams.append({'names': names, 'gender': group_genders.pop(), 'status': 'entered', 'number': len(teams)+1})
+    return (teams if not problems else []), problems
+
+
 def parse_roster(data, gender):
     """Read ruled two-player JBV tables by columns; ignore bracket-only pages."""
     teams, issues = [], []

@@ -3,7 +3,27 @@
     "Kaufer Martin": "Martin Kaufer",
     "藪見 真歩": "薮見 真歩"
   },
-  "events": {},
+  "events": {
+    "e-78fe0e5d21158e": {
+      "relatedSources": [
+        {
+          "label": "横浜ビーチバレーボール連盟の大会案内",
+          "url": "https://ybvf.volleyball.ne.jp/tournament/2026%e5%b9%b4%e5%ba%a6ybvf-series-5-%e3%83%95%e3%82%b8%e3%82%ad%e3%83%8f%e3%82%a6%e3%82%b9-veluna%e3%82%ab%e3%83%83%e3%83%97-%e5%85%ac%e8%aa%8d%e3%83%93%e3%83%bc%e3%83%81%e3%83%90%e3%83%ac%e3%83%bc/"
+        }
+      ]
+    },
+    "e-53c5283be4ca9d": {
+      "relatedSources": [
+        {
+          "label": "JVA大会概要・日程",
+          "url": "https://www.jva.or.jp/beach_domestic/2026/other-events/kawasakicup/"
+        }
+      ]
+    },
+    "e-8e604b2a75657e": {
+      "venue": "愛知県碧南市・碧南緑地ビーチコート"
+    }
+  },
   "entries": {},
   "ignoredPages": []
 }

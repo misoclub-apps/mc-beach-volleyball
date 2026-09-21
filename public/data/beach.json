@@ -1,37 +1,69 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-21T16:46:14+00:00",
+  "generatedAt": "2026-09-21T17:00:32+00:00",
+  "checkedAt": "2026-09-21T16:56:30+00:00",
   "asOf": "2026-09-22",
   "year": 2026,
   "coverage": {
-    "source": "日本ビーチバレーボール連盟（JBV）・日本バレーボール協会（JVA）",
-    "description": "JBVの年間予定・ニュース・公認大会から、取得時点で開催前または開催中の大会を収録。JVA国内予定も確認。公開された参加名簿を選手に紐付けています。未発表の出場予定は含みません。",
+    "source": "JBV・JVA・各大会主催者",
+    "description": "JBVの年間予定・ニュース・公認大会とJVA国際大会予定から、取得時点で開催前または開催中の大会を収録。主催者サイトも確認し、大会別に公開された参加名簿を選手に紐付けています。未発表の出場予定は含みません。",
     "domains": [
       "www.jbv.jp",
-      "www.jva.or.jp"
+      "www.jva.or.jp",
+      "ybvf.volleyball.ne.jp"
     ],
     "reviewedSources": [
       {
         "url": "https://www.jva.or.jp/beach_domestic/2026/",
         "title": "2026年国内大会スケジュール | 公益財団法人日本バレーボール協会",
-        "checkedAt": "2026-09-21T16:46:12+00:00"
+        "checkedAt": "2026-09-21T16:51:57+00:00"
       },
       {
         "url": "https://www.jva.or.jp/beach_domestic/2026/other-events/kawasakicup/",
         "title": "川崎市長杯 JVA第18回ビーチバレーボール大会 | 公益財団法人日本バレーボール協会",
-        "checkedAt": "2026-09-21T16:46:13+00:00"
+        "checkedAt": "2026-09-21T16:51:58+00:00"
       },
       {
         "url": "https://www.jva.or.jp/beach_domestic/2026/other-events/kawasakicup/?entry=schedule_results",
         "title": "川崎市長杯 JVA第18回ビーチバレーボール大会 | 公益財団法人日本バレーボール協会",
-        "checkedAt": "2026-09-21T16:46:14+00:00"
+        "checkedAt": "2026-09-21T16:51:59+00:00"
+      },
+      {
+        "url": "https://ybvf.volleyball.ne.jp/",
+        "title": "Yokohama Beach Volleyball Federation | Fun time on the Beach",
+        "checkedAt": "2026-09-21T16:52:00+00:00"
+      },
+      {
+        "url": "https://ybvf.volleyball.ne.jp/tournament/2026%e5%b9%b4%e5%ba%a6ybvf-series-5-%e3%83%95%e3%82%b8%e3%82%ad%e3%83%8f%e3%82%a6%e3%82%b9-veluna%e3%82%ab%e3%83%83%e3%83%97-%e5%85%ac%e8%aa%8d%e3%83%93%e3%83%bc%e3%83%81%e3%83%90%e3%83%ac%e3%83%bc/",
+        "title": "2026年度YBVF series 5 フジキハウス VELUNAカップ 公認ビーチバレーボール大会 | Yokohama Beach Volleyball Federation",
+        "checkedAt": "2026-09-21T16:52:02+00:00"
+      },
+      {
+        "url": "https://www.jva.or.jp/beach_international/2026/ioc-oca2026/",
+        "title": "第20回アジア競技大会（2026/愛知・名古屋） | 公益財団法人日本バレーボール協会",
+        "checkedAt": "2026-09-21T16:56:09+00:00"
+      },
+      {
+        "url": "https://www.jva.or.jp/beach_international/2026/ioc-oca2026/?entry=member",
+        "title": "第20回アジア競技大会（2026/愛知・名古屋） | 公益財団法人日本バレーボール協会",
+        "checkedAt": "2026-09-21T16:56:28+00:00"
+      },
+      {
+        "url": "https://www.jva.or.jp/beach_international/2026/bpt2026/alanya-2/",
+        "title": "FUTURESアランヤ大会 | 公益財団法人日本バレーボール協会",
+        "checkedAt": "2026-09-21T16:56:29+00:00"
+      },
+      {
+        "url": "https://www.jva.or.jp/beach_international/2026/avc2026/doha/",
+        "title": "アジアビーチツアードーハオープン | 公益財団法人日本バレーボール協会",
+        "checkedAt": "2026-09-21T16:56:30+00:00"
       }
     ],
     "pagesDiscovered": 113,
     "pagesChecked": 113,
     "pdfsChecked": 4,
     "reviewCount": 0,
-    "offline": false,
+    "offline": true,
     "skippedCount": 99
   },
   "players": [
@@ -71,7 +103,8 @@
       "name": "オト パウリネ恵美里",
       "gender": "women",
       "aliases": [
-        "オト パウリネ恵美里"
+        "オト パウリネ恵美里",
+        "オトパウリネ 恵美里"
       ],
       "roman": "",
       "profileUrl": null
@@ -1771,9 +1804,88 @@
       ],
       "roman": "Kai Kurokawa",
       "profileUrl": "https://www.jbv.jp/players/man/kurokawa.html"
+    },
+    {
+      "id": "p-f68c79e674a200",
+      "name": "黒澤孝太",
+      "gender": "men",
+      "aliases": [
+        "黒澤孝太"
+      ],
+      "roman": "",
+      "profileUrl": null
     }
   ],
   "events": [
+    {
+      "id": "e-8e604b2a75657e",
+      "name": "第20回アジア競技大会（2026/愛知・名古屋）",
+      "officialTitle": "第20回アジア競技大会（2026/愛知・名古屋）",
+      "category": "国際大会",
+      "startDate": "2026-09-20",
+      "endDate": "2026-10-03",
+      "dateLabel": "9/20-10/3",
+      "venue": "愛知県碧南市・碧南緑地ビーチコート",
+      "cancelled": false,
+      "sourceUrl": "https://www.jva.or.jp/beach_international/2026/ioc-oca2026/",
+      "scheduleSourceUrl": "https://www.jva.or.jp/beach_international/2026/",
+      "documents": [
+        {
+          "url": "https://www.jva.or.jp/beach_international/2026/ioc-oca2026/?entry=member",
+          "label": "日本の出場メンバー（JVA）",
+          "kind": "entry",
+          "gender": null
+        }
+      ],
+      "entries": [
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 1,
+          "sourceUrl": "https://www.jva.or.jp/beach_international/2026/ioc-oca2026/?entry=member",
+          "checkedAt": "2026-09-21T16:56:28+00:00",
+          "playerIds": [
+            "p-2bc3a9cc952c04",
+            "p-f68c79e674a200"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "entered",
+          "number": 2,
+          "sourceUrl": "https://www.jva.or.jp/beach_international/2026/ioc-oca2026/?entry=member",
+          "checkedAt": "2026-09-21T16:56:28+00:00",
+          "playerIds": [
+            "p-229aea0a5e245b",
+            "p-6940ec375c06e8"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 3,
+          "sourceUrl": "https://www.jva.or.jp/beach_international/2026/ioc-oca2026/?entry=member",
+          "checkedAt": "2026-09-21T16:56:28+00:00",
+          "playerIds": [
+            "p-f0f0a4a7f277b6",
+            "p-bcf55897f68a02"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 4,
+          "sourceUrl": "https://www.jva.or.jp/beach_international/2026/ioc-oca2026/?entry=member",
+          "checkedAt": "2026-09-21T16:56:28+00:00",
+          "playerIds": [
+            "p-907be3ffc8f0ce",
+            "p-4615251b352481"
+          ]
+        }
+      ],
+      "entryStatus": "published",
+      "checkedAt": "2026-09-21T16:56:08+00:00"
+    },
     {
       "id": "e-30e644ef01a566",
       "name": "第9・10回H・B・V・C（Hiroshima Beach Volleyball Club）CUP in ベイサイドビーチ坂",
@@ -1795,7 +1907,7 @@
       ],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-21T16:44:25+00:00"
+      "checkedAt": "2026-09-21T16:47:09+00:00"
     },
     {
       "id": "e-88cb918f9f721a",
@@ -1855,7 +1967,7 @@
           "number": 1,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-bacb4c47486198",
             "p-df48743bbeeb58"
@@ -1867,7 +1979,7 @@
           "number": 2,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-4becb601919188",
             "p-b5a1767dae9173"
@@ -1879,7 +1991,7 @@
           "number": 3,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-0932b58def2823",
             "p-bb255ad1ef4d73"
@@ -1891,7 +2003,7 @@
           "number": 4,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-e900bac72b258e",
             "p-7b33eeb4c59158"
@@ -1903,7 +2015,7 @@
           "number": 5,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-c03b165b51346a",
             "p-de825d238f0a84"
@@ -1915,7 +2027,7 @@
           "number": 6,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-3c0f1899831ea6",
             "p-5bfc10c148b633"
@@ -1927,7 +2039,7 @@
           "number": 7,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-f14c67cc3f1f06",
             "p-abe30bf088268c"
@@ -1939,7 +2051,7 @@
           "number": 8,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-aae242c346d332",
             "p-5e6f0b334b4679"
@@ -1951,7 +2063,7 @@
           "number": 9,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-456af9f5b9effd",
             "p-c3ff1ffcd612ed"
@@ -1963,7 +2075,7 @@
           "number": 10,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-b9c92aacfb3510",
             "p-d751e2f59f7802"
@@ -1975,7 +2087,7 @@
           "number": 11,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-94664df6f011f8",
             "p-9201eba2042d0d"
@@ -1987,7 +2099,7 @@
           "number": 12,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-5b3b7296c53464",
             "p-90c520e7170021"
@@ -1999,7 +2111,7 @@
           "number": 13,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-39e29bb5b30187",
             "p-7c039b7bda13a8"
@@ -2011,7 +2123,7 @@
           "number": 14,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-e660d211b4496a",
             "p-80b22dcc07c24e"
@@ -2023,7 +2135,7 @@
           "number": 15,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-c50aa57b4324af",
             "p-a2ae033a2c458d"
@@ -2035,7 +2147,7 @@
           "number": 16,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-536d8879278f47",
             "p-6cc776b47b5e95"
@@ -2047,7 +2159,7 @@
           "number": 17,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-c4f072e092a2f2",
             "p-c15fae4e6e68a2"
@@ -2059,7 +2171,7 @@
           "number": 18,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-54316126a8a75f",
             "p-744fba13784877"
@@ -2071,7 +2183,7 @@
           "number": 19,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-89b5d37cd11b8c",
             "p-7534d7c24cd95d"
@@ -2083,7 +2195,7 @@
           "number": 20,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-297b17500e7c10",
             "p-d9ee789da27f2b"
@@ -2095,7 +2207,7 @@
           "number": 21,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-28b7b74a5eb99c",
             "p-ebb98e5e06a98e"
@@ -2107,7 +2219,7 @@
           "number": 22,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-5aa33f86f91d65",
             "p-267993eb67bba7"
@@ -2119,7 +2231,7 @@
           "number": 23,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-10902c73bf77fb",
             "p-8ce24651c6a54c"
@@ -2131,7 +2243,7 @@
           "number": 24,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-0e83a86fb129d8",
             "p-50dc877a7cec02"
@@ -2143,7 +2255,7 @@
           "number": 25,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-820ff7f07b47df",
             "p-e527a1b6fbbfca"
@@ -2155,7 +2267,7 @@
           "number": 26,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-193c3e6bcc660d",
             "p-ec090c58210ae5"
@@ -2167,7 +2279,7 @@
           "number": 27,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-be282ee5369769",
             "p-e70290ca03d006"
@@ -2179,7 +2291,7 @@
           "number": 28,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:55+00:00",
+          "checkedAt": "2026-09-21T16:47:15+00:00",
           "playerIds": [
             "p-1e50fca86d32a7",
             "p-16216d397111da"
@@ -2191,7 +2303,7 @@
           "number": 1,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-e2f0ff5692e9bc",
             "p-2ad8777261c796"
@@ -2203,7 +2315,7 @@
           "number": 2,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-5bcfe1e82824db",
             "p-b880af03c17a8d"
@@ -2215,7 +2327,7 @@
           "number": 3,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-9fe27d6b40c23e",
             "p-63c0eb523e1429"
@@ -2227,7 +2339,7 @@
           "number": 4,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-0012effe0e4f80",
             "p-24d02039890a15"
@@ -2239,7 +2351,7 @@
           "number": 5,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-bd3287e1362a54",
             "p-f2fa0338d31d37"
@@ -2251,7 +2363,7 @@
           "number": 6,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-5a194d18749c9e",
             "p-0e522b0dbb975e"
@@ -2263,7 +2375,7 @@
           "number": 7,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-fae05b76f162ee",
             "p-058c4ec3f3802d"
@@ -2275,7 +2387,7 @@
           "number": 8,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-bd2ce333aca5e6",
             "p-6b636528915ff5"
@@ -2287,7 +2399,7 @@
           "number": 9,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-f9c13549ef3d9a",
             "p-e1aa5fe79cfa78"
@@ -2299,7 +2411,7 @@
           "number": 10,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-7133c92bb8a56b",
             "p-426647a04c610e"
@@ -2311,7 +2423,7 @@
           "number": 11,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-195bc3b45e3e72",
             "p-2be15d0607014e"
@@ -2323,7 +2435,7 @@
           "number": 12,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-9c40824722c700",
             "p-915d9bd3be71d4"
@@ -2335,7 +2447,7 @@
           "number": 13,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-56198d51067c42",
             "p-cbfb49e65b03e7"
@@ -2347,7 +2459,7 @@
           "number": 14,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-fd735e30d00fe5",
             "p-70758c41dbd816"
@@ -2359,7 +2471,7 @@
           "number": 15,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-63bd5537dddddc",
             "p-b08c41e1130378"
@@ -2371,7 +2483,7 @@
           "number": 16,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-1ef00814faedb6",
             "p-d4619d6a8aaba4"
@@ -2383,7 +2495,7 @@
           "number": 17,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-07757767a97420",
             "p-f3309d4a4eb5eb"
@@ -2395,7 +2507,7 @@
           "number": 18,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-59dc53e20f904b",
             "p-ea4e0c0ccba243"
@@ -2407,7 +2519,7 @@
           "number": 19,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-ba6e259b045dc4",
             "p-92fcf437958e50"
@@ -2419,7 +2531,7 @@
           "number": 20,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-27fcc16cbd21d9",
             "p-e74385bc91847b"
@@ -2431,7 +2543,7 @@
           "number": 21,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-238cbfb56b8682",
             "p-ec3d66bf61a909"
@@ -2443,7 +2555,7 @@
           "number": 22,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-ef8586266060ae",
             "p-643a643a7a36bd"
@@ -2455,7 +2567,7 @@
           "number": 23,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-27146d1100b160",
             "p-acc0e64aee804f"
@@ -2467,7 +2579,7 @@
           "number": 24,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-90c73910db8908",
             "p-3a1909b6c0933b"
@@ -2479,7 +2591,7 @@
           "number": 25,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-5a683b5d033eb9",
             "p-30f54d52b7eceb"
@@ -2491,7 +2603,7 @@
           "number": 26,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-58367f076d2631",
             "p-e5643b6bbdc6e7"
@@ -2503,7 +2615,7 @@
           "number": 27,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-e68522b1b2ae3d",
             "p-39277685de5f32"
@@ -2515,7 +2627,7 @@
           "number": 28,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-285d531c0b6a5c",
             "p-a9d89e9a2fdf49"
@@ -2527,7 +2639,7 @@
           "number": 29,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-d80bb44af433de",
             "p-5b5c22b0fbab93"
@@ -2539,7 +2651,7 @@
           "number": 30,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-08d066486c8a89",
             "p-42ca88b3a7d1a9"
@@ -2551,7 +2663,7 @@
           "number": 31,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-4f7f70f882c0d8",
             "p-33be9913501c00"
@@ -2563,7 +2675,7 @@
           "number": 32,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-4ae6df1a16048e",
             "p-5aa84c84841109"
@@ -2575,7 +2687,7 @@
           "number": 33,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:56+00:00",
+          "checkedAt": "2026-09-21T16:47:16+00:00",
           "playerIds": [
             "p-9aa915b22f538d",
             "p-0ae5bd566aae50"
@@ -2583,7 +2695,7 @@
         }
       ],
       "entryStatus": "published",
-      "checkedAt": "2026-09-21T16:43:54+00:00"
+      "checkedAt": "2026-09-21T16:47:12+00:00"
     },
     {
       "id": "e-9603da85e96465",
@@ -2612,7 +2724,7 @@
       ],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-21T16:44:23+00:00"
+      "checkedAt": "2026-09-21T16:47:20+00:00"
     },
     {
       "id": "e-51803488845004",
@@ -2635,7 +2747,7 @@
       ],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-21T16:44:30+00:00"
+      "checkedAt": "2026-09-21T16:47:24+00:00"
     },
     {
       "id": "e-e309b63890b129",
@@ -2671,7 +2783,7 @@
           "number": 1,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-4becb601919188",
             "p-80b22dcc07c24e"
@@ -2683,7 +2795,7 @@
           "number": 2,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-bb255ad1ef4d73",
             "p-bacb4c47486198"
@@ -2695,7 +2807,7 @@
           "number": 3,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-e900bac72b258e",
             "p-90c520e7170021"
@@ -2707,7 +2819,7 @@
           "number": 4,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-7ce605fcf52b8d",
             "p-5bfc10c148b633"
@@ -2719,7 +2831,7 @@
           "number": 5,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-0932b58def2823",
             "p-456af9f5b9effd"
@@ -2731,7 +2843,7 @@
           "number": 6,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-c3ff1ffcd612ed",
             "p-83717440788185"
@@ -2743,7 +2855,7 @@
           "number": 7,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-3c0f1899831ea6",
             "p-267993eb67bba7"
@@ -2755,7 +2867,7 @@
           "number": 8,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-aae242c346d332",
             "p-5e6f0b334b4679"
@@ -2767,7 +2879,7 @@
           "number": 9,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-de825d238f0a84",
             "p-8ce24651c6a54c"
@@ -2779,7 +2891,7 @@
           "number": 10,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-b9c92aacfb3510",
             "p-d751e2f59f7802"
@@ -2791,7 +2903,7 @@
           "number": 11,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-94664df6f011f8",
             "p-9201eba2042d0d"
@@ -2803,7 +2915,7 @@
           "number": 12,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-39e29bb5b30187",
             "p-7c039b7bda13a8"
@@ -2815,7 +2927,7 @@
           "number": 13,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-c482f56f258175",
             "p-bdab3e1443988a"
@@ -2827,7 +2939,7 @@
           "number": 14,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-c50aa57b4324af",
             "p-a2ae033a2c458d"
@@ -2839,7 +2951,7 @@
           "number": 15,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-c03b165b51346a",
             "p-f8ec9f01f73a50"
@@ -2851,7 +2963,7 @@
           "number": 16,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-536d8879278f47",
             "p-6cc776b47b5e95"
@@ -2863,7 +2975,7 @@
           "number": 17,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-5b3b7296c53464",
             "p-5aa33f86f91d65"
@@ -2875,7 +2987,7 @@
           "number": 18,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-c4f072e092a2f2",
             "p-c15fae4e6e68a2"
@@ -2887,7 +2999,7 @@
           "number": 19,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-e527a1b6fbbfca",
             "p-d97b7ff6733d31"
@@ -2899,7 +3011,7 @@
           "number": 20,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-df285780bb6402",
             "p-e660d211b4496a"
@@ -2911,7 +3023,7 @@
           "number": 21,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-f9df949f999cf1",
             "p-4c177784a4432b"
@@ -2923,7 +3035,7 @@
           "number": 22,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-89b5d37cd11b8c",
             "p-7534d7c24cd95d"
@@ -2935,7 +3047,7 @@
           "number": 23,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-b0ec356fd21201",
             "p-9c5a1283daa8e0"
@@ -2947,7 +3059,7 @@
           "number": 24,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-297b17500e7c10",
             "p-d9ee789da27f2b"
@@ -2959,7 +3071,7 @@
           "number": 25,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-0e83a86fb129d8",
             "p-b8edb88a18e274"
@@ -2971,7 +3083,7 @@
           "number": 26,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-28b7b74a5eb99c",
             "p-ebb98e5e06a98e"
@@ -2983,7 +3095,7 @@
           "number": 27,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-193c3e6bcc660d",
             "p-ec090c58210ae5"
@@ -2995,7 +3107,7 @@
           "number": 28,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-1e50fca86d32a7",
             "p-16216d397111da"
@@ -3007,7 +3119,7 @@
           "number": 29,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:51+00:00",
+          "checkedAt": "2026-09-21T16:47:27+00:00",
           "playerIds": [
             "p-be282ee5369769",
             "p-e70290ca03d006"
@@ -3019,7 +3131,7 @@
           "number": 1,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-9fe27d6b40c23e",
             "p-63c0eb523e1429"
@@ -3031,7 +3143,7 @@
           "number": 2,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-f05a40f62f1f8a",
             "p-f2fa0338d31d37"
@@ -3043,7 +3155,7 @@
           "number": 3,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-b880af03c17a8d",
             "p-e74385bc91847b"
@@ -3055,7 +3167,7 @@
           "number": 4,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-0012effe0e4f80",
             "p-7133c92bb8a56b"
@@ -3067,7 +3179,7 @@
           "number": 5,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-bd2ce333aca5e6",
             "p-6b636528915ff5"
@@ -3079,7 +3191,7 @@
           "number": 6,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-fae05b76f162ee",
             "p-058c4ec3f3802d"
@@ -3091,7 +3203,7 @@
           "number": 7,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-5a194d18749c9e",
             "p-0e522b0dbb975e"
@@ -3103,7 +3215,7 @@
           "number": 8,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-24d02039890a15",
             "p-915d9bd3be71d4"
@@ -3115,7 +3227,7 @@
           "number": 9,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-f9c13549ef3d9a",
             "p-426647a04c610e"
@@ -3127,7 +3239,7 @@
           "number": 10,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-89fb663c39dd55",
             "p-f54e398fdef88c"
@@ -3139,7 +3251,7 @@
           "number": 11,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-195bc3b45e3e72",
             "p-2be15d0607014e"
@@ -3151,7 +3263,7 @@
           "number": 12,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-fd735e30d00fe5",
             "p-70758c41dbd816"
@@ -3163,7 +3275,7 @@
           "number": 13,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-ba6e259b045dc4",
             "p-bd3287e1362a54"
@@ -3175,7 +3287,7 @@
           "number": 14,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-d80bb44af433de",
             "p-e1aa5fe79cfa78"
@@ -3187,7 +3299,7 @@
           "number": 15,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-1ef00814faedb6",
             "p-d4619d6a8aaba4"
@@ -3199,7 +3311,7 @@
           "number": 16,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-e7d443af2e0fb1",
             "p-976ed7cc7e5365"
@@ -3211,7 +3323,7 @@
           "number": 17,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-56198d51067c42",
             "p-5bcfe1e82824db"
@@ -3223,7 +3335,7 @@
           "number": 18,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-ad8b7f4e835959",
             "p-92fcf437958e50"
@@ -3235,7 +3347,7 @@
           "number": 19,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-acc0e64aee804f",
             "p-63bd5537dddddc"
@@ -3247,7 +3359,7 @@
           "number": 20,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-ff8635c304e6d1",
             "p-58367f076d2631"
@@ -3259,7 +3371,7 @@
           "number": 21,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-238cbfb56b8682",
             "p-ec3d66bf61a909"
@@ -3271,7 +3383,7 @@
           "number": 22,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-87a1970d90fd02",
             "p-4fdd823d2d66f2"
@@ -3283,7 +3395,7 @@
           "number": 23,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-3a1909b6c0933b",
             "p-86214dcb5e9107"
@@ -3295,7 +3407,7 @@
           "number": 24,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-27146d1100b160",
             "p-9c40824722c700"
@@ -3307,7 +3419,7 @@
           "number": 25,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-f3309d4a4eb5eb",
             "p-e5643b6bbdc6e7"
@@ -3319,7 +3431,7 @@
           "number": 26,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-5a683b5d033eb9",
             "p-30f54d52b7eceb"
@@ -3331,7 +3443,7 @@
           "number": 27,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-90c73910db8908",
             "p-572a620cb0139b"
@@ -3343,7 +3455,7 @@
           "number": 28,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-8eca3e9f7ac86f",
             "p-aadd725216de9b"
@@ -3355,7 +3467,7 @@
           "number": 29,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=2",
-          "checkedAt": "2026-09-21T16:43:53+00:00",
+          "checkedAt": "2026-09-21T16:47:29+00:00",
           "playerIds": [
             "p-4f7f70f882c0d8",
             "p-33be9913501c00"
@@ -3363,7 +3475,7 @@
         }
       ],
       "entryStatus": "published",
-      "checkedAt": "2026-09-21T16:43:50+00:00"
+      "checkedAt": "2026-09-21T16:47:27+00:00"
     },
     {
       "id": "e-f0a9aa585c411e",
@@ -3386,7 +3498,7 @@
       ],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-21T16:44:24+00:00"
+      "checkedAt": "2026-09-21T16:47:30+00:00"
     },
     {
       "id": "e-78fe0e5d21158e",
@@ -3409,7 +3521,30 @@
       ],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-21T16:44:22+00:00"
+      "checkedAt": "2026-09-21T16:47:32+00:00",
+      "relatedSources": [
+        {
+          "label": "横浜ビーチバレーボール連盟の大会案内",
+          "url": "https://ybvf.volleyball.ne.jp/tournament/2026%e5%b9%b4%e5%ba%a6ybvf-series-5-%e3%83%95%e3%82%b8%e3%82%ad%e3%83%8f%e3%82%a6%e3%82%b9-veluna%e3%82%ab%e3%83%83%e3%83%97-%e5%85%ac%e8%aa%8d%e3%83%93%e3%83%bc%e3%83%81%e3%83%90%e3%83%ac%e3%83%bc/"
+        }
+      ]
+    },
+    {
+      "id": "e-89f930c2c23788",
+      "name": "アジアビーチツアードーハオープン",
+      "officialTitle": "アジアビーチツアードーハオープン",
+      "category": "国際大会",
+      "startDate": "2026-10-10",
+      "endDate": "2026-10-13",
+      "dateLabel": "10/10-13",
+      "venue": "ドーハ（カタール）",
+      "cancelled": false,
+      "sourceUrl": "https://www.jva.or.jp/beach_international/2026/avc2026/doha/",
+      "scheduleSourceUrl": "https://www.jva.or.jp/beach_international/2026/",
+      "documents": [],
+      "entries": [],
+      "entryStatus": "unpublished",
+      "checkedAt": "2026-09-21T16:56:08+00:00"
     },
     {
       "id": "e-fc27375016a447",
@@ -3425,7 +3560,7 @@
       "documents": [],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-21T16:44:00+00:00"
+      "checkedAt": "2026-09-21T16:47:35+00:00"
     },
     {
       "id": "e-53c5283be4ca9d",
@@ -3448,7 +3583,13 @@
       ],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-21T16:43:59+00:00"
+      "checkedAt": "2026-09-21T16:47:36+00:00",
+      "relatedSources": [
+        {
+          "label": "JVA大会概要・日程",
+          "url": "https://www.jva.or.jp/beach_domestic/2026/other-events/kawasakicup/"
+        }
+      ]
     },
     {
       "id": "e-5fda22427c09b3",
@@ -3471,7 +3612,7 @@
       ],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-21T16:44:21+00:00"
+      "checkedAt": "2026-09-21T16:47:38+00:00"
     },
     {
       "id": "e-9340b3fb62036c",
@@ -3500,7 +3641,7 @@
       ],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-21T16:44:18+00:00"
+      "checkedAt": "2026-09-21T16:47:41+00:00"
     },
     {
       "id": "e-e6a9ae6c66475f",
@@ -3516,7 +3657,7 @@
       "documents": [],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-21T16:43:58+00:00"
+      "checkedAt": "2026-09-21T16:47:45+00:00"
     },
     {
       "id": "e-3ad9cf2751e5b6",
@@ -3539,7 +3680,7 @@
       ],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-21T16:44:19+00:00"
+      "checkedAt": "2026-09-21T16:47:46+00:00"
     },
     {
       "id": "e-e07dafb0666493",
@@ -3555,7 +3696,65 @@
       "documents": [],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-21T16:43:47+00:00"
+      "checkedAt": "2026-09-21T16:47:55+00:00"
+    },
+    {
+      "id": "e-5d176050896885",
+      "name": "FUTURESアランヤ大会",
+      "officialTitle": "FUTURESアランヤ大会",
+      "category": "国際大会",
+      "startDate": "2026-10-15",
+      "endDate": "2026-10-18",
+      "dateLabel": "10/15-18",
+      "venue": "アランヤ（トルコ）",
+      "cancelled": false,
+      "sourceUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/alanya-2/",
+      "scheduleSourceUrl": "https://www.jva.or.jp/beach_international/2026/",
+      "documents": [
+        {
+          "url": "https://www.jva.or.jp/beach_international/2026/bpt2026/alanya-2/",
+          "label": "日本の出場メンバー（JVA）",
+          "kind": "entry",
+          "gender": null
+        }
+      ],
+      "entries": [
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 1,
+          "sourceUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/alanya-2/",
+          "checkedAt": "2026-09-21T16:56:29+00:00",
+          "playerIds": [
+            "p-ba6e259b045dc4",
+            "p-63c0eb523e1429"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 2,
+          "sourceUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/alanya-2/",
+          "checkedAt": "2026-09-21T16:56:29+00:00",
+          "playerIds": [
+            "p-e2f0ff5692e9bc",
+            "p-fae05b76f162ee"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "entered",
+          "number": 3,
+          "sourceUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/alanya-2/",
+          "checkedAt": "2026-09-21T16:56:29+00:00",
+          "playerIds": [
+            "p-f2fa0338d31d37",
+            "p-9fe27d6b40c23e"
+          ]
+        }
+      ],
+      "entryStatus": "published",
+      "checkedAt": "2026-09-21T16:56:08+00:00"
     },
     {
       "id": "e-1f9eaaaeaee1c1",
@@ -3571,7 +3770,24 @@
       "documents": [],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-21T16:43:47+00:00"
+      "checkedAt": "2026-09-21T16:47:55+00:00"
+    },
+    {
+      "id": "e-56b0c135bf8a94",
+      "name": "アジアビーチツアー須磨オープン",
+      "officialTitle": "アジアビーチツアー須磨オープン",
+      "category": "国際大会",
+      "startDate": "2026-10-22",
+      "endDate": "2026-10-25",
+      "dateLabel": "10/22-25",
+      "venue": "須磨（日本）",
+      "cancelled": false,
+      "sourceUrl": "https://www.jva.or.jp/beach_international/2026/",
+      "scheduleSourceUrl": "https://www.jva.or.jp/beach_international/2026/",
+      "documents": [],
+      "entries": [],
+      "entryStatus": "unpublished",
+      "checkedAt": "2026-09-21T16:56:08+00:00"
     },
     {
       "id": "e-ff3211f8d3051c",
@@ -3594,7 +3810,24 @@
       ],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-21T16:44:17+00:00"
+      "checkedAt": "2026-09-21T16:47:49+00:00"
+    },
+    {
+      "id": "e-80b578a3c2a2e7",
+      "name": "第4回ユースオリンピック競技大会（2026/ダカール）",
+      "officialTitle": "第4回ユースオリンピック競技大会（2026/ダカール）",
+      "category": "国際大会",
+      "startDate": "2026-10-31",
+      "endDate": "2026-11-13",
+      "dateLabel": "10/31-11/13",
+      "venue": "ダカール（セネガル）",
+      "cancelled": false,
+      "sourceUrl": "https://www.jva.or.jp/beach_international/2026/",
+      "scheduleSourceUrl": "https://www.jva.or.jp/beach_international/2026/",
+      "documents": [],
+      "entries": [],
+      "entryStatus": "unpublished",
+      "checkedAt": "2026-09-21T16:56:08+00:00"
     },
     {
       "id": "e-e5f84b7cb54c3d",
@@ -3610,7 +3843,7 @@
       "documents": [],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-21T16:43:47+00:00"
+      "checkedAt": "2026-09-21T16:47:55+00:00"
     },
     {
       "id": "e-333f422c85b282",
@@ -3626,7 +3859,7 @@
       "documents": [],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-21T16:43:47+00:00"
+      "checkedAt": "2026-09-21T16:47:55+00:00"
     },
     {
       "id": "e-c985a8ceac82e2",
@@ -3642,7 +3875,7 @@
       "documents": [],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-21T16:43:47+00:00"
+      "checkedAt": "2026-09-21T16:47:55+00:00"
     },
     {
       "id": "e-9d8b57a38810b6",
@@ -3658,7 +3891,7 @@
       "documents": [],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-21T16:43:47+00:00"
+      "checkedAt": "2026-09-21T16:47:55+00:00"
     }
   ],
   "issues": []

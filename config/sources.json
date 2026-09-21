@@ -4,19 +4,41 @@
   "maxPages": 160,
   "maxPdfs": 160,
   "maxDomains": 10,
-  "allowedHosts": ["www.jbv.jp", "jbv.jp", "www.jva.or.jp"],
+  "allowedHosts": [
+    "www.jbv.jp",
+    "jbv.jp",
+    "www.jva.or.jp",
+    "ybvf.volleyball.ne.jp"
+  ],
   "seeds": [
     "https://www.jbv.jp/",
     "https://www.jbv.jp/news/2026/",
     "https://www.jbv.jp/schedule/2026/",
     "https://www.jbv.jp/convention/index.html",
     "https://www.jbv.jp/convention-jva/index.html",
-    "https://www.jbv.jp/players/index.html"
+    "https://www.jbv.jp/players/index.html",
+    "https://www.jva.or.jp/beach_international/2026/"
   ],
   "extraPages": [],
   "reviewPages": [
     "https://www.jva.or.jp/beach_domestic/2026/",
     "https://www.jva.or.jp/beach_domestic/2026/other-events/kawasakicup/",
-    "https://www.jva.or.jp/beach_domestic/2026/other-events/kawasakicup/?entry=schedule_results"
+    "https://www.jva.or.jp/beach_domestic/2026/other-events/kawasakicup/?entry=schedule_results",
+    "https://ybvf.volleyball.ne.jp/",
+    "https://ybvf.volleyball.ne.jp/tournament/2026%e5%b9%b4%e5%ba%a6ybvf-series-5-%e3%83%95%e3%82%b8%e3%82%ad%e3%83%8f%e3%82%a6%e3%82%b9-veluna%e3%82%ab%e3%83%83%e3%83%97-%e5%85%ac%e8%aa%8d%e3%83%93%e3%83%bc%e3%83%81%e3%83%90%e3%83%ac%e3%83%bc/",
+    "https://www.jva.or.jp/beach_international/2026/ioc-oca2026/",
+    "https://www.jva.or.jp/beach_international/2026/ioc-oca2026/?entry=member",
+    "https://www.jva.or.jp/beach_international/2026/bpt2026/alanya-2/",
+    "https://www.jva.or.jp/beach_international/2026/avc2026/doha/"
+  ],
+  "htmlRosters": [
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/ioc-oca2026/",
+      "url": "https://www.jva.or.jp/beach_international/2026/ioc-oca2026/?entry=member"
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/alanya-2/",
+      "url": "https://www.jva.or.jp/beach_international/2026/bpt2026/alanya-2/"
+    }
   ]
 }
