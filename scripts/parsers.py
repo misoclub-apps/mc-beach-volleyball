@@ -212,6 +212,8 @@ def parse_jva_teams(html, profiles):
             problems.append('JVAのペア区分・男女区分を確認してください: ' + ' / '.join(names))
             continue
         teams.append({'names': names, 'gender': group_genders.pop(), 'status': 'entered', 'number': len(teams)+1})
+    if not teams and not problems:
+        problems.append('JVAの出場メンバー欄を検出できません。未発表か形式変更かを確認してください')
     return (teams if not problems else []), problems
 
 

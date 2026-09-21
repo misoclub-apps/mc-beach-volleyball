@@ -73,5 +73,10 @@ class ParsersTest(unittest.TestCase):
         self.assertEqual(event['endDate'], '2026-10-03')
         self.assertEqual(event['sourceUrl'], 'https://www.jva.or.jp/beach_international/2026/event/')
 
+    def test_missing_jva_layout_requires_review(self):
+        teams, issues = parse_jva_teams('<main>掲載形式が変わりました</main>', [])
+        self.assertFalse(teams)
+        self.assertTrue(issues)
+
 
 if __name__ == '__main__': unittest.main()

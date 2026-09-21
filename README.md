@@ -94,7 +94,9 @@ npm run update
 
 リポジトリの **Settings → Pages → Source → GitHub Actions** を選択します。`main` へのpushで `.github/workflows/pages.yml` がビルド・公開します。ワークフローは、すでに取得済みのJSONを使うだけです。
 
-公開先: `https://misoclub-apps.github.io/mc-beach-volleyball/`
+公開先: `https://misoclub.pro/mc-beach-volleyball/`
+
+組織に設定済みの独自ドメインを引き継いでいます。GitHub標準URLは `https://misoclub-apps.github.io/mc-beach-volleyball/` です。リポジトリはPublic、PagesのHTTPSを有効に設定済みです。
 
 相対URLとハッシュルーティングを使うため、GitHub Pagesのリポジトリ配下でも動作します。選手・大会ページのURLもそのまま共有できます。
 
