@@ -66,8 +66,11 @@ def parse_profiles(html, url):
             continue
         parts = list(a.stripped_strings)
         if parts:
+            card = a.find_parent('dl')
+            image = card.select_one('dt img[src]') if card else None
             result.append({'name': parts[0], 'roman': parts[1] if len(parts) > 1 else '',
-                           'gender': 'women' if '/woman/' in href else 'men', 'profileUrl': href})
+                           'gender': 'women' if '/woman/' in href else 'men', 'profileUrl': href,
+                           'imageUrl': safe_url(url, image['src']) if image else None})
     return result
 
 

@@ -13,10 +13,10 @@ test.beforeEach(async ({ page }) => {
 
 test("選手検索 → 予定 → 大会 → 選手の往復", async ({ page }) => {
   await page.goto("/");
-  await page.getByLabel("選手名", { exact: true }).fill("関 寛之");
+  await page.getByLabel("選手名", { exact: true }).fill("酒井 春海");
   await expect(page.locator(".player-row")).toHaveCount(1);
   await page.locator(".player-link").click();
-  await expect(page.locator("h1")).toContainText("関");
+  await expect(page.locator("h1")).toContainText("酒井");
   await expect(
     page.locator(".appearance").filter({ hasText: "開催予定" }),
   ).toHaveCount(2);
@@ -27,7 +27,7 @@ test("選手検索 → 予定 → 大会 → 選手の往復", async ({ page }) 
   await expect(hiratsuka.locator(".badge.result")).toHaveText("9位");
   await expect(
     hiratsuka.getByRole("link", { name: "公式の結果 PDF" }),
-  ).toHaveAttribute("href", /#page=5$/);
+  ).toHaveAttribute("href", /#page=10$/);
   await page
     .getByRole("link", { name: "相馬市長杯サテライト相馬大会", exact: true })
     .click();
@@ -35,13 +35,13 @@ test("選手検索 → 予定 → 大会 → 選手の往復", async ({ page }) 
   await expect(
     page.getByRole("heading", { name: "公式資料", exact: true }),
   ).toBeVisible();
-  await page.locator(".team a").filter({ hasText: "関寛之" }).first().click();
-  await expect(page.locator("h1")).toContainText("関");
+  await page.locator(".team a").filter({ hasText: "酒井春海" }).first().click();
+  await expect(page.locator("h1")).toContainText("酒井");
 });
 
 test("お気に入り保存と再読み込み、空検索の回復", async ({ page }) => {
   await page.goto("/");
-  await page.getByLabel("選手名", { exact: true }).fill("関寛之");
+  await page.getByLabel("選手名", { exact: true }).fill("酒井春海");
   await page.locator("[data-save]").click();
   await page.reload();
   await page.getByLabel("お気に入りだけ", { exact: true }).check();
@@ -63,6 +63,25 @@ test("大会検索と男女フィルターが機能する", async ({ page }) => 
   await expect(
     page.locator(".player-identity .small-label").first(),
   ).toHaveText("女子");
+});
+
+test("スマホでも次回大会カードと公式プロフィール画像を表示する", async ({
+  page,
+}) => {
+  await page.setViewportSize({ width: 375, height: 900 });
+  await page.goto("/");
+  await expect(page.locator(".next-event")).toBeVisible();
+  await page.getByLabel("選手名", { exact: true }).fill("酒井春海");
+  const photo = page.locator(".player-row [data-profile-photo]");
+  await expect(photo).toBeVisible();
+  await expect(photo).toHaveJSProperty("complete", true);
+  expect(await photo.evaluate((image) => image.naturalWidth)).toBeGreaterThan(
+    0,
+  );
+  await page.locator(".player-link").click();
+  await expect(
+    page.locator(".profile-heading [data-profile-photo]"),
+  ).toBeVisible();
 });
 
 test("通信失敗の回復案内", async ({ page }) => {

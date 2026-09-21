@@ -17,9 +17,9 @@ test("名前の空白・全半角・異体字を吸収する", () =>
   assert.equal(normalize("髙橋　大地"), normalize("高橋大地")));
 test("日本時間の日付で予定を判定する", () =>
   assert.equal(todayJst(new Date("2026-09-21T16:00:00Z")), "2026-09-22"));
-test("相馬・高萩の実データから関寛之の出場予定を引ける", () => {
+test("相馬・高萩の実データから酒井春海の出場予定を引ける", () => {
   const [p] = filterPlayers(data, {
-    query: "関 寛之",
+    query: "酒井 春海",
     upcoming: true,
     today: data.asOf,
   });

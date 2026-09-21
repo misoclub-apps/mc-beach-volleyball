@@ -1,11 +1,18 @@
 import io
 import unittest
 from unittest.mock import patch, MagicMock
-from scripts.parsers import dates_from_label, parse_article, parse_calendar, parse_roster, parse_jva_calendar, parse_jva_teams, normalize
+from scripts.parsers import dates_from_label, parse_article, parse_calendar, parse_profiles, parse_roster, parse_jva_calendar, parse_jva_teams, normalize
 from scripts.update import compile_players, validate
 
 
 class ParsersTest(unittest.TestCase):
+    def test_profile_photo_comes_from_official_player_card(self):
+        html = '''<dl><dt><a href="woman/sakai.html"><img src="img/woman/sakai_w.jpg"></a></dt>
+        <dd><a href="woman/sakai.html">酒井春海<br><span>Harumi Sakai</span></a></dd></dl>'''
+        profile = parse_profiles(html, 'https://www.jbv.jp/players/index.html')[0]
+        self.assertEqual(profile['imageUrl'], 'https://www.jbv.jp/players/img/woman/sakai_w.jpg')
+        self.assertEqual(profile['profileUrl'], 'https://www.jbv.jp/players/woman/sakai.html')
+
     def test_date_ranges(self):
         for text, start, end in [
             ('2026年9月26日(土)～27日(日)試合開始9:30', '2026-09-26', '2026-09-27'),

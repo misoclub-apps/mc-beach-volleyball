@@ -144,12 +144,13 @@ def compile_players(events, profiles, aliases):
         canonical = key(name, gender)
         pid = stable_id('p-', canonical)
         if pid not in players:
-            players[pid] = {'id': pid, 'name': name, 'gender': gender, 'aliases': [], 'roman': '', 'profileUrl': None}
+            players[pid] = {'id': pid, 'name': name, 'gender': gender, 'aliases': [], 'roman': '',
+                            'profileUrl': None, 'imageUrl': None}
         p = players[pid]
         if name not in p['aliases']:
             p['aliases'].append(name)
         if profile:
-            p.update({k: profile[k] for k in ('name', 'roman', 'profileUrl')})
+            p.update({k: profile[k] for k in ('name', 'roman', 'profileUrl', 'imageUrl')})
         return pid
     for p in profiles:
         player(p['name'], p['gender'], p)
