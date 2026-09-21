@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "node scripts/serve.mjs",
     "build": "node scripts/build.mjs",
@@ -13,5 +15,9 @@
     "test:python": ".venv/bin/python -m unittest discover -s tests -p 'test_*.py'",
     "test:e2e": "playwright test"
   },
-  "devDependencies": { "@playwright/test": "^1.55.0", "@axe-core/playwright": "^4.10.2" }
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "@playwright/test": "^1.55.0",
+    "prettier": "3.9.8"
+  }
 }

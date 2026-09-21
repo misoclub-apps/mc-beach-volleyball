@@ -9,10 +9,11 @@
   --color-rule: #d5deec;
   --color-sand: #f4e3a8;
   --color-sand-ink: #594716;
+  --color-shadow: #14264514;
   --color-error: #a52f36;
   --color-focus: #9d4515;
-  --font-display: 'Avenir Next Condensed', 'Arial Narrow', sans-serif;
-  --font-body: 'Hiragino Kaku Gothic ProN', 'Yu Gothic', Meiryo, sans-serif;
+  --font-display: "Avenir Next Condensed", "Arial Narrow", sans-serif;
+  --font-body: "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -23,7 +24,7 @@
   --space-16: 64px;
   --radius-sm: 6px;
   --radius-md: 12px;
-  --text-small: .8rem;
+  --text-small: 0.8rem;
   --text-base: 1rem;
   --text-large: 1.25rem;
   --ease-ui: ease-out;
