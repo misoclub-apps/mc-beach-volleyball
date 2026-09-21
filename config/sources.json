@@ -1,0 +1,22 @@
+{
+  "year": 2026,
+  "requestIntervalSeconds": 1.2,
+  "maxPages": 160,
+  "maxPdfs": 160,
+  "maxDomains": 10,
+  "allowedHosts": ["www.jbv.jp", "jbv.jp", "www.jva.or.jp"],
+  "seeds": [
+    "https://www.jbv.jp/",
+    "https://www.jbv.jp/news/2026/",
+    "https://www.jbv.jp/schedule/2026/",
+    "https://www.jbv.jp/convention/index.html",
+    "https://www.jbv.jp/convention-jva/index.html",
+    "https://www.jbv.jp/players/index.html"
+  ],
+  "extraPages": [],
+  "reviewPages": [
+    "https://www.jva.or.jp/beach_domestic/2026/",
+    "https://www.jva.or.jp/beach_domestic/2026/other-events/kawasakicup/",
+    "https://www.jva.or.jp/beach_domestic/2026/other-events/kawasakicup/?entry=schedule_results"
+  ]
+}
