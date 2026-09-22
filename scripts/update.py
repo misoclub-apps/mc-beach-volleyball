@@ -34,10 +34,11 @@ def write_json(path, value):
 
 
 class Fetcher:
-    def __init__(self, interval, offline=False, allowed_hosts=None):
+    def __init__(self, interval, offline=False, allowed_hosts=None, max_retries=5):
         self.cache = ROOT / '.cache/http'
         self.cache.mkdir(parents=True, exist_ok=True)
         self.interval, self.offline, self.last = interval, offline, 0
+        self.max_retries = max_retries
         self.session = requests.Session()
         self.session.headers['User-Agent'] = UA
         self.session.headers['Accept-Encoding'] = 'gzip, deflate'
@@ -68,35 +69,48 @@ class Fetcher:
             for field, header in [('etag', 'If-None-Match'), ('lastModified', 'If-Modified-Since')]:
                 if meta.get(field):
                     headers[header] = meta[field]
-        time.sleep(max(0, self.interval - (time.monotonic() - self.last)))
-        self.last = time.monotonic()
-        # Never follow a redirect to an unconfigured external/private host.
-        response = self.session.get(url, headers=headers, timeout=(10, 40), allow_redirects=False, stream=True)
-        try:
-            if response.status_code == 304 and path.exists():
-                data = path.read_bytes()
-            else:
-                response.raise_for_status()
-                if response.status_code != 200:
-                    raise ValueError(f'未対応HTTP応答 {response.status_code}: {url}')
-                chunks, size = [], 0
-                for chunk in response.iter_content(65536):
-                    size += len(chunk)
-                    if size > 30 * 1024 * 1024:
-                        raise ValueError('ファイルが30MBを超えています')
-                    chunks.append(chunk)
-                data = b''.join(chunks)
-                if urlparse(url).path.lower().endswith('.pdf') and not data.startswith(b'%PDF'):
-                    raise ValueError('PDFではない応答です')
-                path.write_bytes(data)
-            meta = {'url': url, 'checkedAt': now(), 'sha256': hashlib.sha256(data).hexdigest(),
-                    'etag': response.headers.get('ETag', meta.get('etag')),
-                    'lastModified': response.headers.get('Last-Modified', meta.get('lastModified'))}
-            write_json(meta_path, meta)
-            self.records[url] = meta
-            return data
-        finally:
-            response.close()
+        for attempt in range(self.max_retries + 1):
+            time.sleep(max(0, self.interval - (time.monotonic() - self.last)))
+            self.last = time.monotonic()
+            response = None
+            try:
+                # Never follow a redirect to an unconfigured external/private host.
+                response = self.session.get(url, headers=headers, timeout=(10, 40),
+                                            allow_redirects=False, stream=True)
+                if response.status_code == 304 and path.exists():
+                    data = path.read_bytes()
+                else:
+                    response.raise_for_status()
+                    if response.status_code != 200:
+                        raise ValueError(f'未対応HTTP応答 {response.status_code}: {url}')
+                    chunks, size = [], 0
+                    for chunk in response.iter_content(65536):
+                        size += len(chunk)
+                        if size > 30 * 1024 * 1024:
+                            raise ValueError('ファイルが30MBを超えています')
+                        chunks.append(chunk)
+                    data = b''.join(chunks)
+                    if urlparse(url).path.lower().endswith('.pdf') and not data.startswith(b'%PDF'):
+                        raise requests.ConnectionError('PDFではない一時応答です')
+                    path.write_bytes(data)
+                meta = {'url': url, 'checkedAt': now(), 'sha256': hashlib.sha256(data).hexdigest(),
+                        'etag': response.headers.get('ETag', meta.get('etag')),
+                        'lastModified': response.headers.get('Last-Modified', meta.get('lastModified'))}
+                write_json(meta_path, meta)
+                self.records[url] = meta
+                return data
+            except requests.RequestException as error:
+                status = getattr(getattr(error, 'response', None), 'status_code', None)
+                retryable = status in (408, 429) or (status is not None and status >= 500) or status is None
+                if not retryable or attempt >= self.max_retries:
+                    raise
+                retry_after = response.headers.get('Retry-After') if response is not None else None
+                delay = min(int(retry_after), 60) if retry_after and retry_after.isdigit() else min(2 ** (attempt + 1), 16)
+                print(f'[retry {attempt + 1}/{self.max_retries}] {status or type(error).__name__}: {url} ({delay}秒後)', flush=True)
+                time.sleep(delay)
+            finally:
+                if response is not None:
+                    response.close()
 
     def check_robots(self):
         if self.offline:
@@ -213,7 +227,8 @@ def run(args):
     if len({h.removeprefix('www.') for h in config['allowedHosts']}) > config['maxDomains']:
         raise ValueError('取得対象が10ドメインを超えています')
     as_of = args.as_of or datetime.now(ZoneInfo('Asia/Tokyo')).date().isoformat()
-    fetcher = Fetcher(config['requestIntervalSeconds'], args.offline, config['allowedHosts'])
+    fetcher = Fetcher(config['requestIntervalSeconds'], args.offline, config['allowedHosts'],
+                      config.get('maxRetries', 5))
     fetcher.check_robots()
     pages, profiles, calendar = discover(fetcher, config, issues)
     if not profiles or not pages:

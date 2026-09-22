@@ -1,6 +1,7 @@
 {
   "year": 2026,
   "requestIntervalSeconds": 1.2,
+  "maxRetries": 5,
   "maxPages": 160,
   "maxPdfs": 160,
   "maxDomains": 10,
