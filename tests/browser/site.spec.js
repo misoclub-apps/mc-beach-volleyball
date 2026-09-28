@@ -24,9 +24,9 @@ test("選手検索 → 予定 → 大会 → 選手の往復", async ({ page }) 
   const hiratsuka = page
     .locator(".past-results .appearance")
     .filter({ hasText: "平塚" });
-  await expect(
-    hiratsuka.locator(".appearance-outcome .appearance-placement"),
-  ).toHaveText("最終順位9位");
+  await expect(hiratsuka.locator(".appearance-result")).toHaveText(
+    "最終順位9位",
+  );
   await expect(
     hiratsuka.getByRole("link", { name: "公式の結果 PDF" }),
   ).toHaveAttribute("href", /#page=10$/);

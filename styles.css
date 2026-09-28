@@ -575,52 +575,40 @@ legend {
   margin-left: 16px;
   color: var(--color-accent);
 }
-.appearance-outcome {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: stretch;
-  margin-top: 16px;
-  border-top: 1px solid var(--color-rule);
-  border-bottom: 1px solid var(--color-rule);
-}
-.appearance-body .appearance-outcome .partner {
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 12px 16px 12px 0;
-  min-width: 0;
-}
-.appearance-placement {
-  display: flex;
+.appearance-result {
+  display: inline-flex;
   align-items: baseline;
-  gap: 10px;
-  min-width: 116px;
-  padding: 9px 14px;
-  border-left: 1px solid #9db9ad;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 8px 14px 8px 11px;
+  border-left: 3px solid #70998a;
   background: #e5eee9;
   color: #1d493a;
 }
-.appearance-placement span {
+.appearance-result span {
   color: #4d6b60;
   font-size: 0.62rem;
   font-weight: 700;
   white-space: nowrap;
 }
-.appearance-placement strong {
-  font-size: 1.2rem;
+.appearance-result strong {
+  font-size: 1.3rem;
   line-height: 1.2;
   white-space: nowrap;
 }
-.appearance-placement.is-winner {
+.appearance-result.is-winner {
   border-left-color: #b77b0d;
   background: #fff1bd;
   color: #684609;
 }
-.appearance-placement.is-winner span {
+.appearance-result.is-winner span {
   color: #765b22;
 }
-.appearance-placement .winner-mark {
+.appearance-result .winner-mark {
   color: #b77b0d;
+}
+.appearance-result + .partner {
+  margin-top: 12px;
 }
 .badge-line {
   display: flex;
