@@ -9,7 +9,8 @@
     "www.jbv.jp",
     "jbv.jp",
     "www.jva.or.jp",
-    "ybvf.volleyball.ne.jp"
+    "ybvf.volleyball.ne.jp",
+    "en.volleyballworld.com"
   ],
   "seeds": [
     "https://www.jbv.jp/",
@@ -43,6 +44,13 @@
     {
       "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/alanya-2/",
       "url": "https://www.jva.or.jp/beach_international/2026/bpt2026/alanya-2/"
+    }
+  ],
+  "volleyballWorldEvents": [
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/alanya-2/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/futures/alanya-tur/",
+      "matchUrls": []
     }
   ],
   "history": {

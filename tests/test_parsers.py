@@ -1,8 +1,8 @@
 import io
 import unittest
 from unittest.mock import patch, MagicMock
-from scripts.parsers import dates_from_label, parse_article, parse_calendar, parse_profile_image, parse_profiles, parse_roster, parse_jva_calendar, parse_jva_teams, normalize
-from scripts.update import apply_event_overrides, compile_players, retain_unresolved_events, validate
+from scripts.parsers import dates_from_label, parse_article, parse_calendar, parse_profile_image, parse_profiles, parse_roster, parse_jva_calendar, parse_jva_teams, parse_volleyball_world_match, parse_volleyball_world_teams, normalize
+from scripts.update import apply_event_overrides, compile_players, merge_volleyball_world_entries, retain_unresolved_events, validate
 
 
 class ParsersTest(unittest.TestCase):
@@ -116,6 +116,49 @@ class ParsersTest(unittest.TestCase):
         teams, issues = parse_jva_teams('<main>掲載形式が変わりました</main>', [])
         self.assertFalse(teams)
         self.assertTrue(issues)
+
+    def test_volleyball_world_keeps_only_japan_teams_and_stage(self):
+        html = '''<table><tr data-team-no="123" data-team-country="JPN">
+        <td class="player1">Riko Tsujimura</td><td class="player2">Mayu Kikuchi</td></tr>
+        <tr data-team-no="456" data-team-country="GER"><td class="player1">Foreign One</td>
+        <td class="player2">Foreign Two</td></tr></table>'''
+        teams = parse_volleyball_world_teams(html, 'women', 'main-draw', 'https://official.example/teams')
+        self.assertEqual(len(teams), 1)
+        self.assertEqual(teams[0]['externalTeamId'], 123)
+        self.assertEqual(teams[0]['internationalStage'], 'main-draw')
+
+    def test_official_team_state_merges_without_replacing_japanese_names(self):
+        event = {'entries': [
+            {'names': ['辻村りこ', '菊地真結'], 'gender': 'women',
+             'status': 'entered', 'sourceUrl': 'https://jva.example/'},
+            {'names': ['旧名簿', '掲載ペア'], 'gender': 'women',
+             'status': 'entered', 'sourceUrl': 'https://jva.example/'},
+        ]}
+        official = [{'names': ['Riko Tsujimura', 'Mayu Kikuchi'], 'gender': 'women',
+                     'status': 'entered', 'internationalStage': 'main-draw',
+                     'externalTeamId': 123, 'sourceUrl': 'https://world.example/'}]
+        aliases = {'Riko Tsujimura': '辻村りこ', 'Mayu Kikuchi': '菊地真結'}
+        merge_volleyball_world_entries(event, official, aliases)
+        self.assertEqual(event['entries'][0]['names'], ['辻村りこ', '菊地真結'])
+        self.assertEqual(event['entries'][0]['externalTeamId'], 123)
+        self.assertEqual(event['entries'][0]['sourceUrl'], 'https://world.example/')
+        self.assertEqual(len(event['entries']), 1)
+
+    def test_volleyball_world_match_keeps_opponents_as_plain_names(self):
+        html = '''<div class="vbw-match-header" data-match-no="99" data-date="2026-10-16T01:00:00Z">
+        <div class="vbw-mu--match vbw-mu-finished"></div><div class="vbw-mu__data-info">Main Draw - Pool A</div>
+        <div class="vbw-mu__team vbw-mu__team--home"><div class="vbw-mu__team__logo"><img src="/flag_jpn"></div>
+        <div class="vbw-mu__team__player-wrap"><div class="vbw-mu__team__name">Tsujimura</div><div class="vbw-mu__team__name vbw-mu__team__name--abbr">T.</div></div>
+        <div class="vbw-mu__team__player-wrap"><div class="vbw-mu__team__name">Kikuchi</div></div></div>
+        <div class="vbw-mu__team vbw-mu__team--away"><div class="vbw-mu__team__logo"><img src="/flag_ger"></div>
+        <div class="vbw-mu__team__player-wrap"><div class="vbw-mu__team__name">Foreign One</div></div>
+        <div class="vbw-mu__team__player-wrap"><div class="vbw-mu__team__name">Foreign Two</div></div></div>
+        <div class="vbw-mu__sets--result"><span class="vbw-mu__pointA">21</span><span class="vbw-mu__pointB">18</span></div>
+        <div class="vbw-mu__score--home">2</div><div class="vbw-mu__score--away">0</div></div>'''
+        match = parse_volleyball_world_match(html, 'https://official.example/match/99')
+        self.assertEqual(match['home']['countryCode'], 'JPN')
+        self.assertEqual(match['away']['names'], ['Foreign One', 'Foreign Two'])
+        self.assertEqual(match['score'], [2, 0])
 
 
 if __name__ == '__main__': unittest.main()

@@ -78,6 +78,37 @@ test("大会検索と男女フィルターが機能する", async ({ page }) => 
   ).toHaveText("女子");
 });
 
+test("海外大会は日本ペアだけを出場区分つきで表示する", async ({ page }) => {
+  await page.setViewportSize({ width: 375, height: 900 });
+  await page.goto("/#event/e-5d176050896885");
+  await expect(
+    page.getByRole("heading", { name: "FUTURESアランヤ大会" }),
+  ).toBeVisible();
+  await expect(page.locator(".team")).toHaveCount(4);
+  await expect(
+    page.locator(".team .badge").filter({ hasText: "本戦" }),
+  ).toHaveCount(2);
+  await expect(
+    page.locator(".team .badge").filter({ hasText: "予選" }),
+  ).toHaveCount(1);
+  await expect(
+    page.locator(".team .badge").filter({ hasText: "リザーブ" }),
+  ).toHaveCount(1);
+  await expect(
+    page.getByText("日本ペアの試合日程は公式発表後に掲載します。", {
+      exact: true,
+    }),
+  ).toBeVisible();
+  await expect(
+    page.locator(".team").first().getByRole("link", { name: "公式チーム表" }),
+  ).toHaveAttribute("href", /volleyballworld\.com/);
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= innerWidth,
+    ),
+  ).toBe(true);
+});
+
 test("スマホでも次回大会カードと公式プロフィール画像を表示する", async ({
   page,
 }) => {

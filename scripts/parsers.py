@@ -231,6 +231,88 @@ def parse_jva_teams(html, profiles):
     return (teams if not problems else []), problems
 
 
+def parse_volleyball_world_teams(html, gender, stage, source_url):
+    """Return only official Volleyball World rows explicitly marked JPN."""
+    soup = BeautifulSoup(html, 'html.parser')
+    status = 'reserve' if stage == 'reserve' else 'entered'
+    teams = []
+    for row in soup.select('tr[data-team-country="JPN"]'):
+        def first_text(cell):
+            return next(cell.stripped_strings, '') if cell else ''
+
+        names = [
+            first_text(cell)
+            for cell in (row.select_one('.player1'), row.select_one('.player2'))
+            if first_text(cell)
+        ]
+        team_no = row.get('data-team-no')
+        if len(names) != 2 or not team_no or not str(team_no).isdigit():
+            raise ValueError('Volleyball WorldのJPNチーム表を解析できません')
+        teams.append({
+            'names': names,
+            'gender': gender,
+            'status': status,
+            'internationalStage': stage,
+            'externalTeamId': int(team_no),
+            'sourceUrl': source_url,
+        })
+    return teams
+
+
+def parse_volleyball_world_match(html, source_url):
+    """Parse one public official match page; foreign players remain plain text."""
+    soup = BeautifulSoup(html, 'html.parser')
+    header = soup.select_one('.vbw-match-header[data-match-no]')
+    if not header:
+        raise ValueError('Volleyball Worldの公式試合情報を確認できません')
+
+    def team(selector):
+        node = header.select_one(selector)
+        if not node:
+            raise ValueError('公式試合ページの対戦チームを解析できません')
+        names = []
+        for name in node.select('.vbw-mu__team__player-wrap .vbw-mu__team__name'):
+            if 'vbw-mu__team__name--abbr' not in name.get('class', []):
+                value = name.get_text(' ', strip=True)
+                if value:
+                    names.append(value)
+        flag = node.select_one('.vbw-mu__team__logo img[src]')
+        code = None
+        if flag:
+            match = re.search(r'flag_([a-z]{3})(?:\b|$)', flag['src'], re.I)
+            code = match.group(1).upper() if match else None
+        if not names or not code:
+            raise ValueError('公式試合ページの選手名または国コードを解析できません')
+        return {'names': names, 'countryCode': code}
+
+    home, away = team('.vbw-mu__team--home'), team('.vbw-mu__team--away')
+    if home['countryCode'] != 'JPN' and away['countryCode'] != 'JPN':
+        raise ValueError('日本チームが関係しない試合です')
+    sets = []
+    for result in header.select('.vbw-mu__sets--result:not(.hidden)'):
+        a, b = result.select_one('.vbw-mu__pointA'), result.select_one('.vbw-mu__pointB')
+        if a and b and a.get_text(strip=True).isdigit() and b.get_text(strip=True).isdigit():
+            sets.append([int(a.get_text(strip=True)), int(b.get_text(strip=True))])
+    score_a, score_b = header.select_one('.vbw-mu__score--home'), header.select_one('.vbw-mu__score--away')
+    match_node = header.select_one('.vbw-mu--match')
+    status_class = ' '.join(header.get('class', [])) + ' ' + ' '.join(match_node.get('class', []) if match_node else [])
+    completed = 'finished' in status_class or bool(sets)
+    info = header.select_one('.vbw-mu__data-info')
+    return {
+        'id': f'vw-{header["data-match-no"]}',
+        'dateTimeUtc': header.get('data-date'),
+        'status': 'completed' if completed else 'scheduled',
+        'label': info.get_text(' ', strip=True) if info else '',
+        'home': home,
+        'away': away,
+        'score': [int(score_a.get_text(strip=True)), int(score_b.get_text(strip=True))]
+                 if score_a and score_b and score_a.get_text(strip=True).isdigit() and score_b.get_text(strip=True).isdigit()
+                 else None,
+        'sets': sets,
+        'sourceUrl': source_url,
+    }
+
+
 def parse_roster(data, gender):
     """Read ruled two-player JBV tables by columns; ignore bracket-only pages."""
     teams, issues = [], []

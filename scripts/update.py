@@ -17,7 +17,7 @@ from urllib.robotparser import RobotFileParser
 import requests
 
 from scripts.history import collect_history
-from scripts.parsers import normalize, parse_article, parse_profile_image, parse_profiles, parse_roster, parse_calendar, parse_jva_calendar, parse_jva_teams, safe_url, soup_body, stable_id
+from scripts.parsers import normalize, parse_article, parse_profile_image, parse_profiles, parse_roster, parse_calendar, parse_jva_calendar, parse_jva_teams, parse_volleyball_world_match, parse_volleyball_world_teams, safe_url, soup_body, stable_id
 
 ROOT = Path(__file__).resolve().parents[1]
 UA = 'BeachNote/1.0 (+https://github.com/misoclub-apps/mc-beach-volleyball; local periodic index)'
@@ -219,6 +219,11 @@ def validate(dataset):
                 raise ValueError('最終順位が不正です')
             if not entry.get('sourceUrl'):
                 raise ValueError('出典のない参加情報')
+        for match in e.get('matches', []):
+            if match['home']['countryCode'] != 'JPN' and match['away']['countryCode'] != 'JPN':
+                raise ValueError('日本が関係しない国際試合です')
+            if not match.get('sourceUrl') or not match.get('id'):
+                raise ValueError('出典のない国際試合です')
 
 
 def apply_event_overrides(event, overrides):
@@ -227,6 +232,62 @@ def apply_event_overrides(event, overrides):
     if preserved_id:
         event['id'] = preserved_id
     event.update(overrides.get('events', {}).get(event['id'], {}))
+
+
+def merge_volleyball_world_entries(event, official_entries, aliases):
+    """Replace international entries while preserving known Japanese display names."""
+    canonical = {normalize(k): normalize(v) for k, v in aliases.items()}
+
+    def team_key(entry):
+        return (entry['gender'], tuple(sorted(canonical.get(normalize(n), normalize(n)) for n in entry['names'])))
+
+    existing = {team_key(entry): entry for entry in event['entries']}
+    merged = []
+    for official in official_entries:
+        current = existing.get(team_key(official))
+        if current:
+            current.update({key: value for key, value in official.items() if key != 'names'})
+            merged.append(current)
+        else:
+            official['names'] = [canonical.get(normalize(name), normalize(name)) for name in official['names']]
+            merged.append(official)
+    event['entries'] = merged
+
+
+def collect_volleyball_world(events, fetcher, config, aliases, issues):
+    """Collect JPN teams and explicitly configured official match pages only."""
+    for source in config.get('volleyballWorldEvents', []):
+        event = next((item for item in events if item['sourceUrl'] == source['eventUrl']), None)
+        if event is None:
+            issues.append({'url': source['url'], 'kind': 'external',
+                           'message': '対応するJVA大会を確認できません'})
+            continue
+        official_entries = []
+        team_pages_complete = True
+        for gender in ('men', 'women'):
+            for stage in ('main-draw', 'qualification', 'reserve'):
+                url = f'{source["url"].rstrip("/")}/teams/{gender}/{stage}'
+                try:
+                    official_entries.extend(parse_volleyball_world_teams(
+                        fetcher.get(url), gender, stage, url))
+                except Exception as error:
+                    team_pages_complete = False
+                    issues.append({'url': url, 'eventId': event['id'], 'kind': 'external',
+                                   'message': str(error)})
+        if team_pages_complete:
+            merge_volleyball_world_entries(event, official_entries, aliases)
+        event['matches'] = []
+        for url in source.get('matchUrls', []):
+            try:
+                event['matches'].append(parse_volleyball_world_match(fetcher.get(url), url))
+            except Exception as error:
+                issues.append({'url': url, 'eventId': event['id'], 'kind': 'external',
+                               'message': str(error)})
+        event.setdefault('relatedSources', []).append(
+            {'url': source['url'], 'label': 'Volleyball World 公式大会ページ'})
+        checked_urls = [entry['sourceUrl'] for entry in official_entries]
+        if checked_urls:
+            event['checkedAt'] = max(fetcher.records[url]['checkedAt'] for url in checked_urls)
 
 
 def retain_unresolved_events(events, previous_events, as_of):
@@ -388,6 +449,7 @@ def run(args):
             event['documents'].append({'url': source['url'], 'label': '日本の出場メンバー（JVA）', 'kind': 'entry', 'gender': None})
         except Exception as error:
             issues.append({'url': source['url'], 'kind': 'external', 'message': str(error)})
+    collect_volleyball_world(events, fetcher, config, overrides.get('aliases', {}), issues)
     history, history_pdfs = collect_history(fetcher, config, as_of)
     for result_event in history:
         existing_index = next((i for i, event in enumerate(events)
@@ -413,8 +475,8 @@ def run(args):
         raise ValueError('結果PDFを含む取得上限超過')
     players = compile_players(events, profiles, overrides.get('aliases', {}))
     dataset = {'schemaVersion': 1, 'generatedAt': now(), 'checkedAt': max(r['checkedAt'] for r in fetcher.records.values()), 'asOf': as_of, 'year': config['year'],
-               'coverage': {'source': 'JBV・JVA・各大会主催者',
-                            'description': 'JBVの年間予定・ニュース・公認大会とJVA国際大会予定から、公開済みの大会と参加名簿を選手に紐付けています。開催後も大会と選手の紐付けを保持し、公式最終結果が未発表の場合は「順位確認中」と表示します。過去結果は大会区分を限定せず、公式最終順位表を確認できたものから順次収録します。未発表の出場・順位は推測しません。',
+               'coverage': {'source': 'JBV・JVA・Volleyball World・各大会主催者',
+                            'description': 'JBVの年間予定・ニュース・公認大会、JVA国際大会予定、Volleyball Worldの公式チーム表から、公開済みの大会と日本選手の参加情報を選手に紐付けています。海外大会はJPNのペアと日本が関係する公式試合だけを収録し、海外の対戦相手は試合内の名前と国コードだけを表示します。開催後も大会と選手の紐付けを保持し、公式最終結果が未発表の場合は「順位確認中」と表示します。未発表の出場・順位は推測しません。',
                             'domains': sorted({urlparse(u).hostname for u in fetcher.records}),
                             'reviewedSources': [{'url': r['url'], 'title': r['title'], 'checkedAt': r['checkedAt']} for r in external_review],
                             'pagesDiscovered': len(candidates), 'pagesChecked': min(len(candidates), limit),
