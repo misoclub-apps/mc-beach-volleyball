@@ -2,7 +2,7 @@ import io
 import unittest
 from unittest.mock import patch, MagicMock
 from scripts.parsers import dates_from_label, parse_article, parse_calendar, parse_profile_image, parse_profiles, parse_roster, parse_jva_calendar, parse_jva_teams, normalize
-from scripts.update import compile_players, validate
+from scripts.update import apply_event_overrides, compile_players, validate
 
 
 class ParsersTest(unittest.TestCase):
@@ -86,6 +86,16 @@ class ParsersTest(unittest.TestCase):
         event = parse_jva_calendar(html, 'https://www.jva.or.jp/beach_international/2026/', 2026)[0]
         self.assertEqual(event['endDate'], '2026-10-03')
         self.assertEqual(event['sourceUrl'], 'https://www.jva.or.jp/beach_international/2026/event/')
+
+    def test_detail_link_can_keep_existing_public_event_id(self):
+        event = {'id': 'e-new', 'sourceUrl': 'https://official.example/event/', 'venue': 'old'}
+        overrides = {
+            'eventIds': {'https://official.example/event/': 'e-existing'},
+            'events': {'e-existing': {'venue': 'confirmed'}},
+        }
+        apply_event_overrides(event, overrides)
+        self.assertEqual(event['id'], 'e-existing')
+        self.assertEqual(event['venue'], 'confirmed')
 
     def test_missing_jva_layout_requires_review(self):
         teams, issues = parse_jva_teams('<main>掲載形式が変わりました</main>', [])

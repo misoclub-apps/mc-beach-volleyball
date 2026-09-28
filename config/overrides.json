@@ -3,6 +3,10 @@
     "Kaufer Martin": "Martin Kaufer",
     "藪見 真歩": "薮見 真歩"
   },
+  "eventIds": {
+    "https://www.jva.or.jp/beach_international/2026/avc2026/suma/": "e-56b0c135bf8a94",
+    "https://www.jva.or.jp/beach_international/2026/ioc-yog2026/76809/": "e-80b578a3c2a2e7"
+  },
   "events": {
     "e-78fe0e5d21158e": {
       "relatedSources": [
@@ -22,6 +26,11 @@
     },
     "e-8e604b2a75657e": {
       "venue": "愛知県碧南市・碧南緑地ビーチコート"
+    },
+    "e-80b578a3c2a2e7": {
+      "endDate": "2026-11-04",
+      "dateLabel": "2026年10月31日（土）～11月4日（水）",
+      "venue": "サリービーチ ウェスト（セネガル）"
     }
   },
   "entries": {},

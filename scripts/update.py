@@ -220,6 +220,14 @@ def validate(dataset):
                 raise ValueError('出典のない参加情報')
 
 
+def apply_event_overrides(event, overrides):
+    """Preserve public event IDs when an official calendar adds a detail URL."""
+    preserved_id = overrides.get('eventIds', {}).get(event['sourceUrl'])
+    if preserved_id:
+        event['id'] = preserved_id
+    event.update(overrides.get('events', {}).get(event['id'], {}))
+
+
 def run(args):
     config = json.loads((ROOT / 'config/sources.json').read_text())
     overrides = json.loads((ROOT / 'config/overrides.json').read_text())
@@ -246,7 +254,7 @@ def run(args):
                 skipped.append({'url': url, 'title': title, 'reason': '対応する大会日程の記載なし'})
                 continue
             event['checkedAt'] = fetcher.records[url]['checkedAt']
-            event.update(overrides.get('events', {}).get(event['id'], {}))
+            apply_event_overrides(event, overrides)
             if event['endDate'] and event['endDate'] < as_of:
                 skipped.append({'url': url, 'title': title, 'reason': '過去大会（今回の対象外）'})
                 continue
@@ -301,7 +309,7 @@ def run(args):
             return other['startDate'] == event['startDate'] and (a in b or b in a or ('小浜' in other['name'] and '北信越' in event['name']))
         if not any(same_event(e) for e in events):
             event['checkedAt'] = fetcher.records[event.get('scheduleSourceUrl', event['sourceUrl'])]['checkedAt']
-            event.update(overrides.get('events', {}).get(event['id'], {}))
+            apply_event_overrides(event, overrides)
             events.append(event)
     external_review = []
     for url in config.get('reviewPages', []):

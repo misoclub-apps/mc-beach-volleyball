@@ -29,7 +29,10 @@ test("選手検索 → 予定 → 大会 → 選手の往復", async ({ page }) 
     hiratsuka.getByRole("link", { name: "公式の結果 PDF" }),
   ).toHaveAttribute("href", /#page=10$/);
   await page
-    .getByRole("link", { name: "相馬市長杯サテライト相馬大会", exact: true })
+    .getByRole("link", {
+      name: "川崎市長杯 JVA第18回ビーチバレーボール大会",
+      exact: true,
+    })
     .click();
   await expect(page.locator(".team")).not.toHaveCount(0);
   await expect(
@@ -56,7 +59,7 @@ test("お気に入り保存と再読み込み、空検索の回復", async ({ pa
 
 test("大会検索と男女フィルターが機能する", async ({ page }) => {
   await page.goto("/#events");
-  await page.getByLabel("大会名・会場", { exact: true }).fill("相馬");
+  await page.getByLabel("大会名・会場", { exact: true }).fill("高萩");
   await expect(page.locator(".event-row")).toHaveCount(1);
   await page.goto("/#players");
   await page.getByRole("button", { name: "女子", exact: true }).click();
