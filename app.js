@@ -42,7 +42,7 @@ const range = (event) =>
     : "日程確認中";
 const badge = (entry, event) =>
   entry.status === "completed"
-    ? `<span class="result-field"><span>結果</span><strong>${h(entry.resultLabel)}</strong></span>`
+    ? `<span class="result-field${entry.rank === 1 ? " is-winner" : ""}"><span>結果</span><strong>${h(entry.resultLabel)}</strong>${entry.rank === 1 ? '<span class="winner-mark" aria-hidden="true">★</span>' : ""}</span>`
     : `<span class="badge ${entry.status === "entered" ? "" : "sand"}">${h({ entered: event && !isUpcoming(event) ? "名簿掲載" : "出場予定", resultPending: "順位確認中", reserve: "補欠", withdrawn: "欠場" }[entry.status] || "確認中")}</span>`;
 const favorite = (p) =>
   `<button class="favorite ${saved.includes(p.id) ? "is-saved" : ""}" data-save="${p.id}" aria-pressed="${saved.includes(p.id)}" aria-label="${h(p.name)}をお気に入り${saved.includes(p.id) ? "から削除" : "に追加"}">${saved.includes(p.id) ? "★" : "☆"}</button>`;

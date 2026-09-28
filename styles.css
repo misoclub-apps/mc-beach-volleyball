@@ -1243,3 +1243,15 @@ legend {
 .badge-line .result-field {
   margin-left: auto;
 }
+.result-field.is-winner {
+  padding: 4px 8px 4px 10px;
+  border-left-color: #b77b0d;
+  border-radius: 0 4px 4px 0;
+  background: #fff1bd;
+  color: #684609;
+}
+.result-field.is-winner .winner-mark {
+  color: #b77b0d;
+  font-size: 0.68rem;
+  line-height: 1;
+}
