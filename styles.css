@@ -1243,6 +1243,9 @@ legend {
 .badge-line .result-field {
   margin-left: auto;
 }
+.result-field.is-compact {
+  padding-left: 10px;
+}
 .result-field.is-winner {
   padding: 4px 8px 4px 10px;
   border-left-color: #b77b0d;

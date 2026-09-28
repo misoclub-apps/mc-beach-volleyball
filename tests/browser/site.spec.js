@@ -175,9 +175,7 @@ test("過去大会は期間で絞り込めて結果とペアを辿れる", async
   await expect(
     page.getByText("男子の最終順位表は確認できていません。", { exact: false }),
   ).toBeVisible();
-  await expect(page.locator(".team .result-field").first()).toHaveText(
-    "結果1位★",
-  );
+  await expect(page.locator(".team .result-field").first()).toHaveText("1位★");
   await expect(
     page.locator(".team .result-field.is-winner").first(),
   ).toBeVisible();

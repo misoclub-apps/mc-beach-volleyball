@@ -40,9 +40,9 @@ const range = (event) =>
     ? date(event.startDate) +
       (event.endDate !== event.startDate ? ` — ${date(event.endDate)}` : "")
     : "日程確認中";
-const badge = (entry, event) =>
+const badge = (entry, event, showResultLabel = true) =>
   entry.status === "completed"
-    ? `<span class="result-field${entry.rank === 1 ? " is-winner" : ""}"><span>結果</span><strong>${h(entry.resultLabel)}</strong>${entry.rank === 1 ? '<span class="winner-mark" aria-hidden="true">★</span>' : ""}</span>`
+    ? `<span class="result-field${showResultLabel ? "" : " is-compact"}${entry.rank === 1 ? " is-winner" : ""}">${showResultLabel ? "<span>結果</span>" : ""}<strong>${h(entry.resultLabel)}</strong>${entry.rank === 1 ? '<span class="winner-mark" aria-hidden="true">★</span>' : ""}</span>`
     : `<span class="badge ${entry.status === "entered" ? "" : "sand"}">${h({ entered: event && !isUpcoming(event) ? "名簿掲載" : "出場予定", resultPending: "順位確認中", reserve: "補欠", withdrawn: "欠場" }[entry.status] || "確認中")}</span>`;
 const favorite = (p) =>
   `<button class="favorite ${saved.includes(p.id) ? "is-saved" : ""}" data-save="${p.id}" aria-pressed="${saved.includes(p.id)}" aria-label="${h(p.name)}をお気に入り${saved.includes(p.id) ? "から削除" : "に追加"}">${saved.includes(p.id) ? "★" : "☆"}</button>`;
@@ -254,7 +254,7 @@ function eventPage(id) {
     .map((gender) => {
       const entries = e.entries.filter((x) => x.gender === gender);
       return entries.length
-        ? `<h3 class="gender-heading">${genderName(gender)} <span>${entries.length} ${unit}</span></h3><div class="teams">${entries.map((entry) => `<div class="team"><div>${entry.playerIds.map((id) => `<a href="#player/${id}">${h(data.players.find((p) => p.id === id).name)}</a>`).join('<span class="pair-divider"> / </span>')}</div>${badge(entry, e)}${external(entry.sourceUrl, entry.status === "completed" ? "結果 PDF" : "名簿")}</div>`).join("")}</div>`
+        ? `<h3 class="gender-heading">${genderName(gender)} <span>${entries.length} ${unit}</span></h3><div class="teams">${entries.map((entry) => `<div class="team"><div>${entry.playerIds.map((id) => `<a href="#player/${id}">${h(data.players.find((p) => p.id === id).name)}</a>`).join('<span class="pair-divider"> / </span>')}</div>${badge(entry, e, false)}${external(entry.sourceUrl, entry.status === "completed" ? "結果 PDF" : "名簿")}</div>`).join("")}</div>`
         : "";
     })
     .join(
