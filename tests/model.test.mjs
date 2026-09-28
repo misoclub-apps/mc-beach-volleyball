@@ -103,7 +103,9 @@ test("出典・選手参照・日程・過去の最終順位が整合する", ()
       assert.ok(
         e.entries.every(
           (entry) =>
-            (entry.status === "completed" && entry.rank > 0 && entry.resultLabel) ||
+            (entry.status === "completed" &&
+              entry.rank > 0 &&
+              entry.resultLabel) ||
             ["resultPending", "reserve"].includes(entry.status),
         ),
       );
@@ -111,7 +113,7 @@ test("出典・選手参照・日程・過去の最終順位が整合する", ()
     assert.match(e.sourceUrl, /^https:\/\//);
     const seen = new Set();
     for (const entry of e.entries) {
-      assert.equal(entry.playerIds.length, 2);
+      assert.ok([1, 2].includes(entry.playerIds.length));
       assert.match(entry.sourceUrl, /^https:\/\//);
       for (const id of entry.playerIds) {
         assert.ok(ids.has(id));

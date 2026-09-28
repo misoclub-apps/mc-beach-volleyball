@@ -21,9 +21,7 @@
     "https://www.jva.or.jp/beach_international/2026/"
   ],
   "extraPages": [],
-  "retainPastEvents": [
-    "https://www.jbv.jp/news/entry-2493.html"
-  ],
+  "retainPastEvents": ["https://www.jbv.jp/news/entry-2493.html"],
   "reviewPages": [
     "https://www.jva.or.jp/beach_domestic/2026/",
     "https://www.jva.or.jp/beach_domestic/2026/other-events/kawasakicup/",
@@ -52,18 +50,12 @@
     "events": [
       {
         "url": "https://www.jva.or.jp/beach_domestic/2026/japan-beach-volleyball-tour-bvt1/nagoya/",
-        "genders": [
-          "men",
-          "women"
-        ],
+        "genders": ["men", "women"],
         "coverage": "男女の公式最終順位表に掲載されたペアを収録。"
       },
       {
         "url": "https://www.jva.or.jp/beach_domestic/2026/japan-beach-volleyball-tour-bvt1/osaka/",
-        "genders": [
-          "men",
-          "women"
-        ],
+        "genders": ["men", "women"],
         "coverage": "男女の公式最終順位表に掲載されたペアを収録。",
         "corrections": {
           "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf": {
@@ -77,37 +69,909 @@
       },
       {
         "url": "https://www.jva.or.jp/beach_domestic/2026/japan-beach-volleyball-tour-bvt1/miyakonojo/",
-        "genders": [
-          "men",
-          "women"
-        ],
+        "genders": ["men", "women"],
         "coverage": "男女の公式最終順位表に掲載されたペアを収録。"
       },
       {
         "url": "https://www.jva.or.jp/beach_domestic/2026/japan-beach-volleyball-tour-bvt1/tachikawatachihi/",
-        "genders": [
-          "women"
-        ],
+        "genders": ["women"],
         "coverage": "女子の公式最終順位を収録。男子の最終順位表は確認できていません。"
       },
       {
         "url": "https://www.jva.or.jp/beach_domestic/2026/japan-beach-volleyball-tour-bvt1/yokohama/",
-        "genders": [
-          "men",
-          "women"
-        ],
+        "genders": ["men", "women"],
         "coverage": "男女の公式最終順位表に掲載されたペアを収録。"
       },
       {
         "url": "https://www.jva.or.jp/beach_domestic/2026/japan-beach-volleyball-tour-bvt1/hiratsuka/",
-        "genders": [
-          "men",
-          "women"
-        ],
+        "genders": ["men", "women"],
         "coverage": "男女の公式最終順位表に掲載されたペアを収録。"
       }
     ],
     "directEvents": [
+      {
+        "url": "https://www.jbv.jp/news/entry-2318.html",
+        "name": "相馬市長杯サテライト相馬",
+        "category": "BVT2",
+        "startDate": "2025-09-27",
+        "endDate": "2025-09-28",
+        "dateLabel": "2025年9月27日(土)～28日(日)試合開始9:30",
+        "venue": "福島県相馬市・尾浜ビーチバレーボール場",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2024/BVT2_soma_result_men_20250928.pdf",
+            "label": "男子結果・最終順位",
+            "gender": "men",
+            "parser": "jbv-ranking"
+          },
+          {
+            "url": "https://www.jbv.jp/news/2024/BVT2_soma_result_women_20250928.pdf",
+            "label": "女子結果・最終順位",
+            "gender": "women",
+            "parser": "jbv-ranking"
+          }
+        ]
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2319.html",
+        "name": "JBVシリーズ2025碧南大会 丸八証券カップ",
+        "category": "JBVs",
+        "startDate": "2025-10-03",
+        "endDate": "2025-10-05",
+        "dateLabel": "2025年10月3日（金）～5日（日）",
+        "venue": "愛知県碧南市・碧南緑地ビーチコート",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/2025hekinan_ranking_men_20251005.pdf",
+            "label": "男子最終順位",
+            "gender": "men",
+            "parser": "jbv-ranking"
+          },
+          {
+            "url": "https://www.jbv.jp/news/2025/2025hekinan_ranking_women_20251005.pdf",
+            "label": "女子最終順位",
+            "gender": "women",
+            "parser": "jbv-ranking"
+          }
+        ]
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2329.html",
+        "name": "サテライト岐阜",
+        "category": "BVT2",
+        "startDate": "2025-10-11",
+        "endDate": "2025-10-12",
+        "dateLabel": "2025年10月11日(土)～12日(日)試合開始9:30",
+        "venue": "岐阜県海津市・長良川サービスセンターサンドコート",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/BVT2_gifu_result_men_20251012.pdf",
+            "label": "男子結果・最終順位",
+            "gender": "men",
+            "parser": "jbv-ranking"
+          },
+          {
+            "url": "https://www.jbv.jp/news/2024/BVT2_gifu_result_women_20251012.pdf",
+            "label": "女子結果・最終順位",
+            "gender": "women",
+            "parser": "jbv-ranking"
+          }
+        ]
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2331.html",
+        "name": "川崎市杯 JVA第17回ビーチバレーボール",
+        "category": "JBVs",
+        "startDate": "2025-10-11",
+        "endDate": "2025-10-12",
+        "dateLabel": "2025年10月11日(土)～12日(日)",
+        "venue": "神奈川県川崎市・川崎マリエンビーチバレーコート",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2024/kawasakicup_17th_men_reslt_20251012.pdf",
+            "label": "男子結果・最終順位",
+            "gender": "men",
+            "parser": "jbv-ranking"
+          },
+          {
+            "url": "https://www.jbv.jp/news/2024/kawasakicup_17th_women_reslt_20251012.pdf",
+            "label": "女子結果・最終順位",
+            "gender": "women",
+            "parser": "jbv-ranking"
+          }
+        ]
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2336.html#day-1",
+        "name": "U20北信越・小浜（1日目）",
+        "category": "BVT3",
+        "startDate": "2025-10-12",
+        "endDate": "2025-10-12",
+        "dateLabel": "2025-10-12",
+        "venue": "若狭鯉川シーサイドパーク（福井県小浜市鯉川29-3）",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/BVT3_obama_seedlist_1day_result.pdf",
+            "label": "大会1日目結果・順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2336.html",
+        "matchText": "U20北信越・小浜"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2336.html#day-2",
+        "name": "U20北信越・小浜（2日目）",
+        "category": "BVT3",
+        "startDate": "2025-10-13",
+        "endDate": "2025-10-13",
+        "dateLabel": "2025-10-13",
+        "venue": "若狭鯉川シーサイドパーク（福井県小浜市鯉川29-3）",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/BVT3_obama_seedlist_2day_result.pdf",
+            "label": "大会2日目結果・順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2336.html",
+        "matchText": "U20北信越・小浜"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2339.html#day-1",
+        "name": "U20東海／新舞子（1日目）",
+        "category": "BVT3",
+        "startDate": "2025-10-18",
+        "endDate": "2025-10-18",
+        "dateLabel": "2025-10-18",
+        "venue": "新舞子ブルーサンビーチ常設コート(愛知県知多市緑浜町2)",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/BVT3_shinmaiko_seedlist_1day_result.pdf",
+            "label": "大会1日目結果・順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2339.html",
+        "matchText": "U20東海／新舞子"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2330.html",
+        "name": "サテライト高萩",
+        "category": "BVT2",
+        "startDate": "2025-10-18",
+        "endDate": "2025-10-19",
+        "dateLabel": "2025年10月18日(土)～19日(日)試合開始9:30",
+        "venue": "茨城県高萩市・高戸（前浜海岸）特設コート",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2024/bvt2takahagi_result_men_20251019.pdf",
+            "label": "男子結果・最終順位",
+            "gender": "men",
+            "parser": "jbv-ranking"
+          },
+          {
+            "url": "https://www.jbv.jp/news/2024/bvt2takahagi_result_women_20251019.pdf",
+            "label": "女子結果・最終順位",
+            "gender": "women",
+            "parser": "jbv-ranking"
+          }
+        ]
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2339.html#day-2",
+        "name": "U20東海／新舞子（2日目）",
+        "category": "BVT3",
+        "startDate": "2025-10-19",
+        "endDate": "2025-10-19",
+        "dateLabel": "2025-10-19",
+        "venue": "新舞子ブルーサンビーチ常設コート(愛知県知多市緑浜町2)",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/BVT3_shinmaiko_seedlist_2day_result.pdf",
+            "label": "大会2日目結果・順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2339.html",
+        "matchText": "U20東海／新舞子"
+      },
+      {
+        "url": "https://www.jva.or.jp/beach_domestic/2025/japan-beach-volleyball-tour-bvt1/matsuyama/",
+        "name": "ジャパンビーチバレーボールツアー2025 第9戦 松山大会",
+        "category": "BVT1",
+        "startDate": "2025-10-25",
+        "endDate": "2025-10-26",
+        "dateLabel": "2025-10-25〜2025-10-26",
+        "venue": "愛媛県松山市・松山城城山公園堀之内",
+        "documents": [
+          {
+            "url": "https://www.jva.or.jp/wp-content/uploads/2025/01/2025_bvt1_matsuyama_results_1026.pdf",
+            "label": "男女最終日結果・最終順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "matchText": "第9戦 松山大会"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2354.html",
+        "name": "アンダーエイジU20チャンピオンシップ川崎",
+        "category": "BVT3",
+        "startDate": "2025-11-22",
+        "endDate": "2025-11-23",
+        "dateLabel": "2025年11月22日(土)～23日(日)",
+        "venue": "川崎マリエン(川崎市川崎区東扇島38-1)",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2024/2025BVT3_championship_result_2025112223.pdf",
+            "label": "男女最終順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ]
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2371.html#round-1",
+        "name": "チャレンジャーシリーズ2026川崎大会第1戦 OCEANBELLE CUP",
+        "category": "JBVc",
+        "startDate": "2026-02-21",
+        "endDate": "2026-02-21",
+        "dateLabel": "2026-02-21",
+        "venue": "川崎マリエンビーチバレーコート",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/JBVChallengerseries2026_result_1_20260221.pdf",
+            "label": "第1戦男女結果・順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2371.html",
+        "matchText": "チャレンジャーシリーズ2026川崎大会第1・2戦 OCEANBELLE CUP"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2371.html#round-2",
+        "name": "チャレンジャーシリーズ2026川崎大会第2戦 OCEANBELLE CUP",
+        "category": "JBVc",
+        "startDate": "2026-02-22",
+        "endDate": "2026-02-22",
+        "dateLabel": "2026-02-22",
+        "venue": "川崎マリエンビーチバレーコート",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/JBVChallengerseries2026_result_2_20260222.pdf",
+            "label": "第2戦男女結果・順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2371.html",
+        "matchText": "チャレンジャーシリーズ2026川崎大会第1・2戦 OCEANBELLE CUP"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2379.html",
+        "name": "アンダーエイジU20横浜キング",
+        "category": "BVT3",
+        "startDate": "2026-03-08",
+        "endDate": "2026-03-08",
+        "dateLabel": "2026年3月8日(日)",
+        "venue": "横浜市海の公園ビーチバレーボールコート",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2024_1/BVT3KING_result_20260308.pdf",
+            "label": "男女最終順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ]
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2386.html",
+        "name": "DIG CUP presented by MIXI ",
+        "category": "JBVc",
+        "startDate": "2026-03-14",
+        "endDate": "2026-03-15",
+        "dateLabel": "2026年3月14日(土)～3月15日(日)",
+        "venue": "東京都立川市泉町・TACHIHI BEACH",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/DIGCUPpresentedbyMIXI_2daytournament_result_20260315.pdf",
+            "label": "男女最終順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ]
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2381.html",
+        "name": "JBVプレシーズンマッチ2026川崎大会 OCEANBELLE CUP ",
+        "category": "JBVpre",
+        "startDate": "2026-03-28",
+        "endDate": "2026-03-29",
+        "dateLabel": "2026年3月28日（土）～29日（日）",
+        "venue": "川崎マリエンビーチバレーコート",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/JBVPreseasonmuch2026_menresult_20260329.pdf",
+            "label": "男子結果・最終順位",
+            "gender": "men",
+            "parser": "jbv-ranking"
+          },
+          {
+            "url": "https://www.jbv.jp/news/2025/JBVPreseasonmuch2026_womenresult_20260329.pdf",
+            "label": "女子結果・最終順位",
+            "gender": "women",
+            "parser": "jbv-ranking"
+          }
+        ]
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2392.html#day-1",
+        "name": "U20東海・碧南（1日目）",
+        "category": "BVT3",
+        "startDate": "2026-04-04",
+        "endDate": "2026-04-04",
+        "dateLabel": "2026-04-04",
+        "venue": "愛知県碧南市・碧南緑地ビーチコート",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/BVT3hekinan_result_1day_20260404.pdf",
+            "label": "大会1日目結果・順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2392.html",
+        "matchText": "U20東海・碧南"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2392.html#day-2",
+        "name": "U20東海・碧南（2日目）",
+        "category": "BVT3",
+        "startDate": "2026-04-05",
+        "endDate": "2026-04-05",
+        "dateLabel": "2026-04-05",
+        "venue": "愛知県碧南市・碧南緑地ビーチコート",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/BVT3hekinan_result_2day_20260405.pdf",
+            "label": "大会2日目結果・順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2392.html",
+        "matchText": "U20東海・碧南"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2393.html#day-1",
+        "name": "U20関東・平塚大会湘南ベルマーレカップ（1日目）",
+        "category": "BVT3",
+        "startDate": "2026-04-11",
+        "endDate": "2026-04-11",
+        "dateLabel": "2026-04-11",
+        "venue": "湘南ベルマーレひらつかビーチパーク",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2024_1/BVT3hiratsuka_result_1day_20260413.pdf",
+            "label": "大会1日目結果・順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2393.html",
+        "matchText": "U20関東・平塚大会湘南ベルマーレカップ"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2393.html#day-2",
+        "name": "U20関東・平塚大会湘南ベルマーレカップ（2日目）",
+        "category": "BVT3",
+        "startDate": "2026-04-12",
+        "endDate": "2026-04-12",
+        "dateLabel": "2026-04-12",
+        "venue": "湘南ベルマーレひらつかビーチパーク",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2024_1/BVT3hiratsuka_result_2day_20260413.pdf",
+            "label": "大会2日目結果・順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2393.html",
+        "matchText": "U20関東・平塚大会湘南ベルマーレカップ"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2404.html#round-1",
+        "name": "チャレンジャーシリーズ2026/2027 川崎大会第1戦",
+        "category": "JBVc",
+        "startDate": "2026-04-25",
+        "endDate": "2026-04-25",
+        "dateLabel": "2026-04-25",
+        "venue": "川崎マリエンビーチバレーコート",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2024_1/JBVChallengerseries2026_2027_result_1day.pdf",
+            "label": "第1戦男女結果・順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2404.html",
+        "matchText": "チャレンジャーシリーズ2026/2027 川崎大会第1・2戦"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2404.html#round-2",
+        "name": "チャレンジャーシリーズ2026/2027 川崎大会第2戦",
+        "category": "JBVc",
+        "startDate": "2026-04-26",
+        "endDate": "2026-04-26",
+        "dateLabel": "2026-04-26",
+        "venue": "川崎マリエンビーチバレーコート",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2024_1/JBVChallengerseries2026_2027_result_2day.pdf",
+            "label": "第2戦男女結果・順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2404.html",
+        "matchText": "チャレンジャーシリーズ2026/2027 川崎大会第1・2戦"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2396.html",
+        "name": "JBG®Fおだいば2026 第10回ビーチバレーLIVZONカップ",
+        "category": "JBVs",
+        "startDate": "2026-05-04",
+        "endDate": "2026-05-05",
+        "dateLabel": "2026年5月4日（月・祝）1・2回戦 / 2026年5月5日（火・祝）準決勝・決勝・体験会",
+        "venue": "",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/10th_LIVZONcup_men_result_20260505.pdf",
+            "label": "男子結果・最終順位",
+            "gender": "men",
+            "parser": "jbv-ranking"
+          },
+          {
+            "url": "https://www.jbv.jp/news/2025/10th_LIVZONcup_women_result_20260505.pdf",
+            "label": "女子結果・最終順位",
+            "gender": "women",
+            "parser": "jbv-ranking"
+          }
+        ]
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2401.html",
+        "name": "サテライト横浜",
+        "category": "BVT2",
+        "startDate": "2026-05-09",
+        "endDate": "2026-05-10",
+        "dateLabel": "2026年5月9日(土)・10日(日)試合開始9:30予定",
+        "venue": "神奈川県横浜市・横浜海の公園ビーチバレーコート",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2024_1/BVT2_YOKOHAMA_result_men_20260510.pdf",
+            "label": "男子結果・最終順位",
+            "gender": "men",
+            "parser": "jbv-ranking"
+          },
+          {
+            "url": "https://www.jbv.jp/news/2024_1/BVT2_YOKOHAMA_result_women_20260510.pdf",
+            "label": "女子結果・最終順位",
+            "gender": "women",
+            "parser": "jbv-ranking"
+          }
+        ]
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2405.html",
+        "name": "聖地浜松 イオ インダストリーカップ2026",
+        "category": "JBVs",
+        "startDate": "2026-05-16",
+        "endDate": "2026-05-17",
+        "dateLabel": "2026年5月16日(土) 1・2回戦 / 2026年5月17日(日) 準決勝・決勝",
+        "venue": "",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/hamamatsu_result_men_202605017.pdf",
+            "label": "男子結果・最終順位",
+            "gender": "men",
+            "parser": "jbv-ranking"
+          },
+          {
+            "url": "https://www.jbv.jp/news/2025/hamamatsu_result_women_202605017.pdf",
+            "label": "女子結果・最終順位",
+            "gender": "women",
+            "parser": "jbv-ranking"
+          }
+        ]
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2443.html#day-1",
+        "name": "U20四国・愛媛（1日目）",
+        "category": "BVT3",
+        "startDate": "2026-06-13",
+        "endDate": "2026-06-13",
+        "dateLabel": "2026-06-13",
+        "venue": "五色姫海浜公園ビーチバレーボールコート(愛媛県伊予市尾崎地先)",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/BVT3ehime_result_1day_20260613.pdf",
+            "label": "大会1日目結果・順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2443.html",
+        "matchText": "U20四国・愛媛"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2444.html#day-1",
+        "name": "U20東海・焼津（1日目）",
+        "category": "BVT3",
+        "startDate": "2026-06-13",
+        "endDate": "2026-06-13",
+        "dateLabel": "2026-06-13",
+        "venue": "焼津漁港親水広場ふぃしゅーな（静岡県焼津市鰯ケ島136-26）",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/2026underage_yaizu_reslt_1day_20260613.pdf",
+            "label": "大会1日目結果・順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2444.html",
+        "matchText": "U20東海・焼津"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2443.html#day-2",
+        "name": "U20四国・愛媛（2日目）",
+        "category": "BVT3",
+        "startDate": "2026-06-14",
+        "endDate": "2026-06-14",
+        "dateLabel": "2026-06-14",
+        "venue": "五色姫海浜公園ビーチバレーボールコート(愛媛県伊予市尾崎地先)",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/BVT3ehime_result_2day_20260614.pdf",
+            "label": "大会2日目結果・順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2443.html",
+        "matchText": "U20四国・愛媛"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2444.html#day-2",
+        "name": "U20東海・焼津（2日目）",
+        "category": "BVT3",
+        "startDate": "2026-06-14",
+        "endDate": "2026-06-14",
+        "dateLabel": "2026-06-14",
+        "venue": "焼津漁港親水広場ふぃしゅーな（静岡県焼津市鰯ケ島136-26）",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/2026underage_yaizu_reslt_2day_20260614.pdf",
+            "label": "大会2日目結果・順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2444.html",
+        "matchText": "U20東海・焼津"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2464.html",
+        "name": "チャレンジャーシリーズ2026/2027 川崎大会第3戦",
+        "category": "JBVc",
+        "startDate": "2026-07-20",
+        "endDate": "2026-07-20",
+        "dateLabel": "2026年7月20日(月・祝)",
+        "venue": "川崎マリエンビーチバレーコート",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/JBVChallengerseries2026_2027_result_20260720.pdf",
+            "label": "男女結果・最終順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ]
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2462.html#day-1",
+        "name": "U15／U18関東・横浜（1日目）",
+        "category": "BVT3",
+        "startDate": "2026-07-25",
+        "endDate": "2026-07-25",
+        "dateLabel": "2026-07-25",
+        "venue": "横浜市海の公園ビーチバレーボールコート",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/BVT3yokohama_result_day1_20260725.pdf",
+            "label": "大会1日目結果・順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2462.html",
+        "matchText": "U15／U18関東・横浜"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2462.html#day-2",
+        "name": "U15／U18関東・横浜（2日目）",
+        "category": "BVT3",
+        "startDate": "2026-07-26",
+        "endDate": "2026-07-26",
+        "dateLabel": "2026-07-26",
+        "venue": "横浜市海の公園ビーチバレーボールコート",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/BVT3yokohama_result_day2_20260726.pdf",
+            "label": "大会2日目結果・順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2462.html",
+        "matchText": "U15／U18関東・横浜"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2463.html#day-2",
+        "name": "U20九州・佐賀（2日目）",
+        "category": "BVT3",
+        "startDate": "2026-08-02",
+        "endDate": "2026-08-02",
+        "dateLabel": "2026-08-02",
+        "venue": "佐賀県唐津市・西の浜",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/BVT3saga_result_day2_20260801.pdf",
+            "label": "大会2日目結果・順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2463.html",
+        "matchText": "U20九州・佐賀"
+      },
+      {
+        "url": "https://www.jva.or.jp/beach_domestic/2026/championships/",
+        "name": "アクティオ杯 ビーチバレージャパンカレッジ2026 JVA第38回全日本ビーチバレーボール大学選手権大会",
+        "category": "全日本大学選手権",
+        "startDate": "2026-08-04",
+        "endDate": "2026-08-06",
+        "dateLabel": "2026-08-04〜2026-08-06",
+        "venue": "神奈川県川崎市・川崎マリエン",
+        "documents": [
+          {
+            "url": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_college_result_ranking_men0812.pdf",
+            "label": "男子最終順位",
+            "gender": "men",
+            "parser": "jbv-ranking"
+          },
+          {
+            "url": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_college_result_ranking_women0812.pdf",
+            "label": "女子最終順位",
+            "gender": "women",
+            "parser": "jbv-ranking"
+          }
+        ],
+        "matchText": "ビーチバレージャパンカレッジ2026"
+      },
+      {
+        "url": "https://www.jva.or.jp/beach_domestic/2026/championships/japanjunior/",
+        "name": "ビーチバレージャパンジュニア JVA第25回全日本ビーチバレーボール高等学校選手権大会 男子",
+        "category": "全日本高校選手権",
+        "startDate": "2026-08-08",
+        "endDate": "2026-08-11",
+        "dateLabel": "2026-08-08〜2026-08-11",
+        "venue": "大阪府阪南市・箱作海水浴場ぴちぴちビーチ",
+        "documents": [
+          {
+            "url": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_junior_result_ranking0811.pdf",
+            "label": "男子最終順位",
+            "gender": "men",
+            "parser": "jbv-ranking"
+          }
+        ],
+        "matchText": "ビーチバレージャパンジュニア"
+      },
+      {
+        "url": "https://www.jva.or.jp/beach_domestic/2026/championships/japanmadonna/",
+        "name": "マドンナカップ in 伊予市 JVA第30回全日本ビーチバレーボール高等学校選手権大会 女子",
+        "category": "全日本高校選手権",
+        "startDate": "2026-08-08",
+        "endDate": "2026-08-11",
+        "dateLabel": "2026-08-08〜2026-08-11",
+        "venue": "愛媛県伊予市・五色姫海浜公園",
+        "documents": [
+          {
+            "url": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_madonnna_result_ranking0813.pdf",
+            "label": "女子最終順位",
+            "gender": "women",
+            "parser": "jbv-ranking"
+          }
+        ],
+        "matchText": "マドンナカップ in 伊予市"
+      },
+      {
+        "url": "https://www.jva.or.jp/beach_domestic/2026/championships/japan/",
+        "name": "ビーチバレージャパン JVA第40回全日本ビーチバレーボール選手権大会 男子",
+        "category": "全日本選手権",
+        "startDate": "2026-08-14",
+        "endDate": "2026-08-16",
+        "dateLabel": "2026-08-14〜2026-08-16",
+        "venue": "神奈川県藤沢市・鵠沼海岸",
+        "documents": [
+          {
+            "url": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_BVJ_ranking_0816.pdf",
+            "label": "男子最終順位",
+            "gender": "men",
+            "parser": "jbv-ranking"
+          }
+        ],
+        "matchText": "JVA第40回全日本ビーチバレーボール選手権大会"
+      },
+      {
+        "url": "https://www.jva.or.jp/beach_domestic/2026/championships/japanladies/",
+        "name": "ビーチバレージャパンレディース JVA第37回全日本ビーチバレーボール選手権大会 女子",
+        "category": "全日本選手権",
+        "startDate": "2026-08-21",
+        "endDate": "2026-08-23",
+        "dateLabel": "2026-08-21〜2026-08-23",
+        "venue": "大阪府泉南郡岬町・せんなん里海公園ビーチバレー競技場",
+        "documents": [
+          {
+            "url": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_BVJL_ranking_0823.pdf",
+            "label": "女子最終順位",
+            "gender": "women",
+            "parser": "jbv-ranking"
+          }
+        ],
+        "matchText": "ビーチバレージャパンレディース"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2478.html#day-1",
+        "name": "U20北海道・岩内（1日目）",
+        "category": "BVT3",
+        "startDate": "2026-08-22",
+        "endDate": "2026-08-22",
+        "dateLabel": "2026-08-22",
+        "venue": "いわないマリンビーチ（北海道共和町梨野舞納395番地1-地先)",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/BVT3hokkaido_result_20260822.pdf",
+            "label": "大会1日目結果・順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2478.html",
+        "matchText": "U20北海道・岩内"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2479.html#day-1",
+        "name": "U20東北・山形（1日目）",
+        "category": "BVT3",
+        "startDate": "2026-08-22",
+        "endDate": "2026-08-22",
+        "dateLabel": "2026-08-22",
+        "venue": "湯野浜海岸特設コート（山形県鶴岡市湯野浜1-1）",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/BVT3yamagata_result_day1_20260822.pdf",
+            "label": "大会1日目結果・順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2479.html",
+        "matchText": "U20東北・山形"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2480.html#day-2",
+        "name": "U20中国・境港（2日目）",
+        "category": "BVT3",
+        "startDate": "2026-08-23",
+        "endDate": "2026-08-23",
+        "dateLabel": "2026-08-23",
+        "venue": "新屋町海岸ビーチバレー場（鳥取県境港市）",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/BVT3sakaiminato_result_day2_20260823.pdf",
+            "label": "大会2日目結果・順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2480.html",
+        "matchText": "U20中国・境港"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2478.html#day-2",
+        "name": "U20北海道・岩内（2日目）",
+        "category": "BVT3",
+        "startDate": "2026-08-23",
+        "endDate": "2026-08-23",
+        "dateLabel": "2026-08-23",
+        "venue": "いわないマリンビーチ（北海道共和町梨野舞納395番地1-地先)",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/BVT3hokkaido_result_20260823.pdf",
+            "label": "大会2日目結果・順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2478.html",
+        "matchText": "U20北海道・岩内"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2479.html#day-2",
+        "name": "U20東北・山形（2日目）",
+        "category": "BVT3",
+        "startDate": "2026-08-23",
+        "endDate": "2026-08-23",
+        "dateLabel": "2026-08-23",
+        "venue": "湯野浜海岸特設コート（山形県鶴岡市湯野浜1-1）",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/BVT3yamagata_result_day2_20260822.pdf",
+            "label": "大会2日目結果・順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2479.html",
+        "matchText": "U20東北・山形"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2481.html#day-1",
+        "name": "U18近畿・兵庫（1日目）",
+        "category": "BVT3",
+        "startDate": "2026-08-27",
+        "endDate": "2026-08-27",
+        "dateLabel": "2026-08-27",
+        "venue": "",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/BVT3hyogo_result_day1_20260827.pdf",
+            "label": "大会1日目結果・順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2481.html",
+        "matchText": "U18近畿・兵庫"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2481.html#day-2",
+        "name": "U18近畿・兵庫（2日目）",
+        "category": "BVT3",
+        "startDate": "2026-08-28",
+        "endDate": "2026-08-28",
+        "dateLabel": "2026-08-28",
+        "venue": "",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/BVT3hyogo_result_day2_20260827.pdf",
+            "label": "大会2日目結果・順位",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2481.html",
+        "matchText": "U18近畿・兵庫"
+      },
       {
         "url": "https://www.jbv.jp/news/entry-2493.html",
         "name": "相馬市長杯ジャパンビーチバレーボールツアー2026サテライト相馬大会",

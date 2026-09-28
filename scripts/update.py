@@ -207,7 +207,7 @@ def validate(dataset):
             raise ValueError(f'日付の前後が不正: {e["id"]}')
         members = set()
         for entry in e['entries']:
-            if len(entry['playerIds']) != 2 or len(set(entry['playerIds'])) != 2:
+            if len(entry['playerIds']) not in (1, 2) or len(set(entry['playerIds'])) != len(entry['playerIds']):
                 raise ValueError(f'ペア情報が不正: {e["id"]}')
             for pid in entry['playerIds']:
                 if pid not in players or pid in members:
@@ -262,7 +262,14 @@ def run(args):
     output = ROOT / 'public/data/beach.json'
     old = json.loads(output.read_text()) if output.exists() else None
     old_by_url = {event['sourceUrl']: event for event in old['events']} if old else {}
-    retained_past_urls = set(config.get('retainPastEvents', [])) | set(old_by_url)
+    history_urls = {
+        source['url'].split('#', 1)[0]
+        for source in config.get('history', {}).get('directEvents', [])
+    }
+    retained_past_urls = (
+        set(config.get('retainPastEvents', []))
+        | {url for url in old_by_url if url.split('#', 1)[0] not in history_urls}
+    )
     fetcher = Fetcher(config['requestIntervalSeconds'], args.offline, config['allowedHosts'],
                       config.get('maxRetries', 5))
     fetcher.check_robots()

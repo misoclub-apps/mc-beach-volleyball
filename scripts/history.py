@@ -60,40 +60,135 @@ def parse_results(raw, year, corrections=None):
 
 
 def parse_jbv_rankings(raw, gender):
-    """Parse the explicit final-ranking table used by JBV satellite PDFs."""
+    """Parse explicit official ranking tables used by JBV and JVA PDFs."""
     teams = []
+
+    def rank_value(label):
+        label = normalize(label)
+        if label in ('優勝', '準優勝'):
+            return {'優勝': (1, '優勝'), '準優勝': (2, '準優勝')}[label]
+        match = re.fullmatch(r'(\d+)(?:位)?', label)
+        return (int(match[1]), f'{int(match[1])}位') if match else None
+
+    def table_gender(table, page_text):
+        if gender:
+            return gender
+        heading = normalize(' '.join(str(cell or '') for row in table[:2] for cell in row))
+        if '男子' in heading:
+            return 'men'
+        if '女子' in heading:
+            return 'women'
+        # A one-table page can put the division only in the page heading.
+        has_men, has_women = '男子' in page_text, '女子' in page_text
+        if has_men != has_women:
+            return 'men' if has_men else 'women'
+        raise ValueError('JBV最終順位の男女区分が不明です')
+
+    continuation = None
     with pdfplumber.open(io.BytesIO(raw)) as pdf:
         for page_number, page in enumerate(pdf.pages, 1):
             text = normalize(page.extract_text() or '')
-            if '最終順位' not in text:
+            if (continuation is None
+                    and not any(label in text for label in ('最終順位', '試合結果順位', 'ルーザートーナメント順位', '結果', '順位'))):
                 continue
             tables = page.extract_tables()
             for table in tables:
-                if not table or normalize(table[0][0]) != '順位':
+                if not table:
                     continue
-                rank = None
-                for row in table[1:]:
+                header_index = next((i for i, row in enumerate(table[:3])
+                                     if normalize(row[0] or '') in ('順位', 'rank', 'no')), None)
+                if header_index is None:
+                    if continuation is None:
+                        continue
+                    first_label = normalize(table[0][0] or '')
+                    if first_label and not rank_value(first_label) and first_label not in ('棄権', '失格'):
+                        continuation = None
+                        continue
+                    name_columns = continuation['name_columns']
+                    combined_column = continuation['combined_column']
+                    header = continuation['header']
+                    header_count = 0
+                    division = continuation['division']
+                    rank = continuation['rank']
+                    display = continuation['display']
+                    data_start = 0
+                else:
+                    header = [normalize(cell or '') for cell in table[header_index]]
+                    subheader = ([normalize(cell or '') for cell in table[header_index + 1]]
+                                 if header_index + 1 < len(table) else [])
+                    header_name_columns = [i for i, cell in enumerate(header) if cell in ('氏名', 'name')]
+                    subheader_name_columns = [i for i, cell in enumerate(subheader) if cell in ('氏名', 'name')]
+                    if header_name_columns:
+                        name_columns, header_count = header_name_columns, 1
+                    elif subheader_name_columns:
+                        name_columns, header_count = subheader_name_columns, 2
+                    else:
+                        name_columns = [i for i, cell in enumerate(header)
+                                        if re.fullmatch(r'(?:選手|player)[12１２]?', cell)]
+                        header_count = 1
+                    combined_column = next((i for i, cell in enumerate(header)
+                                            if cell in ('氏名(所属)', '氏名（所属）')), None)
+                    if combined_column is not None:
+                        name_columns = [combined_column]
+                    if not 1 <= len(name_columns) <= 2:
+                        continue
+                    division = table_gender(table, text)
+                    rank = None
+                    display = None
+                    data_start = header_index + header_count
+                for row in table[data_start:]:
                     label = row[0]
                     if label is not None:
-                        label = normalize(label)
-                        match = re.fullmatch(r'(\d+)位', label)
-                        if not match:
-                            raise ValueError(f'JBV最終順位が不明: {label}')
-                        rank = int(match[1])
+                        normalized_label = normalize(label)
+                        if normalized_label in ('棄権', '失格'):
+                            rank = None
+                            continue
+                        parsed_rank = rank_value(normalized_label)
+                        if not parsed_rank:
+                            raise ValueError(f'JBV最終順位が不明: {normalized_label}')
+                        rank, display = parsed_rank
                     if rank is None:
                         raise ValueError('JBV最終順位の結合セルを確認できません')
-                    surnames = (row[1] or '').splitlines()
-                    given = (row[2] or '').splitlines()
-                    if len(surnames) != 2 or len(given) != 2:
+                    if combined_column is not None:
+                        first = [' '.join(name.split()) for name in (row[combined_column] or '').splitlines() if name.strip()]
+                        adjacent = ([' '.join(name.split()) for name in (row[combined_column + 1] or '').splitlines() if name.strip()]
+                                    if combined_column + 1 < len(row) else [])
+                        if (len(first) == len(adjacent) == 2
+                                and not all(re.search(r'\s', name) for name in first)):
+                            names = [f'{surname} {given}' for surname, given in zip(first, adjacent)]
+                        else:
+                            names = first
+                    elif len(name_columns) == 2:
+                        if header_count == 1 and all(
+                            column + 1 < len(header) and not header[column + 1]
+                            for column in name_columns
+                        ):
+                            names = [f'{row[column] or ""} {row[column + 1] or ""}'.strip()
+                                     for column in name_columns]
+                        else:
+                            names = [' '.join((row[column] or '').split()) for column in name_columns]
+                    else:
+                        # Satellite tables split each player's surname and given name
+                        # across adjacent cells under two repeated 氏名 headers.
+                        column = name_columns[0]
+                        repeated = [i for i, cell in enumerate(header) if cell == header[column]]
+                        if len(repeated) == 2 and all(i + 1 < len(row) for i in repeated):
+                            names = [f'{row[i] or ""} {row[i + 1] or ""}'.strip() for i in repeated]
+                        else:
+                            names = [' '.join((row[column] or '').split())]
+                    if not names or any(not name for name in names):
                         raise ValueError(f'JBV最終順位の氏名列が想定外です: {row}')
                     teams.append({
-                        'names': [f'{a} {b}' for a, b in zip(surnames, given)],
-                        'gender': gender,
+                        'names': names,
+                        'gender': division,
                         'status': 'completed',
                         'rank': rank,
-                        'resultLabel': f'{rank}位',
+                        'resultLabel': display,
                         'page': page_number,
                     })
+                continuation = {'name_columns': name_columns, 'combined_column': combined_column,
+                                'header': header, 'division': division, 'rank': rank,
+                                'display': display}
     if not teams:
         raise ValueError('JBVの明示された最終順位表がありません')
     return teams
@@ -149,10 +244,11 @@ def collect_history(fetcher, config, as_of):
     for source in settings.get('directEvents', []):
         if source['endDate'] >= as_of:
             continue
-        page, _ = soup_body(fetcher.get(source['url']))
+        page_url = source.get('pageUrl', source['url'])
+        page, _ = soup_body(fetcher.get(page_url))
         page_text = normalize(page.get_text(' ', strip=True))
-        if normalize(source['name']) not in page_text:
-            raise ValueError(f'過去大会ページの内容が変わっています: {source["url"]}')
+        if normalize(source.get('matchText', source['name'])) not in page_text:
+            raise ValueError(f'過去大会ページの内容が変わっています: {page_url}')
         entries, docs = [], []
         for document in source['documents']:
             pdf_count += 1
@@ -173,7 +269,7 @@ def collect_history(fetcher, config, as_of):
             'startDate': source['startDate'], 'endDate': source['endDate'],
             'dateLabel': source['dateLabel'], 'venue': source['venue'], 'cancelled': False,
             'sourceUrl': source['url'], 'documents': docs, 'entries': entries,
-            'entryStatus': 'published', 'resultCoverage': source['coverage'],
-            'checkedAt': fetcher.records[source['url']]['checkedAt'],
+            'entryStatus': 'published', 'resultCoverage': source.get('coverage', ''),
+            'checkedAt': fetcher.records[page_url]['checkedAt'],
         })
     return events, pdf_count

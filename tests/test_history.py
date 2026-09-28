@@ -56,3 +56,46 @@ class HistoryTests(unittest.TestCase):
         teams = parse_jbv_rankings(b'', 'men')
         self.assertEqual([team['rank'] for team in teams], [1, 3, 3])
         self.assertEqual(teams[1]['names'], ['松下 道一', 'Martin Kaufer'])
+
+    @patch('scripts.history.pdfplumber.open')
+    def test_pair_and_single_ranking_formats_are_supported(self, opened):
+        pair_page = MagicMock()
+        pair_page.extract_text.return_value = '最終順位 男子の部'
+        pair_page.extract_tables.return_value = [[
+            ['男子の部', None, None, None, None, None, None],
+            ['順位', '選手1', '所属', 'ポイント', '選手2', '所属', 'ポイント'],
+            ['1', '選手 一', '', '100', '選手 二', '', '100'],
+        ]]
+        single_page = MagicMock()
+        single_page.extract_text.return_value = '最終順位 女子の部'
+        single_page.extract_tables.return_value = [[
+            ['女子の部', None, None, None],
+            ['順位', '選手', '所属', 'ポイント'],
+            ['1', '選手 三', '', '100'],
+        ]]
+        opened.return_value.__enter__.return_value.pages = [pair_page, single_page]
+        teams = parse_jbv_rankings(b'', None)
+        self.assertEqual(teams[0]['names'], ['選手 一', '選手 二'])
+        self.assertEqual(teams[0]['gender'], 'men')
+        self.assertEqual(teams[1]['names'], ['選手 三'])
+        self.assertEqual(teams[1]['gender'], 'women')
+
+    @patch('scripts.history.pdfplumber.open')
+    def test_ranking_table_continues_on_following_page(self, opened):
+        first = MagicMock()
+        first.extract_text.return_value = '順位 女子の部'
+        first.extract_tables.return_value = [[
+            ['女子の部', None, None, None, None, None, None],
+            ['順位', '選手1', '所属', 'ポイント', '選手2', '所属', 'ポイント'],
+            ['1', '選手 一', '', '100', '選手 二', '', '100'],
+            ['3', '選手 三', '', '80', '選手 四', '', '80'],
+        ]]
+        second = MagicMock()
+        second.extract_text.return_value = '続き'
+        second.extract_tables.return_value = [[
+            [None, '選手 五', '', None, '選手 六', '', None],
+        ]]
+        opened.return_value.__enter__.return_value.pages = [first, second]
+        teams = parse_jbv_rankings(b'', None)
+        self.assertEqual([team['rank'] for team in teams], [1, 3, 3])
+        self.assertEqual(teams[-1]['names'], ['選手 五', '選手 六'])

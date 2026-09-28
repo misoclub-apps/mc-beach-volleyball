@@ -20,7 +20,7 @@ test("選手検索 → 予定 → 大会 → 選手の往復", async ({ page }) 
   await expect(
     page.locator(".appearance").filter({ hasText: "開催予定" }),
   ).toHaveCount(2);
-  await expect(page.locator(".past-results .appearance")).toHaveCount(6);
+  await expect(page.locator(".past-results .appearance")).toHaveCount(18);
   const hiratsuka = page
     .locator(".past-results .appearance")
     .filter({ hasText: "平塚" });
@@ -30,7 +30,7 @@ test("選手検索 → 予定 → 大会 → 選手の往復", async ({ page }) 
   ).toHaveAttribute("href", /#page=10$/);
   const soma = page
     .locator(".past-results .appearance")
-    .filter({ hasText: "相馬" });
+    .filter({ has: page.getByText("順位確認中", { exact: true }) });
   await expect(soma.locator(".badge")).toHaveText("順位確認中");
   await expect(
     soma.getByRole("link", { name: "公式の大会情報" }),
@@ -152,10 +152,13 @@ for (const width of [320, 375, 414, 768, 1440])
 test("過去大会は期間で絞り込めて結果とペアを辿れる", async ({ page }) => {
   await page.goto("/#events");
   await page.getByLabel("表示期間").selectOption("past");
-  await expect(page.locator(".event-row")).toHaveCount(7);
-  await expect(page.locator(".event-row .badge.result")).toHaveCount(7);
-  await page.getByLabel("大会名・会場").fill("立川");
-  await page.locator(".event-row").click();
+  await expect(page.locator(".event-row")).toHaveCount(52);
+  await expect(page.locator(".event-row .badge.result")).toHaveCount(52);
+  await page.getByLabel("大会名・会場").fill("第4戦 立川立飛大会");
+  await page
+    .locator(".event-row")
+    .filter({ hasText: "第4戦 立川立飛大会" })
+    .click();
   await expect(
     page.getByRole("heading", { name: "試合結果", exact: true }),
   ).toBeVisible();
@@ -173,4 +176,24 @@ test("過去大会は期間で絞り込めて結果とペアを辿れる", async
     page.getByText("男子の最終順位表は確認できていません。", { exact: false }),
   ).toBeVisible();
   await expect(page.locator(".team .badge.result").first()).toHaveText("1位");
+});
+
+test("個人順位の大会も選手ページへ辿れる", async ({ page }) => {
+  await page.goto("/#events");
+  await page.locator("#event-period").selectOption("past");
+  await page.locator("#event-search").fill("横浜キング");
+  await page.locator(".event-row").click();
+  await expect(
+    page.getByRole("heading", { name: "最終順位・選手" }),
+  ).toBeVisible();
+  await expect(
+    page.locator(".section-heading").filter({ hasText: "32 選手" }),
+  ).toBeVisible();
+  await page.locator(".team a").first().click();
+  await expect(
+    page
+      .locator(".appearance .partner")
+      .filter({ hasText: "個人順位" })
+      .first(),
+  ).toBeVisible();
 });
