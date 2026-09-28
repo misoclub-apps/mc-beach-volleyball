@@ -37,6 +37,13 @@ class ParsersTest(unittest.TestCase):
         self.assertEqual((e['startDate'], e['endDate']), ('2026-10-11', '2026-10-12'))
         self.assertEqual(e['venue'], '海岸')
 
+    def test_spaced_venue_label(self):
+        html = '''<div id="contents_Right"><h2>聖地浜松カップ2026結果</h2><div class="release_entry">
+        ◆開催日／2026年5月16日(土)<br>
+        ◆会　場／静岡県浜松市・遠州灘海浜公園江之島ビーチコート</div></div>'''
+        event = parse_article(html, 'https://www.jbv.jp/news/entry-2.html', 2026)
+        self.assertEqual(event['venue'], '静岡県浜松市・遠州灘海浜公園江之島ビーチコート')
+
     def test_no_inference_from_publication_date(self):
         html = '<div id="contents_Right"><h2>大会のお知らせ</h2><div class="release_entry">2026年9月22日<br>◆申込期限／2026年10月1日</div></div>'
         self.assertIsNone(parse_article(html, 'https://www.jbv.jp/news/x.html', 2026))

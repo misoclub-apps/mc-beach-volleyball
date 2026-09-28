@@ -511,6 +511,7 @@ def run(args):
             events.append(result_event)
             continue
         pending_event = events[existing_index]
+        result_event['venue'] = result_event.get('venue') or pending_event.get('venue', '')
         completed_genders = {entry['gender'] for entry in result_event['entries']}
         result_event['entries'].extend(
             entry for entry in pending_event['entries']

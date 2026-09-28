@@ -2,7 +2,7 @@
 import io
 import re
 import pdfplumber
-from scripts.parsers import normalize, soup_body, safe_url, dates_from_label, stable_id
+from scripts.parsers import normalize, soup_body, safe_url, dates_from_label, stable_id, parse_article
 
 
 def parse_results(raw, year, corrections=None):
@@ -245,7 +245,8 @@ def collect_history(fetcher, config, as_of):
         if source['endDate'] >= as_of:
             continue
         page_url = source.get('pageUrl', source['url'])
-        page, _ = soup_body(fetcher.get(page_url))
+        page_raw = fetcher.get(page_url)
+        page, _ = soup_body(page_raw)
         page_text = normalize(page.get_text(' ', strip=True))
         if normalize(source.get('matchText', source['name'])) not in page_text:
             raise ValueError(f'過去大会ページの内容が変わっています: {page_url}')
@@ -263,11 +264,13 @@ def collect_history(fetcher, config, as_of):
                         for team in parsed]
             docs.append({'url': document['url'], 'label': document['label'], 'kind': 'result',
                          'gender': document['gender'], 'parsed': True})
+        article = parse_article(page_raw, page_url, config['year'])
+        venue = source.get('venue') or (article.get('venue', '') if article else '')
         events.append({
             'id': stable_id('e-', source['url']), 'name': source['name'],
             'officialTitle': source['name'], 'category': source['category'],
             'startDate': source['startDate'], 'endDate': source['endDate'],
-            'dateLabel': source['dateLabel'], 'venue': source['venue'], 'cancelled': False,
+            'dateLabel': source['dateLabel'], 'venue': venue, 'cancelled': False,
             'sourceUrl': source['url'], 'documents': docs, 'entries': entries,
             'entryStatus': 'published', 'resultCoverage': source.get('coverage', ''),
             'checkedAt': fetcher.records[page_url]['checkedAt'],

@@ -107,7 +107,7 @@ def parse_article(html, url, year):
         if extra:
             date_label += ' / ' + ' / '.join(extra)
     venue = next((re.split(r'[／/:：]', x, maxsplit=1)[-1].strip() for x in lines
-                  if re.match(r'^[◆●■\s]*(会場|開催会場|開催地)[／/:：]', x)), '')
+                  if re.match(r'^[◆●■\s]*(会\s*場|開催会\s*場|開催地)[／/:：]', x)), '')
     if not date_label or not re.search(r'大会|カップ|選手権|シリーズ|キング|CUP|Cup|cup', title):
         return None
     start, end = dates_from_label(date_label, year)

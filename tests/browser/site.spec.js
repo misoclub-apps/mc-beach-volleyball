@@ -131,6 +131,13 @@ test("終了済み海外大会は日本ペアの順位と公式確認済み試�
   ).toHaveAttribute("href", /volleyballworld\.com\/.+\/schedule\/\d+\/$/);
 });
 
+test("空白を含む公式の会場ラベルも表示する", async ({ page }) => {
+  await page.goto("/#event/e-b9d8aa90fc8676");
+  await expect(page.locator(".event-meta")).toContainText(
+    "静岡県浜松市・遠州灘海浜公園江之島ビーチコート",
+  );
+});
+
 test("スマホでも次回大会カードと公式プロフィール画像を表示する", async ({
   page,
 }) => {

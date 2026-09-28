@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-28T11:20:48+00:00",
+  "generatedAt": "2026-09-28T12:14:52+00:00",
   "checkedAt": "2026-09-28T11:19:39+00:00",
   "asOf": "2026-09-28",
   "year": 2026,
@@ -28473,7 +28473,7 @@
       "startDate": "2026-05-04",
       "endDate": "2026-05-05",
       "dateLabel": "2026年5月4日（月・祝）1・2回戦 / 2026年5月5日（火・祝）準決勝・決勝・体験会",
-      "venue": "",
+      "venue": "お台場海浜公園おだいばビーチ（東京都港区）",
       "cancelled": false,
       "sourceUrl": "https://www.jbv.jp/news/entry-2396.html",
       "documents": [
@@ -29802,7 +29802,7 @@
       "startDate": "2026-05-16",
       "endDate": "2026-05-17",
       "dateLabel": "2026年5月16日(土) 1・2回戦 / 2026年5月17日(日) 準決勝・決勝",
-      "venue": "",
+      "venue": "静岡県浜松市・遠州灘海浜公園江之島ビーチコート",
       "cancelled": false,
       "sourceUrl": "https://www.jbv.jp/news/entry-2405.html",
       "documents": [
