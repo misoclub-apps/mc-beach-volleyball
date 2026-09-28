@@ -24,7 +24,7 @@ test("選手検索 → 予定 → 大会 → 選手の往復", async ({ page }) 
   const hiratsuka = page
     .locator(".past-results .appearance")
     .filter({ hasText: "平塚" });
-  await expect(hiratsuka.locator(".badge.result")).toHaveText("9位");
+  await expect(hiratsuka.locator(".result-field")).toHaveText("結果9位");
   await expect(
     hiratsuka.getByRole("link", { name: "公式の結果 PDF" }),
   ).toHaveAttribute("href", /#page=10$/);
@@ -175,7 +175,9 @@ test("過去大会は期間で絞り込めて結果とペアを辿れる", async
   await expect(
     page.getByText("男子の最終順位表は確認できていません。", { exact: false }),
   ).toBeVisible();
-  await expect(page.locator(".team .badge.result").first()).toHaveText("1位");
+  await expect(page.locator(".team .result-field").first()).toHaveText(
+    "結果1位",
+  );
 });
 
 test("個人順位の大会も選手ページへ辿れる", async ({ page }) => {

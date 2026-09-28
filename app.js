@@ -41,7 +41,9 @@ const range = (event) =>
       (event.endDate !== event.startDate ? ` — ${date(event.endDate)}` : "")
     : "日程確認中";
 const badge = (entry, event) =>
-  `<span class="badge ${entry.status === "completed" ? "result" : entry.status === "entered" ? "" : "sand"}">${h(entry.status === "completed" ? entry.resultLabel : { entered: event && !isUpcoming(event) ? "名簿掲載" : "出場予定", resultPending: "順位確認中", reserve: "補欠", withdrawn: "欠場" }[entry.status] || "確認中")}</span>`;
+  entry.status === "completed"
+    ? `<span class="result-field"><span>結果</span><strong>${h(entry.resultLabel)}</strong></span>`
+    : `<span class="badge ${entry.status === "entered" ? "" : "sand"}">${h({ entered: event && !isUpcoming(event) ? "名簿掲載" : "出場予定", resultPending: "順位確認中", reserve: "補欠", withdrawn: "欠場" }[entry.status] || "確認中")}</span>`;
 const favorite = (p) =>
   `<button class="favorite ${saved.includes(p.id) ? "is-saved" : ""}" data-save="${p.id}" aria-pressed="${saved.includes(p.id)}" aria-label="${h(p.name)}をお気に入り${saved.includes(p.id) ? "から削除" : "に追加"}">${saved.includes(p.id) ? "★" : "☆"}</button>`;
 const portrait = (p, large = false) =>
