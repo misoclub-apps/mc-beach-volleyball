@@ -21,6 +21,9 @@ const filters = { query: "", gender: "", upcoming: true, favorites: false };
 const eventFilters = { query: "", category: "", period: "upcoming" };
 const external = (url, label, cls = "") =>
   `<a class="external ${cls}" href="${safeLink(url)}" target="_blank" rel="noopener noreferrer">${h(label)} <span aria-hidden="true">↗</span></a>`;
+const isPdfLink = (url) => /\.pdf(?:[?#]|$)/i.test(url || "");
+const resultLinkLabel = (url, official = false) =>
+  `${official ? "公式の" : ""}結果${isPdfLink(url) ? " PDF" : "ページ"}`;
 const genderName = (gender) => (gender === "men" ? "男子" : "女子");
 const stamp = (value) =>
   new Intl.DateTimeFormat("ja-JP", {
@@ -139,7 +142,7 @@ function appearanceCard({ event, entry }, playerId) {
   const member = partner
     ? `<p class="partner">ペア <a href="#player/${partner.id}">${h(partner.name)} ↗</a></p>`
     : '<p class="partner">個人順位</p>';
-  return `<article class="appearance"><div class="date-block"><span>${event.startDate?.slice(0, 4) || "日程"}</span><strong>${range(event)}</strong><span>${event.cancelled ? "開催中止" : isUpcoming(event) ? "開催予定" : "終了"}</span></div><div class="appearance-body"><div class="badge-line"><span class="small-label">${h(event.category)}</span>${badge(entry, event)}</div><h3><a href="#event/${event.id}">${h(event.name)}</a></h3><p>${h(event.venue || "会場は公式情報をご確認ください")}</p>${member}<div class="source-links">${external(event.sourceUrl, "公式の大会情報")}${external(entry.sourceUrl, entry.status === "completed" ? "公式の結果 PDF" : /\.pdf(?:#|\?|$)/i.test(entry.sourceUrl) ? "掲載名簿 PDF" : "公式の出場メンバー")}</div></div></article>`;
+  return `<article class="appearance"><div class="date-block"><span>${event.startDate?.slice(0, 4) || "日程"}</span><strong>${range(event)}</strong><span>${event.cancelled ? "開催中止" : isUpcoming(event) ? "開催予定" : "終了"}</span></div><div class="appearance-body"><div class="badge-line"><span class="small-label">${h(event.category)}</span>${badge(entry, event)}</div><h3><a href="#event/${event.id}">${h(event.name)}</a></h3><p>${h(event.venue || "会場は公式情報をご確認ください")}</p>${member}<div class="source-links">${external(event.sourceUrl, "公式の大会情報")}${external(entry.sourceUrl, entry.status === "completed" ? resultLinkLabel(entry.sourceUrl, true) : isPdfLink(entry.sourceUrl) ? "掲載名簿 PDF" : "公式の出場メンバー")}</div></div></article>`;
 }
 
 function playerPage(id) {
@@ -275,7 +278,7 @@ function eventPage(id) {
     .map((gender) => {
       const entries = e.entries.filter((x) => x.gender === gender);
       return entries.length
-        ? `<h3 class="gender-heading">${genderName(gender)} <span>${entries.length} ${unit}</span></h3><div class="teams">${entries.map((entry) => `<div class="team"><div>${entry.playerIds.map((id) => `<a href="#player/${id}">${h(data.players.find((p) => p.id === id).name)}</a>`).join('<span class="pair-divider"> / </span>')}</div>${badge(entry, e, false)}${external(entry.sourceUrl, entry.status === "completed" ? "結果 PDF" : entry.sourceUrl.includes("volleyballworld.com") ? "公式チーム表" : "名簿")}</div>`).join("")}</div>`
+        ? `<h3 class="gender-heading">${genderName(gender)} <span>${entries.length} ${unit}</span></h3><div class="teams">${entries.map((entry) => `<div class="team"><div>${entry.playerIds.map((id) => `<a href="#player/${id}">${h(data.players.find((p) => p.id === id).name)}</a>`).join('<span class="pair-divider"> / </span>')}</div>${badge(entry, e, false)}${external(entry.sourceUrl, entry.status === "completed" ? resultLinkLabel(entry.sourceUrl) : entry.sourceUrl.includes("volleyballworld.com") ? "公式チーム表" : "名簿")}</div>`).join("")}</div>`
         : "";
     })
     .join(
