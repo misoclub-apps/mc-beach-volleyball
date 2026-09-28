@@ -46,7 +46,10 @@ test("お気に入り保存と再読み込み、空検索の回復", async ({ pa
   await page.goto("/");
   await page.getByLabel("選手名", { exact: true }).fill("酒井春海");
   await page.locator("[data-save]").click();
+  await page.getByLabel("選手名", { exact: true }).fill("");
+  await expect(page.locator(".player-row h3").first()).toHaveText("酒井春海");
   await page.reload();
+  await expect(page.locator(".player-row h3").first()).toHaveText("酒井春海");
   await page.getByLabel("お気に入りだけ", { exact: true }).check();
   await expect(page.locator(".player-row")).toHaveCount(1);
   await page.getByLabel("選手名", { exact: true }).fill("見つからない名前");

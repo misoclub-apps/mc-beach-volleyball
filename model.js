@@ -40,6 +40,8 @@ export function filterPlayers(
           )),
     )
     .sort((a, b) => {
+      const favoriteOrder = Number(saved.includes(b.id)) - Number(saved.includes(a.id));
+      if (favoriteOrder) return favoriteOrder;
       const count = (p) =>
         appearances(data, p.id).filter(
           (a) => isUpcoming(a.event, today) && a.entry.status === "entered",

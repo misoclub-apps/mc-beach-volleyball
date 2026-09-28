@@ -300,8 +300,7 @@ main.addEventListener("click", (e) => {
     "aria-label",
     `${data.players.find((p) => p.id === id).name}をお気に入り${saved.includes(id) ? "から削除" : "に追加"}`,
   );
-  if (filters.favorites && document.querySelector("#player-list"))
-    renderPlayers();
+  if (document.querySelector("#player-list")) renderPlayers();
 });
 main.addEventListener(
   "error",

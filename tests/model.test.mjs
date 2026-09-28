@@ -70,6 +70,24 @@ test("女子・お気に入り・名前を同時に絞り込める", () => {
     0,
   );
 });
+test("お気に入りの選手を通常の並び順より先に表示する", () => {
+  const d = {
+    players: [
+      { id: "busy", name: "大会多数", aliases: [], gender: "women" },
+      { id: "favorite", name: "お気に入り", aliases: [], gender: "women" },
+    ],
+    events: [
+      {
+        endDate: "2026-10-01",
+        entries: [{ playerIds: ["busy", "partner"], status: "entered" }],
+      },
+    ],
+  };
+  assert.equal(
+    filterPlayers(d, { saved: ["favorite"], today: "2026-09-22" })[0].id,
+    "favorite",
+  );
+});
 test("外部ソースにHTMLやjavascript URLがあっても実行しない", () => {
   assert.equal(safeLink("javascript:alert(1)"), "#");
   assert.equal(
