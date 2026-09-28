@@ -20,7 +20,7 @@ test("選手検索 → 予定 → 大会 → 選手の往復", async ({ page }) 
   await expect(
     page.locator(".appearance").filter({ hasText: "開催予定" }),
   ).toHaveCount(2);
-  await expect(page.locator(".past-results .appearance")).toHaveCount(18);
+  await expect(page.locator(".past-results .appearance")).toHaveCount(24);
   const hiratsuka = page
     .locator(".past-results .appearance")
     .filter({ hasText: "平塚" });
@@ -109,6 +109,25 @@ test("海外大会は日本ペアだけを出場区分つきで表示する", as
   ).toBe(true);
 });
 
+test("終了済み海外大会は日本ペアの順位と公式確認済み試合を表示する", async ({
+  page,
+}) => {
+  await page.goto("/#event/e-f30967f7b13b30");
+  await expect(
+    page.getByRole("heading", { name: "CHALLENGEブバネーシュワル大会" }),
+  ).toBeVisible();
+  await expect(page.locator(".team")).toHaveCount(3);
+  await expect(page.locator(".team .result-field")).toHaveCount(3);
+  await expect(page.locator(".international-match")).toHaveCount(8);
+  await expect(page.locator(".international-matches")).toContainText("USA");
+  await expect(
+    page
+      .locator(".international-match")
+      .first()
+      .getByRole("link", { name: "公式試合ページ" }),
+  ).toHaveAttribute("href", /volleyballworld\.com\/.+\/schedule\/\d+\/$/);
+});
+
 test("スマホでも次回大会カードと公式プロフィール画像を表示する", async ({
   page,
 }) => {
@@ -183,8 +202,8 @@ for (const width of [320, 375, 414, 768, 1440])
 test("過去大会は期間で絞り込めて結果とペアを辿れる", async ({ page }) => {
   await page.goto("/#events");
   await page.getByLabel("表示期間").selectOption("past");
-  await expect(page.locator(".event-row")).toHaveCount(52);
-  await expect(page.locator(".event-row .badge.result")).toHaveCount(52);
+  await expect(page.locator(".event-row")).toHaveCount(80);
+  await expect(page.locator(".event-row .badge.result")).toHaveCount(79);
   await page.getByLabel("大会名・会場").fill("第4戦 立川立飛大会");
   await page
     .locator(".event-row")

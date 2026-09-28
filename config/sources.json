@@ -48,6 +48,146 @@
   ],
   "volleyballWorldEvents": [
     {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/maunganui/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/futures/mount-maunganui-nzl/",
+      "genders": ["men", "women"]
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/bhubaneswar/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/challenge/bhubaneswar-ind/",
+      "genders": ["men", "women"]
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/sanya/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/futures/sanya-chn/",
+      "genders": ["men", "women"]
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/coolangatta/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/futures/coolangatta-aus/",
+      "genders": ["men", "women"]
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/haikou/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/futures/haikou-chn/",
+      "genders": ["men", "women"]
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/tlaxcala/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/challenge/tlaxcala-mex/",
+      "genders": ["men", "women"]
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/rarotonga/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/futures/rarotonga-cok-m/",
+      "genders": ["men"]
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/nayarit/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/challenge/nayarit-mex/",
+      "genders": ["men", "women"]
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/tahiti/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/futures/tahiti-ply-m/",
+      "genders": ["men"]
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/xiamen/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/challenge/xiamen-chn/",
+      "genders": ["men", "women"]
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/nuvali/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/challenge/nuvali-phi/",
+      "genders": ["men", "women"]
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/wuhan/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/futures/wuhan-chn/",
+      "genders": ["women"]
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/geneva/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/futures/geneva-sui-w/",
+      "genders": ["women"]
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/bridlington/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/futures/bridlington-eng/",
+      "genders": ["women"]
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/hangzhou/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/futures/hangzhou-chn/",
+      "genders": ["men", "women"]
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/gstaad/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/elite16/gstaad-sui/",
+      "genders": ["women"]
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/rzeszow/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/futures/rzeszow-pol/",
+      "genders": ["women"]
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/shangluo/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/challenge/shangluo-chn/",
+      "genders": ["men", "women"]
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/riodejaneiro/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/elite16/rio-de-janeiro-bra/",
+      "genders": ["women"]
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/qidong/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/futures/qidong-chn/",
+      "genders": ["men", "women"]
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/pingtan/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/futures/pingtan-chn/",
+      "genders": ["men", "women"]
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/busan/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/futures/busan-kor-w/",
+      "genders": ["women"]
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/tallin/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/futures/tallinn-est/",
+      "genders": ["men"]
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/bujumbura/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/futures/bujumbura-bdi/",
+      "genders": ["men", "women"]
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/modena/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/futures/modena-ita/",
+      "genders": ["men", "women"]
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/brno/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/futures/brno-cze/",
+      "genders": ["men"]
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/budapest/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/futures/budapest-hun/",
+      "genders": ["men", "women"]
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/corigliano-rossano/",
+      "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/futures/corigliano-rossano-ita/",
+      "genders": ["women"]
+    },
+    {
       "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/alanya-2/",
       "url": "https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/futures/alanya-tur/",
       "matchUrls": []

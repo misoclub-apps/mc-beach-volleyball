@@ -1,7 +1,7 @@
 import io
 import unittest
 from unittest.mock import patch, MagicMock
-from scripts.parsers import dates_from_label, parse_article, parse_calendar, parse_profile_image, parse_profiles, parse_roster, parse_jva_calendar, parse_jva_teams, parse_volleyball_world_match, parse_volleyball_world_teams, normalize
+from scripts.parsers import dates_from_label, parse_article, parse_calendar, parse_profile_image, parse_profiles, parse_roster, parse_jva_calendar, parse_jva_teams, parse_volleyball_world_final_standings, parse_volleyball_world_match, parse_volleyball_world_teams, normalize
 from scripts.update import apply_event_overrides, compile_players, merge_volleyball_world_entries, retain_unresolved_events, validate
 
 
@@ -160,5 +160,13 @@ class ParsersTest(unittest.TestCase):
         self.assertEqual(match['away']['names'], ['Foreign One', 'Foreign Two'])
         self.assertEqual(match['score'], [2, 0])
 
+    def test_volleyball_world_final_standings_keep_shared_japan_rank(self):
+        html = '''<table class="vbw-o-table"><tr><td>pool</td></tr></table>
+        <table class="vbw-o-table"><tr class="vbw-o-table__row vbw-o-table__row--5">
+        <td class="position">5</td><td><img src="/flag_jpn"><a href="/teams/women/123/schedule/">Japan</a></td></tr>
+        <tr class="vbw-o-table__row vbw-o-table__row---9"><td class="position"></td>
+        <td><img src="/flag_jpn"><a href="/teams/women/456/schedule/">Japan</a></td></tr></table>'''
+        results = parse_volleyball_world_final_standings(html, 'women', 'https://official.example/standings')
+        self.assertEqual([(item['externalTeamId'], item['rank']) for item in results], [(123, 5), (456, 9)])
 
 if __name__ == '__main__': unittest.main()

@@ -17,7 +17,7 @@ from urllib.robotparser import RobotFileParser
 import requests
 
 from scripts.history import collect_history
-from scripts.parsers import normalize, parse_article, parse_profile_image, parse_profiles, parse_roster, parse_calendar, parse_jva_calendar, parse_jva_teams, parse_volleyball_world_match, parse_volleyball_world_teams, safe_url, soup_body, stable_id
+from scripts.parsers import discover_volleyball_world_japan_match_urls, normalize, parse_article, parse_profile_image, parse_profiles, parse_roster, parse_calendar, parse_jva_calendar, parse_jva_teams, parse_volleyball_world_final_standings, parse_volleyball_world_match, parse_volleyball_world_teams, safe_url, soup_body, stable_id
 
 ROOT = Path(__file__).resolve().parents[1]
 UA = 'BeachNote/1.0 (+https://github.com/misoclub-apps/mc-beach-volleyball; local periodic index)'
@@ -173,7 +173,8 @@ def discover(fetcher, config, issues):
 
 
 def compile_players(events, profiles, aliases):
-    aliases = {normalize(k): normalize(v) for k, v in aliases.items()}
+    display_aliases = {normalize(k): v.strip() for k, v in aliases.items()}
+    aliases = {key: normalize(value) for key, value in display_aliases.items()}
     def key(name, gender):
         norm = normalize(name)
         return gender + ':' + aliases.get(norm, norm)
@@ -181,8 +182,9 @@ def compile_players(events, profiles, aliases):
     def player(name, gender, profile=None):
         canonical = key(name, gender)
         pid = stable_id('p-', canonical)
+        display_name = display_aliases.get(normalize(name), name)
         if pid not in players:
-            players[pid] = {'id': pid, 'name': name, 'gender': gender, 'aliases': [], 'roman': '',
+            players[pid] = {'id': pid, 'name': display_name, 'gender': gender, 'aliases': [], 'roman': '',
                             'profileUrl': None, 'imageUrl': None}
         p = players[pid]
         if name not in p['aliases']:
@@ -249,22 +251,39 @@ def merge_volleyball_world_entries(event, official_entries, aliases):
             current.update({key: value for key, value in official.items() if key != 'names'})
             merged.append(current)
         else:
-            official['names'] = [canonical.get(normalize(name), normalize(name)) for name in official['names']]
+            official['names'] = [canonical.get(normalize(name), name.strip()) for name in official['names']]
             merged.append(official)
     event['entries'] = merged
 
 
-def collect_volleyball_world(events, fetcher, config, aliases, issues):
+def collect_volleyball_world(events, fetcher, config, profiles, aliases, issues, as_of):
     """Collect JPN teams and explicitly configured official match pages only."""
-    for source in config.get('volleyballWorldEvents', []):
+    sources = config.get('volleyballWorldEvents', [])
+    all_aliases = dict(aliases)
+    jva_rosters = {}
+    for source in sources:
+        try:
+            teams, problems = parse_jva_teams(fetcher.get(source['eventUrl']), profiles)
+            for team in teams:
+                for english, japanese in zip(team.pop('englishNames', []), team['names']):
+                    all_aliases.setdefault(english, japanese)
+            jva_rosters[source['eventUrl']] = teams
+        except Exception as error:
+            issues.append({'url': source['eventUrl'], 'kind': 'external', 'message': str(error)})
+
+    for source in sources:
         event = next((item for item in events if item['sourceUrl'] == source['eventUrl']), None)
         if event is None:
             issues.append({'url': source['url'], 'kind': 'external',
                            'message': '対応するJVA大会を確認できません'})
             continue
+        jva_teams = jva_rosters.get(source['eventUrl'], [])
+        if jva_teams:
+            event['entries'] = jva_teams
+            event['entryStatus'] = 'published'
         official_entries = []
         team_pages_complete = True
-        for gender in ('men', 'women'):
+        for gender in source.get('genders', ('men', 'women')):
             for stage in ('main-draw', 'qualification', 'reserve'):
                 url = f'{source["url"].rstrip("/")}/teams/{gender}/{stage}'
                 try:
@@ -274,10 +293,43 @@ def collect_volleyball_world(events, fetcher, config, aliases, issues):
                     team_pages_complete = False
                     issues.append({'url': url, 'eventId': event['id'], 'kind': 'external',
                                    'message': str(error)})
+        official_entries = list({entry['externalTeamId']: entry for entry in reversed(official_entries)}.values())
         if team_pages_complete:
-            merge_volleyball_world_entries(event, official_entries, aliases)
+            merge_volleyball_world_entries(event, official_entries, all_aliases)
+        if event.get('endDate') and event['endDate'] < as_of and team_pages_complete:
+            standings, standings_complete = [], True
+            for gender in source.get('genders', ('men', 'women')):
+                url = f'{source["url"].rstrip("/")}/standings/{gender}/'
+                try:
+                    gender_results = parse_volleyball_world_final_standings(fetcher.get(url), gender, url)
+                    standings.extend(gender_results)
+                except Exception as error:
+                    standings_complete = False
+                    issues.append({'url': url, 'eventId': event['id'], 'kind': 'result',
+                                   'message': str(error)})
+            if standings_complete and standings:
+                by_team = {result['externalTeamId']: result for result in standings}
+                event['entries'] = [entry for entry in event['entries'] if entry.get('externalTeamId') in by_team]
+                for entry in event['entries']:
+                    result = by_team[entry['externalTeamId']]
+                    entry.update({'status': 'completed', 'rank': result['rank'],
+                                  'resultLabel': f'{result["rank"]}位', 'sourceUrl': result['sourceUrl']})
+                event['entryStatus'] = 'published'
+                event['resultCoverage'] = 'Volleyball World公式最終順位表で確認した日本ペアのみ掲載しています。'
+            elif standings_complete:
+                for entry in event['entries']:
+                    entry['status'] = 'resultPending'
+                event['entryStatus'] = 'resultPending'
+                event['resultCoverage'] = '公式最終順位表に日本ペアの順位を確認できないため、公開済み名簿を保持しています。'
         event['matches'] = []
-        for url in source.get('matchUrls', []):
+        match_urls = list(source.get('matchUrls', []))
+        try:
+            match_urls.extend(discover_volleyball_world_japan_match_urls(
+                fetcher.get(source['url']), source['url']))
+        except Exception as error:
+            issues.append({'url': source['url'], 'eventId': event['id'], 'kind': 'discovery',
+                           'message': str(error)})
+        for url in dict.fromkeys(match_urls):
             try:
                 event['matches'].append(parse_volleyball_world_match(fetcher.get(url), url))
             except Exception as error:
@@ -411,8 +463,9 @@ def run(args):
             issues.append({'url': url, 'kind': 'article', 'message': str(error)})
     if len(candidates) > limit:
         issues.append({'kind': 'limit', 'message': f'{len(candidates)-limit}ページが取得上限で未処理'})
+    international_urls = {source['eventUrl'] for source in config.get('volleyballWorldEvents', [])}
     for event in calendar:
-        if event['endDate'] < as_of:
+        if event['endDate'] < as_of and event['sourceUrl'] not in international_urls:
             continue
         def same_event(other):
             a, b = normalize(event['name']), normalize(other['name'])
@@ -449,7 +502,7 @@ def run(args):
             event['documents'].append({'url': source['url'], 'label': '日本の出場メンバー（JVA）', 'kind': 'entry', 'gender': None})
         except Exception as error:
             issues.append({'url': source['url'], 'kind': 'external', 'message': str(error)})
-    collect_volleyball_world(events, fetcher, config, overrides.get('aliases', {}), issues)
+    collect_volleyball_world(events, fetcher, config, profiles, overrides.get('aliases', {}), issues, as_of)
     history, history_pdfs = collect_history(fetcher, config, as_of)
     for result_event in history:
         existing_index = next((i for i, event in enumerate(events)

@@ -258,8 +258,10 @@ function eventPage(id) {
                   : "";
                 return `<article class="international-match"><div><span class="small-label">${match.dateTimeUtc ? stamp(match.dateTimeUtc) : "日時確認中"}</span><p>${h(match.label)}</p></div><div class="match-teams"><span>${h(match.home.names.join(" / "))}（${h(match.home.countryCode)}）</span>${score}<span>${h(match.away.names.join(" / "))}（${h(match.away.countryCode)}）</span>${sets}</div>${external(match.sourceUrl, "公式試合ページ")}</article>`;
               })
-              .join("")}</div>`
-          : '<p class="muted">日本ペアの試合日程は公式発表後に掲載します。</p>'
+              .join(
+                "",
+              )}</div>${isUpcoming(e) ? "" : '<p class="muted">試合別結果は、公式個別試合ページを確認できた試合のみ掲載しています。</p>'}`
+          : `<p class="muted">${isUpcoming(e) ? "日本ペアの試合日程は公式発表後に掲載します。" : "試合別結果は、公式個別試合ページを確認できた試合のみ掲載しています。"}</p>`
       }</section>`
     : "";
   const status =

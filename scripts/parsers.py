@@ -219,13 +219,28 @@ def parse_jva_teams(html, profiles):
     teams, problems = [], []
     for section in body.select('section.m-playerList'):
         names = [n.get_text(' ', strip=True) for n in section.select('.m-playerList-contents-article-data-name')]
+        english_names = []
+        for node in section.select('.m-playerList-contents-article-data-team'):
+            roman = next(node.stripped_strings, '')
+            if ',' in roman:
+                surname, given = (part.strip() for part in roman.split(',', 1))
+                english_names.append(f'{given} {surname.title()}')
+            elif ' ' in roman:
+                surname, given = roman.split(None, 1)
+                english_names.append(f'{given.title()} {surname.title()}')
         if not names:
             continue
-        group_genders = {genders[normalize(n)] for n in names if normalize(n) in genders}
+        heading = section.find_previous(['h3', 'h4'])
+        heading_text = heading.get_text(' ', strip=True) if heading else ''
+        heading_gender = 'women' if '女子' in heading_text else 'men' if '男子' in heading_text else None
+        group_genders = {heading_gender} if heading_gender else {genders[normalize(n)] for n in names if normalize(n) in genders}
         if len(names) != 2 or len(group_genders) != 1:
             problems.append('JVAのペア区分・男女区分を確認してください: ' + ' / '.join(names))
             continue
-        teams.append({'names': names, 'gender': group_genders.pop(), 'status': 'entered', 'number': len(teams)+1})
+        team = {'names': names, 'gender': group_genders.pop(), 'status': 'entered', 'number': len(teams)+1}
+        if len(english_names) == 2:
+            team['englishNames'] = english_names
+        teams.append(team)
     if not teams and not problems:
         problems.append('JVAの出場メンバー欄を検出できません。未発表か形式変更かを確認してください')
     return (teams if not problems else []), problems
@@ -311,6 +326,50 @@ def parse_volleyball_world_match(html, source_url):
         'sets': sets,
         'sourceUrl': source_url,
     }
+
+
+def parse_volleyball_world_final_standings(html, gender, source_url):
+    """Read JPN rows from the official final standings table."""
+    if isinstance(html, bytes):
+        html = html.decode('utf-8', errors='replace')
+    tables = re.findall(r'<table\b[^>]*class=["\'][^"\']*vbw-o-table[^"\']*["\'][^>]*>.*?</table>',
+                        html, re.I | re.S)
+    if not tables:
+        raise ValueError('Volleyball Worldの公式最終順位表を確認できません')
+    results = []
+    # The source intentionally omits many closing tags. Split raw rows before
+    # parsing so one row cannot absorb every row that follows it.
+    raw_rows = re.findall(r'<tr\b[^>]*>.*?(?=<tr\b|</table>)', tables[-1], re.I | re.S)
+    for raw_row in raw_rows:
+        row = BeautifulSoup(f'<table>{raw_row}</table>', 'html.parser').select_one('tr')
+        flag = row.select_one('img[src*="flag_jpn"]')
+        team_link = row.select_one(f'a[href*="/teams/{gender}/"][href*="/schedule"]')
+        if not flag or not team_link:
+            continue
+        team_match = re.search(rf'/teams/{gender}/(\d+)/schedule', team_link.get('href', ''))
+        position = row.select_one('.position')
+        rank_text = position.get_text(strip=True) if position else ''
+        rank_match = re.search(r'(\d+)$', ' '.join(row.get('class', [])))
+        rank = int(rank_text) if rank_text.isdigit() else int(rank_match.group(1)) if rank_match else None
+        if not team_match or not rank:
+            raise ValueError('Volleyball WorldのJPN最終順位を解析できません')
+        results.append({'externalTeamId': int(team_match.group(1)), 'gender': gender,
+                        'rank': rank, 'sourceUrl': source_url})
+    return results
+
+
+def discover_volleyball_world_japan_match_urls(html, source_url):
+    """Find official individual match pages whose official card includes JPN."""
+    soup = BeautifulSoup(html, 'html.parser')
+    urls = []
+    for link in soup.select('a.vbw-matches--matchcenter-btn[href*="/schedule/"]'):
+        card = link.find_parent(class_='vbw-mu--match')
+        if not card or not card.select_one('img[src*="flag_jpn"]'):
+            continue
+        url = safe_url(source_url, link.get('href', '')).split('?', 1)[0]
+        if re.search(r'/schedule/\d+/?$', url):
+            urls.append(url)
+    return list(dict.fromkeys(urls))
 
 
 def parse_roster(data, gender):
