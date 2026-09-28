@@ -571,6 +571,9 @@ legend {
   margin-left: 16px;
   color: var(--color-accent);
 }
+.appearance-result {
+  margin-top: 10px;
+}
 .badge-line {
   display: flex;
   gap: 12px;

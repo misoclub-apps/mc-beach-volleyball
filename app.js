@@ -142,7 +142,12 @@ function appearanceCard({ event, entry }, playerId) {
   const member = partner
     ? `<p class="partner">ペア <a href="#player/${partner.id}">${h(partner.name)} ↗</a></p>`
     : '<p class="partner">個人順位</p>';
-  return `<article class="appearance"><div class="date-block"><span>${event.startDate?.slice(0, 4) || "日程"}</span><strong>${range(event)}</strong><span>${event.cancelled ? "開催中止" : isUpcoming(event) ? "開催予定" : "終了"}</span></div><div class="appearance-body"><div class="badge-line"><span class="small-label">${h(event.category)}</span>${badge(entry, event)}</div><h3><a href="#event/${event.id}">${h(event.name)}</a></h3><p>${h(event.venue || "会場は公式情報をご確認ください")}</p>${member}<div class="source-links">${external(event.sourceUrl, "公式の大会情報")}${external(entry.sourceUrl, entry.status === "completed" ? resultLinkLabel(entry.sourceUrl, true) : isPdfLink(entry.sourceUrl) ? "掲載名簿 PDF" : "公式の出場メンバー")}</div></div></article>`;
+  const result =
+    entry.status === "completed"
+      ? `<div class="appearance-result">${badge(entry, event)}</div>`
+      : "";
+  const status = entry.status === "completed" ? "" : badge(entry, event);
+  return `<article class="appearance"><div class="date-block"><span>${event.startDate?.slice(0, 4) || "日程"}</span><strong>${range(event)}</strong><span>${event.cancelled ? "開催中止" : isUpcoming(event) ? "開催予定" : "終了"}</span></div><div class="appearance-body"><div class="badge-line"><span class="small-label">${h(event.category)}</span>${status}</div><h3><a href="#event/${event.id}">${h(event.name)}</a></h3><p>${h(event.venue || "会場は公式情報をご確認ください")}</p>${member}${result}<div class="source-links">${external(event.sourceUrl, "公式の大会情報")}${external(entry.sourceUrl, entry.status === "completed" ? resultLinkLabel(entry.sourceUrl, true) : isPdfLink(entry.sourceUrl) ? "掲載名簿 PDF" : "公式の出場メンバー")}</div></div></article>`;
 }
 
 function playerPage(id) {
