@@ -604,9 +604,6 @@ legend {
 .appearance-result.is-winner span {
   color: #765b22;
 }
-.appearance-result .winner-mark {
-  color: #b77b0d;
-}
 .appearance-result + .partner {
   margin-top: 12px;
 }

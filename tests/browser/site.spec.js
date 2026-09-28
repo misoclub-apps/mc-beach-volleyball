@@ -140,6 +140,18 @@ test("空白を含む公式の会場ラベルも表示する", async ({ page }) 
   );
 });
 
+test("個人ページの1位表示は色を残して星を付けない", async ({ page }) => {
+  await page.goto("/#player/p-54316126a8a75f");
+  const soma = page
+    .locator(".past-results .appearance")
+    .filter({ hasText: "相馬市長杯サテライト相馬" })
+    .first();
+  await expect(soma.locator(".appearance-result.is-winner")).toHaveText(
+    "最終順位1位",
+  );
+  await expect(soma.locator(".appearance-result")).not.toContainText("★");
+});
+
 test("スマホでも次回大会カードと公式プロフィール画像を表示する", async ({
   page,
 }) => {
