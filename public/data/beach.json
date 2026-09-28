@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-28T00:18:52+00:00",
-  "checkedAt": "2026-09-28T00:16:33+00:00",
+  "generatedAt": "2026-09-28T03:04:47+00:00",
+  "checkedAt": "2026-09-28T03:04:00+00:00",
   "asOf": "2026-09-28",
   "year": 2026,
   "coverage": {
     "source": "JBV・JVA・各大会主催者",
-    "description": "JBVの年間予定・ニュース・公認大会とJVA国際大会予定から、取得時点で開催前または開催中の大会を収録。主催者サイトも確認し、大会別に公開された参加名簿を選手に紐付けています。未発表の出場予定は含みません。過去の結果は2026年BVT1の6大会を対象に、公式最終順位表から収録（立川立飛は女子のみ）。全大会・全試合を網羅するものではありません。",
+    "description": "JBVの年間予定・ニュース・公認大会とJVA国際大会予定から、公開済みの大会と参加名簿を選手に紐付けています。開催後も大会と選手の紐付けを保持し、公式最終結果が未発表の場合は「順位確認中」と表示します。過去結果は大会区分を限定せず、公式最終順位表を確認できたものから順次収録します。未発表の出場・順位は推測しません。",
     "domains": [
       "www.jbv.jp",
       "www.jva.or.jp",
@@ -16,65 +16,65 @@
       {
         "url": "https://www.jva.or.jp/beach_domestic/2026/",
         "title": "2026年国内大会スケジュール | 公益財団法人日本バレーボール協会",
-        "checkedAt": "2026-09-28T00:14:20+00:00"
+        "checkedAt": "2026-09-28T03:01:31+00:00"
       },
       {
         "url": "https://www.jva.or.jp/beach_domestic/2026/other-events/kawasakicup/",
         "title": "川崎市長杯 JVA第18回ビーチバレーボール大会 | 公益財団法人日本バレーボール協会",
-        "checkedAt": "2026-09-28T00:14:04+00:00"
+        "checkedAt": "2026-09-28T03:01:14+00:00"
       },
       {
         "url": "https://www.jva.or.jp/beach_domestic/2026/other-events/kawasakicup/?entry=schedule_results",
         "title": "川崎市長杯 JVA第18回ビーチバレーボール大会 | 公益財団法人日本バレーボール協会",
-        "checkedAt": "2026-09-28T00:14:05+00:00"
+        "checkedAt": "2026-09-28T03:01:16+00:00"
       },
       {
         "url": "https://ybvf.volleyball.ne.jp/",
         "title": "Yokohama Beach Volleyball Federation | Fun time on the Beach",
-        "checkedAt": "2026-09-28T00:14:05+00:00"
+        "checkedAt": "2026-09-28T03:01:16+00:00"
       },
       {
         "url": "https://ybvf.volleyball.ne.jp/tournament/2026%e5%b9%b4%e5%ba%a6ybvf-series-5-%e3%83%95%e3%82%b8%e3%82%ad%e3%83%8f%e3%82%a6%e3%82%b9-veluna%e3%82%ab%e3%83%83%e3%83%97-%e5%85%ac%e8%aa%8d%e3%83%93%e3%83%bc%e3%83%81%e3%83%90%e3%83%ac%e3%83%bc/",
         "title": "2026年度YBVF series 5 フジキハウス VELUNAカップ 公認ビーチバレーボール大会 | Yokohama Beach Volleyball Federation",
-        "checkedAt": "2026-09-28T00:14:07+00:00"
+        "checkedAt": "2026-09-28T03:01:17+00:00"
       },
       {
         "url": "https://www.jva.or.jp/beach_international/2026/ioc-oca2026/",
         "title": "第20回アジア競技大会（2026/愛知・名古屋） | 公益財団法人日本バレーボール協会",
-        "checkedAt": "2026-09-28T00:15:45+00:00"
+        "checkedAt": "2026-09-28T03:03:04+00:00"
       },
       {
         "url": "https://www.jva.or.jp/beach_international/2026/ioc-oca2026/?entry=member",
         "title": "第20回アジア競技大会（2026/愛知・名古屋） | 公益財団法人日本バレーボール協会",
-        "checkedAt": "2026-09-28T00:14:17+00:00"
+        "checkedAt": "2026-09-28T03:01:28+00:00"
       },
       {
         "url": "https://www.jva.or.jp/beach_international/2026/bpt2026/alanya-2/",
         "title": "FUTURESアランヤ大会 | 公益財団法人日本バレーボール協会",
-        "checkedAt": "2026-09-28T00:16:20+00:00"
+        "checkedAt": "2026-09-28T03:03:50+00:00"
       },
       {
         "url": "https://www.jva.or.jp/beach_international/2026/avc2026/doha/",
         "title": "アジアビーチツアードーハオープン | 公益財団法人日本バレーボール協会",
-        "checkedAt": "2026-09-28T00:15:59+00:00"
+        "checkedAt": "2026-09-28T03:03:29+00:00"
       },
       {
         "url": "https://www.jva.or.jp/beach_international/2026/avc2026/suma/",
         "title": "アジアビーチツアー須磨オープン | 公益財団法人日本バレーボール協会",
-        "checkedAt": "2026-09-28T00:16:24+00:00"
+        "checkedAt": "2026-09-28T03:03:53+00:00"
       },
       {
         "url": "https://www.jva.or.jp/beach_international/2026/ioc-yog2026/76809/",
         "title": "第4回ユースオリンピック競技大会（2026/ダカール） | 公益財団法人日本バレーボール協会",
-        "checkedAt": "2026-09-28T00:16:29+00:00"
+        "checkedAt": "2026-09-28T03:03:56+00:00"
       }
     ],
     "pagesDiscovered": 113,
     "pagesChecked": 113,
-    "pdfsChecked": 12,
+    "pdfsChecked": 15,
     "reviewCount": 0,
     "offline": true,
-    "skippedCount": 103
+    "skippedCount": 102
   },
   "players": [
     {
@@ -435,6 +435,17 @@
       "imageUrl": null
     },
     {
+      "id": "p-0ae5bd566aae50",
+      "name": "伊藤 瀬菜",
+      "gender": "women",
+      "aliases": [
+        "伊藤 瀬菜"
+      ],
+      "roman": "",
+      "profileUrl": null,
+      "imageUrl": null
+    },
+    {
       "id": "p-238cbfb56b8682",
       "name": "伊藤 碧紀",
       "gender": "women",
@@ -530,6 +541,17 @@
       "gender": "men",
       "aliases": [
         "佐藤 史之"
+      ],
+      "roman": "",
+      "profileUrl": null,
+      "imageUrl": null
+    },
+    {
+      "id": "p-39277685de5f32",
+      "name": "佐藤 恵",
+      "gender": "women",
+      "aliases": [
+        "佐藤 恵"
       ],
       "roman": "",
       "profileUrl": null,
@@ -658,6 +680,17 @@
       "imageUrl": null
     },
     {
+      "id": "p-59dc53e20f904b",
+      "name": "加藤 沙菜",
+      "gender": "women",
+      "aliases": [
+        "加藤 沙菜"
+      ],
+      "roman": "",
+      "profileUrl": null,
+      "imageUrl": null
+    },
+    {
       "id": "p-267993eb67bba7",
       "name": "加賀 蓮",
       "gender": "men",
@@ -718,6 +751,17 @@
       "gender": "men",
       "aliases": [
         "古田 史郎"
+      ],
+      "roman": "",
+      "profileUrl": null,
+      "imageUrl": null
+    },
+    {
+      "id": "p-5aa84c84841109",
+      "name": "吉原 和香奈",
+      "gender": "women",
+      "aliases": [
+        "吉原 和香奈"
       ],
       "roman": "",
       "profileUrl": null,
@@ -829,6 +873,17 @@
       "gender": "women",
       "aliases": [
         "堤 亜里菜"
+      ],
+      "roman": "",
+      "profileUrl": null,
+      "imageUrl": null
+    },
+    {
+      "id": "p-ea4e0c0ccba243",
+      "name": "大久保 美咲",
+      "gender": "women",
+      "aliases": [
+        "大久保 美咲"
       ],
       "roman": "",
       "profileUrl": null,
@@ -1058,6 +1113,17 @@
       "imageUrl": null
     },
     {
+      "id": "p-e68522b1b2ae3d",
+      "name": "小野寺 智子",
+      "gender": "women",
+      "aliases": [
+        "小野寺 智子"
+      ],
+      "roman": "",
+      "profileUrl": null,
+      "imageUrl": null
+    },
+    {
       "id": "p-a2ae033a2c458d",
       "name": "小野寺 暉",
       "gender": "men",
@@ -1085,6 +1151,17 @@
       "gender": "women",
       "aliases": [
         "山内 志織"
+      ],
+      "roman": "",
+      "profileUrl": null,
+      "imageUrl": null
+    },
+    {
+      "id": "p-744fba13784877",
+      "name": "山口 和也",
+      "gender": "men",
+      "aliases": [
+        "山口 和也"
       ],
       "roman": "",
       "profileUrl": null,
@@ -1222,6 +1299,17 @@
       "roman": "Norika Okada",
       "profileUrl": "https://www.jbv.jp/players/woman/okada.html",
       "imageUrl": "https://www.jbv.jp/players/img/woman/pic/okada.jpg"
+    },
+    {
+      "id": "p-50dc877a7cec02",
+      "name": "岩立 岳",
+      "gender": "men",
+      "aliases": [
+        "岩立 岳"
+      ],
+      "roman": "",
+      "profileUrl": null,
+      "imageUrl": null
     },
     {
       "id": "p-bf1e65e017c8a6",
@@ -1845,6 +1933,17 @@
       "imageUrl": null
     },
     {
+      "id": "p-5b5c22b0fbab93",
+      "name": "清和 真奈美",
+      "gender": "women",
+      "aliases": [
+        "清和 真奈美"
+      ],
+      "roman": "",
+      "profileUrl": null,
+      "imageUrl": null
+    },
+    {
       "id": "p-bdab3e1443988a",
       "name": "清水 啓輔",
       "gender": "men",
@@ -1866,6 +1965,17 @@
       "roman": "Shuma Watanabe",
       "profileUrl": "https://www.jbv.jp/players/man/watanabe-s.html",
       "imageUrl": "https://www.jbv.jp/players/img/man/pic/watanabe_s.jpg"
+    },
+    {
+      "id": "p-42ca88b3a7d1a9",
+      "name": "渡邊 愛菜",
+      "gender": "women",
+      "aliases": [
+        "渡邊 愛菜"
+      ],
+      "roman": "",
+      "profileUrl": null,
+      "imageUrl": null
     },
     {
       "id": "p-8ce24651c6a54c",
@@ -2018,6 +2128,17 @@
       "gender": "men",
       "aliases": [
         "田崎 颯太"
+      ],
+      "roman": "",
+      "profileUrl": null,
+      "imageUrl": null
+    },
+    {
+      "id": "p-ef8586266060ae",
+      "name": "畑 恵",
+      "gender": "women",
+      "aliases": [
+        "畑 恵"
       ],
       "roman": "",
       "profileUrl": null,
@@ -2308,6 +2429,17 @@
       "imageUrl": null
     },
     {
+      "id": "p-9aa915b22f538d",
+      "name": "紺野 実由紀",
+      "gender": "women",
+      "aliases": [
+        "紺野 実由紀"
+      ],
+      "roman": "",
+      "profileUrl": null,
+      "imageUrl": null
+    },
+    {
       "id": "p-5bfc10c148b633",
       "name": "美保幸輝",
       "gender": "men",
@@ -2392,7 +2524,8 @@
       "gender": "women",
       "aliases": [
         "薮見真歩",
-        "藪見 真歩"
+        "藪見 真歩",
+        "薮見 真歩"
       ],
       "roman": "Maho Yabumi",
       "profileUrl": "https://www.jbv.jp/players/woman/yabumi.html",
@@ -2473,6 +2606,17 @@
       "gender": "men",
       "aliases": [
         "西村 悠馬"
+      ],
+      "roman": "",
+      "profileUrl": null,
+      "imageUrl": null
+    },
+    {
+      "id": "p-abe30bf088268c",
+      "name": "西村 晃一",
+      "gender": "men",
+      "aliases": [
+        "西村 晃一"
       ],
       "roman": "",
       "profileUrl": null,
@@ -2740,11 +2884,23 @@
       "imageUrl": null
     },
     {
+      "id": "p-4ae6df1a16048e",
+      "name": "須藤 羽海",
+      "gender": "women",
+      "aliases": [
+        "須藤 羽海"
+      ],
+      "roman": "",
+      "profileUrl": null,
+      "imageUrl": null
+    },
+    {
       "id": "p-5b3b7296c53464",
       "name": "高内 雄心",
       "gender": "men",
       "aliases": [
-        "高内 雄心"
+        "高内 雄心",
+        "髙内 雄心"
       ],
       "roman": "",
       "profileUrl": null,
@@ -2813,6 +2969,17 @@
       "gender": "men",
       "aliases": [
         "高江 証詞"
+      ],
+      "roman": "",
+      "profileUrl": null,
+      "imageUrl": null
+    },
+    {
+      "id": "p-07757767a97420",
+      "name": "高野 愛菜",
+      "gender": "women",
+      "aliases": [
+        "高野 愛菜"
       ],
       "roman": "",
       "profileUrl": null,
@@ -2930,7 +3097,7 @@
           "resultLabel": "優勝",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-2bc3a9cc952c04",
             "p-f68c79e674a200"
@@ -2943,7 +3110,7 @@
           "resultLabel": "準優勝",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-229aea0a5e245b",
             "p-6940ec375c06e8"
@@ -2956,7 +3123,7 @@
           "resultLabel": "3位",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-1552ee38d688ac",
             "p-fd1eaa3d5d7a19"
@@ -2969,7 +3136,7 @@
           "resultLabel": "3位",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-4becb601919188",
             "p-6b056cab733348"
@@ -2982,7 +3149,7 @@
           "resultLabel": "5位",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-bdab3e1443988a",
             "p-00656b2567f575"
@@ -2995,7 +3162,7 @@
           "resultLabel": "5位",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-f14c67cc3f1f06",
             "p-741f25b4958b21"
@@ -3008,7 +3175,7 @@
           "resultLabel": "5位",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-c3ff1ffcd612ed",
             "p-98638614563dfb"
@@ -3021,7 +3188,7 @@
           "resultLabel": "5位",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-82b3e90aa9e413",
             "p-51c855bf09a751"
@@ -3034,7 +3201,7 @@
           "resultLabel": "9位",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-7ce605fcf52b8d",
             "p-bacb4c47486198"
@@ -3047,7 +3214,7 @@
           "resultLabel": "9位",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-94664df6f011f8",
             "p-9201eba2042d0d"
@@ -3060,7 +3227,7 @@
           "resultLabel": "9位",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-df48743bbeeb58",
             "p-b5a1767dae9173"
@@ -3073,7 +3240,7 @@
           "resultLabel": "9位",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-bb3eda817c7adc",
             "p-cc1da19f7ad73e"
@@ -3086,7 +3253,7 @@
           "resultLabel": "9位",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-0932b58def2823",
             "p-e900bac72b258e"
@@ -3099,7 +3266,7 @@
           "resultLabel": "9位",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-5bfc10c148b633",
             "p-aae242c346d332"
@@ -3112,7 +3279,7 @@
           "resultLabel": "9位",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-3c0f1899831ea6",
             "p-d751e2f59f7802"
@@ -3125,7 +3292,7 @@
           "resultLabel": "9位",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-0f1d7e27067be6",
             "p-0b891d351fb2cd"
@@ -3138,7 +3305,7 @@
           "resultLabel": "17位",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-7b33eeb4c59158",
             "p-bb255ad1ef4d73"
@@ -3151,7 +3318,7 @@
           "resultLabel": "17位",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-c338f3ce672cf8",
             "p-b06941d3301571"
@@ -3164,7 +3331,7 @@
           "resultLabel": "17位",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-536d8879278f47",
             "p-6cc776b47b5e95"
@@ -3177,7 +3344,7 @@
           "resultLabel": "17位",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-2ba2990913c01b",
             "p-90c520e7170021"
@@ -3190,7 +3357,7 @@
           "resultLabel": "17位",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-601f1b41287ffb",
             "p-fb025ab8253517"
@@ -3203,7 +3370,7 @@
           "resultLabel": "17位",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-9c5a1283daa8e0",
             "p-0e83a86fb129d8"
@@ -3216,7 +3383,7 @@
           "resultLabel": "17位",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-9af0e6159064c8",
             "p-39e29bb5b30187"
@@ -3229,7 +3396,7 @@
           "resultLabel": "17位",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-92f03fd3246f44",
             "p-7c039b7bda13a8"
@@ -3242,7 +3409,7 @@
           "resultLabel": "17位",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-161d9c9bcde639",
             "p-52e39cfcfa00c0"
@@ -3255,7 +3422,7 @@
           "resultLabel": "17位",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-80b22dcc07c24e",
             "p-c03b165b51346a"
@@ -3268,7 +3435,7 @@
           "resultLabel": "17位",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-e2a3d208cd3596",
             "p-a2ae033a2c458d"
@@ -3281,7 +3448,7 @@
           "resultLabel": "17位",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-8ce24651c6a54c",
             "p-c50aa57b4324af"
@@ -3294,7 +3461,7 @@
           "resultLabel": "優勝",
           "page": 9,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-f0f0a4a7f277b6",
             "p-bcf55897f68a02"
@@ -3307,7 +3474,7 @@
           "resultLabel": "準優勝",
           "page": 9,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-907be3ffc8f0ce",
             "p-4615251b352481"
@@ -3320,7 +3487,7 @@
           "resultLabel": "3位",
           "page": 9,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-209ae8d6247cf3",
             "p-2ad8777261c796"
@@ -3333,7 +3500,7 @@
           "resultLabel": "3位",
           "page": 9,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-04203906673033",
             "p-63c0eb523e1429"
@@ -3346,7 +3513,7 @@
           "resultLabel": "5位",
           "page": 9,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-5a194d18749c9e",
             "p-cbfb49e65b03e7"
@@ -3359,7 +3526,7 @@
           "resultLabel": "5位",
           "page": 9,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-ba6e259b045dc4",
             "p-0a1903073eb965"
@@ -3372,7 +3539,7 @@
           "resultLabel": "5位",
           "page": 9,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-0012effe0e4f80",
             "p-195bc3b45e3e72"
@@ -3385,7 +3552,7 @@
           "resultLabel": "5位",
           "page": 9,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-fae05b76f162ee",
             "p-2ffd40abb352b1"
@@ -3398,7 +3565,7 @@
           "resultLabel": "9位",
           "page": 9,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-7133c92bb8a56b",
             "p-5bcfe1e82824db"
@@ -3411,7 +3578,7 @@
           "resultLabel": "9位",
           "page": 9,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-1ef00814faedb6",
             "p-03abf2f4821d7d"
@@ -3424,7 +3591,7 @@
           "resultLabel": "9位",
           "page": 9,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-be7c43eff160d6",
             "p-ea597e582f838e"
@@ -3437,7 +3604,7 @@
           "resultLabel": "9位",
           "page": 9,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-70758c41dbd816",
             "p-915d9bd3be71d4"
@@ -3450,7 +3617,7 @@
           "resultLabel": "9位",
           "page": 9,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-e2f0ff5692e9bc",
             "p-b880af03c17a8d"
@@ -3463,7 +3630,7 @@
           "resultLabel": "9位",
           "page": 9,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-f54e398fdef88c",
             "p-e1aa5fe79cfa78"
@@ -3476,7 +3643,7 @@
           "resultLabel": "9位",
           "page": 9,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-da681bc9d67166",
             "p-426647a04c610e"
@@ -3489,7 +3656,7 @@
           "resultLabel": "9位",
           "page": 9,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=9",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-bd2ce333aca5e6",
             "p-f2fa0338d31d37"
@@ -3502,7 +3669,7 @@
           "resultLabel": "17位",
           "page": 10,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=10",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-f63352a2165e15",
             "p-89fb663c39dd55"
@@ -3515,7 +3682,7 @@
           "resultLabel": "17位",
           "page": 10,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=10",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-0e522b0dbb975e",
             "p-f9c13549ef3d9a"
@@ -3528,7 +3695,7 @@
           "resultLabel": "17位",
           "page": 10,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=10",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-63bd5537dddddc",
             "p-e74385bc91847b"
@@ -3541,7 +3708,7 @@
           "resultLabel": "17位",
           "page": 10,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=10",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-9fe27d6b40c23e",
             "p-bd3287e1362a54"
@@ -3554,7 +3721,7 @@
           "resultLabel": "17位",
           "page": 10,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=10",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-ec3d66bf61a909",
             "p-643a643a7a36bd"
@@ -3567,7 +3734,7 @@
           "resultLabel": "17位",
           "page": 10,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=10",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-3a1909b6c0933b",
             "p-ecdcaf7edffce0"
@@ -3580,7 +3747,7 @@
           "resultLabel": "17位",
           "page": 10,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=10",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-9166933202a318",
             "p-826fc64ae30e9d"
@@ -3593,7 +3760,7 @@
           "resultLabel": "17位",
           "page": 10,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=10",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-e5643b6bbdc6e7",
             "p-90c73910db8908"
@@ -3606,7 +3773,7 @@
           "resultLabel": "17位",
           "page": 10,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=10",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-285d531c0b6a5c",
             "p-a9d89e9a2fdf49"
@@ -3619,7 +3786,7 @@
           "resultLabel": "17位",
           "page": 10,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=10",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-8eca3e9f7ac86f",
             "p-35d598de3fa1ce"
@@ -3632,7 +3799,7 @@
           "resultLabel": "17位",
           "page": 10,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_nagoyatonarino_result0602.pdf#page=10",
-          "checkedAt": "2026-09-28T00:15:30+00:00",
+          "checkedAt": "2026-09-28T03:02:49+00:00",
           "playerIds": [
             "p-9c40824722c700",
             "p-27fcc16cbd21d9"
@@ -3641,7 +3808,7 @@
       ],
       "entryStatus": "published",
       "resultCoverage": "男女の公式最終順位表に掲載されたペアを収録。",
-      "checkedAt": "2026-09-28T00:14:21+00:00"
+      "checkedAt": "2026-09-28T03:01:32+00:00"
     },
     {
       "id": "e-6b44e5ee71049b",
@@ -3672,7 +3839,7 @@
           "resultLabel": "優勝",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:32+00:00",
+          "checkedAt": "2026-09-28T03:02:51+00:00",
           "playerIds": [
             "p-2bc3a9cc952c04",
             "p-f68c79e674a200"
@@ -3685,7 +3852,7 @@
           "resultLabel": "準優勝",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:32+00:00",
+          "checkedAt": "2026-09-28T03:02:51+00:00",
           "playerIds": [
             "p-229aea0a5e245b",
             "p-6940ec375c06e8"
@@ -3698,7 +3865,7 @@
           "resultLabel": "3位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:32+00:00",
+          "checkedAt": "2026-09-28T03:02:51+00:00",
           "playerIds": [
             "p-bdab3e1443988a",
             "p-00656b2567f575"
@@ -3711,7 +3878,7 @@
           "resultLabel": "3位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:32+00:00",
+          "checkedAt": "2026-09-28T03:02:51+00:00",
           "playerIds": [
             "p-0f1d7e27067be6",
             "p-0b891d351fb2cd"
@@ -3724,7 +3891,7 @@
           "resultLabel": "5位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:32+00:00",
+          "checkedAt": "2026-09-28T03:02:51+00:00",
           "playerIds": [
             "p-f14c67cc3f1f06",
             "p-4becb601919188"
@@ -3737,7 +3904,7 @@
           "resultLabel": "5位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:32+00:00",
+          "checkedAt": "2026-09-28T03:02:51+00:00",
           "playerIds": [
             "p-82b3e90aa9e413",
             "p-51c855bf09a751"
@@ -3750,7 +3917,7 @@
           "resultLabel": "5位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:32+00:00",
+          "checkedAt": "2026-09-28T03:02:51+00:00",
           "playerIds": [
             "p-de825d238f0a84",
             "p-741f25b4958b21"
@@ -3763,7 +3930,7 @@
           "resultLabel": "5位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:32+00:00",
+          "checkedAt": "2026-09-28T03:02:51+00:00",
           "playerIds": [
             "p-3c0f1899831ea6",
             "p-d751e2f59f7802"
@@ -3776,7 +3943,7 @@
           "resultLabel": "優勝",
           "page": 6,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=6",
-          "checkedAt": "2026-09-28T00:15:32+00:00",
+          "checkedAt": "2026-09-28T03:02:51+00:00",
           "playerIds": [
             "p-04203906673033",
             "p-63c0eb523e1429"
@@ -3789,7 +3956,7 @@
           "resultLabel": "準優勝",
           "page": 6,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=6",
-          "checkedAt": "2026-09-28T00:15:32+00:00",
+          "checkedAt": "2026-09-28T03:02:51+00:00",
           "playerIds": [
             "p-0012effe0e4f80",
             "p-195bc3b45e3e72"
@@ -3802,7 +3969,7 @@
           "resultLabel": "3位",
           "page": 6,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=6",
-          "checkedAt": "2026-09-28T00:15:32+00:00",
+          "checkedAt": "2026-09-28T03:02:51+00:00",
           "playerIds": [
             "p-f0f0a4a7f277b6",
             "p-bcf55897f68a02"
@@ -3815,7 +3982,7 @@
           "resultLabel": "3位",
           "page": 6,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=6",
-          "checkedAt": "2026-09-28T00:15:32+00:00",
+          "checkedAt": "2026-09-28T03:02:51+00:00",
           "playerIds": [
             "p-e2f0ff5692e9bc",
             "p-b880af03c17a8d"
@@ -3828,7 +3995,7 @@
           "resultLabel": "5位",
           "page": 6,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=6",
-          "checkedAt": "2026-09-28T00:15:32+00:00",
+          "checkedAt": "2026-09-28T03:02:51+00:00",
           "playerIds": [
             "p-70758c41dbd816",
             "p-915d9bd3be71d4"
@@ -3841,7 +4008,7 @@
           "resultLabel": "5位",
           "page": 6,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=6",
-          "checkedAt": "2026-09-28T00:15:32+00:00",
+          "checkedAt": "2026-09-28T03:02:51+00:00",
           "playerIds": [
             "p-5a194d18749c9e",
             "p-cbfb49e65b03e7"
@@ -3854,7 +4021,7 @@
           "resultLabel": "5位",
           "page": 6,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=6",
-          "checkedAt": "2026-09-28T00:15:32+00:00",
+          "checkedAt": "2026-09-28T03:02:51+00:00",
           "playerIds": [
             "p-bd2ce333aca5e6",
             "p-f2fa0338d31d37"
@@ -3867,7 +4034,7 @@
           "resultLabel": "5位",
           "page": 6,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_osaka_result0607.pdf#page=6",
-          "checkedAt": "2026-09-28T00:15:32+00:00",
+          "checkedAt": "2026-09-28T03:02:51+00:00",
           "playerIds": [
             "p-fae05b76f162ee",
             "p-2ffd40abb352b1"
@@ -3876,7 +4043,7 @@
       ],
       "entryStatus": "published",
       "resultCoverage": "男女の公式最終順位表に掲載されたペアを収録。",
-      "checkedAt": "2026-09-28T00:14:24+00:00"
+      "checkedAt": "2026-09-28T03:01:35+00:00"
     },
     {
       "id": "e-cdb20239a1f5dd",
@@ -3907,7 +4074,7 @@
           "resultLabel": "優勝",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:35+00:00",
+          "checkedAt": "2026-09-28T03:02:54+00:00",
           "playerIds": [
             "p-0932b58def2823",
             "p-e900bac72b258e"
@@ -3920,7 +4087,7 @@
           "resultLabel": "準優勝",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:35+00:00",
+          "checkedAt": "2026-09-28T03:02:54+00:00",
           "playerIds": [
             "p-de825d238f0a84",
             "p-741f25b4958b21"
@@ -3933,7 +4100,7 @@
           "resultLabel": "3位",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:35+00:00",
+          "checkedAt": "2026-09-28T03:02:54+00:00",
           "playerIds": [
             "p-229aea0a5e245b",
             "p-6940ec375c06e8"
@@ -3946,7 +4113,7 @@
           "resultLabel": "3位",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:35+00:00",
+          "checkedAt": "2026-09-28T03:02:54+00:00",
           "playerIds": [
             "p-b96a51d44a8238",
             "p-808e362fe51856"
@@ -3959,7 +4126,7 @@
           "resultLabel": "5位",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:35+00:00",
+          "checkedAt": "2026-09-28T03:02:54+00:00",
           "playerIds": [
             "p-0f1d7e27067be6",
             "p-0b891d351fb2cd"
@@ -3972,7 +4139,7 @@
           "resultLabel": "5位",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:35+00:00",
+          "checkedAt": "2026-09-28T03:02:54+00:00",
           "playerIds": [
             "p-7ce605fcf52b8d",
             "p-bacb4c47486198"
@@ -3985,7 +4152,7 @@
           "resultLabel": "5位",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:35+00:00",
+          "checkedAt": "2026-09-28T03:02:54+00:00",
           "playerIds": [
             "p-f14c67cc3f1f06",
             "p-4becb601919188"
@@ -3998,7 +4165,7 @@
           "resultLabel": "5位",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:35+00:00",
+          "checkedAt": "2026-09-28T03:02:54+00:00",
           "playerIds": [
             "p-5bfc10c148b633",
             "p-aae242c346d332"
@@ -4011,7 +4178,7 @@
           "resultLabel": "9位",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:35+00:00",
+          "checkedAt": "2026-09-28T03:02:54+00:00",
           "playerIds": [
             "p-f68c79e674a200",
             "p-9e9090bc8c310e"
@@ -4024,7 +4191,7 @@
           "resultLabel": "9位",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:35+00:00",
+          "checkedAt": "2026-09-28T03:02:54+00:00",
           "playerIds": [
             "p-3c0f1899831ea6",
             "p-d751e2f59f7802"
@@ -4037,7 +4204,7 @@
           "resultLabel": "9位",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:35+00:00",
+          "checkedAt": "2026-09-28T03:02:54+00:00",
           "playerIds": [
             "p-c3ff1ffcd612ed",
             "p-98638614563dfb"
@@ -4050,7 +4217,7 @@
           "resultLabel": "9位",
           "page": 4,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=4",
-          "checkedAt": "2026-09-28T00:15:35+00:00",
+          "checkedAt": "2026-09-28T03:02:54+00:00",
           "playerIds": [
             "p-39e29bb5b30187",
             "p-c338f3ce672cf8"
@@ -4063,7 +4230,7 @@
           "resultLabel": "優勝",
           "page": 8,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=8",
-          "checkedAt": "2026-09-28T00:15:35+00:00",
+          "checkedAt": "2026-09-28T03:02:54+00:00",
           "playerIds": [
             "p-209ae8d6247cf3",
             "p-2ad8777261c796"
@@ -4076,7 +4243,7 @@
           "resultLabel": "準優勝",
           "page": 8,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=8",
-          "checkedAt": "2026-09-28T00:15:35+00:00",
+          "checkedAt": "2026-09-28T03:02:54+00:00",
           "playerIds": [
             "p-907be3ffc8f0ce",
             "p-4615251b352481"
@@ -4089,7 +4256,7 @@
           "resultLabel": "3位",
           "page": 8,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=8",
-          "checkedAt": "2026-09-28T00:15:35+00:00",
+          "checkedAt": "2026-09-28T03:02:54+00:00",
           "playerIds": [
             "p-63c0eb523e1429",
             "p-915d9bd3be71d4"
@@ -4102,7 +4269,7 @@
           "resultLabel": "3位",
           "page": 8,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=8",
-          "checkedAt": "2026-09-28T00:15:35+00:00",
+          "checkedAt": "2026-09-28T03:02:54+00:00",
           "playerIds": [
             "p-ea597e582f838e",
             "p-bcf55897f68a02"
@@ -4115,7 +4282,7 @@
           "resultLabel": "5位",
           "page": 8,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=8",
-          "checkedAt": "2026-09-28T00:15:35+00:00",
+          "checkedAt": "2026-09-28T03:02:54+00:00",
           "playerIds": [
             "p-0012effe0e4f80",
             "p-195bc3b45e3e72"
@@ -4128,7 +4295,7 @@
           "resultLabel": "5位",
           "page": 8,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=8",
-          "checkedAt": "2026-09-28T00:15:35+00:00",
+          "checkedAt": "2026-09-28T03:02:54+00:00",
           "playerIds": [
             "p-5a194d18749c9e",
             "p-cbfb49e65b03e7"
@@ -4141,7 +4308,7 @@
           "resultLabel": "5位",
           "page": 8,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=8",
-          "checkedAt": "2026-09-28T00:15:35+00:00",
+          "checkedAt": "2026-09-28T03:02:54+00:00",
           "playerIds": [
             "p-e2f0ff5692e9bc",
             "p-b880af03c17a8d"
@@ -4154,7 +4321,7 @@
           "resultLabel": "5位",
           "page": 8,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=8",
-          "checkedAt": "2026-09-28T00:15:35+00:00",
+          "checkedAt": "2026-09-28T03:02:54+00:00",
           "playerIds": [
             "p-ba6e259b045dc4",
             "p-0a1903073eb965"
@@ -4167,7 +4334,7 @@
           "resultLabel": "9位",
           "page": 8,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=8",
-          "checkedAt": "2026-09-28T00:15:35+00:00",
+          "checkedAt": "2026-09-28T03:02:54+00:00",
           "playerIds": [
             "p-bd2ce333aca5e6",
             "p-f2fa0338d31d37"
@@ -4180,7 +4347,7 @@
           "resultLabel": "9位",
           "page": 8,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=8",
-          "checkedAt": "2026-09-28T00:15:35+00:00",
+          "checkedAt": "2026-09-28T03:02:54+00:00",
           "playerIds": [
             "p-3678d75443f2b9",
             "p-6449eebf186d83"
@@ -4193,7 +4360,7 @@
           "resultLabel": "9位",
           "page": 8,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=8",
-          "checkedAt": "2026-09-28T00:15:35+00:00",
+          "checkedAt": "2026-09-28T03:02:54+00:00",
           "playerIds": [
             "p-f54e398fdef88c",
             "p-e1aa5fe79cfa78"
@@ -4206,7 +4373,7 @@
           "resultLabel": "9位",
           "page": 8,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_miyakonojyo_result0614n.pdf#page=8",
-          "checkedAt": "2026-09-28T00:15:35+00:00",
+          "checkedAt": "2026-09-28T03:02:54+00:00",
           "playerIds": [
             "p-da681bc9d67166",
             "p-426647a04c610e"
@@ -4215,7 +4382,7 @@
       ],
       "entryStatus": "published",
       "resultCoverage": "男女の公式最終順位表に掲載されたペアを収録。",
-      "checkedAt": "2026-09-28T00:14:27+00:00"
+      "checkedAt": "2026-09-28T03:01:38+00:00"
     },
     {
       "id": "e-f2f77c1b726504",
@@ -4246,7 +4413,7 @@
           "resultLabel": "1位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:37+00:00",
+          "checkedAt": "2026-09-28T03:02:56+00:00",
           "playerIds": [
             "p-ba6e259b045dc4",
             "p-0a1903073eb965"
@@ -4259,7 +4426,7 @@
           "resultLabel": "2位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:37+00:00",
+          "checkedAt": "2026-09-28T03:02:56+00:00",
           "playerIds": [
             "p-2ab78245ad3254",
             "p-92fcf437958e50"
@@ -4272,7 +4439,7 @@
           "resultLabel": "3位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:37+00:00",
+          "checkedAt": "2026-09-28T03:02:56+00:00",
           "playerIds": [
             "p-c683795e56376b",
             "p-da681bc9d67166"
@@ -4285,7 +4452,7 @@
           "resultLabel": "4位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:37+00:00",
+          "checkedAt": "2026-09-28T03:02:56+00:00",
           "playerIds": [
             "p-ab0d8a733cfa18",
             "p-cb1acec983fd60"
@@ -4298,7 +4465,7 @@
           "resultLabel": "5位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:37+00:00",
+          "checkedAt": "2026-09-28T03:02:56+00:00",
           "playerIds": [
             "p-0012effe0e4f80",
             "p-63c0eb523e1429"
@@ -4311,7 +4478,7 @@
           "resultLabel": "6位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:37+00:00",
+          "checkedAt": "2026-09-28T03:02:56+00:00",
           "playerIds": [
             "p-238cbfb56b8682",
             "p-ec3d66bf61a909"
@@ -4324,7 +4491,7 @@
           "resultLabel": "6位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:37+00:00",
+          "checkedAt": "2026-09-28T03:02:56+00:00",
           "playerIds": [
             "p-a52680d59e32d0",
             "p-8efa2516d6b612"
@@ -4337,7 +4504,7 @@
           "resultLabel": "6位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:37+00:00",
+          "checkedAt": "2026-09-28T03:02:56+00:00",
           "playerIds": [
             "p-24d02039890a15",
             "p-b08c41e1130378"
@@ -4350,7 +4517,7 @@
           "resultLabel": "6位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:37+00:00",
+          "checkedAt": "2026-09-28T03:02:56+00:00",
           "playerIds": [
             "p-ad8b7f4e835959",
             "p-bcf55897f68a02"
@@ -4363,7 +4530,7 @@
           "resultLabel": "10位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:37+00:00",
+          "checkedAt": "2026-09-28T03:02:56+00:00",
           "playerIds": [
             "p-d172410688fa9d",
             "p-ed18c0632dd006"
@@ -4376,7 +4543,7 @@
           "resultLabel": "10位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:37+00:00",
+          "checkedAt": "2026-09-28T03:02:56+00:00",
           "playerIds": [
             "p-298788de6e124b",
             "p-70990a41c8979d"
@@ -4389,7 +4556,7 @@
           "resultLabel": "10位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:37+00:00",
+          "checkedAt": "2026-09-28T03:02:56+00:00",
           "playerIds": [
             "p-285d531c0b6a5c",
             "p-a9d89e9a2fdf49"
@@ -4402,7 +4569,7 @@
           "resultLabel": "13位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:37+00:00",
+          "checkedAt": "2026-09-28T03:02:56+00:00",
           "playerIds": [
             "p-f502528688e23e",
             "p-c55c5f5d9da684"
@@ -4415,7 +4582,7 @@
           "resultLabel": "13位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:37+00:00",
+          "checkedAt": "2026-09-28T03:02:56+00:00",
           "playerIds": [
             "p-5baf896e001d95",
             "p-049303b18ccfd2"
@@ -4428,7 +4595,7 @@
           "resultLabel": "13位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:37+00:00",
+          "checkedAt": "2026-09-28T03:02:56+00:00",
           "playerIds": [
             "p-3bb61700c98638",
             "p-1e382f46160ccd"
@@ -4441,7 +4608,7 @@
           "resultLabel": "13位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026bvt1_tachikawa_result_women0626.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:37+00:00",
+          "checkedAt": "2026-09-28T03:02:56+00:00",
           "playerIds": [
             "p-8324feeb43092a",
             "p-2ff849e6331484"
@@ -4450,7 +4617,7 @@
       ],
       "entryStatus": "published",
       "resultCoverage": "女子の公式最終順位を収録。男子の最終順位表は確認できていません。",
-      "checkedAt": "2026-09-28T00:14:30+00:00"
+      "checkedAt": "2026-09-28T03:01:41+00:00"
     },
     {
       "id": "e-429d5355473912",
@@ -4481,7 +4648,7 @@
           "resultLabel": "優勝",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:40+00:00",
+          "checkedAt": "2026-09-28T03:02:59+00:00",
           "playerIds": [
             "p-2bc3a9cc952c04",
             "p-f68c79e674a200"
@@ -4494,7 +4661,7 @@
           "resultLabel": "準優勝",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:40+00:00",
+          "checkedAt": "2026-09-28T03:02:59+00:00",
           "playerIds": [
             "p-229aea0a5e245b",
             "p-6940ec375c06e8"
@@ -4507,7 +4674,7 @@
           "resultLabel": "3位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:40+00:00",
+          "checkedAt": "2026-09-28T03:02:59+00:00",
           "playerIds": [
             "p-0932b58def2823",
             "p-e900bac72b258e"
@@ -4520,7 +4687,7 @@
           "resultLabel": "3位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:40+00:00",
+          "checkedAt": "2026-09-28T03:02:59+00:00",
           "playerIds": [
             "p-b96a51d44a8238",
             "p-5cfe8c228fc4de"
@@ -4533,7 +4700,7 @@
           "resultLabel": "5位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:40+00:00",
+          "checkedAt": "2026-09-28T03:02:59+00:00",
           "playerIds": [
             "p-de825d238f0a84",
             "p-741f25b4958b21"
@@ -4546,7 +4713,7 @@
           "resultLabel": "5位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:40+00:00",
+          "checkedAt": "2026-09-28T03:02:59+00:00",
           "playerIds": [
             "p-0f1d7e27067be6",
             "p-0b891d351fb2cd"
@@ -4559,7 +4726,7 @@
           "resultLabel": "5位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:40+00:00",
+          "checkedAt": "2026-09-28T03:02:59+00:00",
           "playerIds": [
             "p-bb3eda817c7adc",
             "p-49822e7bfec750"
@@ -4572,7 +4739,7 @@
           "resultLabel": "5位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:40+00:00",
+          "checkedAt": "2026-09-28T03:02:59+00:00",
           "playerIds": [
             "p-1552ee38d688ac",
             "p-fd1eaa3d5d7a19"
@@ -4585,7 +4752,7 @@
           "resultLabel": "9位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:40+00:00",
+          "checkedAt": "2026-09-28T03:02:59+00:00",
           "playerIds": [
             "p-82b3e90aa9e413",
             "p-51c855bf09a751"
@@ -4598,7 +4765,7 @@
           "resultLabel": "9位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:40+00:00",
+          "checkedAt": "2026-09-28T03:02:59+00:00",
           "playerIds": [
             "p-7ce605fcf52b8d",
             "p-bacb4c47486198"
@@ -4611,7 +4778,7 @@
           "resultLabel": "9位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:40+00:00",
+          "checkedAt": "2026-09-28T03:02:59+00:00",
           "playerIds": [
             "p-f14c67cc3f1f06",
             "p-00656b2567f575"
@@ -4624,7 +4791,7 @@
           "resultLabel": "9位",
           "page": 3,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=3",
-          "checkedAt": "2026-09-28T00:15:40+00:00",
+          "checkedAt": "2026-09-28T03:02:59+00:00",
           "playerIds": [
             "p-4becb601919188",
             "p-98638614563dfb"
@@ -4637,7 +4804,7 @@
           "resultLabel": "優勝",
           "page": 6,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=6",
-          "checkedAt": "2026-09-28T00:15:40+00:00",
+          "checkedAt": "2026-09-28T03:02:59+00:00",
           "playerIds": [
             "p-209ae8d6247cf3",
             "p-2ad8777261c796"
@@ -4650,7 +4817,7 @@
           "resultLabel": "準優勝",
           "page": 6,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=6",
-          "checkedAt": "2026-09-28T00:15:40+00:00",
+          "checkedAt": "2026-09-28T03:02:59+00:00",
           "playerIds": [
             "p-f0f0a4a7f277b6",
             "p-04203906673033"
@@ -4663,7 +4830,7 @@
           "resultLabel": "3位",
           "page": 6,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=6",
-          "checkedAt": "2026-09-28T00:15:40+00:00",
+          "checkedAt": "2026-09-28T03:02:59+00:00",
           "playerIds": [
             "p-907be3ffc8f0ce",
             "p-4615251b352481"
@@ -4676,7 +4843,7 @@
           "resultLabel": "3位",
           "page": 6,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=6",
-          "checkedAt": "2026-09-28T00:15:40+00:00",
+          "checkedAt": "2026-09-28T03:02:59+00:00",
           "playerIds": [
             "p-bcf55897f68a02",
             "p-63c0eb523e1429"
@@ -4689,7 +4856,7 @@
           "resultLabel": "5位",
           "page": 6,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=6",
-          "checkedAt": "2026-09-28T00:15:40+00:00",
+          "checkedAt": "2026-09-28T03:02:59+00:00",
           "playerIds": [
             "p-0012effe0e4f80",
             "p-195bc3b45e3e72"
@@ -4702,7 +4869,7 @@
           "resultLabel": "5位",
           "page": 6,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=6",
-          "checkedAt": "2026-09-28T00:15:40+00:00",
+          "checkedAt": "2026-09-28T03:02:59+00:00",
           "playerIds": [
             "p-e2f0ff5692e9bc",
             "p-b880af03c17a8d"
@@ -4715,7 +4882,7 @@
           "resultLabel": "5位",
           "page": 6,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=6",
-          "checkedAt": "2026-09-28T00:15:40+00:00",
+          "checkedAt": "2026-09-28T03:02:59+00:00",
           "playerIds": [
             "p-5a194d18749c9e",
             "p-cbfb49e65b03e7"
@@ -4728,7 +4895,7 @@
           "resultLabel": "5位",
           "page": 6,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=6",
-          "checkedAt": "2026-09-28T00:15:40+00:00",
+          "checkedAt": "2026-09-28T03:02:59+00:00",
           "playerIds": [
             "p-fae05b76f162ee",
             "p-2ffd40abb352b1"
@@ -4741,7 +4908,7 @@
           "resultLabel": "9位",
           "page": 6,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=6",
-          "checkedAt": "2026-09-28T00:15:40+00:00",
+          "checkedAt": "2026-09-28T03:02:59+00:00",
           "playerIds": [
             "p-ad8b7f4e835959",
             "p-5bcfe1e82824db"
@@ -4754,7 +4921,7 @@
           "resultLabel": "9位",
           "page": 6,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=6",
-          "checkedAt": "2026-09-28T00:15:40+00:00",
+          "checkedAt": "2026-09-28T03:02:59+00:00",
           "playerIds": [
             "p-ea597e582f838e",
             "p-426647a04c610e"
@@ -4767,7 +4934,7 @@
           "resultLabel": "9位",
           "page": 6,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=6",
-          "checkedAt": "2026-09-28T00:15:40+00:00",
+          "checkedAt": "2026-09-28T03:02:59+00:00",
           "playerIds": [
             "p-bd2ce333aca5e6",
             "p-f2fa0338d31d37"
@@ -4780,7 +4947,7 @@
           "resultLabel": "9位",
           "page": 6,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_yokohamaresult_0712.pdf#page=6",
-          "checkedAt": "2026-09-28T00:15:40+00:00",
+          "checkedAt": "2026-09-28T03:02:59+00:00",
           "playerIds": [
             "p-f54e398fdef88c",
             "p-e1aa5fe79cfa78"
@@ -4789,7 +4956,7 @@
       ],
       "entryStatus": "published",
       "resultCoverage": "男女の公式最終順位表に掲載されたペアを収録。",
-      "checkedAt": "2026-09-28T00:14:32+00:00"
+      "checkedAt": "2026-09-28T03:01:44+00:00"
     },
     {
       "id": "e-499f3d02bcf0dc",
@@ -4820,7 +4987,7 @@
           "resultLabel": "優勝",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-7ce605fcf52b8d",
             "p-bacb4c47486198"
@@ -4833,7 +5000,7 @@
           "resultLabel": "準優勝",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-1552ee38d688ac",
             "p-fd1eaa3d5d7a19"
@@ -4846,7 +5013,7 @@
           "resultLabel": "3位",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-229aea0a5e245b",
             "p-6940ec375c06e8"
@@ -4859,7 +5026,7 @@
           "resultLabel": "3位",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-f14c67cc3f1f06",
             "p-00656b2567f575"
@@ -4872,7 +5039,7 @@
           "resultLabel": "5位",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-0932b58def2823",
             "p-e900bac72b258e"
@@ -4885,7 +5052,7 @@
           "resultLabel": "5位",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-de825d238f0a84",
             "p-98638614563dfb"
@@ -4898,7 +5065,7 @@
           "resultLabel": "5位",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-0f1d7e27067be6",
             "p-0b891d351fb2cd"
@@ -4911,7 +5078,7 @@
           "resultLabel": "5位",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-041b1d35905b0a",
             "p-a61ea77abc7c27"
@@ -4924,7 +5091,7 @@
           "resultLabel": "9位",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-58ff48742e80ed",
             "p-9e9090bc8c310e"
@@ -4937,7 +5104,7 @@
           "resultLabel": "9位",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-bb3eda817c7adc",
             "p-bdab3e1443988a"
@@ -4950,7 +5117,7 @@
           "resultLabel": "9位",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-4becb601919188",
             "p-6b056cab733348"
@@ -4963,7 +5130,7 @@
           "resultLabel": "9位",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-aae242c346d332",
             "p-90c520e7170021"
@@ -4976,7 +5143,7 @@
           "resultLabel": "13位",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-3c0f1899831ea6",
             "p-d751e2f59f7802"
@@ -4989,7 +5156,7 @@
           "resultLabel": "13位",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-c3ff1ffcd612ed",
             "p-39e29bb5b30187"
@@ -5002,7 +5169,7 @@
           "resultLabel": "13位",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-c338f3ce672cf8",
             "p-d97b7ff6733d31"
@@ -5015,7 +5182,7 @@
           "resultLabel": "13位",
           "page": 5,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=5",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-94664df6f011f8",
             "p-df48743bbeeb58"
@@ -5028,7 +5195,7 @@
           "resultLabel": "優勝",
           "page": 10,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-209ae8d6247cf3",
             "p-2ad8777261c796"
@@ -5041,7 +5208,7 @@
           "resultLabel": "準優勝",
           "page": 10,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-907be3ffc8f0ce",
             "p-4615251b352481"
@@ -5054,7 +5221,7 @@
           "resultLabel": "3位",
           "page": 10,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-04203906673033",
             "p-0a1903073eb965"
@@ -5067,7 +5234,7 @@
           "resultLabel": "3位",
           "page": 10,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-5a194d18749c9e",
             "p-cbfb49e65b03e7"
@@ -5080,7 +5247,7 @@
           "resultLabel": "5位",
           "page": 10,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-ea597e582f838e",
             "p-2ffd40abb352b1"
@@ -5093,7 +5260,7 @@
           "resultLabel": "5位",
           "page": 10,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-195bc3b45e3e72",
             "p-6fe734688b833f"
@@ -5106,7 +5273,7 @@
           "resultLabel": "5位",
           "page": 10,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-ba6e259b045dc4",
             "p-63c0eb523e1429"
@@ -5119,7 +5286,7 @@
           "resultLabel": "5位",
           "page": 10,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-da681bc9d67166",
             "p-c683795e56376b"
@@ -5132,7 +5299,7 @@
           "resultLabel": "9位",
           "page": 10,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-bd2ce333aca5e6",
             "p-5bcfe1e82824db"
@@ -5145,7 +5312,7 @@
           "resultLabel": "9位",
           "page": 10,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-fae05b76f162ee",
             "p-915d9bd3be71d4"
@@ -5158,7 +5325,7 @@
           "resultLabel": "9位",
           "page": 10,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-24d02039890a15",
             "p-b08c41e1130378"
@@ -5171,7 +5338,7 @@
           "resultLabel": "9位",
           "page": 10,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-0012effe0e4f80",
             "p-f2fa0338d31d37"
@@ -5184,7 +5351,7 @@
           "resultLabel": "13位",
           "page": 10,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-f54e398fdef88c",
             "p-e1aa5fe79cfa78"
@@ -5197,7 +5364,7 @@
           "resultLabel": "13位",
           "page": 10,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-e2f0ff5692e9bc",
             "p-b880af03c17a8d"
@@ -5210,7 +5377,7 @@
           "resultLabel": "13位",
           "page": 10,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-9fe27d6b40c23e",
             "p-426647a04c610e"
@@ -5223,7 +5390,7 @@
           "resultLabel": "13位",
           "page": 10,
           "sourceUrl": "https://www.jva.or.jp/wp-content/uploads/2026/01/2026_bvt1_hiratsuka_result_0913_6.pdf#page=10",
-          "checkedAt": "2026-09-28T00:15:42+00:00",
+          "checkedAt": "2026-09-28T03:03:02+00:00",
           "playerIds": [
             "p-f05a40f62f1f8a",
             "p-70758c41dbd816"
@@ -5232,7 +5399,7 @@
       ],
       "entryStatus": "published",
       "resultCoverage": "男女の公式最終順位表に掲載されたペアを収録。",
-      "checkedAt": "2026-09-28T00:14:35+00:00"
+      "checkedAt": "2026-09-28T03:01:47+00:00"
     },
     {
       "id": "e-8e604b2a75657e",
@@ -5260,7 +5427,7 @@
           "status": "entered",
           "number": 1,
           "sourceUrl": "https://www.jva.or.jp/beach_international/2026/ioc-oca2026/?entry=member",
-          "checkedAt": "2026-09-28T00:14:17+00:00",
+          "checkedAt": "2026-09-28T03:01:28+00:00",
           "playerIds": [
             "p-2bc3a9cc952c04",
             "p-f68c79e674a200"
@@ -5271,7 +5438,7 @@
           "status": "entered",
           "number": 2,
           "sourceUrl": "https://www.jva.or.jp/beach_international/2026/ioc-oca2026/?entry=member",
-          "checkedAt": "2026-09-28T00:14:17+00:00",
+          "checkedAt": "2026-09-28T03:01:28+00:00",
           "playerIds": [
             "p-229aea0a5e245b",
             "p-6940ec375c06e8"
@@ -5282,7 +5449,7 @@
           "status": "entered",
           "number": 3,
           "sourceUrl": "https://www.jva.or.jp/beach_international/2026/ioc-oca2026/?entry=member",
-          "checkedAt": "2026-09-28T00:14:17+00:00",
+          "checkedAt": "2026-09-28T03:01:28+00:00",
           "playerIds": [
             "p-f0f0a4a7f277b6",
             "p-bcf55897f68a02"
@@ -5293,7 +5460,7 @@
           "status": "entered",
           "number": 4,
           "sourceUrl": "https://www.jva.or.jp/beach_international/2026/ioc-oca2026/?entry=member",
-          "checkedAt": "2026-09-28T00:14:17+00:00",
+          "checkedAt": "2026-09-28T03:01:28+00:00",
           "playerIds": [
             "p-907be3ffc8f0ce",
             "p-4615251b352481"
@@ -5301,7 +5468,797 @@
         }
       ],
       "entryStatus": "published",
-      "checkedAt": "2026-09-28T00:10:23+00:00"
+      "checkedAt": "2026-09-28T02:57:32+00:00"
+    },
+    {
+      "id": "e-88cb918f9f721a",
+      "name": "相馬市長杯ジャパンビーチバレーボールツアー2026サテライト相馬大会",
+      "officialTitle": "相馬市長杯ジャパンビーチバレーボールツアー2026サテライト相馬大会",
+      "category": "BVT2",
+      "startDate": "2026-09-26",
+      "endDate": "2026-09-27",
+      "dateLabel": "2026年9月26日（土）～27日（日）",
+      "venue": "福島県相馬市・尾浜ビーチバレーボール場",
+      "cancelled": false,
+      "sourceUrl": "https://www.jbv.jp/news/entry-2493.html",
+      "documents": [
+        {
+          "url": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260926.pdf",
+          "label": "男子結果（9月27日更新）",
+          "kind": "result",
+          "gender": "men",
+          "parsed": true
+        },
+        {
+          "url": "https://www.jbv.jp/news/2024_1/BVT2_soma_muchschedule_20260927.pdf",
+          "label": "2日目マッチスケジュール[9/27更新]",
+          "kind": "schedule",
+          "gender": null
+        },
+        {
+          "url": "https://www.jbv.jp/news/2025/2026bvt2_soma_playerinfo_20260921.pdf",
+          "label": "選手への連絡事項[9/20掲載]",
+          "kind": "info",
+          "gender": null
+        },
+        {
+          "url": "https://www.jbv.jp/news/2025/PlayersAction_20260924.pdf",
+          "label": "選手会からのお知らせ[9/24掲載]",
+          "kind": "info",
+          "gender": null
+        },
+        {
+          "url": "https://www.jbv.jp/news/2025/BVT2_soma_muchschedule_20260920.pdf",
+          "label": "男女マッチスケシュール[9/25確定]",
+          "kind": "schedule",
+          "gender": null
+        },
+        {
+          "url": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_men_20260920.pdf",
+          "label": "男子シーディング・対戦表[9/25確定]",
+          "kind": "seed",
+          "gender": "men",
+          "parsed": true
+        },
+        {
+          "url": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf",
+          "label": "女子シーディング・対戦表[9/25確定]",
+          "kind": "seed",
+          "gender": "women",
+          "parsed": true
+        },
+        {
+          "url": "https://www.jbv.jp/news/2025/BVT2_soma_entrylist_men_20260911.pdf",
+          "label": "男子参加チーム[9/11掲載]",
+          "kind": "entry",
+          "gender": "men"
+        },
+        {
+          "url": "https://www.jbv.jp/news/2025/BVT2_soma_entrylist_women_20260911.pdf",
+          "label": "女子参加チーム[9/11掲載]",
+          "kind": "entry",
+          "gender": "women"
+        },
+        {
+          "url": "https://www.jbv.jp/news/2025/BVT2_SOMA_loserTournament_20260922.pdf",
+          "label": "男女実施概要[9/22掲載]",
+          "kind": "info",
+          "gender": "men"
+        }
+      ],
+      "entries": [
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 1,
+          "resultLabel": "1位",
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260926.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:05+00:00",
+          "playerIds": [
+            "p-bacb4c47486198",
+            "p-df48743bbeeb58"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 2,
+          "resultLabel": "2位",
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260926.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:05+00:00",
+          "playerIds": [
+            "p-3c0f1899831ea6",
+            "p-5bfc10c148b633"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 3,
+          "resultLabel": "3位",
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260926.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:05+00:00",
+          "playerIds": [
+            "p-c03b165b51346a",
+            "p-de825d238f0a84"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 3,
+          "resultLabel": "3位",
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260926.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:05+00:00",
+          "playerIds": [
+            "p-54316126a8a75f",
+            "p-744fba13784877"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260926.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:05+00:00",
+          "playerIds": [
+            "p-456af9f5b9effd",
+            "p-c3ff1ffcd612ed"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260926.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:05+00:00",
+          "playerIds": [
+            "p-e900bac72b258e",
+            "p-7b33eeb4c59158"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260926.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:05+00:00",
+          "playerIds": [
+            "p-0932b58def2823",
+            "p-bb255ad1ef4d73"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 5,
+          "resultLabel": "5位",
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260926.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:05+00:00",
+          "playerIds": [
+            "p-10902c73bf77fb",
+            "p-8ce24651c6a54c"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260926.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:05+00:00",
+          "playerIds": [
+            "p-c4f072e092a2f2",
+            "p-c15fae4e6e68a2"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260926.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:05+00:00",
+          "playerIds": [
+            "p-aae242c346d332",
+            "p-5e6f0b334b4679"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260926.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:05+00:00",
+          "playerIds": [
+            "p-5b3b7296c53464",
+            "p-90c520e7170021"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260926.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:05+00:00",
+          "playerIds": [
+            "p-39e29bb5b30187",
+            "p-7c039b7bda13a8"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260926.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:05+00:00",
+          "playerIds": [
+            "p-e660d211b4496a",
+            "p-80b22dcc07c24e"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260926.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:05+00:00",
+          "playerIds": [
+            "p-94664df6f011f8",
+            "p-9201eba2042d0d"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260926.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:05+00:00",
+          "playerIds": [
+            "p-f14c67cc3f1f06",
+            "p-abe30bf088268c"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 9,
+          "resultLabel": "9位",
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260926.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:05+00:00",
+          "playerIds": [
+            "p-4becb601919188",
+            "p-b5a1767dae9173"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260926.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:05+00:00",
+          "playerIds": [
+            "p-536d8879278f47",
+            "p-6cc776b47b5e95"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260926.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:05+00:00",
+          "playerIds": [
+            "p-0e83a86fb129d8",
+            "p-50dc877a7cec02"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260926.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:05+00:00",
+          "playerIds": [
+            "p-28b7b74a5eb99c",
+            "p-ebb98e5e06a98e"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260926.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:05+00:00",
+          "playerIds": [
+            "p-297b17500e7c10",
+            "p-d9ee789da27f2b"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260926.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:05+00:00",
+          "playerIds": [
+            "p-89b5d37cd11b8c",
+            "p-7534d7c24cd95d"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260926.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:05+00:00",
+          "playerIds": [
+            "p-5aa33f86f91d65",
+            "p-267993eb67bba7"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260926.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:05+00:00",
+          "playerIds": [
+            "p-b9c92aacfb3510",
+            "p-d751e2f59f7802"
+          ]
+        },
+        {
+          "gender": "men",
+          "status": "completed",
+          "rank": 17,
+          "resultLabel": "17位",
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260926.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:05+00:00",
+          "playerIds": [
+            "p-c50aa57b4324af",
+            "p-a2ae033a2c458d"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "resultPending",
+          "number": 1,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-e2f0ff5692e9bc",
+            "p-2ad8777261c796"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "resultPending",
+          "number": 2,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-5bcfe1e82824db",
+            "p-b880af03c17a8d"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "resultPending",
+          "number": 3,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-9fe27d6b40c23e",
+            "p-63c0eb523e1429"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "resultPending",
+          "number": 4,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-0012effe0e4f80",
+            "p-24d02039890a15"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "resultPending",
+          "number": 5,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-bd3287e1362a54",
+            "p-f2fa0338d31d37"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "resultPending",
+          "number": 6,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-5a194d18749c9e",
+            "p-0e522b0dbb975e"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "resultPending",
+          "number": 7,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-fae05b76f162ee",
+            "p-058c4ec3f3802d"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "resultPending",
+          "number": 8,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-bd2ce333aca5e6",
+            "p-6b636528915ff5"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "resultPending",
+          "number": 9,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-f9c13549ef3d9a",
+            "p-e1aa5fe79cfa78"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "resultPending",
+          "number": 10,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-7133c92bb8a56b",
+            "p-426647a04c610e"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "resultPending",
+          "number": 11,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-195bc3b45e3e72",
+            "p-2be15d0607014e"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "resultPending",
+          "number": 12,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-9c40824722c700",
+            "p-915d9bd3be71d4"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "resultPending",
+          "number": 13,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-56198d51067c42",
+            "p-cbfb49e65b03e7"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "resultPending",
+          "number": 14,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-fd735e30d00fe5",
+            "p-70758c41dbd816"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "resultPending",
+          "number": 15,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-63bd5537dddddc",
+            "p-b08c41e1130378"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "resultPending",
+          "number": 16,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-1ef00814faedb6",
+            "p-d4619d6a8aaba4"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "resultPending",
+          "number": 17,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-07757767a97420",
+            "p-f3309d4a4eb5eb"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "resultPending",
+          "number": 18,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-59dc53e20f904b",
+            "p-ea4e0c0ccba243"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "resultPending",
+          "number": 19,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-ba6e259b045dc4",
+            "p-92fcf437958e50"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "resultPending",
+          "number": 20,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-27fcc16cbd21d9",
+            "p-e74385bc91847b"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "resultPending",
+          "number": 21,
+          "page": 1,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=1",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-238cbfb56b8682",
+            "p-ec3d66bf61a909"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "resultPending",
+          "number": 22,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-ef8586266060ae",
+            "p-643a643a7a36bd"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "resultPending",
+          "number": 23,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-27146d1100b160",
+            "p-acc0e64aee804f"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "resultPending",
+          "number": 24,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-90c73910db8908",
+            "p-3a1909b6c0933b"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "reserve",
+          "number": 25,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-5a683b5d033eb9",
+            "p-30f54d52b7eceb"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "reserve",
+          "number": 26,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-58367f076d2631",
+            "p-e5643b6bbdc6e7"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "reserve",
+          "number": 27,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-e68522b1b2ae3d",
+            "p-39277685de5f32"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "reserve",
+          "number": 28,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-285d531c0b6a5c",
+            "p-a9d89e9a2fdf49"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "reserve",
+          "number": 29,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-d80bb44af433de",
+            "p-5b5c22b0fbab93"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "reserve",
+          "number": 30,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-08d066486c8a89",
+            "p-42ca88b3a7d1a9"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "reserve",
+          "number": 31,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-4f7f70f882c0d8",
+            "p-33be9913501c00"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "reserve",
+          "number": 32,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-4ae6df1a16048e",
+            "p-5aa84c84841109"
+          ]
+        },
+        {
+          "gender": "women",
+          "status": "reserve",
+          "number": 33,
+          "page": 2,
+          "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_soma_seedlist_women_20260920.pdf#page=2",
+          "checkedAt": "2026-09-28T03:03:12+00:00",
+          "playerIds": [
+            "p-9aa915b22f538d",
+            "p-0ae5bd566aae50"
+          ]
+        }
+      ],
+      "entryStatus": "published",
+      "resultCoverage": "男子の公式最終順位表を収録。女子結果PDFは最終順位と一部試合が未記入のため、結果が揃うまで掲載していません。",
+      "checkedAt": "2026-09-28T03:03:04+00:00"
     },
     {
       "id": "e-e309b63890b129",
@@ -5349,7 +6306,7 @@
           "number": 1,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-4becb601919188",
             "p-80b22dcc07c24e"
@@ -5361,7 +6318,7 @@
           "number": 2,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-bb255ad1ef4d73",
             "p-bacb4c47486198"
@@ -5373,7 +6330,7 @@
           "number": 3,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-e900bac72b258e",
             "p-90c520e7170021"
@@ -5385,7 +6342,7 @@
           "number": 4,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-7ce605fcf52b8d",
             "p-5bfc10c148b633"
@@ -5397,7 +6354,7 @@
           "number": 5,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-0932b58def2823",
             "p-456af9f5b9effd"
@@ -5409,7 +6366,7 @@
           "number": 6,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-c3ff1ffcd612ed",
             "p-83717440788185"
@@ -5421,7 +6378,7 @@
           "number": 7,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-3c0f1899831ea6",
             "p-267993eb67bba7"
@@ -5433,7 +6390,7 @@
           "number": 8,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-aae242c346d332",
             "p-5e6f0b334b4679"
@@ -5445,7 +6402,7 @@
           "number": 9,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-de825d238f0a84",
             "p-8ce24651c6a54c"
@@ -5457,7 +6414,7 @@
           "number": 10,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-b9c92aacfb3510",
             "p-d751e2f59f7802"
@@ -5469,7 +6426,7 @@
           "number": 11,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-94664df6f011f8",
             "p-9201eba2042d0d"
@@ -5481,7 +6438,7 @@
           "number": 12,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-39e29bb5b30187",
             "p-7c039b7bda13a8"
@@ -5493,7 +6450,7 @@
           "number": 13,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-c482f56f258175",
             "p-bdab3e1443988a"
@@ -5505,7 +6462,7 @@
           "number": 14,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-c50aa57b4324af",
             "p-a2ae033a2c458d"
@@ -5517,7 +6474,7 @@
           "number": 15,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-c03b165b51346a",
             "p-f8ec9f01f73a50"
@@ -5529,7 +6486,7 @@
           "number": 16,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-536d8879278f47",
             "p-6cc776b47b5e95"
@@ -5541,7 +6498,7 @@
           "number": 17,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-5b3b7296c53464",
             "p-5aa33f86f91d65"
@@ -5553,7 +6510,7 @@
           "number": 18,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-c4f072e092a2f2",
             "p-c15fae4e6e68a2"
@@ -5565,7 +6522,7 @@
           "number": 19,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-e527a1b6fbbfca",
             "p-d97b7ff6733d31"
@@ -5577,7 +6534,7 @@
           "number": 20,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-df285780bb6402",
             "p-e660d211b4496a"
@@ -5589,7 +6546,7 @@
           "number": 21,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=2",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-f9df949f999cf1",
             "p-4c177784a4432b"
@@ -5601,7 +6558,7 @@
           "number": 22,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=2",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-89b5d37cd11b8c",
             "p-7534d7c24cd95d"
@@ -5613,7 +6570,7 @@
           "number": 23,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=2",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-b0ec356fd21201",
             "p-9c5a1283daa8e0"
@@ -5625,7 +6582,7 @@
           "number": 24,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=2",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-297b17500e7c10",
             "p-d9ee789da27f2b"
@@ -5637,7 +6594,7 @@
           "number": 25,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=2",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-0e83a86fb129d8",
             "p-b8edb88a18e274"
@@ -5649,7 +6606,7 @@
           "number": 26,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=2",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-28b7b74a5eb99c",
             "p-ebb98e5e06a98e"
@@ -5661,7 +6618,7 @@
           "number": 27,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=2",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-193c3e6bcc660d",
             "p-ec090c58210ae5"
@@ -5673,7 +6630,7 @@
           "number": 28,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=2",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-1e50fca86d32a7",
             "p-16216d397111da"
@@ -5685,7 +6642,7 @@
           "number": 29,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_men_20260921.pdf#page=2",
-          "checkedAt": "2026-09-28T00:15:47+00:00",
+          "checkedAt": "2026-09-28T03:03:20+00:00",
           "playerIds": [
             "p-be282ee5369769",
             "p-e70290ca03d006"
@@ -5697,7 +6654,7 @@
           "number": 1,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-9fe27d6b40c23e",
             "p-63c0eb523e1429"
@@ -5709,7 +6666,7 @@
           "number": 2,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-f05a40f62f1f8a",
             "p-f2fa0338d31d37"
@@ -5721,7 +6678,7 @@
           "number": 3,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-b880af03c17a8d",
             "p-e74385bc91847b"
@@ -5733,7 +6690,7 @@
           "number": 4,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-0012effe0e4f80",
             "p-7133c92bb8a56b"
@@ -5745,7 +6702,7 @@
           "number": 5,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-bd2ce333aca5e6",
             "p-6b636528915ff5"
@@ -5757,7 +6714,7 @@
           "number": 6,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-fae05b76f162ee",
             "p-058c4ec3f3802d"
@@ -5769,7 +6726,7 @@
           "number": 7,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-5a194d18749c9e",
             "p-0e522b0dbb975e"
@@ -5781,7 +6738,7 @@
           "number": 8,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-24d02039890a15",
             "p-915d9bd3be71d4"
@@ -5793,7 +6750,7 @@
           "number": 9,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-f9c13549ef3d9a",
             "p-426647a04c610e"
@@ -5805,7 +6762,7 @@
           "number": 10,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-89fb663c39dd55",
             "p-f54e398fdef88c"
@@ -5817,7 +6774,7 @@
           "number": 11,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-195bc3b45e3e72",
             "p-2be15d0607014e"
@@ -5829,7 +6786,7 @@
           "number": 12,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-fd735e30d00fe5",
             "p-70758c41dbd816"
@@ -5841,7 +6798,7 @@
           "number": 13,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-ba6e259b045dc4",
             "p-bd3287e1362a54"
@@ -5853,7 +6810,7 @@
           "number": 14,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-d80bb44af433de",
             "p-e1aa5fe79cfa78"
@@ -5865,7 +6822,7 @@
           "number": 15,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-1ef00814faedb6",
             "p-d4619d6a8aaba4"
@@ -5877,7 +6834,7 @@
           "number": 16,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-e7d443af2e0fb1",
             "p-976ed7cc7e5365"
@@ -5889,7 +6846,7 @@
           "number": 17,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-56198d51067c42",
             "p-5bcfe1e82824db"
@@ -5901,7 +6858,7 @@
           "number": 18,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-ad8b7f4e835959",
             "p-92fcf437958e50"
@@ -5913,7 +6870,7 @@
           "number": 19,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-acc0e64aee804f",
             "p-63bd5537dddddc"
@@ -5925,7 +6882,7 @@
           "number": 20,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=1",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-ff8635c304e6d1",
             "p-58367f076d2631"
@@ -5937,7 +6894,7 @@
           "number": 21,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=2",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-238cbfb56b8682",
             "p-ec3d66bf61a909"
@@ -5949,7 +6906,7 @@
           "number": 22,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=2",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-87a1970d90fd02",
             "p-4fdd823d2d66f2"
@@ -5961,7 +6918,7 @@
           "number": 23,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=2",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-3a1909b6c0933b",
             "p-86214dcb5e9107"
@@ -5973,7 +6930,7 @@
           "number": 24,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=2",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-27146d1100b160",
             "p-9c40824722c700"
@@ -5985,7 +6942,7 @@
           "number": 25,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=2",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-f3309d4a4eb5eb",
             "p-e5643b6bbdc6e7"
@@ -5997,7 +6954,7 @@
           "number": 26,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=2",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-5a683b5d033eb9",
             "p-30f54d52b7eceb"
@@ -6009,7 +6966,7 @@
           "number": 27,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=2",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-90c73910db8908",
             "p-572a620cb0139b"
@@ -6021,7 +6978,7 @@
           "number": 28,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=2",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-8eca3e9f7ac86f",
             "p-aadd725216de9b"
@@ -6033,7 +6990,7 @@
           "number": 29,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/bvt2takahagi_entrylist_women_20260921.pdf#page=2",
-          "checkedAt": "2026-09-28T00:15:49+00:00",
+          "checkedAt": "2026-09-28T03:03:21+00:00",
           "playerIds": [
             "p-4f7f70f882c0d8",
             "p-33be9913501c00"
@@ -6041,7 +6998,7 @@
         }
       ],
       "entryStatus": "published",
-      "checkedAt": "2026-09-28T00:15:45+00:00"
+      "checkedAt": "2026-09-28T03:03:18+00:00"
     },
     {
       "id": "e-f0a9aa585c411e",
@@ -6064,7 +7021,7 @@
       ],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-28T00:15:51+00:00"
+      "checkedAt": "2026-09-28T03:03:24+00:00"
     },
     {
       "id": "e-78fe0e5d21158e",
@@ -6087,7 +7044,7 @@
       ],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-28T00:15:53+00:00",
+      "checkedAt": "2026-09-28T03:03:26+00:00",
       "relatedSources": [
         {
           "label": "横浜ビーチバレーボール連盟の大会案内",
@@ -6110,7 +7067,7 @@
       "documents": [],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-28T00:10:23+00:00"
+      "checkedAt": "2026-09-28T02:57:32+00:00"
     },
     {
       "id": "e-fc27375016a447",
@@ -6146,7 +7103,7 @@
           "number": 1,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-4becb601919188",
             "p-7b33eeb4c59158"
@@ -6158,7 +7115,7 @@
           "number": 2,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-456af9f5b9effd",
             "p-bb3eda817c7adc"
@@ -6170,7 +7127,7 @@
           "number": 3,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-c338f3ce672cf8",
             "p-b06941d3301571"
@@ -6182,7 +7139,7 @@
           "number": 4,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-94664df6f011f8",
             "p-9201eba2042d0d"
@@ -6194,7 +7151,7 @@
           "number": 5,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-39e29bb5b30187",
             "p-7c039b7bda13a8"
@@ -6206,7 +7163,7 @@
           "number": 6,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-54316126a8a75f",
             "p-df48743bbeeb58"
@@ -6218,7 +7175,7 @@
           "number": 7,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-b5a1767dae9173",
             "p-bb255ad1ef4d73"
@@ -6230,7 +7187,7 @@
           "number": 8,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-bdab3e1443988a",
             "p-8e195a0ab023cc"
@@ -6242,7 +7199,7 @@
           "number": 9,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-d3143d7be92c9a",
             "p-8a4c29a5ae9b7f"
@@ -6254,7 +7211,7 @@
           "number": 10,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-fe55fad3dce71b",
             "p-e8f24d749ad0bc"
@@ -6266,7 +7223,7 @@
           "number": 11,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-c4f072e092a2f2",
             "p-c15fae4e6e68a2"
@@ -6278,7 +7235,7 @@
           "number": 12,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-e527a1b6fbbfca",
             "p-d97b7ff6733d31"
@@ -6290,7 +7247,7 @@
           "number": 13,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-fb025ab8253517",
             "p-601f1b41287ffb"
@@ -6302,7 +7259,7 @@
           "number": 14,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-f9df949f999cf1",
             "p-4c177784a4432b"
@@ -6314,7 +7271,7 @@
           "number": 15,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-12bf331ee43993",
             "p-ee3ad5443b7f60"
@@ -6326,7 +7283,7 @@
           "number": 16,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-aacb9bfefaf680",
             "p-05049930459e19"
@@ -6338,7 +7295,7 @@
           "number": 17,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-e81938167bea49",
             "p-e748dd9a84db57"
@@ -6350,7 +7307,7 @@
           "number": 18,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-e66b1b48558f63",
             "p-83717440788185"
@@ -6362,7 +7319,7 @@
           "number": 19,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-0b98e9de0cffdf",
             "p-058d91af69c97e"
@@ -6374,7 +7331,7 @@
           "number": 20,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-c50aa57b4324af",
             "p-9b6cfa4d530ebf"
@@ -6386,7 +7343,7 @@
           "number": 21,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=2",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-0e83a86fb129d8",
             "p-b8edb88a18e274"
@@ -6398,7 +7355,7 @@
           "number": 22,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=2",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-9c5a1283daa8e0",
             "p-a329a755eaf585"
@@ -6410,7 +7367,7 @@
           "number": 23,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=2",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-4c0506f67cc9d0",
             "p-5aa33f86f91d65"
@@ -6422,7 +7379,7 @@
           "number": 24,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=2",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-2ba2990913c01b",
             "p-88b281919d33ef"
@@ -6434,7 +7391,7 @@
           "number": 25,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=2",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-2c7b401cefebb8",
             "p-00d931be297af7"
@@ -6446,7 +7403,7 @@
           "number": 26,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=2",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-10902c73bf77fb",
             "p-b9c92aacfb3510"
@@ -6458,7 +7415,7 @@
           "number": 27,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=2",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-193c3e6bcc660d",
             "p-ec090c58210ae5"
@@ -6470,7 +7427,7 @@
           "number": 28,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=2",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-1e50fca86d32a7",
             "p-16216d397111da"
@@ -6482,7 +7439,7 @@
           "number": 29,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=2",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-d313afd321d386",
             "p-f8e1814b7dbb38"
@@ -6494,7 +7451,7 @@
           "number": 30,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=2",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-0ce7cda7f97ff4",
             "p-d5163185c22129"
@@ -6506,7 +7463,7 @@
           "number": 31,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=2",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-34d67cbf4ecc09",
             "p-54d557db53bb03"
@@ -6518,7 +7475,7 @@
           "number": 32,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_men_20260927.pdf#page=2",
-          "checkedAt": "2026-09-28T00:16:00+00:00",
+          "checkedAt": "2026-09-28T03:03:31+00:00",
           "playerIds": [
             "p-2ef82e3c97ad90",
             "p-3540fef6ccd0ab"
@@ -6530,7 +7487,7 @@
           "number": 1,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-2ffd40abb352b1",
             "p-87a1970d90fd02"
@@ -6542,7 +7499,7 @@
           "number": 2,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-f9c13549ef3d9a",
             "p-70758c41dbd816"
@@ -6554,7 +7511,7 @@
           "number": 3,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-7133c92bb8a56b",
             "p-f54e398fdef88c"
@@ -6566,7 +7523,7 @@
           "number": 4,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-9fe27d6b40c23e",
             "p-f05a40f62f1f8a"
@@ -6578,7 +7535,7 @@
           "number": 5,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-e7d443af2e0fb1",
             "p-fd735e30d00fe5"
@@ -6590,7 +7547,7 @@
           "number": 6,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-da681bc9d67166",
             "p-bd3287e1362a54"
@@ -6602,7 +7559,7 @@
           "number": 7,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-56198d51067c42",
             "p-e1aa5fe79cfa78"
@@ -6614,7 +7571,7 @@
           "number": 8,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-ec3d66bf61a909",
             "p-643a643a7a36bd"
@@ -6626,7 +7583,7 @@
           "number": 9,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-1ef00814faedb6",
             "p-d4619d6a8aaba4"
@@ -6638,7 +7595,7 @@
           "number": 10,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-89fb663c39dd55",
             "p-f63352a2165e15"
@@ -6650,7 +7607,7 @@
           "number": 11,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-92fcf437958e50",
             "p-0a1903073eb965"
@@ -6662,7 +7619,7 @@
           "number": 12,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-27fcc16cbd21d9",
             "p-e74385bc91847b"
@@ -6674,7 +7631,7 @@
           "number": 13,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-63bd5537dddddc",
             "p-4fdd823d2d66f2"
@@ -6686,7 +7643,7 @@
           "number": 14,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-f17a9798000ded",
             "p-b08c41e1130378"
@@ -6698,7 +7655,7 @@
           "number": 15,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-6b636528915ff5",
             "p-0e522b0dbb975e"
@@ -6710,7 +7667,7 @@
           "number": 16,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-a4f13bf9f36201",
             "p-fe59f45e786d0f"
@@ -6722,7 +7679,7 @@
           "number": 17,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-24d02039890a15",
             "p-e5643b6bbdc6e7"
@@ -6734,7 +7691,7 @@
           "number": 18,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-ff8635c304e6d1",
             "p-27f0da6e5bd414"
@@ -6746,7 +7703,7 @@
           "number": 19,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-3a1909b6c0933b",
             "p-86214dcb5e9107"
@@ -6758,7 +7715,7 @@
           "number": 20,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-27146d1100b160",
             "p-acc0e64aee804f"
@@ -6770,7 +7727,7 @@
           "number": 21,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=2",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-42f689886e9058",
             "p-238cbfb56b8682"
@@ -6782,7 +7739,7 @@
           "number": 22,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=2",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-ecdcaf7edffce0",
             "p-58ed7565a6f88d"
@@ -6794,7 +7751,7 @@
           "number": 23,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=2",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-9831a53330a966",
             "p-12d9f5c252d9aa"
@@ -6806,7 +7763,7 @@
           "number": 24,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=2",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-7d8e2aa21f5000",
             "p-6cedfcc792d18a"
@@ -6818,7 +7775,7 @@
           "number": 25,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=2",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-8eca3e9f7ac86f",
             "p-90c73910db8908"
@@ -6830,7 +7787,7 @@
           "number": 26,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=2",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-58367f076d2631",
             "p-08d066486c8a89"
@@ -6842,7 +7799,7 @@
           "number": 27,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=2",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-2be15d0607014e",
             "p-9c40824722c700"
@@ -6854,7 +7811,7 @@
           "number": 28,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=2",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-72de1df24b890d",
             "p-3e7f6ea2d713dd"
@@ -6866,7 +7823,7 @@
           "number": 29,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=2",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-285d531c0b6a5c",
             "p-a9d89e9a2fdf49"
@@ -6878,7 +7835,7 @@
           "number": 30,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=2",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-4f7f70f882c0d8",
             "p-621f79c7608550"
@@ -6890,7 +7847,7 @@
           "number": 31,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=2",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-76ac54447cd4f7",
             "p-d9ccfead55bc95"
@@ -6902,7 +7859,7 @@
           "number": 32,
           "page": 2,
           "sourceUrl": "https://www.jbv.jp/news/2025/BVT2_gifu_entrylist_women_20260927.pdf#page=2",
-          "checkedAt": "2026-09-28T00:16:01+00:00",
+          "checkedAt": "2026-09-28T03:03:32+00:00",
           "playerIds": [
             "p-38f531b23c18ba",
             "p-606edac7e44d53"
@@ -6910,7 +7867,7 @@
         }
       ],
       "entryStatus": "published",
-      "checkedAt": "2026-09-28T00:15:59+00:00"
+      "checkedAt": "2026-09-28T03:03:30+00:00"
     },
     {
       "id": "e-53c5283be4ca9d",
@@ -6952,7 +7909,7 @@
           "number": 1,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/kawasakicup_18th_men_entrylist_20260922.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:04+00:00",
+          "checkedAt": "2026-09-28T03:03:34+00:00",
           "playerIds": [
             "p-f14c67cc3f1f06",
             "p-bacb4c47486198"
@@ -6964,7 +7921,7 @@
           "number": 2,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/kawasakicup_18th_men_entrylist_20260922.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:04+00:00",
+          "checkedAt": "2026-09-28T03:03:34+00:00",
           "playerIds": [
             "p-0932b58def2823",
             "p-e900bac72b258e"
@@ -6976,7 +7933,7 @@
           "number": 3,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/kawasakicup_18th_men_entrylist_20260922.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:04+00:00",
+          "checkedAt": "2026-09-28T03:03:34+00:00",
           "playerIds": [
             "p-229aea0a5e245b",
             "p-6940ec375c06e8"
@@ -6988,7 +7945,7 @@
           "number": 4,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/kawasakicup_18th_men_entrylist_20260922.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:04+00:00",
+          "checkedAt": "2026-09-28T03:03:34+00:00",
           "playerIds": [
             "p-c3ff1ffcd612ed",
             "p-d751e2f59f7802"
@@ -7000,7 +7957,7 @@
           "number": 5,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/kawasakicup_18th_men_entrylist_20260922.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:04+00:00",
+          "checkedAt": "2026-09-28T03:03:34+00:00",
           "playerIds": [
             "p-f68c79e674a200",
             "p-00656b2567f575"
@@ -7012,7 +7969,7 @@
           "number": 6,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/kawasakicup_18th_men_entrylist_20260922.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:04+00:00",
+          "checkedAt": "2026-09-28T03:03:34+00:00",
           "playerIds": [
             "p-0b891d351fb2cd",
             "p-3c0f1899831ea6"
@@ -7024,7 +7981,7 @@
           "number": 7,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/kawasakicup_18th_men_entrylist_20260922.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:04+00:00",
+          "checkedAt": "2026-09-28T03:03:34+00:00",
           "playerIds": [
             "p-98638614563dfb",
             "p-aae242c346d332"
@@ -7036,7 +7993,7 @@
           "number": 8,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/kawasakicup_18th_men_entrylist_20260922.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:04+00:00",
+          "checkedAt": "2026-09-28T03:03:34+00:00",
           "playerIds": [
             "p-2bc3a9cc952c04",
             "p-58ff48742e80ed"
@@ -7048,7 +8005,7 @@
           "number": 9,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/kawasakicup_18th_men_entrylist_20260922.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:04+00:00",
+          "checkedAt": "2026-09-28T03:03:34+00:00",
           "playerIds": [
             "p-df48743bbeeb58",
             "p-94664df6f011f8"
@@ -7060,7 +8017,7 @@
           "number": 10,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/kawasakicup_18th_men_entrylist_20260922.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:04+00:00",
+          "checkedAt": "2026-09-28T03:03:34+00:00",
           "playerIds": [
             "p-c4f072e092a2f2",
             "p-c15fae4e6e68a2"
@@ -7072,7 +8029,7 @@
           "number": 1,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/kawasakicup_18th_women_entrylist_20260922.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:05+00:00",
+          "checkedAt": "2026-09-28T03:03:36+00:00",
           "playerIds": [
             "p-f2fa0338d31d37",
             "p-63c0eb523e1429"
@@ -7084,7 +8041,7 @@
           "number": 2,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/kawasakicup_18th_women_entrylist_20260922.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:05+00:00",
+          "checkedAt": "2026-09-28T03:03:36+00:00",
           "playerIds": [
             "p-0012effe0e4f80",
             "p-195bc3b45e3e72"
@@ -7096,7 +8053,7 @@
           "number": 3,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/kawasakicup_18th_women_entrylist_20260922.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:05+00:00",
+          "checkedAt": "2026-09-28T03:03:36+00:00",
           "playerIds": [
             "p-ba6e259b045dc4",
             "p-bcf55897f68a02"
@@ -7108,7 +8065,7 @@
           "number": 4,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/kawasakicup_18th_women_entrylist_20260922.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:05+00:00",
+          "checkedAt": "2026-09-28T03:03:36+00:00",
           "playerIds": [
             "p-915d9bd3be71d4",
             "p-cbfb49e65b03e7"
@@ -7120,7 +8077,7 @@
           "number": 5,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/kawasakicup_18th_women_entrylist_20260922.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:05+00:00",
+          "checkedAt": "2026-09-28T03:03:36+00:00",
           "playerIds": [
             "p-fae05b76f162ee",
             "p-b880af03c17a8d"
@@ -7132,7 +8089,7 @@
           "number": 6,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/kawasakicup_18th_women_entrylist_20260922.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:05+00:00",
+          "checkedAt": "2026-09-28T03:03:36+00:00",
           "playerIds": [
             "p-bd2ce333aca5e6",
             "p-5bcfe1e82824db"
@@ -7144,7 +8101,7 @@
           "number": 7,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/kawasakicup_18th_women_entrylist_20260922.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:05+00:00",
+          "checkedAt": "2026-09-28T03:03:36+00:00",
           "playerIds": [
             "p-5a194d18749c9e",
             "p-426647a04c610e"
@@ -7156,7 +8113,7 @@
           "number": 8,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/kawasakicup_18th_women_entrylist_20260922.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:05+00:00",
+          "checkedAt": "2026-09-28T03:03:36+00:00",
           "playerIds": [
             "p-ad8b7f4e835959",
             "p-058c4ec3f3802d"
@@ -7168,7 +8125,7 @@
           "number": 9,
           "page": 1,
           "sourceUrl": "https://www.jbv.jp/news/2025/kawasakicup_18th_women_entrylist_20260922.pdf#page=1",
-          "checkedAt": "2026-09-28T00:16:05+00:00",
+          "checkedAt": "2026-09-28T03:03:36+00:00",
           "playerIds": [
             "p-9fe27d6b40c23e",
             "p-f05a40f62f1f8a"
@@ -7176,7 +8133,7 @@
         }
       ],
       "entryStatus": "published",
-      "checkedAt": "2026-09-28T00:16:03+00:00",
+      "checkedAt": "2026-09-28T03:03:34+00:00",
       "relatedSources": [
         {
           "label": "JVA大会概要・日程",
@@ -7205,7 +8162,7 @@
       ],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-28T00:16:08+00:00"
+      "checkedAt": "2026-09-28T03:03:38+00:00"
     },
     {
       "id": "e-9340b3fb62036c",
@@ -7234,7 +8191,7 @@
       ],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-28T00:16:10+00:00"
+      "checkedAt": "2026-09-28T03:03:41+00:00"
     },
     {
       "id": "e-e6a9ae6c66475f",
@@ -7250,7 +8207,7 @@
       "documents": [],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-28T00:16:14+00:00"
+      "checkedAt": "2026-09-28T03:03:47+00:00"
     },
     {
       "id": "e-3ad9cf2751e5b6",
@@ -7273,7 +8230,7 @@
       ],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-28T00:16:15+00:00"
+      "checkedAt": "2026-09-28T03:03:47+00:00"
     },
     {
       "id": "e-e07dafb0666493",
@@ -7289,7 +8246,7 @@
       "documents": [],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-28T00:16:33+00:00"
+      "checkedAt": "2026-09-28T03:04:00+00:00"
     },
     {
       "id": "e-5d176050896885",
@@ -7317,7 +8274,7 @@
           "status": "entered",
           "number": 1,
           "sourceUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/alanya-2/",
-          "checkedAt": "2026-09-28T00:16:20+00:00",
+          "checkedAt": "2026-09-28T03:03:50+00:00",
           "playerIds": [
             "p-ba6e259b045dc4",
             "p-63c0eb523e1429"
@@ -7328,7 +8285,7 @@
           "status": "entered",
           "number": 2,
           "sourceUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/alanya-2/",
-          "checkedAt": "2026-09-28T00:16:20+00:00",
+          "checkedAt": "2026-09-28T03:03:50+00:00",
           "playerIds": [
             "p-e2f0ff5692e9bc",
             "p-fae05b76f162ee"
@@ -7339,7 +8296,7 @@
           "status": "entered",
           "number": 3,
           "sourceUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/alanya-2/",
-          "checkedAt": "2026-09-28T00:16:20+00:00",
+          "checkedAt": "2026-09-28T03:03:50+00:00",
           "playerIds": [
             "p-f2fa0338d31d37",
             "p-9fe27d6b40c23e"
@@ -7347,7 +8304,7 @@
         }
       ],
       "entryStatus": "published",
-      "checkedAt": "2026-09-28T00:10:23+00:00"
+      "checkedAt": "2026-09-28T02:57:32+00:00"
     },
     {
       "id": "e-1f9eaaaeaee1c1",
@@ -7363,7 +8320,7 @@
       "documents": [],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-28T00:16:33+00:00"
+      "checkedAt": "2026-09-28T03:04:00+00:00"
     },
     {
       "id": "e-56b0c135bf8a94",
@@ -7380,7 +8337,7 @@
       "documents": [],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-28T00:10:23+00:00"
+      "checkedAt": "2026-09-28T02:57:32+00:00"
     },
     {
       "id": "e-ff3211f8d3051c",
@@ -7403,7 +8360,7 @@
       ],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-28T00:16:25+00:00"
+      "checkedAt": "2026-09-28T03:03:53+00:00"
     },
     {
       "id": "e-80b578a3c2a2e7",
@@ -7420,7 +8377,7 @@
       "documents": [],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-28T00:10:23+00:00"
+      "checkedAt": "2026-09-28T02:57:32+00:00"
     },
     {
       "id": "e-e5f84b7cb54c3d",
@@ -7436,7 +8393,7 @@
       "documents": [],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-28T00:16:33+00:00"
+      "checkedAt": "2026-09-28T03:04:00+00:00"
     },
     {
       "id": "e-333f422c85b282",
@@ -7452,7 +8409,7 @@
       "documents": [],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-28T00:16:33+00:00"
+      "checkedAt": "2026-09-28T03:04:00+00:00"
     },
     {
       "id": "e-c985a8ceac82e2",
@@ -7468,7 +8425,7 @@
       "documents": [],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-28T00:16:33+00:00"
+      "checkedAt": "2026-09-28T03:04:00+00:00"
     },
     {
       "id": "e-9d8b57a38810b6",
@@ -7484,7 +8441,7 @@
       "documents": [],
       "entries": [],
       "entryStatus": "unpublished",
-      "checkedAt": "2026-09-28T00:16:33+00:00"
+      "checkedAt": "2026-09-28T03:04:00+00:00"
     }
   ],
   "issues": []

@@ -2,7 +2,7 @@ import io
 import unittest
 from unittest.mock import patch, MagicMock
 from scripts.parsers import dates_from_label, parse_article, parse_calendar, parse_profile_image, parse_profiles, parse_roster, parse_jva_calendar, parse_jva_teams, normalize
-from scripts.update import apply_event_overrides, compile_players, validate
+from scripts.update import apply_event_overrides, compile_players, retain_unresolved_events, validate
 
 
 class ParsersTest(unittest.TestCase):
@@ -96,6 +96,21 @@ class ParsersTest(unittest.TestCase):
         apply_event_overrides(event, overrides)
         self.assertEqual(event['id'], 'e-existing')
         self.assertEqual(event['venue'], 'confirmed')
+
+    def test_ended_event_with_roster_is_kept_while_results_are_pending(self):
+        previous = [{
+            'id': 'e-past', 'sourceUrl': 'https://official.example/event/',
+            'endDate': '2026-09-26', 'entryStatus': 'published',
+            'entries': [
+                {'status': 'entered', 'gender': 'women'},
+                {'status': 'reserve', 'gender': 'women'},
+            ],
+        }]
+        events = []
+        self.assertEqual(retain_unresolved_events(events, previous, '2026-09-28'), 1)
+        self.assertEqual(events[0]['entries'][0]['status'], 'resultPending')
+        self.assertEqual(events[0]['entries'][1]['status'], 'reserve')
+        self.assertEqual(events[0]['entryStatus'], 'resultPending')
 
     def test_missing_jva_layout_requires_review(self):
         teams, issues = parse_jva_teams('<main>掲載形式が変わりました</main>', [])

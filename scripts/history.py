@@ -59,6 +59,46 @@ def parse_results(raw, year, corrections=None):
     return teams
 
 
+def parse_jbv_rankings(raw, gender):
+    """Parse the explicit final-ranking table used by JBV satellite PDFs."""
+    teams = []
+    with pdfplumber.open(io.BytesIO(raw)) as pdf:
+        for page_number, page in enumerate(pdf.pages, 1):
+            text = normalize(page.extract_text() or '')
+            if '最終順位' not in text:
+                continue
+            tables = page.extract_tables()
+            for table in tables:
+                if not table or normalize(table[0][0]) != '順位':
+                    continue
+                rank = None
+                for row in table[1:]:
+                    label = row[0]
+                    if label is not None:
+                        label = normalize(label)
+                        match = re.fullmatch(r'(\d+)位', label)
+                        if not match:
+                            raise ValueError(f'JBV最終順位が不明: {label}')
+                        rank = int(match[1])
+                    if rank is None:
+                        raise ValueError('JBV最終順位の結合セルを確認できません')
+                    surnames = (row[1] or '').splitlines()
+                    given = (row[2] or '').splitlines()
+                    if len(surnames) != 2 or len(given) != 2:
+                        raise ValueError(f'JBV最終順位の氏名列が想定外です: {row}')
+                    teams.append({
+                        'names': [f'{a} {b}' for a, b in zip(surnames, given)],
+                        'gender': gender,
+                        'status': 'completed',
+                        'rank': rank,
+                        'resultLabel': f'{rank}位',
+                        'page': page_number,
+                    })
+    if not teams:
+        raise ValueError('JBVの明示された最終順位表がありません')
+    return teams
+
+
 def collect_history(fetcher, config, as_of):
     settings = config.get('history')
     if not settings:
@@ -106,4 +146,34 @@ def collect_history(fetcher, config, as_of):
                        'sourceUrl': url, 'scheduleSourceUrl': index, 'documents': docs,
                        'entries': entries, 'entryStatus': 'published', 'resultCoverage': source['coverage'],
                        'checkedAt': fetcher.records[results_url]['checkedAt']})
+    for source in settings.get('directEvents', []):
+        if source['endDate'] >= as_of:
+            continue
+        page, _ = soup_body(fetcher.get(source['url']))
+        page_text = normalize(page.get_text(' ', strip=True))
+        if normalize(source['name']) not in page_text:
+            raise ValueError(f'過去大会ページの内容が変わっています: {source["url"]}')
+        entries, docs = [], []
+        for document in source['documents']:
+            pdf_count += 1
+            parser = document['parser']
+            raw = fetcher.get(document['url'])
+            if parser == 'jbv-ranking':
+                parsed = parse_jbv_rankings(raw, document['gender'])
+            else:
+                raise ValueError(f'未対応の過去結果形式: {parser}')
+            entries += [dict(team, sourceUrl=document['url'] + f'#page={team["page"]}',
+                             checkedAt=fetcher.records[document['url']]['checkedAt'])
+                        for team in parsed]
+            docs.append({'url': document['url'], 'label': document['label'], 'kind': 'result',
+                         'gender': document['gender'], 'parsed': True})
+        events.append({
+            'id': stable_id('e-', source['url']), 'name': source['name'],
+            'officialTitle': source['name'], 'category': source['category'],
+            'startDate': source['startDate'], 'endDate': source['endDate'],
+            'dateLabel': source['dateLabel'], 'venue': source['venue'], 'cancelled': False,
+            'sourceUrl': source['url'], 'documents': docs, 'entries': entries,
+            'entryStatus': 'published', 'resultCoverage': source['coverage'],
+            'checkedAt': fetcher.records[source['url']]['checkedAt'],
+        })
     return events, pdf_count

@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import MagicMock, patch
-from scripts.history import parse_results
+from scripts.history import parse_jbv_rankings, parse_results
 
 
 class HistoryTests(unittest.TestCase):
@@ -41,3 +41,18 @@ class HistoryTests(unittest.TestCase):
     def test_other_year_is_rejected(self):
         with self.assertRaises(ValueError):
             self.parse([('優勝', '甲', '乙')], title='TOUR 2025 試合結果順位【女子】')
+
+    @patch('scripts.history.pdfplumber.open')
+    def test_jbv_final_ranking_table_is_explicitly_parsed(self, opened):
+        page = MagicMock()
+        page.extract_text.return_value = '最終順位\n男子'
+        page.extract_tables.return_value = [[
+            ['順位', '氏 名（所 属）', None, None, 'ポイント', None],
+            ['1位', '安達\n今井', '龍一\n駿世', '所属', '320\n320', '640'],
+            ['３位', '松下\nMartin', '道一\nKaufer', '所属', '213\n213', '426'],
+            [None, '坂東\n山口', '巧望\n和也', '所属', '213\n213', '426'],
+        ]]
+        opened.return_value.__enter__.return_value.pages = [page]
+        teams = parse_jbv_rankings(b'', 'men')
+        self.assertEqual([team['rank'] for team in teams], [1, 3, 3])
+        self.assertEqual(teams[1]['names'], ['松下 道一', 'Martin Kaufer'])

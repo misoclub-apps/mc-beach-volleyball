@@ -131,7 +131,8 @@ def parse_article(html, url, year):
         if any(d['url'] == link for d in documents):
             continue
         gender = 'women' if re.search(r'女子|women|female', label+' '+link, re.I) else 'men' if re.search(r'男子|(?<!wo)men|male', label+' '+link, re.I) else None
-        kind = ('seed' if re.search(r'シーディング|seedlist', label+' '+link, re.I) else
+        kind = ('result' if re.search(r'結果|result', label+' '+link, re.I) else
+                'seed' if re.search(r'シーディング|seedlist', label+' '+link, re.I) else
                 'entry' if re.search(r'参加チーム|出場チーム|エントリーリスト|entrylist', label+' '+link, re.I) else
                 'schedule' if re.search(r'スケジュール|スケシュール|対戦表|組合せ|組み合わせ|schedule', label+' '+link, re.I) else 'info')
         documents.append({'url': link, 'label': label, 'kind': kind, 'gender': gender})

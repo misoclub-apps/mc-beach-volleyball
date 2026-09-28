@@ -103,7 +103,8 @@ test("出典・選手参照・日程・過去の最終順位が整合する", ()
       assert.ok(
         e.entries.every(
           (entry) =>
-            entry.status === "completed" && entry.rank > 0 && entry.resultLabel,
+            (entry.status === "completed" && entry.rank > 0 && entry.resultLabel) ||
+            ["resultPending", "reserve"].includes(entry.status),
         ),
       );
     }

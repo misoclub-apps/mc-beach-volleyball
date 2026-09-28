@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Fetch official JBV information locally; publish only validated, attributable facts."""
 import argparse
+import copy
 import hashlib
 import json
 import os
@@ -212,7 +213,7 @@ def validate(dataset):
                 if pid not in players or pid in members:
                     raise ValueError(f'名簿の重複または不明な選手: {e["id"]} / {pid}')
                 members.add(pid)
-            if entry['status'] not in ('entered', 'reserve', 'withdrawn', 'completed'):
+            if entry['status'] not in ('entered', 'reserve', 'withdrawn', 'completed', 'resultPending'):
                 raise ValueError('不明な参加状態')
             if entry['status'] == 'completed' and (not isinstance(entry.get('rank'), int) or entry['rank'] < 1 or not entry.get('resultLabel')):
                 raise ValueError('最終順位が不正です')
@@ -228,6 +229,29 @@ def apply_event_overrides(event, overrides):
     event.update(overrides.get('events', {}).get(event['id'], {}))
 
 
+def retain_unresolved_events(events, previous_events, as_of):
+    """Keep published player links after an event ends until final results exist."""
+    existing_ids = {event['id'] for event in events}
+    existing_urls = {event['sourceUrl'] for event in events}
+    retained = 0
+    for previous in previous_events:
+        if previous['id'] in existing_ids or previous['sourceUrl'] in existing_urls:
+            continue
+        if not previous.get('entries') or not previous.get('endDate') or previous['endDate'] >= as_of:
+            continue
+        event = copy.deepcopy(previous)
+        for entry in event['entries']:
+            if entry['status'] == 'entered':
+                entry['status'] = 'resultPending'
+        event['entryStatus'] = 'resultPending'
+        event['resultCoverage'] = '公式最終結果を確認中です。公開済みの参加名簿を保持しています。'
+        events.append(event)
+        existing_ids.add(event['id'])
+        existing_urls.add(event['sourceUrl'])
+        retained += 1
+    return retained
+
+
 def run(args):
     config = json.loads((ROOT / 'config/sources.json').read_text())
     overrides = json.loads((ROOT / 'config/overrides.json').read_text())
@@ -235,6 +259,10 @@ def run(args):
     if len({h.removeprefix('www.') for h in config['allowedHosts']}) > config['maxDomains']:
         raise ValueError('取得対象が10ドメインを超えています')
     as_of = args.as_of or datetime.now(ZoneInfo('Asia/Tokyo')).date().isoformat()
+    output = ROOT / 'public/data/beach.json'
+    old = json.loads(output.read_text()) if output.exists() else None
+    old_by_url = {event['sourceUrl']: event for event in old['events']} if old else {}
+    retained_past_urls = set(config.get('retainPastEvents', [])) | set(old_by_url)
     fetcher = Fetcher(config['requestIntervalSeconds'], args.offline, config['allowedHosts'],
                       config.get('maxRetries', 5))
     fetcher.check_robots()
@@ -255,7 +283,8 @@ def run(args):
                 continue
             event['checkedAt'] = fetcher.records[url]['checkedAt']
             apply_event_overrides(event, overrides)
-            if event['endDate'] and event['endDate'] < as_of:
+            is_past = bool(event['endDate'] and event['endDate'] < as_of)
+            if is_past and url not in retained_past_urls:
                 skipped.append({'url': url, 'title': title, 'reason': '過去大会（今回の対象外）'})
                 continue
             if not event['startDate']:
@@ -296,6 +325,19 @@ def run(args):
                 event['entryStatus'] = 'manual'
             elif event['entries'] and event['entryStatus'] != 'review':
                 event['entryStatus'] = 'published'
+            if is_past:
+                previous = old_by_url.get(url)
+                current_genders = {entry['gender'] for entry in event['entries']}
+                if previous:
+                    event['entries'].extend(
+                        copy.deepcopy(entry) for entry in previous['entries']
+                        if entry['gender'] not in current_genders
+                    )
+                for entry in event['entries']:
+                    if entry['status'] == 'entered':
+                        entry['status'] = 'resultPending'
+                event['entryStatus'] = 'resultPending'
+                event['resultCoverage'] = '公式最終結果を確認中です。公開済みの参加名簿を保持しています。'
             events.append(event)
         except Exception as error:
             issues.append({'url': url, 'kind': 'article', 'message': str(error)})
@@ -340,14 +382,32 @@ def run(args):
         except Exception as error:
             issues.append({'url': source['url'], 'kind': 'external', 'message': str(error)})
     history, history_pdfs = collect_history(fetcher, config, as_of)
-    events.extend(history)
+    for result_event in history:
+        existing_index = next((i for i, event in enumerate(events)
+                               if event['sourceUrl'] == result_event['sourceUrl']), None)
+        if existing_index is None:
+            events.append(result_event)
+            continue
+        pending_event = events[existing_index]
+        completed_genders = {entry['gender'] for entry in result_event['entries']}
+        result_event['entries'].extend(
+            entry for entry in pending_event['entries']
+            if entry['gender'] not in completed_genders
+        )
+        known_documents = {document['url'] for document in result_event['documents']}
+        result_event['documents'].extend(
+            document for document in pending_event['documents']
+            if document['url'] not in known_documents and document['kind'] != 'result'
+        )
+        events[existing_index] = result_event
+    retain_unresolved_events(events, old['events'] if old else [], as_of)
     pdf_count += history_pdfs
     if pdf_count > config['maxPdfs']:
         raise ValueError('結果PDFを含む取得上限超過')
     players = compile_players(events, profiles, overrides.get('aliases', {}))
     dataset = {'schemaVersion': 1, 'generatedAt': now(), 'checkedAt': max(r['checkedAt'] for r in fetcher.records.values()), 'asOf': as_of, 'year': config['year'],
                'coverage': {'source': 'JBV・JVA・各大会主催者',
-                            'description': 'JBVの年間予定・ニュース・公認大会とJVA国際大会予定から、取得時点で開催前または開催中の大会を収録。主催者サイトも確認し、大会別に公開された参加名簿を選手に紐付けています。未発表の出場予定は含みません。過去の結果は2026年BVT1の6大会を対象に、公式最終順位表から収録（立川立飛は女子のみ）。全大会・全試合を網羅するものではありません。',
+                            'description': 'JBVの年間予定・ニュース・公認大会とJVA国際大会予定から、公開済みの大会と参加名簿を選手に紐付けています。開催後も大会と選手の紐付けを保持し、公式最終結果が未発表の場合は「順位確認中」と表示します。過去結果は大会区分を限定せず、公式最終順位表を確認できたものから順次収録します。未発表の出場・順位は推測しません。',
                             'domains': sorted({urlparse(u).hostname for u in fetcher.records}),
                             'reviewedSources': [{'url': r['url'], 'title': r['title'], 'checkedAt': r['checkedAt']} for r in external_review],
                             'pagesDiscovered': len(candidates), 'pagesChecked': min(len(candidates), limit),
@@ -364,8 +424,6 @@ def run(args):
     failures = [i for i in issues if i['kind'] in ('fetch', 'discovery', 'article', 'limit', 'external', 'date')]
     if failures:
         raise ValueError(f'{len(failures)}件の取得エラー。reports/update.json を確認してください。公開データは変更しません。')
-    output = ROOT / 'public/data/beach.json'
-    old = json.loads(output.read_text()) if output.exists() else None
     if old:
         old_events = {e['id'] for e in old['events']}
         new_events = {e['id'] for e in events}

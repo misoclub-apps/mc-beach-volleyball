@@ -21,6 +21,9 @@
     "https://www.jva.or.jp/beach_international/2026/"
   ],
   "extraPages": [],
+  "retainPastEvents": [
+    "https://www.jbv.jp/news/entry-2493.html"
+  ],
   "reviewPages": [
     "https://www.jva.or.jp/beach_domestic/2026/",
     "https://www.jva.or.jp/beach_domestic/2026/other-events/kawasakicup/",
@@ -102,6 +105,26 @@
           "women"
         ],
         "coverage": "男女の公式最終順位表に掲載されたペアを収録。"
+      }
+    ],
+    "directEvents": [
+      {
+        "url": "https://www.jbv.jp/news/entry-2493.html",
+        "name": "相馬市長杯ジャパンビーチバレーボールツアー2026サテライト相馬大会",
+        "category": "BVT2",
+        "startDate": "2026-09-26",
+        "endDate": "2026-09-27",
+        "dateLabel": "2026年9月26日（土）～27日（日）",
+        "venue": "福島県相馬市・尾浜ビーチバレーボール場",
+        "coverage": "男子の公式最終順位表を収録。女子結果PDFは最終順位と一部試合が未記入のため、結果が揃うまで掲載していません。",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260926.pdf",
+            "label": "男子結果（9月27日更新）",
+            "gender": "men",
+            "parser": "jbv-ranking"
+          }
+        ]
       }
     ]
   }

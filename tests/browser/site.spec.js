@@ -20,7 +20,7 @@ test("選手検索 → 予定 → 大会 → 選手の往復", async ({ page }) 
   await expect(
     page.locator(".appearance").filter({ hasText: "開催予定" }),
   ).toHaveCount(2);
-  await expect(page.locator(".past-results .appearance")).toHaveCount(5);
+  await expect(page.locator(".past-results .appearance")).toHaveCount(6);
   const hiratsuka = page
     .locator(".past-results .appearance")
     .filter({ hasText: "平塚" });
@@ -28,6 +28,13 @@ test("選手検索 → 予定 → 大会 → 選手の往復", async ({ page }) 
   await expect(
     hiratsuka.getByRole("link", { name: "公式の結果 PDF" }),
   ).toHaveAttribute("href", /#page=10$/);
+  const soma = page
+    .locator(".past-results .appearance")
+    .filter({ hasText: "相馬" });
+  await expect(soma.locator(".badge")).toHaveText("順位確認中");
+  await expect(
+    soma.getByRole("link", { name: "公式の大会情報" }),
+  ).toHaveAttribute("href", /entry-2493\.html$/);
   await page
     .getByRole("link", {
       name: "川崎市長杯 JVA第18回ビーチバレーボール大会",
@@ -145,8 +152,8 @@ for (const width of [320, 375, 414, 768, 1440])
 test("過去大会は期間で絞り込めて結果とペアを辿れる", async ({ page }) => {
   await page.goto("/#events");
   await page.getByLabel("表示期間").selectOption("past");
-  await expect(page.locator(".event-row")).toHaveCount(6);
-  await expect(page.locator(".event-row .badge.result")).toHaveCount(6);
+  await expect(page.locator(".event-row")).toHaveCount(7);
+  await expect(page.locator(".event-row .badge.result")).toHaveCount(7);
   await page.getByLabel("大会名・会場").fill("立川");
   await page.locator(".event-row").click();
   await expect(
