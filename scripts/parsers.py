@@ -246,6 +246,40 @@ def parse_jva_teams(html, profiles):
     return (teams if not problems else []), problems
 
 
+def parse_jva_final_standings(html, source_url):
+    """Read explicitly labelled men's/women's final-ranking tables on JVA pages."""
+    _, body = soup_body(html)
+    results, problems = [], []
+    for heading in body.select('h3, h4'):
+        label = heading.get_text(' ', strip=True)
+        if '最終順位' not in label:
+            continue
+        gender = 'women' if '女子' in label else 'men' if '男子' in label else None
+        table = heading.find_next('table')
+        if not gender or table is None:
+            problems.append(f'JVA最終順位の区分・表を確認してください: {label}')
+            continue
+        for row in table.select('tbody tr'):
+            cells = row.select('td')
+            rank_match = re.match(r'^(\d+)位', cells[0].get_text(' ', strip=True)) if len(cells) >= 2 else None
+            if not rank_match:
+                problems.append(f'JVA最終順位の順位欄を確認してください: {row.get_text(" ", strip=True)}')
+                continue
+            rank_label = cells[0].get_text(' ', strip=True)
+            team_text = cells[1].get_text(' ', strip=True)
+            names_text = re.sub(r'（[^）]*）', '', team_text)
+            names = [part.strip() for part in re.split(r'[/／]', names_text)]
+            if len(names) != 2 or not all(names):
+                problems.append(f'JVA最終順位の選手欄を確認してください: {team_text}')
+                continue
+            results.append({'names': names, 'gender': gender, 'status': 'completed',
+                            'rank': int(rank_match.group(1)), 'resultLabel': rank_label,
+                            'sourceUrl': source_url})
+    if not results and not problems:
+        problems.append('JVAの最終順位表を検出できません。未発表か形式変更かを確認してください')
+    return (results if not problems else []), problems
+
+
 def parse_volleyball_world_teams(html, gender, stage, source_url):
     """Return only official Volleyball World rows explicitly marked JPN."""
     soup = BeautifulSoup(html, 'html.parser')
@@ -390,6 +424,14 @@ def parse_roster(data, gender):
                     if not re.match(r'^\d{1,3}(?:\s|$)', marker):
                         continue
                     names = [re.sub(r'\s+', ' ', n).strip() for n in row[1].splitlines() if n.strip()]
+                    # A long katakana given name can wrap onto its own PDF line.
+                    # Only repair the unambiguous case where the other player's
+                    # surname/given-name separator is still present.
+                    if len(names) == 3:
+                        unseparated = [i for i, name in enumerate(names) if ' ' not in name]
+                        if len(unseparated) == 2 and unseparated[1] == unseparated[0] + 1:
+                            start = unseparated[0]
+                            names = names[:start] + [' '.join(names[start:start + 2])] + names[start + 2:]
                     if len(names) != 2 or any(re.search(r'\d|勝者|敗者|氏名|チーム', n) for n in names):
                         issues.append(f'{pageno}ページ: チーム{marker}の氏名欄を確認してください')
                         continue

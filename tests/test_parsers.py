@@ -1,7 +1,7 @@
 import io
 import unittest
 from unittest.mock import patch, MagicMock
-from scripts.parsers import dates_from_label, parse_article, parse_calendar, parse_profile_image, parse_profiles, parse_roster, parse_jva_calendar, parse_jva_teams, parse_volleyball_world_final_standings, parse_volleyball_world_match, parse_volleyball_world_teams, normalize
+from scripts.parsers import dates_from_label, parse_article, parse_calendar, parse_profile_image, parse_profiles, parse_roster, parse_jva_calendar, parse_jva_final_standings, parse_jva_teams, parse_volleyball_world_final_standings, parse_volleyball_world_match, parse_volleyball_world_teams, normalize
 from scripts.update import apply_event_overrides, compile_players, merge_volleyball_world_entries, retain_unresolved_events, validate
 
 
@@ -72,6 +72,12 @@ class ParsersTest(unittest.TestCase):
         self.assertFalse(teams)
         self.assertTrue(issues)
 
+    def test_wrapped_katakana_given_name_is_joined(self):
+        teams, issues = self.roster([['9\n補欠', 'オト\nパウリネ恵美里\n関口 希望', '', '2849', '5829']])
+        self.assertFalse(issues)
+        self.assertEqual(teams[0]['names'], ['オト パウリネ恵美里', '関口 希望'])
+        self.assertEqual(teams[0]['status'], 'reserve')
+
     def test_aliases_keep_one_player(self):
         events = [{'entries': [{'names': ['Kaufer Martin', '髙橋 大地'], 'gender': 'men'}]}, {'entries': [{'names': ['Martin Kaufer', '高橋大地'], 'gender': 'men'}]}]
         players = compile_players(events, [], {'Kaufer Martin': 'Martin Kaufer'})
@@ -87,6 +93,17 @@ class ParsersTest(unittest.TestCase):
         self.assertEqual(teams[0]['gender'], 'women')
         html = html.replace('</section>', '<div class="m-playerList-contents-article-data-name">選手 三</div></section>')
         self.assertFalse(parse_jva_teams(html, profiles)[0])
+
+    def test_jva_final_standings_keep_explicit_tied_rank(self):
+        html = '''<main><h4>男子・最終順位</h4><section><table><tbody>
+        <tr><td>3位</td><td>水町 泰杜（所属A／所属B）／黒澤 孝太（所属C）</td></tr>
+        <tr><td>9位タイ</td><td>石島 雄介（所属C）／立谷 純太郎（フリー）</td></tr>
+        </tbody></table></section></main>'''
+        results, issues = parse_jva_final_standings(html, 'https://official.example/result')
+        self.assertFalse(issues)
+        self.assertEqual(results[0]['names'], ['水町 泰杜', '黒澤 孝太'])
+        self.assertEqual(results[1]['rank'], 9)
+        self.assertEqual(results[1]['resultLabel'], '9位タイ')
 
     def test_jva_date_and_source(self):
         html = '''<main><dl class="is-beach_international"><dt>9/20-10/3</dt><dd class="schedule-contents-dl-title"><a href="event/">国際大会</a></dd><dd class="schedule-contents-dl-place">愛知</dd></dl></main>'''
@@ -118,6 +135,26 @@ class ParsersTest(unittest.TestCase):
         self.assertEqual(events[0]['entries'][0]['status'], 'resultPending')
         self.assertEqual(events[0]['entries'][1]['status'], 'reserve')
         self.assertEqual(events[0]['entryStatus'], 'resultPending')
+
+    def test_retained_event_restores_names_from_published_player_ids(self):
+        previous = [{
+            'id': 'e-past', 'sourceUrl': 'https://official.example/event/',
+            'endDate': '2026-10-04', 'entryStatus': 'published',
+            'entries': [{
+                'playerIds': ['p-one', 'p-two'], 'status': 'entered',
+                'gender': 'women', 'sourceUrl': 'https://official.example/roster.pdf',
+            }],
+        }]
+        players = [
+            {'id': 'p-one', 'name': '選手 一'},
+            {'id': 'p-two', 'name': '選手 二'},
+        ]
+        events = []
+        retain_unresolved_events(events, previous, '2026-10-06', players)
+        self.assertEqual(events[0]['entries'][0]['names'], ['選手 一', '選手 二'])
+        self.assertNotIn('playerIds', events[0]['entries'][0])
+        compiled = compile_players(events, [], {})
+        self.assertEqual(len(compiled), 2)
 
     def test_missing_jva_layout_requires_review(self):
         teams, issues = parse_jva_teams('<main>掲載形式が変わりました</main>', [])

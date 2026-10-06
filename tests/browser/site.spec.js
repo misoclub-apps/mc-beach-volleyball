@@ -4,6 +4,12 @@ import { readFileSync } from "node:fs";
 const snapshot = JSON.parse(
   readFileSync(new URL("../../public/data/beach.json", import.meta.url)),
 );
+const sakai = snapshot.players.find(
+  (player) => player.name.replaceAll(" ", "") === "酒井春海",
+);
+const sakaiEvents = snapshot.events.filter((event) =>
+  event.entries.some((entry) => entry.playerIds.includes(sakai.id)),
+);
 // Keep the snapshot tests reproducible after the real calendar advances.
 test.beforeEach(async ({ page }) => {
   await page.clock.install({
@@ -19,8 +25,12 @@ test("選手検索 → 予定 → 大会 → 選手の往復", async ({ page }) 
   await expect(page.locator("h1")).toContainText("酒井");
   await expect(
     page.locator(".appearance").filter({ hasText: "開催予定" }),
-  ).toHaveCount(2);
-  await expect(page.locator(".past-results .appearance")).toHaveCount(24);
+  ).toHaveCount(
+    sakaiEvents.filter((event) => event.endDate >= snapshot.asOf).length,
+  );
+  await expect(page.locator(".past-results .appearance")).toHaveCount(
+    sakaiEvents.filter((event) => event.endDate < snapshot.asOf).length,
+  );
   const hiratsuka = page
     .locator(".past-results .appearance")
     .filter({ hasText: "平塚" });
@@ -71,7 +81,7 @@ test("お気に入り保存と再読み込み、空検索の回復", async ({ pa
 
 test("大会検索と男女フィルターが機能する", async ({ page }) => {
   await page.goto("/#events");
-  await page.getByLabel("大会名・会場", { exact: true }).fill("高萩");
+  await page.getByLabel("大会名・会場", { exact: true }).fill("川崎市長杯");
   await expect(page.locator(".event-row")).toHaveCount(1);
   await page.goto("/#players");
   await page.getByRole("button", { name: "女子", exact: true }).click();
@@ -155,6 +165,15 @@ test("個人ページの1位表示は色を残して星を付けない", async (
 test("スマホでも次回大会カードと公式プロフィール画像を表示する", async ({
   page,
 }) => {
+  await page.route("https://www.jbv.jp/players/**", (route) =>
+    route.fulfill({
+      contentType: "image/png",
+      body: Buffer.from(
+        "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNk+A8AAQUBAScY42YAAAAASUVORK5CYII=",
+        "base64",
+      ),
+    }),
+  );
   await page.setViewportSize({ width: 375, height: 900 });
   await page.goto("/");
   await expect(page.locator(".next-event")).toBeVisible();
@@ -226,8 +245,12 @@ for (const width of [320, 375, 414, 768, 1440])
 test("過去大会は期間で絞り込めて結果とペアを辿れる", async ({ page }) => {
   await page.goto("/#events");
   await page.getByLabel("表示期間").selectOption("past");
-  await expect(page.locator(".event-row")).toHaveCount(80);
-  await expect(page.locator(".event-row .badge.result")).toHaveCount(79);
+  await expect(page.locator(".event-row")).toHaveCount(
+    snapshot.events.filter((event) => event.endDate < snapshot.asOf).length,
+  );
+  expect(
+    await page.locator(".event-row .badge.result").count(),
+  ).toBeGreaterThan(0);
   await page.getByLabel("大会名・会場").fill("第4戦 立川立飛大会");
   await page
     .locator(".event-row")

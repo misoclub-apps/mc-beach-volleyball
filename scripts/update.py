@@ -17,7 +17,7 @@ from urllib.robotparser import RobotFileParser
 import requests
 
 from scripts.history import collect_history
-from scripts.parsers import discover_volleyball_world_japan_match_urls, normalize, parse_article, parse_profile_image, parse_profiles, parse_roster, parse_calendar, parse_jva_calendar, parse_jva_teams, parse_volleyball_world_final_standings, parse_volleyball_world_match, parse_volleyball_world_teams, safe_url, soup_body, stable_id
+from scripts.parsers import discover_volleyball_world_japan_match_urls, normalize, parse_article, parse_profile_image, parse_profiles, parse_roster, parse_calendar, parse_jva_calendar, parse_jva_final_standings, parse_jva_teams, parse_volleyball_world_final_standings, parse_volleyball_world_match, parse_volleyball_world_teams, safe_url, soup_body, stable_id
 
 ROOT = Path(__file__).resolve().parents[1]
 UA = 'BeachNote/1.0 (+https://github.com/misoclub-apps/mc-beach-volleyball; local periodic index)'
@@ -342,10 +342,11 @@ def collect_volleyball_world(events, fetcher, config, profiles, aliases, issues,
             event['checkedAt'] = max(fetcher.records[url]['checkedAt'] for url in checked_urls)
 
 
-def retain_unresolved_events(events, previous_events, as_of):
+def retain_unresolved_events(events, previous_events, as_of, previous_players=()):
     """Keep published player links after an event ends until final results exist."""
     existing_ids = {event['id'] for event in events}
     existing_urls = {event['sourceUrl'] for event in events}
+    previous_names = {player['id']: player['name'] for player in previous_players}
     retained = 0
     for previous in previous_events:
         if previous['id'] in existing_ids or previous['sourceUrl'] in existing_urls:
@@ -354,6 +355,12 @@ def retain_unresolved_events(events, previous_events, as_of):
             continue
         event = copy.deepcopy(previous)
         for entry in event['entries']:
+            if 'names' not in entry and entry.get('playerIds'):
+                try:
+                    entry['names'] = [previous_names[player_id] for player_id in entry['playerIds']]
+                except KeyError as error:
+                    raise ValueError(f'保持する過去大会の選手名を復元できません: {event["id"]} / {error.args[0]}') from error
+                entry.pop('playerIds', None)
             if entry['status'] == 'entered':
                 entry['status'] = 'resultPending'
         event['entryStatus'] = 'resultPending'
@@ -463,7 +470,10 @@ def run(args):
             issues.append({'url': url, 'kind': 'article', 'message': str(error)})
     if len(candidates) > limit:
         issues.append({'kind': 'limit', 'message': f'{len(candidates)-limit}ページが取得上限で未処理'})
-    international_urls = {source['eventUrl'] for source in config.get('volleyballWorldEvents', [])}
+    international_urls = (
+        {source['eventUrl'] for source in config.get('volleyballWorldEvents', [])}
+        | {source['eventUrl'] for source in config.get('htmlResults', [])}
+    )
     for event in calendar:
         if event['endDate'] < as_of and event['sourceUrl'] not in international_urls:
             continue
@@ -502,6 +512,23 @@ def run(args):
             event['documents'].append({'url': source['url'], 'label': '日本の出場メンバー（JVA）', 'kind': 'entry', 'gender': None})
         except Exception as error:
             issues.append({'url': source['url'], 'kind': 'external', 'message': str(error)})
+    for source in config.get('htmlResults', []):
+        event = next((e for e in events if e['sourceUrl'] == source['eventUrl']), None)
+        if event is None:
+            continue
+        try:
+            results, problems = parse_jva_final_standings(fetcher.get(source['url']), source['url'])
+            for problem in problems:
+                issues.append({'url': source['url'], 'eventId': event['id'], 'kind': 'result', 'message': problem})
+            if results:
+                checked_at = fetcher.records[source['url']]['checkedAt']
+                for result in results:
+                    result['checkedAt'] = checked_at
+                event['entries'] = results
+                event['entryStatus'] = 'published'
+                event['documents'].append({'url': source['url'], 'label': '公式最終順位（JVA）', 'kind': 'result', 'gender': None})
+        except Exception as error:
+            issues.append({'url': source['url'], 'kind': 'result', 'message': str(error)})
     collect_volleyball_world(events, fetcher, config, profiles, overrides.get('aliases', {}), issues, as_of)
     history, history_pdfs = collect_history(fetcher, config, as_of)
     for result_event in history:
@@ -523,7 +550,12 @@ def run(args):
             if document['url'] not in known_documents and document['kind'] != 'result'
         )
         events[existing_index] = result_event
-    retain_unresolved_events(events, old['events'] if old else [], as_of)
+    retain_unresolved_events(
+        events,
+        old['events'] if old else [],
+        as_of,
+        old['players'] if old else [],
+    )
     pdf_count += history_pdfs
     if pdf_count > config['maxPdfs']:
         raise ValueError('結果PDFを含む取得上限超過')
