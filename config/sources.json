@@ -30,6 +30,7 @@
     "https://ybvf.volleyball.ne.jp/",
     "https://ybvf.volleyball.ne.jp/tournament/2026%e5%b9%b4%e5%ba%a6ybvf-series-5-%e3%83%95%e3%82%b8%e3%82%ad%e3%83%8f%e3%82%a6%e3%82%b9-veluna%e3%82%ab%e3%83%83%e3%83%97-%e5%85%ac%e8%aa%8d%e3%83%93%e3%83%bc%e3%83%81%e3%83%90%e3%83%ac%e3%83%bc/",
     "https://www.jva.or.jp/beach_international/2026/ioc-oca2026/",
+    "https://www.jva.or.jp/beach_international/2026/ioc-oca2026/?entry=result",
     "https://www.jva.or.jp/beach_international/2026/ioc-oca2026/?entry=member",
     "https://www.jva.or.jp/beach_international/2026/bpt2026/alanya-2/",
     "https://www.jva.or.jp/beach_international/2026/avc2026/doha/",
@@ -44,6 +45,10 @@
     {
       "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/alanya-2/",
       "url": "https://www.jva.or.jp/beach_international/2026/bpt2026/alanya-2/"
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/avc2026/doha/",
+      "url": "https://www.jva.or.jp/beach_international/2026/avc2026/doha/"
     }
   ],
   "volleyballWorldEvents": [
@@ -1137,7 +1142,36 @@
             "parser": "jbv-ranking"
           }
         ]
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2494.html",
+        "name": "サテライト高萩大会",
+        "category": "BVT2",
+        "startDate": "2026-10-03",
+        "endDate": "2026-10-04",
+        "dateLabel": "2026年10月3日（土）～4日（日）",
+        "venue": "茨城県高萩市・高戸（前浜海岸）特設コート",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/bvt2takahagi_result_men_20261004.pdf",
+            "label": "男子結果・最終順位（10月4日更新）",
+            "gender": "men",
+            "parser": "jbv-ranking"
+          },
+          {
+            "url": "https://www.jbv.jp/news/2025/bvt2takahagi_result_women_20261004.pdf",
+            "label": "女子結果・最終順位（10月4日更新）",
+            "gender": "women",
+            "parser": "jbv-ranking"
+          }
+        ]
       }
     ]
-  }
+  },
+  "htmlResults": [
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/ioc-oca2026/",
+      "url": "https://www.jva.or.jp/beach_international/2026/ioc-oca2026/?entry=result"
+    }
+  ]
 }
