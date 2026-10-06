@@ -60,3 +60,12 @@
 - 同じ記事で男子結果PDFも新しいURLに変わっていた。最新の表は23ペアで、旧版に掲載された福嶋晃介／西村晃一は掲載されていない。公開データも最新版へ合わせた。
 - 今後、相馬の結果記事に設定済みのPDFリンクがなくなった場合は更新を止めて確認する。古いPDFを黙って使い続けない。
 - 10月5日付のルーザートーナメント結果PDFもリンクされている。本戦の最終順位とは別区分のため、本戦順位へ混ぜていない。
+
+## 同日追記：タリン大会と結果未確認大会の追跡
+
+- Volleyball Worldの[タリン大会男子公式最終順位表](https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/futures/tallinn-est/standings/men/)を再確認した。水町泰杜／黒澤孝太組は9位グループ内に明記されている。表の共同順位の2行目以降は順位セルが空白で、チーム詳細リンクもないため、旧解析では見落としていた。
+- 公式の[予選チーム一覧](https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/futures/tallinn-est/teams/men/qualification)にある同ペアの英語名・チームIDと、最終順位表の表記を照合した。9位を掲載し、順位を試合結果から算出していない。
+- 同じ形式の[平潭島大会男子公式最終順位表](https://en.volleyballworld.com/beachvolleyball/competitions/beach-pro-tour/2026/futures/pingtan-chn/standings/men/)にも水町／黒澤組の4位が明記されていた。こちらも旧解析で欠落していたため追加した。
+- 修正後の再解析では、公開済みの順位確認中1件が公式9位となり、平潭島の公式4位も追加された。確認中は0件、公式順位は2199件となった。
+- 全件再取得後の `scripts.audit_sources` ではPDF 99件を点検し、PDF解析エラーは0件。外部リンク候補244件を抽出した。
+- 今後は順位未確認の大会を `reports/update.json` の `resultFollowup.pending` に毎回列挙する。終了1か月後も未確認なら公式資料と読み取りを最終確認し、根拠がない場合のみ出典付きで追跡を終了する。単なる日付経過では自動的に打ち切らない。

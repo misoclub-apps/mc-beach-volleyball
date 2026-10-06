@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Fetch official JBV information locally; publish only validated, attributable facts."""
 import argparse
+import calendar
 import copy
 import hashlib
 import json
@@ -9,7 +10,7 @@ from pathlib import Path
 import re
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 from zoneinfo import ZoneInfo
 from urllib.parse import urlparse
 from urllib.robotparser import RobotFileParser
@@ -215,7 +216,7 @@ def validate(dataset):
                 if pid not in players or pid in members:
                     raise ValueError(f'名簿の重複または不明な選手: {e["id"]} / {pid}')
                 members.add(pid)
-            if entry['status'] not in ('entered', 'reserve', 'withdrawn', 'completed', 'resultPending'):
+            if entry['status'] not in ('entered', 'reserve', 'withdrawn', 'completed', 'resultPending', 'resultUnavailable'):
                 raise ValueError('不明な参加状態')
             if entry['status'] == 'completed' and (not isinstance(entry.get('rank'), int) or entry['rank'] < 1 or not entry.get('resultLabel')):
                 raise ValueError('最終順位が不正です')
@@ -256,7 +257,22 @@ def merge_volleyball_world_entries(event, official_entries, aliases):
     event['entries'] = merged
 
 
-def collect_volleyball_world(events, fetcher, config, profiles, aliases, issues, as_of):
+def match_volleyball_world_standings(standings, official_entries):
+    """Match unlinked final-table names to the same event's official team list."""
+    for result in standings:
+        if result['externalTeamId'] is not None:
+            continue
+        label = normalize(result['teamLabel'])
+        matches = [entry for entry in official_entries
+                   if entry['gender'] == result['gender'] and
+                   normalize('/'.join(name.rsplit(' ', 1)[-1] for name in entry['names'])) == label]
+        if len(matches) != 1:
+            raise ValueError(f'公式最終順位のチーム照合が不確実です: {result["teamLabel"]} / {len(matches)}件')
+        result['externalTeamId'] = matches[0]['externalTeamId']
+    return standings
+
+
+def collect_volleyball_world(events, fetcher, config, profiles, aliases, issues, as_of, result_reviews=None):
     """Collect JPN teams and explicitly configured official match pages only."""
     sources = config.get('volleyballWorldEvents', [])
     all_aliases = dict(aliases)
@@ -277,6 +293,7 @@ def collect_volleyball_world(events, fetcher, config, profiles, aliases, issues,
             issues.append({'url': source['url'], 'kind': 'external',
                            'message': '対応するJVA大会を確認できません'})
             continue
+        closed_review = (result_reviews or {}).get(event['id'], {}).get('status') == 'closed'
         jva_teams = jva_rosters.get(source['eventUrl'], [])
         if jva_teams:
             event['entries'] = jva_teams
@@ -296,7 +313,7 @@ def collect_volleyball_world(events, fetcher, config, profiles, aliases, issues,
         official_entries = list({entry['externalTeamId']: entry for entry in reversed(official_entries)}.values())
         if team_pages_complete:
             merge_volleyball_world_entries(event, official_entries, all_aliases)
-        if event.get('endDate') and event['endDate'] < as_of and team_pages_complete:
+        if event.get('endDate') and event['endDate'] < as_of and team_pages_complete and not closed_review:
             standings, standings_complete = [], True
             for gender in source.get('genders', ('men', 'women')):
                 url = f'{source["url"].rstrip("/")}/standings/{gender}/'
@@ -306,6 +323,13 @@ def collect_volleyball_world(events, fetcher, config, profiles, aliases, issues,
                 except Exception as error:
                     standings_complete = False
                     issues.append({'url': url, 'eventId': event['id'], 'kind': 'result',
+                                   'message': str(error)})
+            if standings_complete:
+                try:
+                    match_volleyball_world_standings(standings, official_entries)
+                except ValueError as error:
+                    standings_complete = False
+                    issues.append({'url': source['url'], 'eventId': event['id'], 'kind': 'result',
                                    'message': str(error)})
             if standings_complete and standings:
                 by_team = {result['externalTeamId']: result for result in standings}
@@ -321,14 +345,21 @@ def collect_volleyball_world(events, fetcher, config, profiles, aliases, issues,
                     entry['status'] = 'resultPending'
                 event['entryStatus'] = 'resultPending'
                 event['resultCoverage'] = '公式最終順位表に日本ペアの順位を確認できないため、公開済み名簿を保持しています。'
+            else:
+                for entry in event['entries']:
+                    if entry['status'] == 'entered':
+                        entry['status'] = 'resultPending'
+                event['entryStatus'] = 'resultPending'
+                event['resultCoverage'] = '公式最終順位の読み取りを確認中です。公開済み名簿を保持しています。'
         event['matches'] = []
         match_urls = list(source.get('matchUrls', []))
-        try:
-            match_urls.extend(discover_volleyball_world_japan_match_urls(
-                fetcher.get(source['url']), source['url']))
-        except Exception as error:
-            issues.append({'url': source['url'], 'eventId': event['id'], 'kind': 'discovery',
-                           'message': str(error)})
+        if not closed_review:
+            try:
+                match_urls.extend(discover_volleyball_world_japan_match_urls(
+                    fetcher.get(source['url']), source['url']))
+            except Exception as error:
+                issues.append({'url': source['url'], 'eventId': event['id'], 'kind': 'discovery',
+                               'message': str(error)})
         for url in dict.fromkeys(match_urls):
             try:
                 event['matches'].append(parse_volleyball_world_match(fetcher.get(url), url))
@@ -370,6 +401,69 @@ def retain_unresolved_events(events, previous_events, as_of, previous_players=()
         existing_urls.add(event['sourceUrl'])
         retained += 1
     return retained
+
+
+def one_month_after(day):
+    value = date.fromisoformat(day)
+    year, month = value.year + (value.month == 12), value.month % 12 + 1
+    return date(year, month, min(value.day, calendar.monthrange(year, month)[1])).isoformat()
+
+
+def apply_result_reviews(events, reviews, as_of):
+    """Close a result search only after a sourced, explicit final review."""
+    known = {event['id']: event for event in events}
+    for event_id, review in reviews.items():
+        event = known.get(event_id)
+        if not event:
+            raise ValueError(f'結果確認終了の大会が見つかりません: {event_id}')
+        if review.get('status') != 'closed' or not review.get('reviewedAt') or not review.get('reason') or not review.get('sources'):
+            raise ValueError(f'結果確認終了の根拠が不足しています: {event_id}')
+        try:
+            date.fromisoformat(review['reviewedAt'])
+        except ValueError as error:
+            raise ValueError(f'結果確認終了の日付が不正です: {event_id}') from error
+        if not all(isinstance(url, str) and urlparse(url).scheme == 'https' for url in review['sources']):
+            raise ValueError(f'結果確認終了の出典URLが不正です: {event_id}')
+        if as_of < one_month_after(event['endDate']) or review['reviewedAt'] < one_month_after(event['endDate']):
+            raise ValueError(f'1か月経過前に結果確認を終了できません: {event_id}')
+        if any(entry['status'] == 'completed' for entry in event['entries']):
+            raise ValueError(f'公式順位がある大会の確認終了指定を見直してください: {event_id}')
+        if not any(entry['status'] in ('entered', 'resultPending', 'resultUnavailable') for entry in event['entries']):
+            raise ValueError(f'結果確認終了の対象名簿がありません: {event_id}')
+        for entry in event['entries']:
+            if entry['status'] in ('entered', 'resultPending'):
+                entry['status'] = 'resultUnavailable'
+        event['entryStatus'] = 'resultUnavailable'
+        event['resultCoverage'] = '公式の最終順位を確認できませんでした。大会情報・公開済み名簿へのリンクを残しています。'
+        event['resultReview'] = review
+
+
+def result_followup(events, as_of, previous_events=()):
+    """Put every unresolved event on the next update's explicit audit list."""
+    pending, closed, resolved = [], [], []
+    current_by_id = {event['id']: event for event in events}
+    for previous in previous_events:
+        if not any(entry['status'] == 'resultPending' for entry in previous['entries']):
+            continue
+        current = current_by_id.get(previous['id'])
+        if current is None:
+            raise ValueError(f'順位確認中の大会が更新時に消えています: {previous["id"]}')
+        if not any(entry['status'] in ('resultPending', 'resultUnavailable', 'completed') for entry in current['entries']):
+            raise ValueError(f'順位確認中の大会の結果状態が失われています: {previous["id"]}')
+        if any(entry['status'] == 'completed' for entry in current['entries']):
+            resolved.append({'eventId': current['id'], 'name': current['name'],
+                             'results': [{'rank': entry['rank'], 'sourceUrl': entry['sourceUrl']}
+                                         for entry in current['entries'] if entry['status'] == 'completed']})
+    for event in events:
+        if any(entry['status'] == 'resultUnavailable' for entry in event['entries']):
+            closed.append({'eventId': event['id'], 'name': event['name'],
+                           'reviewedAt': event['resultReview']['reviewedAt']})
+        elif any(entry['status'] == 'resultPending' for entry in event['entries']):
+            deadline = one_month_after(event['endDate'])
+            pending.append({'eventId': event['id'], 'name': event['name'],
+                            'sourceUrl': event['sourceUrl'], 'endDate': event['endDate'],
+                            'finalReviewDue': deadline, 'action': 'finalReview' if as_of >= deadline else 'weeklyCheck'})
+    return {'pending': pending, 'closed': closed, 'resolvedSincePrevious': resolved}
 
 
 def run(args):
@@ -516,6 +610,8 @@ def run(args):
         event = next((e for e in events if e['sourceUrl'] == source['eventUrl']), None)
         if event is None:
             continue
+        if overrides.get('resultReviews', {}).get(event['id'], {}).get('status') == 'closed':
+            continue
         try:
             results, problems = parse_jva_final_standings(fetcher.get(source['url']), source['url'])
             for problem in problems:
@@ -529,8 +625,13 @@ def run(args):
                 event['documents'].append({'url': source['url'], 'label': '公式最終順位（JVA）', 'kind': 'result', 'gender': None})
         except Exception as error:
             issues.append({'url': source['url'], 'kind': 'result', 'message': str(error)})
-    collect_volleyball_world(events, fetcher, config, profiles, overrides.get('aliases', {}), issues, as_of)
-    history, history_pdfs = collect_history(fetcher, config, as_of)
+    collect_volleyball_world(events, fetcher, config, profiles, overrides.get('aliases', {}), issues, as_of,
+                             overrides.get('resultReviews', {}))
+    closed_result_ids = {event_id for event_id, review in overrides.get('resultReviews', {}).items()
+                         if review.get('status') == 'closed'}
+    closed_result_urls = {event['sourceUrl'] for event in events + (old['events'] if old else [])
+                          if event['id'] in closed_result_ids}
+    history, history_pdfs = collect_history(fetcher, config, as_of, closed_result_urls)
     for result_event in history:
         existing_index = next((i for i, event in enumerate(events)
                                if event['sourceUrl'] == result_event['sourceUrl']), None)
@@ -556,6 +657,8 @@ def run(args):
         as_of,
         old['players'] if old else [],
     )
+    apply_result_reviews(events, overrides.get('resultReviews', {}), as_of)
+    followup = result_followup(events, as_of, old['events'] if old else [])
     pdf_count += history_pdfs
     if pdf_count > config['maxPdfs']:
         raise ValueError('結果PDFを含む取得上限超過')
@@ -574,6 +677,7 @@ def run(args):
     if not events or not any(e['entries'] for e in events):
         raise ValueError('有効な大会・出場データがありません。公開データは変更しません。')
     write_json(ROOT / 'reports/update.json', {'at': now(), 'issues': issues, 'skipped': skipped,
+                                             'resultFollowup': followup,
                                              'warnings': fetcher.warnings, 'sources': fetcher.records})
     # Hard fetch/discovery failures must not erase the last good snapshot.
     failures = [i for i in issues if i['kind'] in ('fetch', 'discovery', 'article', 'limit', 'external', 'date')]

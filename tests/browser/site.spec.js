@@ -303,3 +303,20 @@ test("個人順位の大会も選手ページへ辿れる", async ({ page }) => 
       .first(),
   ).toBeVisible();
 });
+
+test("最終確認を終えた大会は選手とのリンクを残して未確認と表示する", async ({ page }) => {
+  const fixture = structuredClone(snapshot);
+  const event = fixture.events.find((item) => item.id === "e-531409aa8438dc");
+  event.entries[0].status = "resultUnavailable";
+  delete event.entries[0].rank;
+  delete event.entries[0].resultLabel;
+  event.entryStatus = "resultUnavailable";
+  event.resultCoverage = "公式の最終順位を確認できませんでした。";
+  await page.route("**/data/beach.json", (route) => route.fulfill({ json: fixture }));
+  await page.goto(`/#event/${event.id}`);
+  await expect(page.getByRole("heading", { name: "試合結果" })).toBeVisible();
+  await expect(page.locator(".event-results")).toContainText("最終順位未確認");
+  await expect(page.locator(".team")).toHaveCount(1);
+  await page.locator(".team a").first().click();
+  await expect(page.locator(".past-results .appearance").filter({ hasText: event.name })).toContainText("最終順位未確認");
+});

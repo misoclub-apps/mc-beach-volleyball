@@ -378,16 +378,19 @@ def parse_volleyball_world_final_standings(html, gender, source_url):
         row = BeautifulSoup(f'<table>{raw_row}</table>', 'html.parser').select_one('tr')
         flag = row.select_one('img[src*="flag_jpn"]')
         team_link = row.select_one(f'a[href*="/teams/{gender}/"][href*="/schedule"]')
-        if not flag or not team_link:
+        if not flag:
             continue
-        team_match = re.search(rf'/teams/{gender}/(\d+)/schedule', team_link.get('href', ''))
+        team_match = re.search(rf'/teams/{gender}/(\d+)/schedule', team_link.get('href', '')) if team_link else None
+        team_name = row.select_one('.vbw-mu__team__name:not(.vbw-mu__team__name--abbr)')
+        team_label = team_name.get_text(' ', strip=True) if team_name else ''
         position = row.select_one('.position')
         rank_text = position.get_text(strip=True) if position else ''
         rank_match = re.search(r'(\d+)$', ' '.join(row.get('class', [])))
         rank = int(rank_text) if rank_text.isdigit() else int(rank_match.group(1)) if rank_match else None
-        if not team_match or not rank:
+        if (not team_match and not team_label) or not rank:
             raise ValueError('Volleyball WorldのJPN最終順位を解析できません')
-        results.append({'externalTeamId': int(team_match.group(1)), 'gender': gender,
+        results.append({'externalTeamId': int(team_match.group(1)) if team_match else None,
+                        'teamLabel': team_label, 'gender': gender,
                         'rank': rank, 'sourceUrl': source_url})
     return results
 

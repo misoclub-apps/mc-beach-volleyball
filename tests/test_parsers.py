@@ -2,7 +2,7 @@ import io
 import unittest
 from unittest.mock import patch, MagicMock
 from scripts.parsers import dates_from_label, parse_article, parse_calendar, parse_profile_image, parse_profiles, parse_roster, parse_jva_calendar, parse_jva_final_standings, parse_jva_teams, parse_volleyball_world_final_standings, parse_volleyball_world_match, parse_volleyball_world_teams, normalize
-from scripts.update import apply_event_overrides, compile_players, merge_volleyball_world_entries, retain_unresolved_events, validate
+from scripts.update import apply_event_overrides, apply_result_reviews, compile_players, match_volleyball_world_standings, merge_volleyball_world_entries, one_month_after, result_followup, retain_unresolved_events, validate
 
 
 class ParsersTest(unittest.TestCase):
@@ -212,5 +212,41 @@ class ParsersTest(unittest.TestCase):
         <td><img src="/flag_jpn"><a href="/teams/women/456/schedule/">Japan</a></td></tr></table>'''
         results = parse_volleyball_world_final_standings(html, 'women', 'https://official.example/standings')
         self.assertEqual([(item['externalTeamId'], item['rank']) for item in results], [(123, 5), (456, 9)])
+
+    def test_volleyball_world_unlinked_final_row_matches_official_team(self):
+        html = '''<table class="vbw-o-table"><tr><td>pool</td></tr></table>
+        <table class="vbw-o-table"><tr class="vbw-o-table__row vbw-o-table__row--9"><td class="position">9</td><td>Other team</td></tr>
+        <tr class="vbw-o-table__row vbw-o-table__row---9"><td class="position"></td><td><img src="/flag_jpn">
+        <div class="vbw-mu__team__name">Mizumachi / Kurosawa</div></td></tr></table>'''
+        results = parse_volleyball_world_final_standings(html, 'men', 'https://official.example/standings')
+        teams = [{'names': ['Taito Mizumachi', 'Kota Kurosawa'], 'gender': 'men', 'externalTeamId': 3171989}]
+        self.assertEqual(match_volleyball_world_standings(results, teams)[0]['externalTeamId'], 3171989)
+        self.assertEqual(results[0]['rank'], 9)
+        results[0]['externalTeamId'] = None
+        with self.assertRaisesRegex(ValueError, '照合が不確実'):
+            match_volleyball_world_standings(results, teams + [dict(teams[0], externalTeamId=2)])
+
+    def test_pending_result_requires_final_review_after_one_calendar_month(self):
+        self.assertEqual(one_month_after('2026-01-31'), '2026-02-28')
+        event = {'id': 'e-past', 'name': '大会', 'sourceUrl': 'https://official.example/event/',
+                 'endDate': '2026-09-26', 'entries': [{'status': 'resultPending'}]}
+        self.assertEqual(result_followup([event], '2026-10-06')['pending'][0]['action'], 'weeklyCheck')
+        self.assertEqual(result_followup([event], '2026-10-26')['pending'][0]['action'], 'finalReview')
+        review = {'status': 'closed', 'reviewedAt': '2026-10-26', 'reason': '公式最終順位を確認できない',
+                  'sources': ['https://official.example/event/']}
+        with self.assertRaisesRegex(ValueError, '1か月経過前'):
+            apply_result_reviews([event], {'e-past': review}, '2026-10-25')
+        apply_result_reviews([event], {'e-past': review}, '2026-10-26')
+        self.assertEqual(event['entries'][0]['status'], 'resultUnavailable')
+        self.assertEqual(result_followup([event], '2026-11-02')['pending'], [])
+
+    def test_pending_result_cannot_disappear_silently(self):
+        previous = {'id': 'e-past', 'name': '大会', 'entries': [{'status': 'resultPending'}]}
+        with self.assertRaisesRegex(ValueError, '消えています'):
+            result_followup([], '2026-10-06', [previous])
+        current = {'id': 'e-past', 'name': '大会', 'entries': [
+            {'status': 'completed', 'rank': 9, 'sourceUrl': 'https://official.example/result'}]}
+        report = result_followup([current], '2026-10-06', [previous])
+        self.assertEqual(report['resolvedSincePrevious'][0]['results'][0]['rank'], 9)
 
 if __name__ == '__main__': unittest.main()

@@ -46,7 +46,7 @@ const range = (event) =>
 const badge = (entry, event, showResultLabel = true) =>
   entry.status === "completed"
     ? `<span class="result-field${showResultLabel ? "" : " is-compact"}${entry.rank === 1 ? " is-winner" : ""}">${showResultLabel ? "<span>結果</span>" : ""}<strong>${h(entry.resultLabel)}</strong>${entry.rank === 1 ? '<span class="winner-mark" aria-hidden="true">★</span>' : ""}</span>`
-    : `<span class="badge ${entry.status === "entered" ? "" : "sand"}">${h(entry.internationalStage === "main-draw" ? "本戦" : entry.internationalStage === "qualification" ? "予選" : { entered: event && !isUpcoming(event) ? "名簿掲載" : "出場予定", resultPending: "順位確認中", reserve: "リザーブ", withdrawn: "欠場" }[entry.status] || "確認中")}</span>`;
+    : `<span class="badge ${entry.status === "entered" ? "" : "sand"}">${h(entry.status === "resultUnavailable" ? "最終順位未確認" : entry.internationalStage === "main-draw" ? "本戦" : entry.internationalStage === "qualification" ? "予選" : { entered: event && !isUpcoming(event) ? "名簿掲載" : "出場予定", resultPending: "順位確認中", reserve: "リザーブ", withdrawn: "欠場" }[entry.status] || "確認中")}</span>`;
 const favorite = (p) =>
   `<button class="favorite ${saved.includes(p.id) ? "is-saved" : ""}" data-save="${p.id}" aria-pressed="${saved.includes(p.id)}" aria-label="${h(p.name)}をお気に入り${saved.includes(p.id) ? "から削除" : "に追加"}">${saved.includes(p.id) ? "★" : "☆"}</button>`;
 const portrait = (p, large = false) =>
@@ -156,12 +156,12 @@ function playerPage(id) {
   const all = appearances(data, id);
   const plans = all.filter((a) => isUpcoming(a.event));
   const results = all
-    .filter((a) => ["completed", "resultPending"].includes(a.entry.status))
+    .filter((a) => ["completed", "resultPending", "resultUnavailable"].includes(a.entry.status))
     .sort((a, b) => b.event.endDate.localeCompare(a.event.endDate));
   const ended = all.filter(
     (a) =>
       !isUpcoming(a.event) &&
-      !["completed", "resultPending"].includes(a.entry.status),
+      !["completed", "resultPending", "resultUnavailable"].includes(a.entry.status),
   );
   document.title = `${p.name}の出場予定・大会結果 | BEACH NOTE`;
   main.innerHTML = `<a class="back-link" href="#players">← 選手一覧へ</a><section class="profile-heading"><div class="profile-identity">${portrait(p, true)}<div><p class="eyebrow">${genderName(p.gender)} / PLAYER NOTE</p><h1>${h(p.name)}</h1><p class="roman">${h(p.roman)}</p></div></div><div class="profile-actions">${favorite(p)}${p.profileUrl ? external(p.profileUrl, "公式プロフィール") : ""}</div></section><div class="profile-layout"><section><div class="section-heading"><h2>これからの出場予定</h2><span>${plans.length} 大会</span></div>${plans.length ? plans.map((a) => appearanceCard(a, id)).join("") : empty("公開された出場予定はありません", '<p>名簿公開前の大会や未収録の大会に出場する場合もあります。</p><a class="button" href="#events">大会カレンダーへ</a>')}<section class="past-results" aria-labelledby="past-results-heading"><div class="section-heading"><h2 id="past-results-heading">過去の大会結果</h2><span>${results.length} 大会</span></div>${results.length ? results.map((a) => appearanceCard(a, id)).join("") : empty("収録済みの結果はありません", "<p>今後、確認できた公式結果を追加していきます。</p>")}</section>${ended.length ? `<details class="past"><summary>取得済みの終了・中止大会（${ended.length}件）</summary>${ended.map((a) => appearanceCard(a, id)).join("")}</details>` : ""}</section><aside class="note-panel"><p class="eyebrow">ABOUT THIS NOTE</p><h2>公式発表を、<br>そのまま手がかりに。</h2><p>掲載名簿に名前のある大会をまとめています。出場変更や当日の予定は公式情報でご確認ください。</p><p>補欠は「出場予定」と分けて表示しています。</p><p class="small-label">最終取得<br>${stamp(data.checkedAt || data.generatedAt)}</p></aside></div>`;
@@ -211,7 +211,8 @@ function renderEvents() {
             const hasPending = e.entries.some(
               (entry) => entry.status === "resultPending",
             );
-            return `${heading}<a class="event-row" href="#event/${e.id}"><span class="event-date">${range(e)}</span><div><span class="small-label">${h(e.category)}</span><h3>${h(e.name)}</h3><p>${h(e.venue)}</p></div><span class="badge ${hasResults ? "result" : hasPending || !e.entries.length || e.cancelled ? "sand" : ""}">${e.cancelled ? "開催中止" : hasResults ? "結果あり" : hasPending ? "結果確認中" : e.entries.length ? "選手情報あり" : "日程掲載"}</span><span aria-hidden="true">↗</span></a>`;
+            const hasUnavailable = e.entries.some((entry) => entry.status === "resultUnavailable");
+            return `${heading}<a class="event-row" href="#event/${e.id}"><span class="event-date">${range(e)}</span><div><span class="small-label">${h(e.category)}</span><h3>${h(e.name)}</h3><p>${h(e.venue)}</p></div><span class="badge ${hasResults ? "result" : hasPending || hasUnavailable || !e.entries.length || e.cancelled ? "sand" : ""}">${e.cancelled ? "開催中止" : hasResults ? "結果あり" : hasPending ? "結果確認中" : hasUnavailable ? "最終順位未確認" : e.entries.length ? "選手情報あり" : "日程掲載"}</span><span aria-hidden="true">↗</span></a>`;
           })
           .join("")
       : empty(
@@ -236,6 +237,7 @@ function eventPage(id) {
   const hasPending = e.entries.some(
     (entry) => entry.status === "resultPending",
   );
+  const hasUnavailable = e.entries.some((entry) => entry.status === "resultUnavailable");
   const hasResults = resultEntries.length > 0 || resultDocuments.length > 0;
   const unit =
     e.entries.length && e.entries.every((entry) => entry.playerIds.length === 1)
@@ -248,8 +250,8 @@ function eventPage(id) {
     return entry ? [{ gender, entry }] : [];
   });
   const resultSummary =
-    hasResults || hasPending
-      ? `<section class="event-results" aria-labelledby="event-results-heading"><div class="result-title"><div><p class="eyebrow">OFFICIAL RESULT</p><h2 id="event-results-heading">試合結果</h2></div><span class="badge ${hasResults ? "result" : "sand"}">${hasResults ? "結果掲載" : "結果確認中"}</span></div>${winners.length ? `<div class="winner-grid">${winners.map(({ gender, entry }) => `<article class="winner"><span>${genderName(gender)} 優勝</span><strong>${entry.playerIds.map((playerId) => `<a href="#player/${playerId}">${h(data.players.find((player) => player.id === playerId).name)}</a>`).join('<span class="pair-divider"> / </span>')}</strong></article>`).join("")}</div>` : `<p class="muted">${hasPending ? "公式の最終結果を確認中です。" : "公式の試合結果が公開されています。"}</p>`}<div class="result-documents">${resultDocuments.map((document) => external(document.url, document.label, "button result-button")).join("")}</div></section>`
+    hasResults || hasPending || hasUnavailable
+      ? `<section class="event-results" aria-labelledby="event-results-heading"><div class="result-title"><div><p class="eyebrow">OFFICIAL RESULT</p><h2 id="event-results-heading">試合結果</h2></div><span class="badge ${hasResults ? "result" : "sand"}">${hasResults ? "結果掲載" : hasPending ? "結果確認中" : "最終順位未確認"}</span></div>${winners.length ? `<div class="winner-grid">${winners.map(({ gender, entry }) => `<article class="winner"><span>${genderName(gender)} 優勝</span><strong>${entry.playerIds.map((playerId) => `<a href="#player/${playerId}">${h(data.players.find((player) => player.id === playerId).name)}</a>`).join('<span class="pair-divider"> / </span>')}</strong></article>`).join("")}</div>` : `<p class="muted">${hasPending ? "公式の最終結果を確認中です。" : hasUnavailable ? "公式の最終順位を確認できませんでした。" : "公式の試合結果が公開されています。"}</p>`}<div class="result-documents">${resultDocuments.map((document) => external(document.url, document.label, "button result-button")).join("")}</div></section>`
       : "";
   const internationalMatches = e.matches || [];
   const matchSummary = Array.isArray(e.matches)
@@ -276,7 +278,7 @@ function eventPage(id) {
     e.entryStatus === "review"
       ? "参加名簿の一部は確認中です。掲載のない選手については公式資料をご覧ください。"
       : "取得時点で出場選手の発表を確認できていません。公式ページで最新情報をご確認ください。";
-  main.innerHTML = `<a class="back-link" href="#events">← 大会カレンダーへ</a><section class="event-heading"><p class="eyebrow">${h(e.category)} / TOURNAMENT NOTE</p><h1>${h(e.name)}</h1><div class="event-meta"><strong>${range(e)}</strong><p>${h(e.venue)}</p>${e.cancelled ? '<span class="badge sand">開催中止</span>' : hasResults ? '<span class="badge result">結果掲載</span>' : hasPending ? '<span class="badge sand">結果確認中</span>' : ""}</div>${external(e.sourceUrl, "公式の大会情報を見る", "button primary")}</section>${resultSummary}${matchSummary}<div class="profile-layout"><section><div class="section-heading"><h2>${hasResults ? `最終順位・${unit}` : hasPending ? `参加${unit}・結果確認状況` : `出場選手・${unit}`}</h2><span>${e.entries.length} ${unit}</span></div>${e.resultCoverage ? `<p class="notice">${h(e.resultCoverage)}</p>` : ""}${e.entryStatus === "review" || !e.entries.length ? `<p class="notice">${status}</p>` : ""}${[
+  main.innerHTML = `<a class="back-link" href="#events">← 大会カレンダーへ</a><section class="event-heading"><p class="eyebrow">${h(e.category)} / TOURNAMENT NOTE</p><h1>${h(e.name)}</h1><div class="event-meta"><strong>${range(e)}</strong><p>${h(e.venue)}</p>${e.cancelled ? '<span class="badge sand">開催中止</span>' : hasResults ? '<span class="badge result">結果掲載</span>' : hasPending ? '<span class="badge sand">結果確認中</span>' : hasUnavailable ? '<span class="badge sand">最終順位未確認</span>' : ""}</div>${external(e.sourceUrl, "公式の大会情報を見る", "button primary")}</section>${resultSummary}${matchSummary}<div class="profile-layout"><section><div class="section-heading"><h2>${hasResults ? `最終順位・${unit}` : hasPending ? `参加${unit}・結果確認状況` : `出場選手・${unit}`}</h2><span>${e.entries.length} ${unit}</span></div>${e.resultCoverage ? `<p class="notice">${h(e.resultCoverage)}</p>` : ""}${e.entryStatus === "review" || !e.entries.length ? `<p class="notice">${status}</p>` : ""}${[
     "men",
     "women",
   ]

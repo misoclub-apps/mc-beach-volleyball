@@ -202,7 +202,7 @@ def verify_direct_result_links(page, page_url, documents):
         raise ValueError(f'公式記事の結果PDFリンクが変更されました: {missing}')
 
 
-def collect_history(fetcher, config, as_of):
+def collect_history(fetcher, config, as_of, closed_result_urls=()):
     settings = config.get('history')
     if not settings:
         return [], 0
@@ -211,6 +211,8 @@ def collect_history(fetcher, config, as_of):
     events, pdf_count = [], 0
     for source in settings['events']:
         url = source['url']
+        if url in closed_result_urls:
+            continue
         link = next((a for a in soup.select('a[href]') if a['href'] == url), None)
         dl = link.find_parent('dl') if link else None
         if dl is None:
@@ -250,6 +252,8 @@ def collect_history(fetcher, config, as_of):
                        'entries': entries, 'entryStatus': 'published', 'resultCoverage': source['coverage'],
                        'checkedAt': fetcher.records[results_url]['checkedAt']})
     for source in settings.get('directEvents', []):
+        if source['url'] in closed_result_urls:
+            continue
         if source['endDate'] >= as_of:
             continue
         page_url = source.get('pageUrl', source['url'])

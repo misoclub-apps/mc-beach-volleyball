@@ -1,10 +1,20 @@
 import unittest
 from unittest.mock import MagicMock, patch
 from bs4 import BeautifulSoup
-from scripts.history import parse_jbv_rankings, parse_results, verify_direct_result_links
+from scripts.history import collect_history, parse_jbv_rankings, parse_results, verify_direct_result_links
 
 
 class HistoryTests(unittest.TestCase):
+    def test_closed_result_is_not_fetched_again(self):
+        fetcher = MagicMock()
+        fetcher.get.return_value = b'<main></main>'
+        config = {'history': {'indexUrl': 'https://official.example/index', 'events': [],
+                              'directEvents': [{'url': 'https://official.example/event',
+                                                'endDate': '2026-09-01'}]}}
+        self.assertEqual(collect_history(fetcher, config, '2026-10-06',
+                                         {'https://official.example/event'}), ([], 0))
+        fetcher.get.assert_called_once_with('https://official.example/index')
+
     def test_result_article_pdf_replacement_requires_review(self):
         page = BeautifulSoup('<a href="new-women.pdf">女子結果・最終順位</a>', 'html.parser')
         with self.assertRaisesRegex(ValueError, 'リンクが変更'):
