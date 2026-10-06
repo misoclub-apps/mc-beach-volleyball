@@ -1133,12 +1133,19 @@
         "endDate": "2026-09-27",
         "dateLabel": "2026年9月26日（土）～27日（日）",
         "venue": "福島県相馬市・尾浜ビーチバレーボール場",
-        "coverage": "男子の公式最終順位表を収録。女子結果PDFは最終順位と一部試合が未記入のため、結果が揃うまで掲載していません。",
+        "coverage": "JBV公式結果PDFの男子・女子最終順位表を収録しています。",
+        "requireDocumentLinks": true,
         "documents": [
           {
-            "url": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260926.pdf",
-            "label": "男子結果（9月27日更新）",
+            "url": "https://www.jbv.jp/news/2025/BVT2_soma_result_men_20260927.pdf",
+            "label": "男子結果・最終順位（9月27日更新）",
             "gender": "men",
+            "parser": "jbv-ranking"
+          },
+          {
+            "url": "https://www.jbv.jp/news/2024_1/BVT2_soma_result_women_20260927.pdf",
+            "label": "女子結果・最終順位（9月27日更新）",
+            "gender": "women",
             "parser": "jbv-ranking"
           }
         ]

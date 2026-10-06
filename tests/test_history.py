@@ -1,9 +1,20 @@
 import unittest
 from unittest.mock import MagicMock, patch
-from scripts.history import parse_jbv_rankings, parse_results
+from bs4 import BeautifulSoup
+from scripts.history import parse_jbv_rankings, parse_results, verify_direct_result_links
 
 
 class HistoryTests(unittest.TestCase):
+    def test_result_article_pdf_replacement_requires_review(self):
+        page = BeautifulSoup('<a href="new-women.pdf">女子結果・最終順位</a>', 'html.parser')
+        with self.assertRaisesRegex(ValueError, 'リンクが変更'):
+            verify_direct_result_links(page, 'https://official.example/event', [
+                {'url': 'https://official.example/old-women.pdf'}
+            ])
+        verify_direct_result_links(page, 'https://official.example/event', [
+            {'url': 'https://official.example/new-women.pdf'}
+        ])
+
     def parse(self, rows, corrections=None, title='JAPAN BEACH VOLLEYBALL TOUR 2026\n試合結果順位【女子】'):
         page = MagicMock()
         page.extract_text.return_value = title

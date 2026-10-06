@@ -194,6 +194,14 @@ def parse_jbv_rankings(raw, gender):
     return teams
 
 
+def verify_direct_result_links(page, page_url, documents):
+    """Catch a result article that silently replaced its configured PDF links."""
+    published = {safe_url(page_url, link['href']) for link in page.select('a[href]')}
+    missing = [document['url'] for document in documents if document['url'] not in published]
+    if missing:
+        raise ValueError(f'公式記事の結果PDFリンクが変更されました: {missing}')
+
+
 def collect_history(fetcher, config, as_of):
     settings = config.get('history')
     if not settings:
@@ -250,6 +258,8 @@ def collect_history(fetcher, config, as_of):
         page_text = normalize(page.get_text(' ', strip=True))
         if normalize(source.get('matchText', source['name'])) not in page_text:
             raise ValueError(f'過去大会ページの内容が変わっています: {page_url}')
+        if source.get('requireDocumentLinks'):
+            verify_direct_result_links(page, page_url, source['documents'])
         entries, docs = [], []
         for document in source['documents']:
             pdf_count += 1

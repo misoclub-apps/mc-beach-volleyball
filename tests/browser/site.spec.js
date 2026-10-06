@@ -42,8 +42,11 @@ test("選手検索 → 予定 → 大会 → 選手の往復", async ({ page }) 
   ).toHaveAttribute("href", /#page=10$/);
   const soma = page
     .locator(".past-results .appearance")
-    .filter({ has: page.getByText("順位確認中", { exact: true }) });
-  await expect(soma.locator(".badge")).toHaveText("順位確認中");
+    .filter({ hasText: "相馬市長杯ジャパンビーチバレーボールツアー2026" });
+  await expect(soma.locator(".appearance-result")).toHaveText("最終順位5位");
+  await expect(
+    soma.getByRole("link", { name: "公式の結果 PDF" }),
+  ).toHaveAttribute("href", /BVT2_soma_result_women_20260927\.pdf#page=2$/);
   await expect(
     soma.getByRole("link", { name: "公式の大会情報" }),
   ).toHaveAttribute("href", /entry-2493\.html$/);
