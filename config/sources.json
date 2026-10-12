@@ -1172,6 +1172,58 @@
             "parser": "jbv-ranking"
           }
         ]
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2495.html",
+        "name": "サテライト岐阜大会",
+        "category": "BVT2",
+        "startDate": "2026-10-10",
+        "endDate": "2026-10-11",
+        "dateLabel": "2026年10月10日（土）～11日（日）",
+        "venue": "岐阜県海津市・長良川サービスセンターサンドコート",
+        "matchText": "サテライト岐阜大会",
+        "requireDocumentLinks": true,
+        "coverage": "男女の公式最終順位表に掲載されたペアを収録。",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/BVT2_gifu_result_men_20261011.pdf",
+            "label": "男子結果・最終順位（10月11日更新）",
+            "gender": "men",
+            "parser": "jbv-ranking"
+          },
+          {
+            "url": "https://www.jbv.jp/news/2025/BVT2_gifu_result_women_20261011.pdf",
+            "label": "女子結果・最終順位（10月11日更新）",
+            "gender": "women",
+            "parser": "jbv-ranking"
+          }
+        ]
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2496.html",
+        "name": "川崎市長杯 JVA第18回ビーチバレーボール大会",
+        "category": "JBVs",
+        "startDate": "2026-10-10",
+        "endDate": "2026-10-11",
+        "dateLabel": "2026年10月10日（土）～11日（日）",
+        "venue": "神奈川県川崎市・川崎マリエンビーチバレーコート",
+        "matchText": "川崎市長杯 JVA第18回ビーチバレーボール大会",
+        "requireDocumentLinks": true,
+        "coverage": "男女の公式最終順位表に掲載されたペアを収録。",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/kawasakicup_18th_men_result_20261011.pdf",
+            "label": "男子結果・最終順位（10月11日更新）",
+            "gender": "men",
+            "parser": "jbv-ranking"
+          },
+          {
+            "url": "https://www.jbv.jp/news/2025/kawasakicup_18th_women_result_20261011.pdf",
+            "label": "女子結果・最終順位（10月11日更新）",
+            "gender": "women",
+            "parser": "jbv-ranking"
+          }
+        ]
       }
     ]
   },

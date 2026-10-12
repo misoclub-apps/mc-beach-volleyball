@@ -44,6 +44,16 @@ class ParsersTest(unittest.TestCase):
         event = parse_article(html, 'https://www.jbv.jp/news/entry-2.html', 2026)
         self.assertEqual(event['venue'], '静岡県浜松市・遠州灘海浜公園江之島ビーチコート')
 
+    def test_official_open_and_cup_titles_with_explicit_date(self):
+        for title, date in (
+            ('第12回ビーチバレーボール九州サーキット大崎オープン', '2026年11月14日(土)'),
+            ('Ocean Fun Fest 2026ビーチバレー宮古島杯', '2026年12月12日(土)・13日(日)'),
+        ):
+            html = f'<div id="contents_Right"><h2>{title}</h2><div class="release_entry">開催日／{date}<br>会場／ビーチコート</div></div>'
+            event = parse_article(html, 'https://www.jbv.jp/schedule/entry-1.html', 2026)
+            self.assertIsNotNone(event, title)
+            self.assertEqual(event['startDate'].split('-')[0], '2026')
+
     def test_no_inference_from_publication_date(self):
         html = '<div id="contents_Right"><h2>大会のお知らせ</h2><div class="release_entry">2026年9月22日<br>◆申込期限／2026年10月1日</div></div>'
         self.assertIsNone(parse_article(html, 'https://www.jbv.jp/news/x.html', 2026))

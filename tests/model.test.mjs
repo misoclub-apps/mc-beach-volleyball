@@ -17,16 +17,15 @@ test("名前の空白・全半角・異体字を吸収する", () =>
   assert.equal(normalize("髙橋　大地"), normalize("高橋大地")));
 test("日本時間の日付で予定を判定する", () =>
   assert.equal(todayJst(new Date("2026-09-21T16:00:00Z")), "2026-09-22"));
-test("高萩・川崎の実データから酒井春海の出場予定を引ける", () => {
-  const [p] = filterPlayers(data, {
-    query: "酒井 春海",
-    upcoming: true,
-    today: data.asOf,
-  });
+test("高萩・川崎の公式結果から酒井春海の過去大会を引ける", () => {
+  const [p] = filterPlayers(data, { query: "酒井 春海", upcoming: false });
   assert.ok(p);
-  const names = appearances(data, p.id).map((a) => a.event.name);
-  assert.ok(names.some((n) => n.includes("高萩")));
-  assert.ok(names.some((n) => n.includes("川崎")));
+  const results = appearances(data, p.id).filter((a) =>
+    ["高萩", "川崎市長杯"].some((name) => a.event.name.includes(name)),
+  );
+  assert.equal(results.length, 2);
+  assert.ok(results.every((a) => a.entry.status === "completed"));
+  assert.ok(results.every((a) => a.entry.rank === 5));
 });
 test("補欠のみの選手を出場予定フィルターに混ぜない", () => {
   const d = {

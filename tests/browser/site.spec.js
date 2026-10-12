@@ -17,8 +17,9 @@ test.beforeEach(async ({ page }) => {
   });
 });
 
-test("選手検索 → 予定 → 大会 → 選手の往復", async ({ page }) => {
+test("選手検索 → 過去結果 → 大会 → 選手の往復", async ({ page }) => {
   await page.goto("/");
+  await page.getByLabel("出場予定のある選手").uncheck();
   await page.getByLabel("選手名", { exact: true }).fill("酒井 春海");
   await expect(page.locator(".player-row")).toHaveCount(1);
   await page.locator(".player-link").click();
@@ -66,11 +67,13 @@ test("選手検索 → 予定 → 大会 → 選手の往復", async ({ page }) 
 
 test("お気に入り保存と再読み込み、空検索の回復", async ({ page }) => {
   await page.goto("/");
+  await page.getByLabel("出場予定のある選手").uncheck();
   await page.getByLabel("選手名", { exact: true }).fill("酒井春海");
   await page.locator("[data-save]").click();
   await page.getByLabel("選手名", { exact: true }).fill("");
   await expect(page.locator(".player-row h3").first()).toHaveText("酒井春海");
   await page.reload();
+  await page.getByLabel("出場予定のある選手").uncheck();
   await expect(page.locator(".player-row h3").first()).toHaveText("酒井春海");
   await page.getByLabel("お気に入りだけ", { exact: true }).check();
   await expect(page.locator(".player-row")).toHaveCount(1);
@@ -84,6 +87,7 @@ test("お気に入り保存と再読み込み、空検索の回復", async ({ pa
 
 test("大会検索と男女フィルターが機能する", async ({ page }) => {
   await page.goto("/#events");
+  await page.getByLabel("表示期間").selectOption("past");
   await page.getByLabel("大会名・会場", { exact: true }).fill("川崎市長杯");
   await expect(page.locator(".event-row")).toHaveCount(1);
   await page.goto("/#players");
@@ -186,6 +190,7 @@ test("スマホでも次回大会カードと公式プロフィール画像を�
     return [input.top + input.height / 2, icon.top + icon.height / 2];
   });
   expect(Math.abs(searchCenters[0] - searchCenters[1])).toBeLessThan(1);
+  await page.getByLabel("出場予定のある選手").uncheck();
   await page.getByLabel("選手名", { exact: true }).fill("酒井春海");
   const photo = page.locator(".player-row [data-profile-photo]");
   await expect(photo).toBeVisible();

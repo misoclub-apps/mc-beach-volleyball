@@ -108,7 +108,7 @@ def parse_article(html, url, year):
             date_label += ' / ' + ' / '.join(extra)
     venue = next((re.split(r'[／/:：]', x, maxsplit=1)[-1].strip() for x in lines
                   if re.match(r'^[◆●■\s]*(会\s*場|開催会\s*場|開催地)[／/:：]', x)), '')
-    if not date_label or not re.search(r'大会|カップ|選手権|シリーズ|キング|CUP|Cup|cup', title):
+    if not date_label or not re.search(r'大会|カップ|選手権|シリーズ|キング|オープン|杯|CUP|Cup|cup', title):
         return None
     start, end = dates_from_label(date_label, year)
     explicit_dates = re.findall(r'20\d{2}年\d{1,2}月\d{1,2}日', unicodedata.normalize('NFKC', date_label))
