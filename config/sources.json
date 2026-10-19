@@ -1224,13 +1224,95 @@
             "parser": "jbv-ranking"
           }
         ]
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2506.html#day-1",
+        "name": "U20北信越・小浜（1日目）",
+        "category": "BVT3",
+        "startDate": "2026-10-11",
+        "endDate": "2026-10-11",
+        "dateLabel": "2026-10-11",
+        "venue": "福井県小浜市・若狭鯉川シーサイドパーク",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/BVT3_obama_result_day1_20261011.pdf",
+            "label": "1日目男女結果・順位（10月13日掲載）",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2506.html",
+        "matchText": "アンダーエイジ北信越・小浜大会",
+        "requireDocumentLinks": true,
+        "expectedPairs": 39,
+        "coverage": "公式結果表の男女順位を収録。"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2506.html#day-2",
+        "name": "U20北信越・小浜（2日目）",
+        "category": "BVT3",
+        "startDate": "2026-10-12",
+        "endDate": "2026-10-12",
+        "dateLabel": "2026-10-12",
+        "venue": "福井県小浜市・若狭鯉川シーサイドパーク",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/BVT3_obama_result_day2_20261012.pdf",
+            "label": "2日目男女結果・順位（10月13日掲載）",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2506.html",
+        "matchText": "アンダーエイジ北信越・小浜大会",
+        "requireDocumentLinks": true,
+        "expectedPairs": 39,
+        "coverage": "公式結果表の男女順位を収録。"
       }
     ]
   },
+  "multiDayRosters": [
+    {
+      "url": "https://www.jbv.jp/news/entry-2516.html#day-1",
+      "pageUrl": "https://www.jbv.jp/news/entry-2516.html",
+      "name": "U20東海／新舞子大会（1日目）",
+      "category": "BVT3",
+      "startDate": "2026-10-17",
+      "endDate": "2026-10-17",
+      "dateLabel": "2026-10-17",
+      "venue": "愛知県知多市・新舞子ブルーサンビーチ",
+      "document": {
+        "url": "https://www.jbv.jp/news/2025/BVT3_shinmaiko_seedlist_day1_20261016.pdf",
+        "label": "1日目男女シーディング（10月16日掲載）"
+      },
+      "matchText": "アンダーエイジ東海／新舞子大会",
+      "expectedPairs": 49
+    },
+    {
+      "url": "https://www.jbv.jp/news/entry-2516.html#day-2",
+      "pageUrl": "https://www.jbv.jp/news/entry-2516.html",
+      "name": "U20東海／新舞子大会（2日目）",
+      "category": "BVT3",
+      "startDate": "2026-10-18",
+      "endDate": "2026-10-18",
+      "dateLabel": "2026-10-18",
+      "venue": "愛知県知多市・新舞子ブルーサンビーチ",
+      "document": {
+        "url": "https://www.jbv.jp/news/2025/BVT3_shinmaiko_seedlist_day2_20261016.pdf",
+        "label": "2日目男女シーディング（10月16日掲載）"
+      },
+      "matchText": "アンダーエイジ東海／新舞子大会",
+      "expectedPairs": 60
+    }
+  ],
   "htmlResults": [
     {
       "eventUrl": "https://www.jva.or.jp/beach_international/2026/ioc-oca2026/",
       "url": "https://www.jva.or.jp/beach_international/2026/ioc-oca2026/?entry=result"
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/avc2026/doha/",
+      "url": "https://www.jva.or.jp/beach_international/2026/avc2026/doha/?entry=result"
     }
   ]
 }

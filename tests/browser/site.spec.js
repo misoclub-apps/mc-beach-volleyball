@@ -91,6 +91,7 @@ test("大会検索と男女フィルターが機能する", async ({ page }) => 
   await page.getByLabel("大会名・会場", { exact: true }).fill("川崎市長杯");
   await expect(page.locator(".event-row")).toHaveCount(1);
   await page.goto("/#players");
+  await page.getByLabel("出場予定のある選手").uncheck();
   await page.getByRole("button", { name: "女子", exact: true }).click();
   await expect(
     page.locator(".player-identity .small-label").first(),
@@ -114,9 +115,7 @@ test("海外大会は日本ペアだけを出場区分つきで表示する", as
     page.locator(".team .badge").filter({ hasText: "リザーブ" }),
   ).toHaveCount(1);
   await expect(
-    page.getByText("日本ペアの試合日程は公式発表後に掲載します。", {
-      exact: true,
-    }),
+    page.getByText("公式の最終結果を確認中です。", { exact: true }),
   ).toBeVisible();
   await expect(
     page.locator(".team").first().getByRole("link", { name: "公式チーム表" }),

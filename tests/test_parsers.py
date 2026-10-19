@@ -1,7 +1,7 @@
 import io
 import unittest
 from unittest.mock import patch, MagicMock
-from scripts.parsers import dates_from_label, parse_article, parse_calendar, parse_profile_image, parse_profiles, parse_roster, parse_jva_calendar, parse_jva_final_standings, parse_jva_teams, parse_volleyball_world_final_standings, parse_volleyball_world_match, parse_volleyball_world_teams, normalize
+from scripts.parsers import dates_from_label, parse_article, parse_calendar, parse_profile_image, parse_profiles, parse_roster, parse_mixed_seedlist, parse_jva_calendar, parse_jva_final_standings, parse_jva_teams, parse_volleyball_world_final_standings, parse_volleyball_world_match, parse_volleyball_world_teams, normalize
 from scripts.update import apply_event_overrides, apply_result_reviews, compile_players, match_volleyball_world_standings, merge_volleyball_world_entries, one_month_after, result_followup, retain_unresolved_events, validate
 
 
@@ -63,6 +63,26 @@ class ParsersTest(unittest.TestCase):
         events = parse_calendar(html, 'https://www.jbv.jp/convention/index.html', 2026)
         self.assertTrue(events[0]['cancelled'])
         self.assertEqual(events[1]['name'], '関東 U18')
+
+    def test_mixed_seedlist_keeps_each_gender_and_collapses_identical_pair(self):
+        page = MagicMock()
+        page.extract_text.return_value = '男子の部 女子の部 シーディングリスト'
+        page.extract_tables.return_value = [
+            [['男子の部', None, None, None, None, None, None, None],
+             ['NO', '選手１', '所属', 'ポイント', '選手２', '所属', 'ポイント', 'Pt合計'],
+             ['1', '男子甲', '', '10', '男子乙', '', '10', '20'],
+             ['2', '男子甲', '', '10', '男子乙', '', '10', '20']],
+            [['女子の部', None, None, None, None, None, None, None],
+             ['NO', '選手１', '所属', 'ポイント', '選手２', '所属', 'ポイント', 'Pt合計'],
+             ['1', '女子甲', '', '5', '女子乙', '', '5', '10']],
+        ]
+        document = MagicMock()
+        document.__enter__.return_value.pages = [page]
+        with patch('scripts.parsers.pdfplumber.open', return_value=document):
+            teams, problems = parse_mixed_seedlist(b'%PDF')
+        self.assertEqual(problems, [])
+        self.assertEqual([(team['gender'], team['names']) for team in teams],
+                         [('men', ['男子甲', '男子乙']), ('women', ['女子甲', '女子乙'])])
 
     def roster(self, rows):
         page = MagicMock()

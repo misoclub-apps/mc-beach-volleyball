@@ -18,7 +18,7 @@ from urllib.robotparser import RobotFileParser
 import requests
 
 from scripts.history import collect_history
-from scripts.parsers import discover_volleyball_world_japan_match_urls, normalize, parse_article, parse_profile_image, parse_profiles, parse_roster, parse_calendar, parse_jva_calendar, parse_jva_final_standings, parse_jva_teams, parse_volleyball_world_final_standings, parse_volleyball_world_match, parse_volleyball_world_teams, safe_url, soup_body, stable_id
+from scripts.parsers import discover_volleyball_world_japan_match_urls, normalize, parse_article, parse_profile_image, parse_profiles, parse_roster, parse_mixed_seedlist, parse_calendar, parse_jva_calendar, parse_jva_final_standings, parse_jva_teams, parse_volleyball_world_final_standings, parse_volleyball_world_match, parse_volleyball_world_teams, safe_url, soup_body, stable_id
 
 ROOT = Path(__file__).resolve().parents[1]
 UA = 'BeachNote/1.0 (+https://github.com/misoclub-apps/mc-beach-volleyball; local periodic index)'
@@ -562,6 +562,38 @@ def run(args):
             events.append(event)
         except Exception as error:
             issues.append({'url': url, 'kind': 'article', 'message': str(error)})
+    for source in config.get('multiDayRosters', []):
+        page_url, document = source['pageUrl'], source['document']
+        _, body = soup_body(fetcher.get(page_url))
+        if normalize(source['matchText']) not in normalize(body.get_text(' ', strip=True)):
+            raise ValueError(f'複数日大会の公式ページが変わっています: {page_url}')
+        links = {safe_url(page_url, a['href']) for a in body.select('a[href]')}
+        if document['url'] not in links:
+            raise ValueError(f'最新のシーディングPDFリンクを確認できません: {document["url"]}')
+        pdf_count += 1
+        raw = fetcher.get(document['url'])
+        teams, problems = parse_mixed_seedlist(raw)
+        if problems or len(teams) != source['expectedPairs']:
+            raise ValueError(f'複数日大会の名簿を確認してください: {document["url"]} '
+                             f'{len(teams)}ペア / 想定{source["expectedPairs"]}ペア / {problems}')
+        is_past = source['endDate'] < as_of
+        for team in teams:
+            team['status'] = 'resultPending' if is_past else 'entered'
+            team['sourceUrl'] = document['url'] + f'#page={team["page"]}'
+            team['checkedAt'] = fetcher.records[document['url']]['checkedAt']
+        events = [event for event in events if event['sourceUrl'] != page_url]
+        events.append({
+            'id': stable_id('e-', source['url']), 'name': source['name'],
+            'officialTitle': source['name'], 'category': source['category'],
+            'startDate': source['startDate'], 'endDate': source['endDate'],
+            'dateLabel': source['dateLabel'], 'venue': source['venue'],
+            'cancelled': False, 'sourceUrl': source['url'],
+            'documents': [{'url': document['url'], 'label': document['label'],
+                           'kind': 'seed', 'gender': None, 'parsed': True}],
+            'entries': teams, 'entryStatus': 'resultPending' if is_past else 'published',
+            'resultCoverage': '公式最終結果を確認中です。公開済みの参加名簿を保持しています。' if is_past else '',
+            'checkedAt': fetcher.records[page_url]['checkedAt'],
+        })
     if len(candidates) > limit:
         issues.append({'kind': 'limit', 'message': f'{len(candidates)-limit}ページが取得上限で未処理'})
     international_urls = (

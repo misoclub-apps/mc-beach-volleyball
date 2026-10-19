@@ -278,6 +278,9 @@ def collect_history(fetcher, config, as_of, closed_result_urls=()):
                         for team in parsed]
             docs.append({'url': document['url'], 'label': document['label'], 'kind': 'result',
                          'gender': document['gender'], 'parsed': True})
+        if source.get('expectedPairs') is not None and len(entries) != source['expectedPairs']:
+            raise ValueError(f'過去大会の最終順位件数が変わっています: {page_url} '
+                             f'{len(entries)}ペア / 想定{source["expectedPairs"]}ペア')
         article = parse_article(page_raw, page_url, config['year'])
         venue = source.get('venue') or (article.get('venue', '') if article else '')
         events.append({

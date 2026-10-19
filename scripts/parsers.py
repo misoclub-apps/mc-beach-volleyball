@@ -409,6 +409,42 @@ def discover_volleyball_world_japan_match_urls(html, source_url):
     return list(dict.fromkeys(urls))
 
 
+
+def parse_mixed_seedlist(data):
+    """Read an official BVT3 seed list with separate men's and women's tables."""
+    teams, problems, seen = [], [], set()
+    division = None
+    with pdfplumber.open(io.BytesIO(data)) as pdf:
+        for pageno, page in enumerate(pdf.pages, 1):
+            if not (page.extract_text() or '').strip():
+                problems.append(f'{pageno}ページ: 文字データなし')
+                continue
+            for table in page.extract_tables():
+                for row in table:
+                    if len(row) != 8:
+                        continue
+                    heading = normalize(row[0] or '')
+                    if heading in ('男子の部', '女子の部'):
+                        division = 'men' if heading.startswith('男子') else 'women'
+                        continue
+                    if not re.fullmatch(r'\d{1,3}', heading):
+                        continue
+                    names = [re.sub(r'\s+', ' ', row[i] or '').strip() for i in (1, 4)]
+                    if (not division or not all(names) or
+                            not all(re.fullmatch(r'[\d,]+', (row[i] or '').strip()) for i in (3, 6, 7))):
+                        problems.append(f'{pageno}ページ: シード{heading}の選手・ポイント欄を確認してください')
+                        continue
+                    key = (division, *(normalize(name) for name in names))
+                    if key in seen:
+                        continue  # Identical pair is printed twice in some official lists.
+                    seen.add(key)
+                    teams.append({'names': names, 'gender': division, 'status': 'entered',
+                                  'number': int(heading), 'page': pageno})
+    if {team['gender'] for team in teams} != {'men', 'women'}:
+        problems.append('男女両方のシーディング表を確認できません')
+    return (teams if not problems else []), problems
+
+
 def parse_roster(data, gender):
     """Read ruled two-player JBV tables by columns; ignore bracket-only pages."""
     teams, issues = [], []
