@@ -1,7 +1,7 @@
 import io
 import unittest
 from unittest.mock import patch, MagicMock
-from scripts.parsers import dates_from_label, parse_article, parse_calendar, parse_profile_image, parse_profiles, parse_roster, parse_mixed_seedlist, parse_jva_calendar, parse_jva_final_standings, parse_jva_teams, parse_volleyball_world_final_standings, parse_volleyball_world_match, parse_volleyball_world_teams, normalize
+from scripts.parsers import dates_from_label, parse_article, parse_calendar, parse_profile_image, parse_profiles, parse_roster, parse_mixed_seedlist, parse_mixed_status_roster, parse_jva_calendar, parse_jva_final_standings, parse_jva_teams, parse_volleyball_world_final_standings, parse_volleyball_world_match, parse_volleyball_world_teams, normalize
 from scripts.update import apply_event_overrides, apply_result_reviews, compile_players, match_volleyball_world_standings, merge_volleyball_world_entries, one_month_after, result_followup, retain_unresolved_events, validate
 
 
@@ -48,6 +48,7 @@ class ParsersTest(unittest.TestCase):
         for title, date in (
             ('第12回ビーチバレーボール九州サーキット大崎オープン', '2026年11月14日(土)'),
             ('Ocean Fun Fest 2026ビーチバレー宮古島杯', '2026年12月12日(土)・13日(日)'),
+            ('第14回ビーチバレーボール SANNO OPEN【チャレンジャー】', '2026年12月5日(土)'),
         ):
             html = f'<div id="contents_Right"><h2>{title}</h2><div class="release_entry">開催日／{date}<br>会場／ビーチコート</div></div>'
             event = parse_article(html, 'https://www.jbv.jp/schedule/entry-1.html', 2026)
@@ -80,6 +81,25 @@ class ParsersTest(unittest.TestCase):
         document.__enter__.return_value.pages = [page]
         with patch('scripts.parsers.pdfplumber.open', return_value=document):
             teams, problems = parse_mixed_seedlist(b'%PDF')
+        self.assertEqual(problems, [])
+        self.assertEqual([(team['gender'], team['names']) for team in teams],
+                         [('men', ['男子甲', '男子乙']), ('women', ['女子甲', '女子乙'])])
+
+    def test_mixed_status_roster_excludes_cancellations_and_empty_slots(self):
+        page = MagicMock()
+        page.extract_text.return_value = '男子の部 女子の部 エントリーリスト'
+        page.extract_tables.return_value = [
+            [['男子の部', None, None, None, None, None, None],
+             ['1', '参加確定', '男子甲', '', '男子乙', '', '2026/10/21'],
+             ['2', '補欠', '', '', '', '', '']],
+            [['女子の部', None, None, None, None, None, None],
+             ['1', '参加確定', '女子甲', '', '女子乙', '', '2026/10/21'],
+             ['', 'キャンセル', '女子丙', '', '女子丁', '', '2026/10/21']]
+        ]
+        document = MagicMock()
+        document.__enter__.return_value.pages = [page]
+        with patch('scripts.parsers.pdfplumber.open', return_value=document):
+            teams, problems = parse_mixed_status_roster(b'%PDF')
         self.assertEqual(problems, [])
         self.assertEqual([(team['gender'], team['names']) for team in teams],
                          [('men', ['男子甲', '男子乙']), ('women', ['女子甲', '女子乙'])])
@@ -252,6 +272,9 @@ class ParsersTest(unittest.TestCase):
         teams = [{'names': ['Taito Mizumachi', 'Kota Kurosawa'], 'gender': 'men', 'externalTeamId': 3171989}]
         self.assertEqual(match_volleyball_world_standings(results, teams)[0]['externalTeamId'], 3171989)
         self.assertEqual(results[0]['rank'], 9)
+        results[0]['teamLabel'] = 'Taito / Kurosawa'
+        results[0]['externalTeamId'] = None
+        self.assertEqual(match_volleyball_world_standings(results, teams)[0]['externalTeamId'], 3171989)
         results[0]['externalTeamId'] = None
         with self.assertRaisesRegex(ValueError, '照合が不確実'):
             match_volleyball_world_standings(results, teams + [dict(teams[0], externalTeamId=2)])

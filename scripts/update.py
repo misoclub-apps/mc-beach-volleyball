@@ -18,7 +18,7 @@ from urllib.robotparser import RobotFileParser
 import requests
 
 from scripts.history import collect_history
-from scripts.parsers import discover_volleyball_world_japan_match_urls, normalize, parse_article, parse_profile_image, parse_profiles, parse_roster, parse_mixed_seedlist, parse_calendar, parse_jva_calendar, parse_jva_final_standings, parse_jva_teams, parse_volleyball_world_final_standings, parse_volleyball_world_match, parse_volleyball_world_teams, safe_url, soup_body, stable_id
+from scripts.parsers import discover_volleyball_world_japan_match_urls, normalize, parse_article, parse_profile_image, parse_profiles, parse_roster, parse_mixed_seedlist, parse_mixed_status_roster, parse_calendar, parse_jva_calendar, parse_jva_final_standings, parse_jva_teams, parse_volleyball_world_final_standings, parse_volleyball_world_match, parse_volleyball_world_teams, safe_url, soup_body, stable_id
 
 ROOT = Path(__file__).resolve().parents[1]
 UA = 'BeachNote/1.0 (+https://github.com/misoclub-apps/mc-beach-volleyball; local periodic index)'
@@ -262,10 +262,14 @@ def match_volleyball_world_standings(standings, official_entries):
     for result in standings:
         if result['externalTeamId'] is not None:
             continue
-        label = normalize(result['teamLabel'])
+        label_parts = [normalize(part) for part in result['teamLabel'].split('/')]
+        def name_matches(label, full_name):
+            parts = full_name.split()
+            return label in {normalize(parts[0]), normalize(parts[-1])}
         matches = [entry for entry in official_entries
-                   if entry['gender'] == result['gender'] and
-                   normalize('/'.join(name.rsplit(' ', 1)[-1] for name in entry['names'])) == label]
+                   if entry['gender'] == result['gender'] and len(label_parts) == 2 and
+                   len(entry['names']) == 2 and
+                   all(name_matches(label, name) for label, name in zip(label_parts, entry['names']))]
         if len(matches) != 1:
             raise ValueError(f'公式最終順位のチーム照合が不確実です: {result["teamLabel"]} / {len(matches)}件')
         result['externalTeamId'] = matches[0]['externalTeamId']
@@ -333,13 +337,16 @@ def collect_volleyball_world(events, fetcher, config, profiles, aliases, issues,
                                    'message': str(error)})
             if standings_complete and standings:
                 by_team = {result['externalTeamId']: result for result in standings}
-                event['entries'] = [entry for entry in event['entries'] if entry.get('externalTeamId') in by_team]
                 for entry in event['entries']:
-                    result = by_team[entry['externalTeamId']]
-                    entry.update({'status': 'completed', 'rank': result['rank'],
-                                  'resultLabel': f'{result["rank"]}位', 'sourceUrl': result['sourceUrl']})
-                event['entryStatus'] = 'published'
-                event['resultCoverage'] = 'Volleyball World公式最終順位表で確認した日本ペアのみ掲載しています。'
+                    result = by_team.get(entry.get('externalTeamId'))
+                    if result:
+                        entry.update({'status': 'completed', 'rank': result['rank'],
+                                      'resultLabel': f'{result["rank"]}位', 'sourceUrl': result['sourceUrl']})
+                    elif entry['status'] != 'reserve':
+                        entry['status'] = 'resultPending'
+                event['entryStatus'] = ('resultPending' if any(entry['status'] == 'resultPending'
+                                                             for entry in event['entries']) else 'published')
+                event['resultCoverage'] = 'Volleyball World公式最終順位表で確認した日本ペアの順位です。'
             elif standings_complete:
                 for entry in event['entries']:
                     entry['status'] = 'resultPending'
@@ -541,6 +548,22 @@ def run(args):
                 except Exception as error:
                     event['entryStatus'] = 'review'
                     issues.append({'url': doc['url'], 'eventId': event['id'], 'kind': 'fetch', 'message': str(error)})
+            mixed_source = next((source for source in config.get('mixedStatusRosters', [])
+                                 if source['eventUrl'] == url), None)
+            if mixed_source:
+                doc = next((d for d in event['documents'] if d['url'] == mixed_source['documentUrl']), None)
+                if not doc:
+                    raise ValueError(f'公式記事の最新名簿リンクを確認できません: {mixed_source["documentUrl"]}')
+                pdf_count += 1
+                teams, problems = parse_mixed_status_roster(fetcher.get(doc['url']))
+                if problems or len(teams) != mixed_source['expectedPairs']:
+                    raise ValueError(f'男女名簿を確認してください: {doc["url"]} '
+                                     f'{len(teams)}ペア / 想定{mixed_source["expectedPairs"]}ペア / {problems}')
+                for team in teams:
+                    team['sourceUrl'] = doc['url'] + f'#page={team["page"]}'
+                    team['checkedAt'] = fetcher.records[doc['url']]['checkedAt']
+                event['entries'].extend(teams)
+                doc['parsed'] = True
             if event['id'] in overrides.get('entries', {}):
                 event['entries'] = overrides['entries'][event['id']]
                 event['entryStatus'] = 'manual'

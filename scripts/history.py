@@ -2,7 +2,7 @@
 import io
 import re
 import pdfplumber
-from scripts.parsers import normalize, soup_body, safe_url, dates_from_label, stable_id, parse_article
+from scripts.parsers import normalize, soup_body, safe_url, dates_from_label, stable_id, parse_article, parse_mixed_seedlist
 
 
 def parse_results(raw, year, corrections=None):
@@ -273,6 +273,12 @@ def collect_history(fetcher, config, as_of, closed_result_urls=()):
                 parsed = parse_jbv_rankings(raw, document['gender'])
             else:
                 raise ValueError(f'未対応の過去結果形式: {parser}')
+            for excluded in source.get('excludedResultPairs', []):
+                matching = [team for team in parsed if team['names'] == excluded['names']
+                            and team['gender'] == excluded['gender']]
+                if len(matching) != 1:
+                    raise ValueError(f'要確認の結果行が変わっています: {document["url"]} / {excluded["names"]}')
+                parsed.remove(matching[0])
             entries += [dict(team, sourceUrl=document['url'] + f'#page={team["page"]}',
                              checkedAt=fetcher.records[document['url']]['checkedAt'])
                         for team in parsed]
@@ -281,6 +287,23 @@ def collect_history(fetcher, config, as_of, closed_result_urls=()):
         if source.get('expectedPairs') is not None and len(entries) != source['expectedPairs']:
             raise ValueError(f'過去大会の最終順位件数が変わっています: {page_url} '
                              f'{len(entries)}ペア / 想定{source["expectedPairs"]}ペア')
+        seed_lists = {}
+        for pending in source.get('pendingSeedPairs', []):
+            seed_url = pending['documentUrl']
+            if seed_url not in seed_lists:
+                pdf_count += 1
+                seed_lists[seed_url] = parse_mixed_seedlist(fetcher.get(seed_url))
+                docs.append({'url': seed_url, 'label': '順位未確認ペアの公式シーディング',
+                             'kind': 'seed', 'gender': None, 'parsed': True})
+            seed_teams, problems = seed_lists[seed_url]
+            matches = [team for team in seed_teams if team['names'] == pending['names']
+                       and team['gender'] == pending['gender']]
+            if problems or len(matches) != 1:
+                raise ValueError(f'順位確認中のペアを公式シーディングで確認できません: {seed_url}')
+            team = matches[0]
+            entries.append(dict(team, status='resultPending',
+                                sourceUrl=seed_url + f'#page={team["page"]}',
+                                checkedAt=fetcher.records[seed_url]['checkedAt']))
         article = parse_article(page_raw, page_url, config['year'])
         venue = source.get('venue') or (article.get('venue', '') if article else '')
         events.append({

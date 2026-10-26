@@ -98,25 +98,20 @@ test("大会検索と男女フィルターが機能する", async ({ page }) => 
   ).toHaveText("女子");
 });
 
-test("海外大会は日本ペアだけを出場区分つきで表示する", async ({ page }) => {
+test("海外大会は日本ペアの順位と補欠の導線を表示する", async ({ page }) => {
   await page.setViewportSize({ width: 375, height: 900 });
   await page.goto("/#event/e-5d176050896885");
   await expect(
     page.getByRole("heading", { name: "FUTURESアランヤ大会" }),
   ).toBeVisible();
   await expect(page.locator(".team")).toHaveCount(4);
-  await expect(
-    page.locator(".team .badge").filter({ hasText: "本戦" }),
-  ).toHaveCount(2);
-  await expect(
-    page.locator(".team .badge").filter({ hasText: "予選" }),
-  ).toHaveCount(1);
+  for (const rank of ["2位", "5位", "17位"]) {
+    await expect(page.locator(".team").getByText(rank, { exact: true })).toBeVisible();
+  }
   await expect(
     page.locator(".team .badge").filter({ hasText: "リザーブ" }),
   ).toHaveCount(1);
-  await expect(
-    page.getByText("公式の最終結果を確認中です。", { exact: true }),
-  ).toBeVisible();
+  await expect(page.getByRole("heading", { name: "最終順位・ペア" })).toBeVisible();
   await expect(
     page.locator(".team").first().getByRole("link", { name: "公式チーム表" }),
   ).toHaveAttribute("href", /volleyballworld\.com/);
@@ -125,6 +120,14 @@ test("海外大会は日本ペアだけを出場区分つきで表示する", as
       () => document.documentElement.scrollWidth <= innerWidth,
     ),
   ).toBe(true);
+});
+
+test("一部の順位が判読できない大会も選手と大会の導線を残す", async ({ page }) => {
+  await page.goto("/#event/e-33105953ce97ff");
+  const unresolved = page.locator(".team").filter({ hasText: "田中 悠人" });
+  await expect(unresolved.getByRole("link", { name: "石原 瑛太" })).toBeVisible();
+  await expect(unresolved.getByText("順位確認中", { exact: true })).toBeVisible();
+  await expect(page.locator(".team").getByText("1位", { exact: true })).toHaveCount(2);
 });
 
 test("終了済み海外大会は日本ペアの順位と公式確認済み試合を表示する", async ({

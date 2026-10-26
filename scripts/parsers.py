@@ -108,7 +108,7 @@ def parse_article(html, url, year):
             date_label += ' / ' + ' / '.join(extra)
     venue = next((re.split(r'[／/:：]', x, maxsplit=1)[-1].strip() for x in lines
                   if re.match(r'^[◆●■\s]*(会\s*場|開催会\s*場|開催地)[／/:：]', x)), '')
-    if not date_label or not re.search(r'大会|カップ|選手権|シリーズ|キング|オープン|杯|CUP|Cup|cup', title):
+    if not date_label or not re.search(r'大会|カップ|選手権|シリーズ|キング|オープン|杯|CUP|OPEN', title, re.I):
         return None
     start, end = dates_from_label(date_label, year)
     explicit_dates = re.findall(r'20\d{2}年\d{1,2}月\d{1,2}日', unicodedata.normalize('NFKC', date_label))
@@ -442,6 +442,43 @@ def parse_mixed_seedlist(data):
                                   'number': int(heading), 'page': pageno})
     if {team['gender'] for team in teams} != {'men', 'women'}:
         problems.append('男女両方のシーディング表を確認できません')
+    return (teams if not problems else []), problems
+
+
+def parse_mixed_status_roster(data):
+    """Read a two-gender entry list with explicit confirmed/reserve/cancelled rows."""
+    teams, problems = [], []
+    division = None
+    with pdfplumber.open(io.BytesIO(data)) as pdf:
+        for pageno, page in enumerate(pdf.pages, 1):
+            if not (page.extract_text() or '').strip():
+                problems.append(f'{pageno}ページ: 文字データなし')
+                continue
+            for table in page.extract_tables():
+                for row in table:
+                    if len(row) != 7:
+                        continue
+                    heading = normalize(row[0] or '')
+                    if heading in ('男子の部', '女子の部'):
+                        division = 'men' if heading.startswith('男子') else 'women'
+                        continue
+                    if not re.fullmatch(r'\d{1,3}', heading):
+                        continue
+                    state = normalize(row[1] or '')
+                    if state not in ('参加確定', '補欠', 'キャンセル') or not division:
+                        problems.append(f'{pageno}ページ: エントリー{heading}の状態を確認してください')
+                        continue
+                    names = [re.sub(r'\s+', ' ', row[i] or '').strip() for i in (2, 4)]
+                    if not any(names) or state == 'キャンセル':
+                        continue
+                    if not all(names):
+                        problems.append(f'{pageno}ページ: エントリー{heading}の選手名を確認してください')
+                        continue
+                    teams.append({'names': names, 'gender': division,
+                                  'status': 'reserve' if state == '補欠' else 'entered',
+                                  'number': int(heading), 'page': pageno})
+    if {team['gender'] for team in teams} != {'men', 'women'}:
+        problems.append('男女両方のエントリー表を確認できません')
     return (teams if not problems else []), problems
 
 

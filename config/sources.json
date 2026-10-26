@@ -1268,41 +1268,98 @@
         "requireDocumentLinks": true,
         "expectedPairs": 39,
         "coverage": "公式結果表の男女順位を収録。"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2516.html#day-1",
+        "name": "U20東海／新舞子大会（1日目）",
+        "category": "BVT3",
+        "startDate": "2026-10-17",
+        "endDate": "2026-10-17",
+        "dateLabel": "2026-10-17",
+        "venue": "愛知県知多市・新舞子ブルーサンビーチ",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/BVT3_shinmaiko_result_day1_20261017.pdf",
+            "label": "1日目男女結果・順位（10月19日掲載）",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2516.html",
+        "matchText": "アンダーエイジ東海／新舞子大会",
+        "requireDocumentLinks": true,
+        "expectedPairs": 44,
+        "excludedResultPairs": [
+          {
+            "names": ["田中 悠人", "田中 悠人"],
+            "gender": "men"
+          }
+        ],
+        "pendingSeedPairs": [
+          {
+            "names": ["田中 悠人", "石原 瑛太"],
+            "gender": "men",
+            "documentUrl": "https://www.jbv.jp/news/2025/BVT3_shinmaiko_seedlist_day1_20261016.pdf"
+          },
+          {
+            "names": ["瀬藤 悠太", "西野 湊太郎"],
+            "gender": "men",
+            "documentUrl": "https://www.jbv.jp/news/2025/BVT3_shinmaiko_seedlist_day1_20261016.pdf"
+          },
+          {
+            "names": ["髙橋 凰馬", "野嶋 琉生"],
+            "gender": "men",
+            "documentUrl": "https://www.jbv.jp/news/2025/BVT3_shinmaiko_seedlist_day1_20261016.pdf"
+          },
+          {
+            "names": ["唐澤 真唯", "長田 瑠菜"],
+            "gender": "women",
+            "documentUrl": "https://www.jbv.jp/news/2025/BVT3_shinmaiko_seedlist_day1_20261016.pdf"
+          },
+          {
+            "names": ["デラクルズ ケンジ", "田垣 亜衣琉"],
+            "gender": "men",
+            "documentUrl": "https://www.jbv.jp/news/2025/BVT3_shinmaiko_seedlist_day1_20261016.pdf"
+          }
+        ],
+        "coverage": "公式結果表の順位を収録。名簿にある一部ペアの順位は未確認。男子1行は選手名の重複表記がある。"
+      },
+      {
+        "url": "https://www.jbv.jp/news/entry-2516.html#day-2",
+        "name": "U20東海／新舞子大会（2日目）",
+        "category": "BVT3",
+        "startDate": "2026-10-18",
+        "endDate": "2026-10-18",
+        "dateLabel": "2026-10-18",
+        "venue": "愛知県知多市・新舞子ブルーサンビーチ",
+        "documents": [
+          {
+            "url": "https://www.jbv.jp/news/2025/BVT3_shinmaiko_result_day2_20261018.pdf",
+            "label": "2日目男女結果・順位（10月19日掲載）",
+            "gender": null,
+            "parser": "jbv-ranking"
+          }
+        ],
+        "pageUrl": "https://www.jbv.jp/news/entry-2516.html",
+        "matchText": "アンダーエイジ東海／新舞子大会",
+        "requireDocumentLinks": true,
+        "expectedPairs": 59,
+        "pendingSeedPairs": [
+          {
+            "names": ["瀬藤 悠太", "西野 湊太郎"],
+            "gender": "men",
+            "documentUrl": "https://www.jbv.jp/news/2025/BVT3_shinmaiko_seedlist_day2_20261016.pdf"
+          }
+        ],
+        "coverage": "公式結果表の順位を収録。名簿にある一部ペアの順位は未確認。"
       }
     ]
   },
-  "multiDayRosters": [
+  "mixedStatusRosters": [
     {
-      "url": "https://www.jbv.jp/news/entry-2516.html#day-1",
-      "pageUrl": "https://www.jbv.jp/news/entry-2516.html",
-      "name": "U20東海／新舞子大会（1日目）",
-      "category": "BVT3",
-      "startDate": "2026-10-17",
-      "endDate": "2026-10-17",
-      "dateLabel": "2026-10-17",
-      "venue": "愛知県知多市・新舞子ブルーサンビーチ",
-      "document": {
-        "url": "https://www.jbv.jp/news/2025/BVT3_shinmaiko_seedlist_day1_20261016.pdf",
-        "label": "1日目男女シーディング（10月16日掲載）"
-      },
-      "matchText": "アンダーエイジ東海／新舞子大会",
-      "expectedPairs": 49
-    },
-    {
-      "url": "https://www.jbv.jp/news/entry-2516.html#day-2",
-      "pageUrl": "https://www.jbv.jp/news/entry-2516.html",
-      "name": "U20東海／新舞子大会（2日目）",
-      "category": "BVT3",
-      "startDate": "2026-10-18",
-      "endDate": "2026-10-18",
-      "dateLabel": "2026-10-18",
-      "venue": "愛知県知多市・新舞子ブルーサンビーチ",
-      "document": {
-        "url": "https://www.jbv.jp/news/2025/BVT3_shinmaiko_seedlist_day2_20261016.pdf",
-        "label": "2日目男女シーディング（10月16日掲載）"
-      },
-      "matchText": "アンダーエイジ東海／新舞子大会",
-      "expectedPairs": 60
+      "eventUrl": "https://www.jbv.jp/news/entry-2517.html",
+      "documentUrl": "https://www.jbv.jp/news/2025/JBVChallengerseries2026_2027_entrylist20261021.pdf",
+      "expectedPairs": 41
     }
   ],
   "htmlResults": [
