@@ -433,15 +433,15 @@ def apply_result_reviews(events, reviews, as_of):
             raise ValueError(f'結果確認終了の出典URLが不正です: {event_id}')
         if as_of < one_month_after(event['endDate']) or review['reviewedAt'] < one_month_after(event['endDate']):
             raise ValueError(f'1か月経過前に結果確認を終了できません: {event_id}')
-        if any(entry['status'] == 'completed' for entry in event['entries']):
-            raise ValueError(f'公式順位がある大会の確認終了指定を見直してください: {event_id}')
         if not any(entry['status'] in ('entered', 'resultPending', 'resultUnavailable') for entry in event['entries']):
             raise ValueError(f'結果確認終了の対象名簿がありません: {event_id}')
         for entry in event['entries']:
             if entry['status'] in ('entered', 'resultPending'):
                 entry['status'] = 'resultUnavailable'
-        event['entryStatus'] = 'resultUnavailable'
-        event['resultCoverage'] = '公式の最終順位を確認できませんでした。大会情報・公開済み名簿へのリンクを残しています。'
+        has_completed = any(entry['status'] == 'completed' for entry in event['entries'])
+        event['entryStatus'] = 'published' if has_completed else 'resultUnavailable'
+        event['resultCoverage'] = ('確認できた順位だけ掲載しています。ほかのペアの最終順位は確認できませんでした。'
+                                   if has_completed else '公式の最終順位を確認できませんでした。大会情報・公開済み名簿へのリンクを残しています。')
         event['resultReview'] = review
 
 
@@ -457,7 +457,8 @@ def result_followup(events, as_of, previous_events=()):
             raise ValueError(f'順位確認中の大会が更新時に消えています: {previous["id"]}')
         if not any(entry['status'] in ('resultPending', 'resultUnavailable', 'completed') for entry in current['entries']):
             raise ValueError(f'順位確認中の大会の結果状態が失われています: {previous["id"]}')
-        if any(entry['status'] == 'completed' for entry in current['entries']):
+        if (sum(entry['status'] == 'completed' for entry in current['entries']) >
+                sum(entry['status'] == 'completed' for entry in previous['entries'])):
             resolved.append({'eventId': current['id'], 'name': current['name'],
                              'results': [{'rank': entry['rank'], 'sourceUrl': entry['sourceUrl']}
                                          for entry in current['entries'] if entry['status'] == 'completed']})
@@ -622,13 +623,16 @@ def run(args):
     international_urls = (
         {source['eventUrl'] for source in config.get('volleyballWorldEvents', [])}
         | {source['eventUrl'] for source in config.get('htmlResults', [])}
+        | {source['eventUrl'] for source in config.get('htmlRosters', [])}
     )
     for event in calendar:
         if event['endDate'] < as_of and event['sourceUrl'] not in international_urls:
             continue
         def same_event(other):
             a, b = normalize(event['name']), normalize(other['name'])
-            return other['startDate'] == event['startDate'] and (a in b or b in a or ('小浜' in other['name'] and '北信越' in event['name']))
+            same_championship = ('チャンピオンシップ川崎' in a and 'チャンピオンシップ川崎' in b
+                                 and 'u20' in a and 'u20' in b)
+            return other['startDate'] == event['startDate'] and (a in b or b in a or ('小浜' in other['name'] and '北信越' in event['name']) or same_championship)
         if not any(same_event(e) for e in events):
             event['checkedAt'] = fetcher.records[event.get('scheduleSourceUrl', event['sourceUrl'])]['checkedAt']
             apply_event_overrides(event, overrides)
@@ -657,7 +661,10 @@ def run(args):
                 team['sourceUrl'] = source['url']
                 team['checkedAt'] = fetcher.records[source['url']]['checkedAt']
             event['entries'] = teams
-            event['entryStatus'] = 'review' if problems else 'published' if teams else 'unpublished'
+            if event['endDate'] < as_of:
+                for team in teams:
+                    team['status'] = 'resultPending'
+            event['entryStatus'] = 'review' if problems else 'resultPending' if teams and event['endDate'] < as_of else 'published' if teams else 'unpublished'
             event['documents'].append({'url': source['url'], 'label': '日本の出場メンバー（JVA）', 'kind': 'entry', 'gender': None})
         except Exception as error:
             issues.append({'url': source['url'], 'kind': 'external', 'message': str(error)})
@@ -680,6 +687,23 @@ def run(args):
                 event['documents'].append({'url': source['url'], 'label': '公式最終順位（JVA）', 'kind': 'result', 'gender': None})
         except Exception as error:
             issues.append({'url': source['url'], 'kind': 'result', 'message': str(error)})
+    for source in config.get('verifiedResultArticles', []):
+        event = next((e for e in events if e['sourceUrl'] == source['eventUrl']), None)
+        if event is None:
+            raise ValueError(f'公式記事の結果に対応する大会がありません: {source["eventUrl"]}')
+        html = fetcher.get(source['url'])
+        _, body = soup_body(html)
+        if not re.search(source['evidencePattern'], normalize(body.get_text(' ', strip=True))):
+            raise ValueError(f'公式記事の順位表記が変わっています: {source["url"]}')
+        matches = [entry for entry in event['entries'] if entry['gender'] == source['gender']
+                   and [normalize(name) for name in entry['names']] == [normalize(name) for name in source['names']]]
+        if len(matches) != 1:
+            raise ValueError(f'公式記事の順位と名簿を照合できません: {source["url"]} / {source["names"]}')
+        rank = source['rank']
+        matches[0].update({'status': 'completed', 'rank': rank, 'resultLabel': f'{rank}位',
+                           'sourceUrl': source['url'], 'checkedAt': fetcher.records[source['url']]['checkedAt']})
+        event['entryStatus'] = 'resultPending' if any(entry['status'] == 'resultPending' for entry in event['entries']) else 'published'
+        event['documents'].append({'url': source['url'], 'label': '公式記事で確認した順位', 'kind': 'result', 'gender': source['gender']})
     collect_volleyball_world(events, fetcher, config, profiles, overrides.get('aliases', {}), issues, as_of,
                              overrides.get('resultReviews', {}))
     closed_result_ids = {event_id for event_id, review in overrides.get('resultReviews', {}).items()

@@ -130,6 +130,17 @@ test("一部の順位が判読できない大会も選手と大会の導線を�
   await expect(page.locator(".team").getByText("1位", { exact: true })).toHaveCount(2);
 });
 
+test("須磨オープンは公式記事で確認できた準優勝と他の日本ペアを表示する", async ({ page }) => {
+  await page.goto("/#event/e-56b0c135bf8a94");
+  await expect(page.getByRole("heading", { name: "アジアビーチツアー須磨オープン" })).toBeVisible();
+  await expect(page.locator(".team")).toHaveCount(4);
+  const runnerUp = page.locator(".team").filter({ hasText: "黒川魁" });
+  await expect(runnerUp.getByText("2位", { exact: true })).toBeVisible();
+  await expect(runnerUp.getByRole("link", { name: "安達龍一" })).toBeVisible();
+  await expect(page.locator(".team").getByText("順位確認中", { exact: true })).toHaveCount(3);
+  await expect(page.locator(".event-heading").getByText("一部結果掲載")).toBeVisible();
+});
+
 test("終了済み海外大会は日本ペアの順位と公式確認済み試合を表示する", async ({
   page,
 }) => {

@@ -49,6 +49,20 @@
     {
       "eventUrl": "https://www.jva.or.jp/beach_international/2026/avc2026/doha/",
       "url": "https://www.jva.or.jp/beach_international/2026/avc2026/doha/"
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/avc2026/suma/",
+      "url": "https://www.jva.or.jp/beach_international/2026/avc2026/suma/"
+    }
+  ],
+  "verifiedResultArticles": [
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/avc2026/suma/",
+      "url": "https://www.jva.or.jp/topics/202610126-2/",
+      "names": ["黒川 魁", "安達 龍一"],
+      "gender": "men",
+      "rank": 2,
+      "evidencePattern": "黒川魁[^。]{0,100}/安達龍一[^。]{0,40}準優勝"
     }
   ],
   "volleyballWorldEvents": [
@@ -1358,8 +1372,8 @@
   "mixedStatusRosters": [
     {
       "eventUrl": "https://www.jbv.jp/news/entry-2517.html",
-      "documentUrl": "https://www.jbv.jp/news/2025/JBVChallengerseries2026_2027_entrylist20261021.pdf",
-      "expectedPairs": 41
+      "documentUrl": "https://www.jbv.jp/news/2025/JBVChallengerseries2026_2027_entrylist20261031.pdf",
+      "expectedPairs": 39
     }
   ],
   "htmlResults": [

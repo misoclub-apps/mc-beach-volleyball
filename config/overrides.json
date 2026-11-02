@@ -17,11 +17,15 @@
     "辰巳遼": "辰巳 遼"
   },
   "eventIds": {
+    "https://www.jbv.jp/news/entry-2519.html": "e-333f422c85b282",
     "https://www.jva.or.jp/beach_international/2026/avc2026/suma/": "e-56b0c135bf8a94",
     "https://www.jva.or.jp/beach_international/2026/ioc-yog2026/76809/": "e-80b578a3c2a2e7",
     "https://www.jbv.jp/news/entry-2517.html": "e-e5f84b7cb54c3d"
   },
   "events": {
+    "e-333f422c85b282": {
+      "name": "アンダーエイジU20チャンピオンシップ川崎大会"
+    },
     "e-c985a8ceac82e2": {
       "relatedSources": [
         {

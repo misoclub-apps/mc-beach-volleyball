@@ -302,4 +302,16 @@ class ParsersTest(unittest.TestCase):
         report = result_followup([current], '2026-10-06', [previous])
         self.assertEqual(report['resolvedSincePrevious'][0]['results'][0]['rank'], 9)
 
+    def test_partially_ranked_event_closes_only_unresolved_pairs(self):
+        event = {'id': 'e-partial', 'name': '大会', 'sourceUrl': 'https://official.example/event/',
+                 'endDate': '2026-10-25', 'entries': [
+                     {'status': 'completed', 'rank': 2, 'sourceUrl': 'https://official.example/result'},
+                     {'status': 'resultPending'}]}
+        review = {'status': 'closed', 'reviewedAt': '2026-11-25', 'reason': '残る順位の掲載なし',
+                  'sources': ['https://official.example/event/']}
+        self.assertEqual(result_followup([event], '2026-11-02', [event])['resolvedSincePrevious'], [])
+        apply_result_reviews([event], {'e-partial': review}, '2026-11-25')
+        self.assertEqual([entry['status'] for entry in event['entries']], ['completed', 'resultUnavailable'])
+        self.assertEqual(result_followup([event], '2026-11-25')['pending'], [])
+
 if __name__ == '__main__': unittest.main()
