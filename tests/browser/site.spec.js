@@ -98,22 +98,20 @@ test("大会検索と男女フィルターが機能する", async ({ page }) => 
   ).toHaveText("女子");
 });
 
-test("海外大会は日本ペアの順位と補欠の導線を表示する", async ({ page }) => {
+test("海外大会は現在の公式一覧にある日本ペアの順位を表示する", async ({ page }) => {
   await page.setViewportSize({ width: 375, height: 900 });
   await page.goto("/#event/e-5d176050896885");
   await expect(
     page.getByRole("heading", { name: "FUTURESアランヤ大会" }),
   ).toBeVisible();
-  await expect(page.locator(".team")).toHaveCount(4);
+  await expect(page.locator(".team")).toHaveCount(3);
   for (const rank of ["2位", "5位", "17位"]) {
     await expect(page.locator(".team").getByText(rank, { exact: true })).toBeVisible();
   }
-  await expect(
-    page.locator(".team .badge").filter({ hasText: "リザーブ" }),
-  ).toHaveCount(1);
+  await expect(page.locator(".team .badge").filter({ hasText: "リザーブ" })).toHaveCount(0);
   await expect(page.getByRole("heading", { name: "最終順位・ペア" })).toBeVisible();
   await expect(
-    page.locator(".team").first().getByRole("link", { name: "公式チーム表" }),
+    page.locator(".team").first().getByRole("link", { name: "結果ページ" }),
   ).toHaveAttribute("href", /volleyballworld\.com/);
   expect(
     await page.evaluate(
@@ -130,15 +128,17 @@ test("一部の順位が判読できない大会も選手と大会の導線を�
   await expect(page.locator(".team").getByText("1位", { exact: true })).toHaveCount(2);
 });
 
-test("須磨オープンは公式記事で確認できた準優勝と他の日本ペアを表示する", async ({ page }) => {
+test("須磨オープンは公式最終順位の日本4ペアを表示する", async ({ page }) => {
   await page.goto("/#event/e-56b0c135bf8a94");
   await expect(page.getByRole("heading", { name: "アジアビーチツアー須磨オープン" })).toBeVisible();
   await expect(page.locator(".team")).toHaveCount(4);
   const runnerUp = page.locator(".team").filter({ hasText: "黒川魁" });
   await expect(runnerUp.getByText("2位", { exact: true })).toBeVisible();
   await expect(runnerUp.getByRole("link", { name: "安達龍一" })).toBeVisible();
-  await expect(page.locator(".team").getByText("順位確認中", { exact: true })).toHaveCount(3);
-  await expect(page.locator(".event-heading").getByText("一部結果掲載")).toBeVisible();
+  await expect(page.locator(".team").getByText("5位タイ", { exact: true })).toHaveCount(1);
+  await expect(page.locator(".team").getByText("9位タイ", { exact: true })).toHaveCount(2);
+  await expect(page.locator(".team").getByText("順位確認中", { exact: true })).toHaveCount(0);
+  await expect(page.locator(".event-heading").getByText("結果掲載")).toBeVisible();
 });
 
 test("終了済み海外大会は日本ペアの順位と公式確認済み試合を表示する", async ({

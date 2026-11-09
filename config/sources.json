@@ -55,16 +55,7 @@
       "url": "https://www.jva.or.jp/beach_international/2026/avc2026/suma/"
     }
   ],
-  "verifiedResultArticles": [
-    {
-      "eventUrl": "https://www.jva.or.jp/beach_international/2026/avc2026/suma/",
-      "url": "https://www.jva.or.jp/topics/202610126-2/",
-      "names": ["黒川 魁", "安達 龍一"],
-      "gender": "men",
-      "rank": 2,
-      "evidencePattern": "黒川魁[^。]{0,100}/安達龍一[^。]{0,40}準優勝"
-    }
-  ],
+  "verifiedResultArticles": [],
   "volleyballWorldEvents": [
     {
       "eventUrl": "https://www.jva.or.jp/beach_international/2026/bpt2026/maunganui/",
@@ -1377,6 +1368,14 @@
     }
   ],
   "htmlResults": [
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/avc2026/suma/",
+      "url": "https://www.jva.or.jp/beach_international/2026/avc2026/suma/?entry=result"
+    },
+    {
+      "eventUrl": "https://www.jva.or.jp/beach_international/2026/ioc-yog2026/76809/",
+      "url": "https://www.jva.or.jp/beach_international/2026/ioc-yog2026/76809/?entry=result"
+    },
     {
       "eventUrl": "https://www.jva.or.jp/beach_international/2026/ioc-oca2026/",
       "url": "https://www.jva.or.jp/beach_international/2026/ioc-oca2026/?entry=result"
